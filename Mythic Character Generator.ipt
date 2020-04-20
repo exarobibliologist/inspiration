@@ -3,10 +3,11 @@ Header: <center><span style='font:24pt Arial'>Mythic Character Generator</span><
 Table: MessageTable
 Define: mythicname =[@AllNames>>Proper>>Implode]
 Define: skillset = <b>[!Skills]</b> = [!Fate]
-<span style='font:24pt Arial'><b>{$mythicname}</b></span><br><span style='font:18pt Arial'><b>Attributes</b></span><br><b>Strength:</b> [@Fate]<br><b>Agility:</b> [@Fate]<br><b>Reflex:</b> [@Fate]<br><b>IQ:</b> [@Fate]<br><b>Intuition:</b> [@Fate]<br><b>Willpower:</b> [@Fate]<br><b>Toughness:</b> [@Fate]<br><br><span style='font:18pt Arial'><b>Abilities</b></span> <br>[@{8d3} AbilityRand >> implode <br>]
+<span style='font:24pt Arial'><b>{$mythicname}</b></span><br><span style='font:18pt Arial'><b>Attributes</b></span><br><b>Strength:</b> [@Fate]<br><b>Agility:</b> [@Fate]<br><b>Reflex:</b> [@Fate]<br><b>IQ:</b> [@Fate]<br><b>Intuition:</b> [@Fate]<br><b>Willpower:</b> [@Fate]<br><b>Toughness:</b> [@Fate]<br><br><span style='font:18pt Arial'><b>Abilities</b></span> <br>[@{8d3} AbilityRand >> sort >> implode <br>]
 
 Table: AbilityRand
-1:<b>[!Skills]</b> = [@AbilityFate]
+3:<b>[!Skills]</b> = [@AbilityFate]
+1:<b>Darkweb [!Skills]</b> = [@AbilityFate]
 
 Table: Fate
 1:Miniscule (1)
@@ -81,8 +82,7 @@ Commune with Spirits
 Composition
 [|VR|Computer] Build/Repair 
 [|VR|Computer] Programming
-[|VR|Computer] Hardware
-[|VR|Computer] Software
+[|VR|Computer] Hardware/Software
 Con
 Contortionist
 Cooking
@@ -134,7 +134,6 @@ Gamekeeper
 Gardening
 Geography
 Ghost Tracking
-Golf
 Groundskeeping
 Gunnery
 Heraldry
@@ -215,7 +214,8 @@ Singing
 Sleight of Hand 
 Smith
 Sociology
-Spell Casting 
+Spell Casting
+Sports
 Starship Repair 
 Stealth
 Storytelling
