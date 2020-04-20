@@ -1,0 +1,177 @@
+Header: <center><b>After the adventure, the party headed down to their favorite watering hole...</b></center>
+
+Table: MasterTavernName
+The [@TavernsA] [@TavernsB]
+The [@TavernsA] [@TavernsB]
+The [@TavernsA] [@TavernsB]
+The [@TavernsA] [@TavernsB] Inn
+The [@TavernsA] [@TavernsB] Tavern
+The [@TavernsA] [@TavernsB] Tavern and Inn
+The [@TavernsA] [@TavernsB] Restaurant
+The House of [@TavernsC]
+The [@TavernsA] House of [@TavernsC]
+The [@TavernsB]'s [@TavernsC]
+The [@TavernsB]
+[@TavernsC] and [@TavernsC]
+The [@TavernsB]
+
+Table: TavernsA
+Amazing
+Angry
+500:[@Colors]
+500:[@Colors] and [@Colors]
+Bouncing
+Brewing
+Burning
+Carved
+Checkered
+Cobbler's
+Copper[||y]
+Crackling
+Crawling
+Drunken
+Dwarven
+Elven
+Falling
+Farmer's
+Fisherman's
+Flying
+Frolicking
+Gobbling
+Gold[||en]
+Gnomish
+Guilty
+Halfling's
+Handsome
+Happy
+Hearty
+Herder's
+Hidden
+Humble
+Hungry
+Husband's
+Icy
+Innocent
+Iron
+Ivory
+King's
+Musty
+Oaken
+Prince's
+Restful
+Running
+Rusty
+Satisfied
+Silver
+Sleeping
+Smith's
+Spiked
+Stone
+Stumbling
+Swimming
+Thirsty
+Wife's
+Wizard's
+Yellow
+
+Table: Colors
+White
+Yellow
+Blue
+Red
+Green
+Black
+Brown
+Azure
+Purple
+Gray
+Orange
+Maroon
+Charcoal
+Aquamarine
+Coral
+Crimson
+Cyan
+
+Table: TavernsB
+Archer
+Axe
+Bench
+Bowman
+Dagger
+Dog
+Duchess
+Dragon
+Dwarf
+Eagle
+Elf
+Fork
+Glaive
+Glibber
+Gnome
+Gobbler
+Goblin
+Griffen
+Halberd
+Halfling
+Hammer
+Hero
+Ice Pick
+Keg
+Knight
+Lobster
+Maiden
+Man-at-arms
+Minatour
+Mug
+Nail
+Octopus
+Ogre
+Orc
+Pauper
+Peacock
+Pick
+Pike
+Pikeman
+Plate
+Princess
+Sailor
+Sausage
+Scabbard
+Seagull
+Shark
+Spoon
+Swordsman
+Troll
+Turkey
+Turtle
+Unicorn
+Virgin
+Warrior
+Wench
+
+Table: TavernsC
+Ale
+Beer
+Chicken
+Eats
+Fish
+Good Food
+Happiness
+Hooch
+Hops
+Hunger
+Lamb
+Mead
+Melody
+Punch
+Rest
+Scotch
+Sheep
+Sleep
+Song
+Spirits
+Steak
+Stew
+Whisky
+Venison
