@@ -6,17 +6,18 @@ Define: skillset = <b>[!Skills]</b> = [!Fate]
 <span style='font:24pt Arial'><b>{$mythicname}</b></span><br><span style='font:18pt Arial'><b>Attributes</b></span><br><b>Strength:</b> [@Fate]<br><b>Agility:</b> [@Fate]<br><b>Reflex:</b> [@Fate]<br><b>IQ:</b> [@Fate]<br><b>Intuition:</b> [@Fate]<br><b>Willpower:</b> [@Fate]<br><b>Toughness:</b> [@Fate]<br><br><span style='font:18pt Arial'><b>Abilities</b></span> <br>[@{8d3} AbilityRand >> sort >> implode <br>]
 
 Table: AbilityRand
-3:<b>[!Skills]</b> = [@AbilityFate]
+8:<b>[!Skills]</b> = [@AbilityFate]
 1:<b>Darkweb [!Skills]</b> = [@AbilityFate]
+1:<b>Illegal [!Skills]</b> = [@AbilityFate]
 
 Table: Fate
 1:Miniscule (1)
-1:Weak (2)
-2:Low (3)
-9:Below Average (4)
-15:Average (5)
-15:Above Average (10)
-9:High (15)
+2:Weak (2)
+4:Low (3)
+16:Below Average (4)
+32:Average (5)
+16:Above Average (10)
+4:High (15)
 2:Exceptional (20)
 1:Incredible (25)
 1:Awesome (30)
@@ -25,12 +26,12 @@ Table: Fate
 Table: AbilityFate
 1:Miniscule (1)
 2:Weak (2)
-9:Low (3)
-15:Below Average (4)
-9:Average (5)
-2:Above Average (10)
-1:High (15)
-1:Exceptional (20)
+4:Low (3)
+16:Below Average (4)
+32:Average (5)
+16:Above Average (10)
+4:High (15)
+2:Exceptional (20)
 1:Incredible (25)
 1:Awesome (30)
 1:Superhuman (35)
@@ -47,6 +48,7 @@ Animal Calls
 Animal Care
 Animal Training
 Antidotes
+Antisocial Networking
 Appraise
 Arcane Lore
 Archery
@@ -54,7 +56,6 @@ Armory
 Astrogation
 Astrology
 Astronomy
-Avoid Traps
 Balance
 Barter
 Basket Making
@@ -63,6 +64,7 @@ Begging
 Biology
 Blacksmith
 Bladed Weapons
+Blogging
 Bluff
 Boating
 Boost Morale
@@ -80,9 +82,9 @@ Climbing
 Coin Tricks
 Commune with Spirits
 Composition
-[|VR|Computer] Build/Repair 
-[|VR|Computer] Programming
-[|VR|Computer] Hardware/Software
+[|VR|Computer|Hologram] Build/Repair 
+[|VR|Computer|Hologram] Programming/Software
+[|VR|Computer|Hologram] Hardware
 Con
 Contortionist
 Cooking
@@ -143,7 +145,7 @@ History
 Hunting
 Infiltrate
 Innkeeping
-Interrogate
+Interrogation
 Interviewing
 Intimidate
 Invention
@@ -190,6 +192,7 @@ Pick Locks
 Pickpocketing
 Piloting
 Poisoning
+Pornography
 Pottery
 Priest
 Prostitution
@@ -213,6 +216,7 @@ Shopkeeping
 Singing
 Sleight of Hand 
 Smith
+Social Networking
 Sociology
 Spell Casting
 Sports
@@ -231,7 +235,7 @@ Teamster
 Theology
 Throwing
 Tracking
-Traps
+Trap [|Avoidance|Disarm|Design]
 Ventriloquism
 Veterinarian
 Vintner
@@ -242,10 +246,15 @@ Zero-G Maneuvering
 
 Table: AllNames
 [@HumanName]
+[@ElvishName]
+[@SkratName]
+[@LatinName]
+[@OrcName]
+[@DwarfName]
 [@SpanishFullFemaleNames]
 [@SpanishFullMaleNames]
-6:[@WestFullFemaleNames]
-6:[@WestFullMaleNames]
+[@WestFullFemaleNames]
+[@WestFullMaleNames]
 [@FrenchFullFemaleNames]
 [@FrenchFullMaleNames]
 [@JapanFullFemaleNames]
@@ -3709,7 +3718,6 @@ Shuffle: SkratNameEnd
 [@SkratNameStart][@SkratNameMiddle][@SkratNameEnd]
 
 Table: SkratNameStart
-[!{1d3} SkratNameStart]
 skra
 skre
 skri
@@ -3742,7 +3750,6 @@ kwe
 kwi
 
 Table: SkratNameMiddle
-[!{1d3} SkratNameMiddle]
 ta
 te
 ti
@@ -3760,7 +3767,6 @@ kwa
 kwe
 
 Table: SkratNameEnd
-[!{1d3} SkratNameEnd]
 at
 et
 it
@@ -5052,34 +5058,7 @@ th
 5:k
 3:ng
 
-Table: DemonName
-[@DemonNameCompounded>>Proper]
-
-Table: DemonNameCompounded
-[@{1d3} BeginMiddleDemonName][@EndDemonName]
-
-Table: BeginMiddleDemonName
-Shuffle: Demonsecondnames
-Define: contractionplacement=[|||']
-[@Demonfirstname]{$contractionplacement}
-
-Table: EndDemonName
-Shuffle: Demonsecondnames
-Define: contractionplacement=[|||']
-[@Demonfirstname]
-
-Table: Contraction
-1:[|||']
-
-Table: Demonfirstname
-Define: alphavowel =[|a|ab|ac|ad|af|ag|ah|ak|al|am|an|ap|ar|as|at|av|aw|ax|ay|az|e|eb|ed|ef|eg|eh|ek|el|em|en|ep|eq|er|es|et|ev|ew|ex|ey|ez|i|ib|ic|id|if|ig|ih|ik|il|im|in|ip|ir|is|it|iv|iw|ix|iy|iz|o|ob|od|of|oh|ok|ol|om|on|op|or|os|ot|ov|ow|ox|oy|oz|u|ub|ud|ug|uh|uk|ul|um|un|up|ur|us|ut|uv|uw|ux|uy|uz]
-Define: alphaconsonant =[|b|br|by|c|cr|cz|d|de|dr|dy|f|fr|g|gr|gu|gy|h|j|k|kr|ku|ky|l|m|mu|n|p|ph|pr|py|q|r|ra|ry|s|si|st|t|ta|ti|tr|tu|ty|q|qu|r|ra|ry|s|sh|si|st|t|ta|ti|tr|tu|ty|v|vy|w|we|wy|x|xy|y|z|ze|zy]
-{$alphavowel}
-{$alphaconsonant}
-{$alphavowel}{$alphaconsonant}
-{$alphaconsonant}{$alphavowel}
-
-Table: MasterDwarfName
+Table: DwarfName
 10:[@DwarfNameFirst][@DwarfNameMiddle][@DwarfNameLast]
 
 Table: DwarfNameFirst
@@ -5184,909 +5163,3 @@ u
 ug
 ur 
 us
-
-Table: Elements
-actinium
-aluminum
-americium
-antimony
-argon
-arsenic
-astatine
-barium
-berkellium
-beryllium
-bismuth
-bohrium
-boron
-bromine
-cadmium
-calcium
-calfornium
-carbon
-cerium
-cesium
-chlorine
-chromium
-cobalt
-copper
-curium
-dubmium
-dysprosium
-einsteinium
-erbium
-europium
-fermium
-flourine
-francium
-gadolinium
-gallium
-germanium
-gold
-hafnium
-hassium
-helium
-holmium
-hydrogen
-indium
-iodine
-iridium
-iron
-krypton
-lanthanum
-lawrencium
-lead
-lithium
-luteium
-magnesium
-manganese
-meitnerium
-mendelevium
-mercury
-molybdenum
-neodymium
-neon
-neptunium
-nickel
-niobium
-nitrogen
-nobelium
-osmium
-oxygen
-palladium
-phosphorus
-platinum
-plutonium
-potassium
-praseodymium
-promethium
-protactinum
-radium
-radon
-rhenium
-rhodium
-rubidium
-ruthenium
-rutherfordium
-samarium
-scandium
-seaborgium
-selenium
-silicon
-silver
-sodium
-strontium
-sulfur
-tantalum
-technetium
-tellurium
-terbium
-thallium
-thorium
-thullium
-tin
-titanium
-tungsten
-ununbium
-ununhexium
-ununnillium
-ununoctium
-ununquadium
-unununium
-uranium
-vanadium
-xenon
-ytterbium
-yttrium
-zinc
-zirconium
-
-Table: Minerals
-acanthite
-acmite
-actinolite
-adamite
-alabaster
-allanite
-alunite
-anhydrite
-arsenopyrite
-asbestos
-aventurine
-axinite
-azurite
-barite
-benitoite
-beryl
-biotite
-bismuth
-borax
-boronite
-calcite
-carnallite
-celestite
-chalcedony
-chlorite
-chrondrodite
-chrysoberyl
-cinnabar
-colbaltite
-corundum
-cryolite
-dendrite
-diopside
-dolomite
-emery
-feldspar
-fluorite
-garnet
-galena
-gypsum
-graphite
-halite
-hematite
-jadeite
-kaolinite
-kernite
-lazulite
-lepidolite
-magnetite
-malachite
-mesolite
-mica
-molybdenite
-olivine
-pectolite
-polybasite
-pyrite
-pyrolusite
-pyromorphite
-pyrophyllite
-pyroxene
-quartz
-rhodochrosite
-scapolite
-serpentine
-sphene
-spinel
-strontianite
-sulfur
-talc
-tetrahedrite
-thorite
-
-Table: Gems
-agate
-alexandrite
-almandine
-amber
-amethyst
-andradite
-aquamarine
-beryl
-bloodstone
-carbuncle
-chalcedony
-chrysolite
-chrysoprase
-citrine
-diamond
-emerald
-fire opal
-garnet
-heliotrope
-hyacinth
-jacinth
-jade
-jasper
-kunzite
-lapis lazuli
-lazurite
-malachite
-melanite
-milky quartz
-moonstone
-nephrite
-olivine
-onyx
-opal
-peridot
-pyrope
-red jasper
-rose quartz
-ruby
-sapphire
-sard
-sardonyx
-smoky quartz
-smoky topaz
-spinel
-star sapphire
-sunstone
-topaz
-tourmaline
-turquoise
-white sapphire
-zircon
-
-Table: Metals
-aluminum
-americium
-antimony
-arsenic
-barium
-beryllium
-bismuth
-cadmium
-cerium
-cesium
-chromium
-cobalt
-columbium
-copper
-dyprosium
-erbium
-europium
-gadolinum
-gallium
-germanium
-gold
-hafium
-holmium
-indium
-iridium
-iron
-lanthanum
-lead
-lithium
-lutetium
-magnesium
-manganese
-mercury
-molybdenum
-neodymium
-nickel
-niobium
-osmium
-palladium
-phosphorus
-platinum
-polonium
-potassium
-praseodymium
-promethium
-protactinum
-radium
-rhenium
-rubidium
-ruthenium
-samarium
-scandium
-silver
-sodium
-strontium
-tantalum
-technetium
-terbium
-thallium
-thorium
-thulium
-tin
-titanium
-tungsten
-uranium
-vanadium
-ytterbium
-yttrium
-zinc
-zirconium
-
-Table: Alloys
-brass
-bronze
-carbon steel
-cast iron
-chrome
-damask
-electrum
-elinvar
-graphite steel
-invar
-permalloy
-pewter
-pink gold
-solder
-stainless steel
-steel
-sterling silver
-white gold
-wrought iron
-
-Table: Monsters
-air elemental
-amphisbaena
-ankheg
-banshee
-beholder
-basilisk
-behemoth
-boogeyman
-brown bear
-bunyip
-cave bear
-centaur
-chimera
-cockatrice
-demon
-doppleganger
-dragon
-drake
-dryad
-earth elemental
-efreeti
-firedrake
-fire elemental
-fire giant
-frost giant
-garuda
-ghost
-ghoul
-giant
-giant ant
-goblin
-golem
-gorgon
-gremlin
-griffin
-gryphon
-harpy
-hill giant
-hippogryph
-hobbit
-hobgoblin
-hydra
-ice giant
-imp
-jinn
-kelpie
-kolbold
-kraken
-krenshar
-lamia
-leprechaun
-lizardman
-manticore
-medusa
-mermaid
-merman
-minotaur
-nymph
-ogre
-oni
-orc
-pegasus
-phantom
-phoenix
-pixie
-poltergeist
-rat
-roc
-satyr
-scorpion
-shade
-shadow
-siren
-snark
-spectre
-sphinx
-spirit
-stirges
-stone giant
-succubus
-thunderbird
-trapdoor spider
-troll
-unicorn
-vampire
-viper
-water elemental
-werewolf
-wight
-wraith
-wyvern
-yeti
-zombie
-
-Table: NormalAnimals
-alligator
-antelope
-[|||black|brown|red] bear
-bird
-boar
-bull
-calf
-cat
-chicken
-cow
-crane
-crow
-deer
-dinosaur
-dog
-donkey
-duck
-eagle
-elephant
-falcon
-flamingo
-fox
-frog
-goat
-goose
-hawk
-hen
-horse
-lion
-monkey
-moose
-mouse
-mule
-oceanic bird
-owl
-ox
-pig
-pigeon
-rabbit
-rat
-rooster
-sheep
-snake
-sparrow
-squirrel
-tiger
-toad
-wild boar
-wild goat
-wild ox
-woodpecker
-wolf
-
-Table: Plants
-Aaron's beard
-acacia
-acanthus
-aconite
-adam's needle
-aechmea
-afican violet
-agapanthus
-agave
-ageratum
-agrimony
-allamanda
-allium
-allspice
-althaea
-alyssum
-amaranthus
-amaryllis
-amazon lily
-anchusa
-anemone
-angelica
-anise
-arugula
-arum lily
-asphodel
-aster
-astilbe
-aubrietia
-auricula
-autumn crocus
-avens
-azalea
-baby's breath
-bachelor's button
-balloon flower
-barberry
-basil
-basket flower
-basket-of-gold
-bay leaf
-beautybush
-bedstraw
-bee balm
-begonia
-belladonna
-bellflower
-bergenia
-billbergia
-bindweed
-bird-of-paradise
-bittersweet
-black-eyed Susan
-black pepper
-bladderwort
-blanket-flower
-bleeding heart
-bluebell
-borage
-bougainvillea
-bridal wreath
-broom
-browallia
-bryony
-buddleia
-bugloss
-burning bush
-butterbur
-buttercup
-butterfly flower
-cactus
-calceolaria
-calendula
-calla lily
-camelia
-campanula
-campion
-candytuft
-canna
-Canterbury bell
-capers
-capsicum
-caraway seed
-cardamon
-cardinal flower
-carnation
-cassia
-catchfly
-cattleya orchid
-cayenne pepper
-ceanothus
-celandine
-celery salt
-celery seed
-celosia
-century plant
-chamomile
-chervil
-chicory
-chili powder
-china rose
-chinese lantern
-chives
-christmas cactus
-chrysanthemum
-cilantro
-cineraria
-cinnamon
-cinquefoil
-clarkia
-clematis
-clianthus
-clivia
-clover
-clove
-cockscomb
-coleus
-columbine
-comfrey
-coneflower
-convolvulvus
-coreopsis
-coriander
-cornflower
-corydalis
-cosmos
-costmary
-cowbell
-cowslip
-cranesbill
-creamcups
-creeping jenny
-crocus
-crowfoot
-crown of thorns
-cuckoo flower
-cuckoopint
-cumin
-curry powder
-cyclamen
-cymbidium
-daffodil
-dahlia
-daisy
-dandelion
-datura
-daylily
-delphinium
-dianthus
-dill
-dill seed
-dogbane
-dog rose
-dogtooth violet
-dog violet
-dogwood
-easter lily
-edelweiss
-eglantine
-elecampane
-english daisy
-epiphyllum
-eucharis
-euphorbia
-exacum
-fennel
-fenugreek
-firethorn
-fleabane
-fleur-de-lis
-flowering quince
-forget-me-not
-forsythia
-foxglove
-frangipani
-freesia
-fritillary
-fuchsia
-gaillardia
-gardenia
-garlic
-garlic salt
-gazania
-gentian
-geranium
-gerbera daisy
-germander
-ghostweed
-gillyflower
-ginger
-ginseng
-gladiola
-globeflower
-globe thistle
-gloxinia
-goatsbeard
-gold dust
-golden bell
-goldenrod
-goldflower
-granadilla
-grape hyacinth
-guelder rose
-gypsophila
-harebell
-hawkweed
-heather
-hedgehog cactus
-heliotrope
-hellebore
-hibiscus
-hollyhock
-honeysuckle
-horehound
-horseradish
-hoya
-hyacinth
-hydrangea
-hypericum
-hyssop
-impatiens
-indian paintbrush
-iris
-japonica
-jonquil
-juniper berries
-kalanchoe
-knapweed
-laburnum
-larkspur
-lavender
-lemon mint
-lemon verbena
-leopard's lily
-licorice root
-lilac
-lily of the valley
-lipstick plant
-lobelia
-lotus
-lovage
-lungwort
-lupine
-mace
-magnolia
-majoram
-mallow
-maltese cross
-marguerite
-marigold
-marsh mallow
-marsh marigold
-martagon lily
-mayflower
-meadow saffron
-meadow rue
-meadowsweet
-mecanopsis
-merrybells
-mignonette
-milfoil
-milkwort
-mimosa
-mint
-moccasin flower
-mock orange
-moneywort
-monkey flower
-monkshood
-montbretia
-moonflower
-morning glory
-moschatel
-moss pink
-moss rose
-mullein
-musk rose
-mustard
-mustard seed
-narcissus
-nasturtium
-nemesia
-nicotiana
-nierembergia
-nutmeg
-oleander
-onion
-onion flakes
-onion salt
-opium poppy
-opuntia
-orchid
-oregano
-oxalis
-oxeye daisy
-painted tongue
-pansy
-paprika
-parsley
-peppercorn
-peppermint
-periwinkle
-petunia
-phlox
-pimento
-pimpernel
-plantain
-plumbago
-poinsettia
-pokeweed
-polyanthus
-poppy
-poppy seed
-portulaca
-potentilla
-potherb
-pot marigold
-prickly poppy
-primrose
-primula
-ragged robin
-ragwort
-ranunculus
-rhododendron
-rock cress
-rock jasmine
-rock rose
-rose
-rosemary
-rudbeckia
-safflower
-saffron
-sage
-sainfoin
-salad burnet
-salpiglossis
-salvia
-savory
-saxifrage
-scabious
-sea lavender
-sedum
-sesame seed
-shooting star
-shrimp plant
-slipper flower
-slipperwort
-snapdragon
-snowdrop
-soapwort
-solomon's seal
-sorrel
-sowbread
-spearmint
-speedwell
-spider flower
-spirea
-spurge
-spurry
-squill
-star anise
-statice
-stephanotis
-stitchwort
-stock strawflower
-strelitzia
-streptocarpus
-sunflower
-sun rose
-sweetbrier
-syringa
-tansy
-tassel flower
-tarragon
-tea rose
-teasel
-thistle
-thorn apple
-thrift
-thunbergia
-thyme
-tiger lily
-toad lily
-tormentil
-tradescantia
-trillium
-trumpet creeper
-trumpet flower
-tuberose
-tulip
-turmeric
-valerian
-vanilla
-vanilla bean
-verbena
-veronica
-vervain
-viburnum
-vinca
-viola
-violet
-wallflower
-water lily
-white pepper
-windflower
-winter aconite
-wintergreen
-winter jasmine
-wisteria
-woadwaxen
-wolfsbane
-wood sorrel
-woolflower
-wormwood
-woundwort
-yarrow
-yucca
-zinnia
