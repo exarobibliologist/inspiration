@@ -51,7 +51,7 @@ Define: assessmentphrase =Do not use if you or a family member are pregnant, nur
 
 Table: WizardMessageTable
 Set: wizardlanguage =[@Language]
-Set: wizardname =[@{1d3} Get{$wizardlanguage}Word>>Proper>>Implode\_]
+Set: wizardname =[@Get{$wizardlanguage}Word>>Proper]
 Set: labname =[@Get{$wizardlanguage}Word>>Proper]
 100:{$wizardname}'s [@BookType] [|showed|indicated|concluded] that
 15:Personal [@BookType] [|showed|indicated|concluded] that
@@ -68,22 +68,23 @@ Table: UncommonSideeffects2MasterTable
 Table: UncommonSideeffects2
 Set: uncommonformatting =<br><br><span style='font:10pt Arial'>
 Define: wizardmessage =[@WizardMessageTable]
-10:{$uncommonformatting}{$wizardmessage} <u>[!{1d4} FantasyRaces>>Proper>>Implode]</u>, and <u>[!FantasyRaces>>Proper>>Implode]'s</u> have [|a|up to] {1d100}% immunity to [|the|any|1/{1d9+1} of the] effects of this recipe.</li></b></span>
-10:{$uncommonformatting}{$wizardmessage} <u>[!{1d6} Monsters>>Proper>>Implode]</u>, and <u>[!Monsters>>Proper>>Implode]'s</u> have [|a|up to] {1d100}% immunity to [|the|any|1/{1d9+1} of the] effects of this recipe.</li></b></span>
-20:{$uncommonformatting}{$wizardmessage} <u>[!{1d3} CharacterAlignment>>Implode]</u> and <u>[!CharacterAlignment]</u> aligned characters have [|a|up to] {1d100}% immunity to [|the|any|1/{1d9+1} of the] effects of this recipe.</li></b></span>
-20:{$uncommonformatting}{$wizardmessage} <u>[!{1d3} CharacterClass>>Implode]</u> and <u>[!CharacterClass]'s</u> have [|a|up to] {1d100}% immunity to [|the|any|1/{1d9+1} of the] effects of this recipe.</li></b></span>
-10:{$uncommonformatting}{$wizardmessage} <u>[!{1d4} FantasyRaces>>Proper>>Implode]</u>, and <u>[!FantasyRaces>>Proper>>Implode]'s</u> are at {1d100}% more risk to [|the|any|1/{1d9+1} of the] effects of this recipe.</li></b></span>
-10:{$uncommonformatting}{$wizardmessage} <u>[!{1d6} Monsters>>Proper>>Implode]</u>, and <u>[!Monsters>>Proper>>Implode]'s</u> are at {1d100}% more risk to [|the|any|1/{1d9+1} of the] effects of this recipe.</li></b></span>
-20:{$uncommonformatting}{$wizardmessage} <u>[!{1d3} CharacterAlignment>>Implode]</u> and <u>[!CharacterAlignment]</u> aligned characters are at {1d100}% more risk to [|the|any|1/{1d9+1} of the] effects of this recipe.</li></b></span>
-20:{$uncommonformatting}{$wizardmessage} <u>[!{1d3} CharacterClass>>Implode]</u> and <u>[!CharacterClass]'s</u> are at {1d100}% more risk to [|the|any|1/{1d9+1} of the] effects of this recipe.</li></b></span>
-10:{$uncommonformatting}{$wizardmessage} <u>[@FantasyRaces>>Proper]'s</u> have [|a|up to] {1d100}% immunity to [|the|any|1/{1d9+1} of the] effects of this recipe.</li></b></span>
-10:{$uncommonformatting}{$wizardmessage} <u>[@Monsters>>Proper]'s</u> have [|a|up to] {1d100}% immunity to [|the|any|1/{1d9+1} of the] effects of this recipe.</li></b></span>
-20:{$uncommonformatting}{$wizardmessage} <u>[@CharacterAlignment]</u> aligned characters have [|a|up to] {1d100}% immunity to [|the|any|1/{1d9+1} of the] effects of this recipe.</li></b></span>
-20:{$uncommonformatting}{$wizardmessage} <u>[@CharacterClass]'s</u> have [|a|up to] {1d100}% immunity to [|the|any|1/{1d9+1} of the] effects of this recipe.</li></b></span>
-10:{$uncommonformatting}{$wizardmessage} <u>[@FantasyRaces>>Proper]'s</u> are at {1d100}% more risk to [|the|any|1/{1d9+1} of the] effects of this recipe.</li></b></span>
-10:{$uncommonformatting}{$wizardmessage} <u>[@Monsters>>Proper]'s</u> are at {1d100}% more risk to [|the|any|1/{1d9+1} of the] effects of this recipe.</li></b></span>
-20:{$uncommonformatting}{$wizardmessage} <u>[@CharacterAlignment]</u> aligned characters are at {1d100}% more risk to [|the|any|1/{1d9+1} of the] effects of this recipe.</li></b></span>
-20:{$uncommonformatting}{$wizardmessage} <u>[@CharacterClass]'s</u> are at {1d100}% more risk to [|the|any|1/{1d9+1} of the] effects of this recipe.</li></b></span>
+Define: assessmentphrase =Do not use if you or a family member are pregnant, nursing, of childbearing age, have a history of or are at risk from [!{$assessmentnumber1} RiskAssessmentTable>>Implode>>Sort]. If negative symptoms [|develop|persist], see [@WhoCanHeal] immediately.
+1:{$uncommonformatting}{$wizardmessage} <u>[!{1d4} FantasyRaces>>Proper>>Implode]</u>, and <u>[!FantasyRaces>>Proper>>Implode]'s</u> have [|a|up to] {1d100}% immunity to [|the|any|1/{1d9+1} of the] effects of this recipe.</li></b></span>
+1:{$uncommonformatting}{$wizardmessage} <u>[!{1d6} Monsters>>Proper>>Implode]</u>, and <u>[!Monsters>>Proper>>Implode]'s</u> have [|a|up to] {1d100}% immunity to [|the|any|1/{1d9+1} of the] effects of this recipe.</li></b></span>
+1:{$uncommonformatting}{$wizardmessage} <u>[!{1d3} CharacterAlignment>>Implode]</u> and <u>[!CharacterAlignment]</u> aligned characters have [|a|up to] {1d100}% immunity to [|the|any|1/{1d9+1} of the] effects of this recipe.</li></b></span>
+1:{$uncommonformatting}{$wizardmessage} <u>[!{1d3} CharacterClass>>Implode]</u> and <u>[!CharacterClass]'s</u> have [|a|up to] {1d100}% immunity to [|the|any|1/{1d9+1} of the] effects of this recipe.</li></b></span>
+1:{$uncommonformatting}{$wizardmessage} <u>[!{1d4} FantasyRaces>>Proper>>Implode]</u>, and <u>[!FantasyRaces>>Proper>>Implode]'s</u> are at {1d100}% more risk to [|the|any|1/{1d9+1} of the] effects of this recipe. [|||||{$assessmentphrase}|]</li></b></span>
+1:{$uncommonformatting}{$wizardmessage} <u>[!{1d6} Monsters>>Proper>>Implode]</u>, and <u>[!Monsters>>Proper>>Implode]'s</u> are at {1d100}% more risk to [|the|any|1/{1d9+1} of the] effects of this recipe. [|||||{$assessmentphrase}|]</li></b></span>
+1:{$uncommonformatting}{$wizardmessage} <u>[!{1d3} CharacterAlignment>>Implode]</u> and <u>[!CharacterAlignment]</u> aligned characters are at {1d100}% more risk to [|the|any|1/{1d9+1} of the] effects of this recipe. [|||||{$assessmentphrase}|]</li></b></span>
+1:{$uncommonformatting}{$wizardmessage} <u>[!{1d3} CharacterClass>>Implode]</u> and <u>[!CharacterClass]'s</u> are at {1d100}% more risk to [|the|any|1/{1d9+1} of the] effects of this recipe. [|||||{$assessmentphrase}|]</li></b></span>
+1:{$uncommonformatting}{$wizardmessage} <u>[@FantasyRaces>>Proper]'s</u> have [|a|up to] {1d100}% immunity to [|the|any|1/{1d9+1} of the] effects of this recipe.</li></b></span>
+1:{$uncommonformatting}{$wizardmessage} <u>[@Monsters>>Proper]'s</u> have [|a|up to] {1d100}% immunity to [|the|any|1/{1d9+1} of the] effects of this recipe.</li></b></span>
+1:{$uncommonformatting}{$wizardmessage} <u>[@CharacterAlignment]</u> aligned characters have [|a|up to] {1d100}% immunity to [|the|any|1/{1d9+1} of the] effects of this recipe.</li></b></span>
+1:{$uncommonformatting}{$wizardmessage} <u>[@CharacterClass]'s</u> have [|a|up to] {1d100}% immunity to [|the|any|1/{1d9+1} of the] effects of this recipe.</li></b></span>
+1:{$uncommonformatting}{$wizardmessage} <u>[@FantasyRaces>>Proper]'s</u> are at {1d100}% more risk to [|the|any|1/{1d9+1} of the] effects of this recipe. [|||||{$assessmentphrase}|]</li></b></span>
+1:{$uncommonformatting}{$wizardmessage} <u>[@Monsters>>Proper]'s</u> are at {1d100}% more risk to [|the|any|1/{1d9+1} of the] effects of this recipe. [|||||{$assessmentphrase}|]</li></b></span>
+1:{$uncommonformatting}{$wizardmessage} <u>[@CharacterAlignment]</u> aligned characters are at {1d100}% more risk to [|the|any|1/{1d9+1} of the] effects of this recipe. [|||||{$assessmentphrase}|]</li></b></span>
+1:{$uncommonformatting}{$wizardmessage} <u>[@CharacterClass]'s</u> are at {1d100}% more risk to [|the|any|1/{1d9+1} of the] effects of this recipe. [|||||{$assessmentphrase}|]</li></b></span>
 
 Table: DiseaseAssessment
 Set: diseaseformatting =<br><br><span style='font:10pt Arial'>
@@ -197,6 +198,7 @@ Shuffle: UncommonSideeffectsTable
 4:cataplexy
 4:chills
 4:choking
+4:coronavirus
 4:coughing
 4:cramps
 4:cysts
