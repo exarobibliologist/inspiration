@@ -2,7 +2,7 @@ Set: HeaderFormatting =<span style='font:11pt Arial'><i><b>
 Set: WarningFormatting =<span style='font:8pt Arial'>
 Set: BodyFormatting =<span style='font:10pt Arial'>
 
-Header:<center><span style='font:20pt Arial'><b>Dungeon GeoMorph Mapper</span><br><span style='font:12pt Arial'>Using Geomorph tiles from Stonewerks</span></center><span style='font:8pt Arial'><center><b>This material is Open Game Content, and is licensed for public use under the terms of the Open Game License v1.0a.</span></center>
+Header:<center><span style='font:20pt Arial'><b>Dungeon GeoMorph Mapper</span><br><span style='font:12pt Arial'>Using Geomorph tiles from Dave's Mapper</span></center><span style='font:8pt Arial'><center><b>This material is Open Game Content, and is licensed for public use under the terms of the Open Game License v1.0a.</span></center>
 
 Table: Master
 [@{2d5+1} Lines>>Implode<br>]
