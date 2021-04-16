@@ -6,7 +6,7 @@ Define: skillset = <b>[!Skills]</b> = [!Fate]
 <span style='font:24pt Arial'><b>{$mythicname}</b></span><br><span style='font:18pt Arial'><b>Attributes</b></span><br><b>Strength:</b> [@Fate]<br><b>Agility:</b> [@Fate]<br><b>Reflex:</b> [@Fate]<br><b>IQ:</b> [@Fate]<br><b>Intuition:</b> [@Fate]<br><b>Willpower:</b> [@Fate]<br><b>Toughness:</b> [@Fate]<br><br><span style='font:18pt Arial'><b>Abilities</b></span> <br>[@{8d3} AbilityRand >> sort >> implode <br>]
 
 Table: AbilityRand
-8:<b>[!Skills]</b> = [@AbilityFate]
+10:<b>[!Skills]</b> = [@AbilityFate]
 1:<b>Darkweb [!Skills]</b> = [@AbilityFate]
 1:<b>Illegal [!Skills]</b> = [@AbilityFate]
 
@@ -83,8 +83,8 @@ Coin Tricks
 Commune with Spirits
 Composition
 [|VR|Computer|Hologram] Build/Repair 
-[|VR|Computer|Hologram] Programming/Software
-[|VR|Computer|Hologram] Hardware
+[|VR|Computer|Holograhic] Programming/Software
+[|VR|Computer|Holograhic] Hardware
 Con
 Contortionist
 Cooking
@@ -179,6 +179,7 @@ Musical Instruments
 Nature Lore
 Navigation
 Negotiation
+Networking
 Notary
 Nursing
 Occultism
@@ -245,62 +246,33 @@ Wrestling
 Zero-G Maneuvering 
 
 Table: AllNames
-[@HumanName]
-[@ElvishName]
-[@SkratName]
-[@LatinName]
-[@OrcName]
-[@DwarfName]
-[@SpanishFullFemaleNames]
-[@SpanishFullMaleNames]
-[@WestFullFemaleNames]
-[@WestFullMaleNames]
-[@FrenchFullFemaleNames]
-[@FrenchFullMaleNames]
-[@JapanFullFemaleNames]
-[@JapanFullMaleNames]
-[@ChinaFullMaleNames]
-[@ChinaFullFemaleNames]
-EndTable:
-
-Table: SpanishFullMaleNames
-[@SpanishMaleNames] [@SpanishSurnames] [@SpanishSurnames]
-EndTable:
-
-Table: SpanishFullFemaleNames
-[@SpanishFemaleNames] [@SpanishSurnames] [@SpanishSurnames]
-EndTable:
-
-Table: WestFullMaleNames
-[@WestMaleNames] [@WestSurnames]
-EndTable:
-
-Table: WestFullFemaleNames
-[@WestFemaleNames] [@WestSurnames]
-EndTable:
-
-Table: FrenchFullMaleNames
-[@FrenchMaleNames] [@FrenchSurnames]
-EndTable:
-
-Table: FrenchFullFemaleNames
-[@FrenchFemaleNames] [@FrenchSurnames]
-EndTable:
-
-Table: JapanFullMaleNames
-[@JapanSurnames] [@JapanMaleNames]
-EndTable:
-
-Table: JapanFullFemaleNames
-[@JapanSurnames] [@JapanFemaleNames]
-EndTable:
-
-Table: ChinaFullMaleNames
-[@ChinaSurnames] [@ChinaMaleNames]
-EndTable:
-
-Table: ChinaFullFemaleNames
-[@ChinaSurnames] [@ChinaFemaleNames]
+5:[@LatinName] [@SpanishSurnames]
+5:[@LatinName] [@WestSurnames]
+5:[@LatinName] [@FrenchSurnames]
+5:[@LatinName] [@JapanSurnames]
+5:[@LatinName] [@ChinaSurnames]
+10:[@LatinName] [@LatinName]
+10:[@HumanName] [@SpanishSurnames]
+10:[@HumanName] [@WestSurnames]
+10:[@HumanName] [@FrenchSurnames]
+10:[@HumanName] [@JapanSurnames]
+10:[@HumanName] [@ChinaSurnames]
+15:[@SpanishMaleNames] [@SpanishSurnames]
+15:[@SpanishFemaleNames] [@SpanishSurnames]
+15:[@WestMaleNames] [@WestSurnames]
+15:[@WestFemaleNames] [@WestSurnames]
+15:[@FrenchMaleNames] [@FrenchSurnames]
+15:[@FrenchFemaleNames] [@FrenchSurnames]
+15:[@JapanSurnames] [@JapanMaleNames]
+15:[@JapanSurnames] [@JapanFemaleNames]
+15:[@ChinaSurnames] [@ChinaMaleNames]
+15:[@ChinaSurnames] [@ChinaFemaleNames]
+5:[@HumanName]
+5:[@ElvishName]
+4:[@SkratName]
+3:[@OrcName]
+3:[@DwarfName]
+3:[@DemonName]
 EndTable:
 
 Table:WestMaleNames
@@ -5163,3 +5135,25 @@ u
 ug
 ur 
 us
+
+Table: DemonName
+[@DemonNameCompounded>>Proper]
+
+Table: DemonNameCompounded
+[@{1d3} BeginMiddleDemonName][@EndDemonName]
+
+Table: BeginMiddleDemonName
+Define: contractionplacement=[|||']
+[@Demonfirstname]{$contractionplacement}
+
+Table: EndDemonName
+Define: contractionplacement=[|||']
+[@Demonfirstname]
+
+Table: Demonfirstname
+Define: alphavowel =[|a|ab|ac|ad|af|ag|ah|ak|al|am|an|ap|ar|as|at|av|aw|ax|ay|az|e|eb|ed|ef|eg|eh|ek|el|em|en|ep|eq|er|es|et|ev|ew|ex|ey|ez|i|ib|ic|id|if|ig|ih|ik|il|im|in|ip|ir|is|it|iv|iw|ix|iy|iz|o|ob|od|of|oh|ok|ol|om|on|op|or|os|ot|ov|ow|ox|oy|oz|u|ub|ud|ug|uh|uk|ul|um|un|up|ur|us|ut|uv|uw|ux|uy|uz]
+Define: alphaconsonant =[|b|br|by|c|cr|cz|d|de|dr|dy|f|fr|g|gr|gu|gy|h|j|k|kr|ku|ky|l|m|mu|n|p|ph|pr|py|q|r|ra|ry|s|si|st|t|ta|ti|tr|tu|ty|q|qu|r|ra|ry|s|sh|si|st|t|ta|ti|tr|tu|ty|v|vy|w|we|wy|x|xy|y|z|ze|zy]
+{$alphavowel}
+{$alphaconsonant}
+{$alphavowel}{$alphaconsonant}
+{$alphaconsonant}{$alphavowel}
