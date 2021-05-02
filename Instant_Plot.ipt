@@ -1,7 +1,8 @@
 Header: <center><span style='font:24pt Arial'>Instant Plot</span><br><span style='font:7pt Arial'><center><b>Do not confuse with a pressure cooker with a similar name.<br>This material is Open Game Content, and is licensed for public use under the terms of the Open Game License v1.0a.</b><br>This generator helps you design a plot for a game by pre-generating elements that you can weave into a story. The Setting determines where the story takes place. The Tone determines what style of storytelling the campaign has. Things generated can introduce interesting elements into the story.</span></center>
 
 Table: Instant
-<b>Setting</b> = [@Setting]<br><b>Tone</b> = [@Tone]<br><b>Population</b> = [@Population]<br><b>Things</b> = [!2 Things >> Sort >> Implode]<br><b>Other Things</b> = [!5 Other >> Sort >> Implode]<br><b>Actions</b> = [!5 Actions >> Sort >> Implode]
+<b>Setting</b> = [@Setting]<br><b>Tone</b> = [@Tone]<br><b>Population</b> = [@Population]<br><b>Things</b> = [!2 Things >> Sort >> Implode]<br><b>Other Things</b> = [!5 Other >> Sort >> Implode]
+###<br><b>Actions</b> = [!5 Actions >> Sort >> Implode]
 
 Table: Setting
 Alien Occupied Earth
@@ -16,7 +17,7 @@ Artificial World
 Atlantis
 Barbarian Europe
 Bizarro World
-Boston, circa {1d400 + 1630}
+Boston MA, circa {1d400 + 1630}
 Camping Out
 City Under Siege
 Classical (Greek/Roman/Peloponnesian)
@@ -29,11 +30,13 @@ Darkworld
 Dawn of Civilization
 Depopulated Earth
 Desert Planet
+Dragon
 Dreamworld
 Dungeon
 Dying World
 Dystopia
 Early Space Exploration
+Edwardian Era
 Elizabethan England
 Fallen Civilization
 Farm
@@ -50,6 +53,7 @@ Grimm's Fairy Tales
 Historical
 Industrial Revolution
 Institution/Institutionalized
+Interdimensional Space
 Isolated Space Probe
 Jungle World
 Limbo
@@ -94,6 +98,7 @@ Treetop Civilization
 Tropical Paradise
 Underground
 Underwater
+Victorian Era
 Viking Explorers
 Virtual Reality
 War
@@ -108,7 +113,7 @@ Table: Tone
 Action/Adventure
 B-Movie
 Campy
-Conspiracy
+Conspiracy Theory
 Despair
 Epic
 Fantasy
@@ -212,6 +217,7 @@ Suburb
 Supernatural
 Supers
 Territory
+Terrorist
 Time Travel
 Trade
 Troubled Youth
