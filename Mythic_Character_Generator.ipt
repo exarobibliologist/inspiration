@@ -2,7 +2,6 @@ Header: <center><span style='font:24pt Arial'>Mythic Character Generator</span><
 
 Table: MessageTable
 Define: mythicname =[@AllNames>>Proper>>Implode]
-Define: skillset = <b>[!Skills]</b> = [!Fate]
 <span style='font:24pt Arial'><b>{$mythicname}</b></span><br><span style='font:18pt Arial'><b>Attributes</b></span><br><b>Strength:</b> [@Fate]<br><b>Agility:</b> [@Fate]<br><b>Reflex:</b> [@Fate]<br><b>IQ:</b> [@Fate]<br><b>Intuition:</b> [@Fate]<br><b>Willpower:</b> [@Fate]<br><b>Toughness:</b> [@Fate]<br><br><span style='font:18pt Arial'><b>Abilities</b></span> <br>[@{10d5} AbilityRand >> sort >> implode <br>]
 
 Table: AbilityRand
