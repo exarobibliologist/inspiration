@@ -3,12 +3,11 @@ Header: <center><span style='font:24pt Arial'>Mythic Character Generator</span><
 Table: MessageTable
 Define: mythicname =[@AllNames>>Proper>>Implode]
 Define: skillset = <b>[!Skills]</b> = [!Fate]
-<span style='font:24pt Arial'><b>{$mythicname}</b></span><br><span style='font:18pt Arial'><b>Attributes</b></span><br><b>Strength:</b> [@Fate]<br><b>Agility:</b> [@Fate]<br><b>Reflex:</b> [@Fate]<br><b>IQ:</b> [@Fate]<br><b>Intuition:</b> [@Fate]<br><b>Willpower:</b> [@Fate]<br><b>Toughness:</b> [@Fate]<br><br><span style='font:18pt Arial'><b>Abilities</b></span> <br>[@{8d3} AbilityRand >> sort >> implode <br>]
+<span style='font:24pt Arial'><b>{$mythicname}</b></span><br><span style='font:18pt Arial'><b>Attributes</b></span><br><b>Strength:</b> [@Fate]<br><b>Agility:</b> [@Fate]<br><b>Reflex:</b> [@Fate]<br><b>IQ:</b> [@Fate]<br><b>Intuition:</b> [@Fate]<br><b>Willpower:</b> [@Fate]<br><b>Toughness:</b> [@Fate]<br><br><span style='font:18pt Arial'><b>Abilities</b></span> <br>[@{10d5} AbilityRand >> sort >> implode <br>]
 
 Table: AbilityRand
-10:<b>[!Skills]</b> = [@AbilityFate]
-1:<b>Darkweb [!Skills]</b> = [@AbilityFate]
-1:<b>Illegal [!Skills]</b> = [@AbilityFate]
+20:<b>[!Skills]</b> = [@AbilityFate]
+2:<b>[|Darkweb|Illegal|Unofficial|Unauthorized|Unlicensed|Forbidden] [!Skills]</b> = [@AbilityFate]
 
 Table: Fate
 1:Miniscule (1)
@@ -64,7 +63,7 @@ Barter
 Basket Making
 Bee-keeping
 Begging
-Bio[|engineering|logy|tech]
+3:Bio[|engineering|logy|tech]
 Blacksmith
 Bladed Weapons
 Blogging
@@ -166,7 +165,7 @@ Languages
 Law
 Law Enforcement
 Leatherworking
-Levitate
+Levitation
 Library Skills
 Listening Deeply
 Literacy
