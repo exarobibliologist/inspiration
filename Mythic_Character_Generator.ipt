@@ -1,12 +1,16 @@
 Header: <center><span style='font:24pt Arial'>Mythic Character Generator</span><br><span style='font:7pt Arial'><center><b>This material is Open Game Content, and is licensed for public use under the terms of the Open Game License v1.0a.</b></span></center>
 
+MaxReps:1
+Prompt: Number of Tiles {MythicTable|MythicCards}MythicTable
+
 Table: MessageTable
 Define: mythicname =[@AllNames>>Proper>>Implode]
-<span style='font:24pt Arial'><b>{$mythicname}</b></span><br><span style='font:18pt Arial'><b>Attributes</b></span><br><b>Strength:</b> [@Fate]<br><b>Agility:</b> [@Fate]<br><b>Reflex:</b> [@Fate]<br><b>IQ:</b> [@Fate]<br><b>Intuition:</b> [@Fate]<br><b>Willpower:</b> [@Fate]<br><b>Toughness:</b> [@Fate]<br><br><span style='font:18pt Arial'><b>Abilities</b></span> <br>[@{10d5} AbilityRand >> sort >> implode <br>]
+Define: skillset = <b>[!Skills]</b> = [!Fate]
+<span style='font:24pt Arial'><b>{$mythicname}</b></span><br><span style='font:18pt Arial'><b>Attributes</b></span><br><b>Strength:</b> [when] {$prompt1} = MythicTable[do][@Fate][else][@FateCards][end]<br><b>Agility:</b> [when] {$prompt1} = MythicTable[do][@Fate][else][@FateCards][end]<br><b>Reflex:</b> [when] {$prompt1} = MythicTable[do][@Fate][else][@FateCards][end]<br><b>IQ:</b> [when] {$prompt1} = MythicTable[do][@Fate][else][@FateCards][end]<br><b>Intuition:</b> [when] {$prompt1} = MythicTable[do][@Fate][else][@FateCards][end]<br><b>Willpower:</b> [when] {$prompt1} = MythicTable[do][@Fate][else][@FateCards][end]<br><b>Toughness:</b> [when] {$prompt1} = MythicTable[do][@Fate][else][@FateCards][end]<br><br><span style='font:18pt Arial'><b>Abilities</b></span> <br>[@{10d5} AbilityRand >> sort >> implode <br>]
 
 Table: AbilityRand
-20:<b>[!Skills]</b> = [@AbilityFate]
-2:<b>[|Darkweb|Illegal|Unofficial|Unauthorized|Unlicensed|Forbidden] [!Skills]</b> = [@AbilityFate]
+20:<b>[!Skills]</b> = [when] {$prompt1} = MythicTable[do][@Fate][else][@FateCards][end]
+2:<b>[|Darkweb|Illegal|Unofficial|Unauthorized|Unlicensed|Forbidden] [!Skills]</b> = [when] {$prompt1} = MythicTable[do][@Fate][else][@FateCards][end]
 
 Table: Fate
 1:Miniscule (1)
@@ -21,18 +25,18 @@ Table: Fate
 1:Awesome (30)
 1:Superhuman (35)
 
-Table: AbilityFate
-1:Miniscule (1)
-2:Weak (2)
-4:Low (3)
-16:Below Average (4)
-32:Average (5)
-16:Above Average (10)
-4:High (15)
-2:Exceptional (20)
-1:Incredible (25)
-1:Awesome (30)
-1:Superhuman (35)
+Table: FateCards
+1:Impossible +2
+1:Impossible +1
+2:Impossible
+4:Very Unlikely
+16:Unlikely
+32:50/50
+16:Likely
+4:Very Likely
+2:Has To Be
+1:Has To Be +1
+1:Has To Be +2
 
 Table: Skills
 Accounting
