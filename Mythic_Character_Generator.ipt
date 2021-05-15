@@ -10,7 +10,8 @@ Define: skillset = <b>[!Skills]</b> = [!Fate]
 
 Table: AbilityRand
 20:<b>[!Skills]</b> = [when] {$prompt1} = MythicTable[do][@Fate][else][@FateCards][end]
-2:<b>[|Darkweb|Illegal|Unofficial|Unauthorized|Unlicensed|Forbidden] [!Skills]</b> = [when] {$prompt1} = MythicTable[do][@Fate][else][@FateCards][end]
+3:<b>[|Experimental|Unlicensed|Innovative|Untested] [!Skills]</b> = [when] {$prompt1} = MythicTable[do][@Fate][else][@FateCards][end]
+1:<b>[|Darkweb|Illegal|Unauthorized|Unofficial|Forbidden] [!Skills]</b> = [when] {$prompt1} = MythicTable[do][@Fate][else][@FateCards][end]
 
 Table: Fate
 1:Miniscule (1)
@@ -30,9 +31,9 @@ Table: FateCards
 1:Impossible +1
 2:Impossible
 4:Very Unlikely
-16:Unlikely
-32:50/50
-16:Likely
+32:Unlikely
+64:50/50
+32:Likely
 4:Very Likely
 2:Has To Be
 1:Has To Be +1
@@ -44,8 +45,10 @@ Acrobatics
 Acting
 Activist
 Aeronautics
+Agriculture
 Alchemy
 Alien Culture 
+Anarchy
 Anatomy
 Anesthesia
 Animal Calls
@@ -57,6 +60,8 @@ Appraise
 Arcane Lore
 Archery
 Armory
+Aromatherapy
+Astrobiology
 Astrogation
 Astrology
 Astronomy
@@ -66,12 +71,15 @@ Barter
 Basket Making
 Bee-keeping
 Begging
-3:Bio[|engineering|logy|tech]
+Bioengineering
+Biology
+Biotech
 Blacksmith
 Bladed Weapons
 Blogging
 Bluff
 Boating
+Book-binder
 Boost Morale
 Boot-licking
 Bowyer/Fletcher
@@ -85,6 +93,7 @@ Cheerleading
 Chemistry
 Climbing
 Cloning
+Colonization
 Coin Tricks
 Commune with Spirits
 Composition
@@ -92,17 +101,20 @@ Composition
 [|VR|Computer|Holograhic] Programming/Software
 [|VR|Computer|Holograhic] Hardware
 Con
+Conservationist
 Contortionist
+Contraband
 Cooking
 Cosmetology
 Costuming
 Courtly Ways
 Criminology
-Crypto
 Cryptocurrency
 Cryptography
+Cryptozoology
 Culinary Arts
 Current Events
+Cytogenetics
 Dance
 Darts
 Demolitions
@@ -116,11 +128,16 @@ Drawing
 Driving
 Drug Knowledge
 Economics
+Education
 Electronics
+Emotional
 Engineer
 Escape Artist
 Etiquette
+Eugenics
+Exegesis
 Explosives
+Extremist
 Eyesight
 Falconry
 Farming
@@ -133,6 +150,7 @@ Fishing
 Fisticuffs
 Flattery
 Flirting
+Floriculture
 Folklore
 Forage
 Forensics
@@ -143,7 +161,7 @@ Gambling
 Game Playing
 Gamekeeper
 Gardening
-Genetic Engineering
+Genetics
 Geography
 Ghost Tracking
 Groundskeeping
@@ -154,12 +172,15 @@ Herding
 History
 Hunting
 Hydroponics
+Illusion
+Impressionist
 Infiltrate
 Innkeeping
 Interrogation
 Interviewing
 Intimidate
 Invention
+Iridology
 Juggling
 Jumping
 Knots
@@ -170,7 +191,7 @@ Law Enforcement
 Leatherworking
 Levitation
 Library Skills
-Listening Deeply
+Listening
 Literacy
 Literature
 Locate Traps
@@ -184,10 +205,14 @@ Mathematics
 Mechanic
 Medicine
 Meditation
+Meteorology
 Microbiology
+Midwife
 Moneylending
 Move Quietly
+Museology
 Musical Instruments
+Mythology
 Nature Lore
 Navigation
 Negotiation
@@ -195,11 +220,15 @@ Networking
 Notary
 Nursing
 Occultism
+Ophthalmology
 Oratory
 Painting
+Paleobiology
 Pantomime
 Persuade
+Philanthropy
 Photography
+Photojournalism
 Physics
 Pick Locks
 Pickpocketing
@@ -209,8 +238,11 @@ Pornography
 Pottery
 Priest
 Prostitution
+Psudeoscience
 Psychology
+Psychotherapy
 Quick-Draw
+Radio
 Religion
 Research
 Riding
@@ -219,6 +251,7 @@ Running
 Salesmanship
 Salvage
 SCUBA
+Science
 Sculpting
 Seamanship
 Seduction
@@ -230,6 +263,7 @@ Singing
 Sleight of Hand 
 Smith
 Social Networking
+Sociobiology
 Sociology
 Spell Casting
 Sports
@@ -244,7 +278,10 @@ Sword Fighting
 Tactics
 Tailor
 Tall Tales
+Tattoo Artist
 Teamster
+Teratology
+Terrorist
 Theology
 Throwing
 Tracking
