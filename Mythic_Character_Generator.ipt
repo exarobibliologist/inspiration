@@ -28,15 +28,15 @@ Table: Fate
 
 Table: FateCards
 1:Impossible +2
-1:Impossible +1
-2:Impossible
-4:Very Unlikely
-32:Unlikely
-64:50/50
-32:Likely
-4:Very Likely
-2:Has To Be
-1:Has To Be +1
+4:Impossible +1
+16:Impossible
+64:Very Unlikely
+256:Unlikely
+1024:50/50
+256:Likely
+64:Very Likely
+16:Has To Be
+4:Has To Be +1
 1:Has To Be +2
 
 Table: Skills
