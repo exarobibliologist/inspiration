@@ -1,16 +1,17 @@
 Header: <center><span style='font:24pt Arial'>Mythic Character Generator - Cards Version</span><br><span style='font:7pt Arial'><center><b>This generator is Open Game Content, and is licensed for public use under the terms of the Open Game License v1.0a.<br>Mythic Game Master Emulator Deck is © Copyright 2019 by Tana Pigeon and Word Mill Publishing.</b></span></center>
 
 MaxReps:1
+Prompt: Generation {Normal|Weighted}Weighted
 
 Table: MessageTable
 Define: mythicname =[@AllNames>>Proper>>Implode]
 Define: skillset = <b>[!Skills]</b> = [!Fate]
-<span style='font:24pt Arial'><b>{$mythicname}</b></span><br><span style='font:18pt Arial'><b>Attributes</b></span><br><b>Strength:</b> [@FateCards]<br><b>Agility:</b> [@FateCards]<br><b>Reflex:</b> [@FateCards]<br><b>IQ:</b> [@FateCards]<br><b>Intuition:</b> [@FateCards]<br><b>Willpower:</b> [@FateCards]<br><b>Toughness:</b> [@FateCards]<br><br><span style='font:18pt Arial'><b>Abilities</b></span> <br>[@{10d5} AbilityRand >> sort >> implode <br>]
+<span style='font:24pt Arial'><b>{$mythicname}</b></span><br><span style='font:18pt Arial'><b>Attributes</b></span><br><b>Strength:</b> [when] {$prompt1} = Normal[do][@FateCards][else][@FateCardsWeighted][end]<br><b>Agility:</b> [when] {$prompt1} = Normal[do][@FateCards][else][@FateCardsWeighted][end]<br><b>Reflex:</b> [when] {$prompt1} = Normal[do][@FateCards][else][@FateCardsWeighted][end]<br><b>IQ:</b> [when] {$prompt1} = Normal[do][@FateCards][else][@FateCardsWeighted][end]<br><b>Intuition:</b> [when] {$prompt1} = Normal[do][@FateCards][else][@FateCardsWeighted][end]<br><b>Willpower:</b> [when] {$prompt1} = Normal[do][@FateCards][else][@FateCardsWeighted][end]<br><b>Toughness:</b> [when] {$prompt1} = Normal[do][@FateCards][else][@FateCardsWeighted][end]<br><br><span style='font:18pt Arial'><b>Abilities</b></span> <br>[when] {$prompt1} = Normal[do][@{6d5} AbilityRand >> sort >> implode <br>][else][@{3d5} AbilityRand >> sort >> implode <br>][end]
 
 Table: AbilityRand
-20:<b>[!Skills]</b> = [@FateCards]
-3:<b>[|Experimental|Unlicensed|Innovative|Untested] [!Skills]</b> = [@FateCards]
-1:<b>[|Darkweb|Illegal|Unauthorized|Unofficial|Forbidden] [!Skills]</b> = [@FateCards]
+20:<b>[!Skills]</b> = [when] {$prompt1} = Normal[do][@FateCards][else][@FateCardsWeighted][end]
+3:<b>[|Experimental|Unlicensed|Innovative|Untested] [!Skills]</b> = [when] {$prompt1} = Normal[do][@FateCards][else][@FateCardsWeighted][end]
+1:<b>[|Darkweb|Illegal|Unauthorized|Unofficial|Forbidden] [!Skills]</b> = [when] {$prompt1} = Normal[do][@FateCards][else][@FateCardsWeighted][end]
 
 Table: FateCards
 1:Impossible +2
@@ -20,6 +21,19 @@ Table: FateCards
 256:Unlikely
 1024:50/50
 256:Likely
+64:Very Likely
+16:Has To Be
+4:Has To Be +1
+1:Has To Be +2
+
+Table: FateCardsWeighted
+1:Impossible +2
+4:Impossible +1
+16:Impossible
+64:Very Unlikely
+128:Unlikely
+256:50/50
+128:Likely
 64:Very Likely
 16:Has To Be
 4:Has To Be +1
