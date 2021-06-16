@@ -54,12 +54,15 @@ Table: FateCardsWeighted
 1:Has To Be +2
 
 Table: Skills
+Able Seaman
+Accident Prevention
 Accounting
 Acrobatics
 Acting
 Activist
 Aeronautics
 Agriculture
+Alarm Operator
 Alchemy
 Alien Culture 
 Anarchy
@@ -73,14 +76,20 @@ Antisocial Networking
 Appraise
 Arcane Lore
 Archery
+Architect
+Archivist
 Armory
 Aromatherapy
 Astrobiology
 Astrogation
 Astrology
 Astronomy
+Auction Clerk
+Auditor
 Autopsy
+Baker
 Balance
+Bartender
 Barter
 Basket Making
 Bee-keeping
@@ -100,20 +109,24 @@ Bowyer/Fletcher
 Breaking & Entering 
 Bribery
 Bureaucracy
+Butcher
+Butler
 Camouflage
-Cards
+Card Player
 Carpenter
 Cheerleading
 Chemistry
 Climbing
 Cloning
-Colonization
+Coffee Roasting
 Coin Tricks
+Colonization
 Commune with Spirits
 Composition
 [|VR|Computer|Hologram] Build/Repair 
 [|VR|Computer|Holograhic] Programming/Software
 [|VR|Computer|Holograhic] Hardware
+[|VR|Computer|Holograhic] Security
 Con
 Conservationist
 Contortionist
@@ -126,6 +139,8 @@ Criminology
 Cryptocurrency
 Cryptography
 Cryptozoology
+Crystal Cutting
+Crystal Growing
 Culinary Arts
 Current Events
 Cytogenetics
@@ -173,6 +188,7 @@ Forgery
 Fortune Telling
 Gambling
 Game Playing
+Gamer
 Gamekeeper
 Gardening
 Genetics
@@ -200,11 +216,13 @@ Jumping
 Knots
 Kung-Fu
 Languages
+Laureate
 Law
 Law Enforcement
 Leatherworking
 Levitation
 Library Skills
+Lifeguard
 Listening
 Literacy
 Literature
@@ -232,6 +250,7 @@ Navigation
 Negotiation
 Networking
 Notary
+Novelist
 Nursing
 Occultism
 Ophthalmology
