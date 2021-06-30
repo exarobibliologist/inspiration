@@ -9,8 +9,11 @@ Define: skillset = <b>[!Skills]</b> = [!Fate]
 
 Table: AbilityRand
 20:<b>[!Skills]</b> = [@Fate]
-4:<b>[|Experimental|Unlicensed|Innovative|Untested] [!Skills]</b> = [@Fate]
-1:<b>[|Darkweb|Illegal|Unauthorized|Unofficial|Forbidden] [!Skills]</b> = [@Fate]
+1:<b>[|Amateur|Beginner|Novice|Untested] [!Skills]</b> = [@Fate]
+1:<b>[|Intermediate|Standard|Common|Average] [!Skills]</b> = [@Fate]
+1:<b>[|Advanced|Progressive|Experimental|Breakthrough] [!Skills]</b> = [@Fate]
+1:<b>[|Unlicensed|Innovative|Untested] [!Skills]</b> = [@Fate]
+1:<b>[|Darkweb|Illegal|Unauthorized|Forbidden] [!Skills]</b> = [@Fate]
 
 Table: Fate
 1:Miniscule (1)

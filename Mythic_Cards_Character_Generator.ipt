@@ -10,8 +10,11 @@ Define: skillset = <b>[!Skills]</b> = [!Fate]
 
 Table: AbilityRand
 20:<b>[!Skills]</b> = [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end]
-4:<b>[|Experimental|Unlicensed|Innovative|Untested] [!Skills]</b> = [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end]
-1:<b>[|Darkweb|Illegal|Unauthorized|Unofficial|Forbidden] [!Skills]</b> = [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end]
+1:<b>[|Amateur|Beginner|Novice|Untested] [!Skills]</b> = [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end]
+1:<b>[|Intermediate|Standard|Common|Average] [!Skills]</b> = [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end]
+1:<b>[|Advanced|Progressive|Experimental|Breakthrough] [!Skills]</b> = [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end]
+1:<b>[|Unlicensed|Innovative|Untested] [!Skills]</b> = [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end]
+1:<b>[|Darkweb|Illegal|Unauthorized|Forbidden] [!Skills]</b> = [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end]
 
 Table: FateCards
 1:Impossible +2
