@@ -1,18 +1,16 @@
 Header: <center><span style='font:24pt Arial'>Mythic Character Generator</span><br><span style='font:7pt Arial'><center><b>This material is Open Game Content, and is licensed for public use under the terms of the Open Game License v1.0a.</b></span></center>
 
 MaxReps:1
-Prompt: Number of Tiles {MythicTable|MythicCards}MythicTable
-Prompt: Cards Generation {Normal|Weighted}Weighted
 
 Table: MessageTable
 Define: mythicname =[@AllNames>>Proper>>Implode]
 Define: skillset = <b>[!Skills]</b> = [!Fate]
-<span style='font:24pt Arial'><b>{$mythicname}</b></span><br><span style='font:18pt Arial'><b>Attributes</b></span><br><b>Strength:</b> [when] {$prompt1} = MythicTable[do][@Fate][else][when] {$prompt2} = Normal[do][@FateCards][else][@FateCardsWeighted][end][end]<br><b>Agility:</b> [when] {$prompt1} = MythicTable[do][@Fate][else][when] {$prompt2} = Normal[do][@FateCards][else][@FateCardsWeighted][end][end]<br><b>Reflex:</b> [when] {$prompt1} = MythicTable[do][@Fate][else][when] {$prompt2} = Normal[do][@FateCards][else][@FateCardsWeighted][end][end]<br><b>IQ:</b> [when] {$prompt1} = MythicTable[do][@Fate][else][when] {$prompt2} = Normal[do][@FateCards][else][@FateCardsWeighted][end][end]<br><b>Intuition:</b> [when] {$prompt1} = MythicTable[do][@Fate][else][when] {$prompt2} = Normal[do][@FateCards][else][@FateCardsWeighted][end][end]<br><b>Willpower:</b> [when] {$prompt1} = MythicTable[do][@Fate][else][when] {$prompt2} = Normal[do][@FateCards][else][@FateCardsWeighted][end][end]<br><b>Toughness:</b> [when] {$prompt1} = MythicTable[do][@Fate][else][when] {$prompt2} = Normal[do][@FateCards][else][@FateCardsWeighted][end][end]<br><br><span style='font:18pt Arial'><b>Abilities</b></span> <br>[when] {$prompt2} = Normal[do][@{6d5} AbilityRand >> sort >> implode <br>][else][@{3d5} AbilityRand >> sort >> implode <br>][end][end]
+<span style='font:24pt Arial'><b>{$mythicname}</b></span><br><span style='font:18pt Arial'><b>Attributes</b></span><br><b>Strength:</b> [@Fate]<br><b>Agility:</b> [@Fate]<br><b>Reflex:</b> [@Fate]<br><b>IQ:</b> [@Fate]<br><b>Intuition:</b> [@Fate]<br><b>Willpower:</b> [@Fate]<br><b>Toughness:</b> [@Fate]<br><br><span style='font:18pt Arial'><b>Abilities</b></span> <br>[@{5d5} AbilityRand >> sort >> implode <br>]
 
 Table: AbilityRand
-20:<b>[!Skills]</b> = [when] {$prompt1} = MythicTable[do][@Fate][else][when] {$prompt2} = Normal[do][@FateCards][else][@FateCardsWeighted][end][end]
-3:<b>[|Experimental|Unlicensed|Innovative|Untested] [!Skills]</b> = [when] {$prompt1} = MythicTable[do][@Fate][else][when] {$prompt2} = Normal[do][@FateCards][else][@FateCardsWeighted][end][end]
-1:<b>[|Darkweb|Illegal|Unauthorized|Unofficial|Forbidden] [!Skills]</b> = [when] {$prompt1} = MythicTable[do][@Fate][else][when] {$prompt2} = Normal[do][@FateCards][else][@FateCardsWeighted][end][end]
+20:<b>[!Skills]</b> = [@Fate]
+4:<b>[|Experimental|Unlicensed|Innovative|Untested] [!Skills]</b> = [@Fate]
+1:<b>[|Darkweb|Illegal|Unauthorized|Unofficial|Forbidden] [!Skills]</b> = [@Fate]
 
 Table: Fate
 1:Miniscule (1)
@@ -26,32 +24,6 @@ Table: Fate
 1:Incredible (25)
 1:Awesome (30)
 1:Superhuman (35)
-
-Table: FateCards
-1:Impossible +2
-4:Impossible +1
-16:Impossible
-64:Very Unlikely
-256:Unlikely
-1024:50/50
-256:Likely
-64:Very Likely
-16:Has To Be
-4:Has To Be +1
-1:Has To Be +2
-
-Table: FateCardsWeighted
-1:Impossible +2
-4:Impossible +1
-16:Impossible
-64:Very Unlikely
-128:Unlikely
-256:50/50
-128:Likely
-64:Very Likely
-16:Has To Be
-4:Has To Be +1
-1:Has To Be +2
 
 Table: Skills
 Able Seaman
