@@ -6,15 +6,15 @@ Prompt: Generation {Average|Better}Better
 Table: MessageTable
 Define: mythicname =[@AllNames>>Proper>>Implode]
 Define: skillset = <b>[!Skills]</b> = [!Fate]
-<span style='font:24pt Arial'><b>{$mythicname}</b></span><br><span style='font:18pt Arial'><b>Attributes</b></span><br><b>Strength:</b> [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end]<br><b>Agility:</b> [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end]<br><b>Reflex:</b> [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end]<br><b>IQ:</b> [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end]<br><b>Intuition:</b> [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end]<br><b>Willpower:</b> [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end]<br><b>Toughness:</b> [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end]<br><br><span style='font:18pt Arial'><b>Abilities</b></span> <br>[@{5d5} AbilityRand >> sort >> implode <br>]
+<img src="C:\\Users\\micro\\Documents\\GitHub\\inspiration\\MythicDeck4.png" height="400"><br><span style='font:24pt Arial'><b>{$mythicname}</b></span><br><span style='font:18pt Arial'><b>Attributes</b></span><br><b>Strength:</b> [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end]<br><b>Agility:</b> [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end]<br><b>Reflex:</b> [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end]<br><b>IQ:</b> [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end]<br><b>Intuition:</b> [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end]<br><b>Willpower:</b> [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end]<br><b>Toughness:</b> [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end]<br><br><span style='font:18pt Arial'><b>Abilities</b></span> <br>[@{5d5} AbilityRand >> sort >> implode <br>]
 
 Table: AbilityRand
 20:<b>[!Skills]</b> = [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end]
-1:<b>[|Amateur|Beginner|Novice|Untested] [!Skills]</b> = [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end]
-1:<b>[|Intermediate|Standard|Common|Average] [!Skills]</b> = [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end]
-1:<b>[|Advanced|Progressive|Experimental|Breakthrough] [!Skills]</b> = [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end]
-1:<b>[|Unlicensed|Innovative|Untested] [!Skills]</b> = [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end]
-1:<b>[|Darkweb|Illegal|Unauthorized|Forbidden] [!Skills]</b> = [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end]
+1:<b>[|Amateur|Beginner|Novice|Untested] [!Skills]</b> = [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end] ([|-1|-2|-3|+1|+2] [|Rank|Crit] with [@Skills])
+1:<b>[|Intermediate|Standard|Common|Average] [!Skills]</b> = [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end] ([|-1|-2|+1|+2] [|Rank|Crit] with [@Skills])
+1:<b>[|Advanced|Progressive|Experimental|Breakthrough] [!Skills]</b> = [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end] ([|-1|-2|+1|+2|+3] [|Rank|Crit] with [@Skills])
+1:<b>[|Unlicensed|Innovative|Untested] [!Skills]</b> = [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end] ([|-2|-5|+2|+5] [|Rank|Crit] with [@Skills])
+1:<b>[|Darkweb|Illegal|Unauthorized|Forbidden] [!Skills]</b> = [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end] ([|-2|-5|+2|+5] [|Rank|Crit] with [@Skills])
 
 Table: FateCards
 1:Impossible +2
