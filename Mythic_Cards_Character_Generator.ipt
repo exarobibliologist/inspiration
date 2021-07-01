@@ -10,11 +10,15 @@ Define: skillset = <b>[!Skills]</b> = [!Fate]
 
 Table: AbilityRand
 20:<b>[!Skills]</b> = [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end]
-1:<b>[|Amateur|Beginner|Novice|Untested] [!Skills]</b> = [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end] ([|-1|-2|-3|+1|+2] [|Rank|Crit] with [@Skills])
-1:<b>[|Intermediate|Standard|Common|Average] [!Skills]</b> = [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end] ([|-1|-2|+1|+2] [|Rank|Crit] with [@Skills])
-1:<b>[|Advanced|Progressive|Experimental|Breakthrough] [!Skills]</b> = [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end] ([|-1|-2|+1|+2|+3] [|Rank|Crit] with [@Skills])
-1:<b>[|Unlicensed|Innovative|Untested] [!Skills]</b> = [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end] ([|-2|-5|+2|+5] [|Rank|Crit] with [@Skills])
-1:<b>[|Darkweb|Illegal|Unauthorized|Forbidden] [!Skills]</b> = [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end] ([|-2|-5|+2|+5] [|Rank|Crit] with [@Skills])
+2:<b>[!Skills]</b> = [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end] <b>([|Amateur|Beginner|Novice|Untested] ([|-|+]{1d3} <i>[@ShiftRank]</i> with [@Skills]))</b>
+2:<b>[!Skills]</b> = [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end] <b>([|Intermediate|Standard|Common|Average] ([|-|+]{1d3 +2}<i> [@ShiftRank]</i> with [@Skills]))</b>
+2:<b>[!Skills]</b> = [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end] <b>([|Advanced|Progressive|Breakthrough] ([|-|+]{1d3 +4}<i> [@ShiftRank]</i> with [@Skills]))</b>
+2:<b>[!Skills]</b> = [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end] <b>([|Unlicensed|Experimental|Innovative|Untested] ([|-|+]{1d3 +6}<i> [@ShiftRank]</i> with [@Skills]))</b>
+2:<b>[!Skills]</b> = [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end] <b>([|Darkweb|Illegal|Unauthorized|Forbidden] ([|-|+]{1d3 +8}<i> [@ShiftRank]</i> with [@Skills]))</b>
+
+Table: ShiftRank
+5:Chaos Factor
+1:Rank Shift
 
 Table: FateCards
 1:Impossible +2
