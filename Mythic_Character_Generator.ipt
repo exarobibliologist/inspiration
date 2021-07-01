@@ -15,6 +15,17 @@ Table: AbilityRand
 1:<b>[|Unlicensed|Innovative|Untested] [!Skills]</b> = [@Fate]
 1:<b>[|Darkweb|Illegal|Unauthorized|Forbidden] [!Skills]</b> = [@Fate]
 
+20:<b>[!Skills]</b> = [@Fate]
+2:<b>[!Skills]</b> = [@Fate] <b>([|Amateur|Beginner|Novice|Untested] ([|-|+]{1d3} <i>[@ShiftRank]</i> with [@Skills]))</b>
+2:<b>[!Skills]</b> = [@Fate] <b>([|Intermediate|Standard|Common|Average] ([|-|+]{1d3 +2}<i> [@ShiftRank]</i> with [@Skills]))</b>
+2:<b>[!Skills]</b> = [@Fate] <b>([|Advanced|Progressive|Breakthrough] ([|-|+]{1d3 +4}<i> [@ShiftRank]</i> with [@Skills]))</b>
+2:<b>[!Skills]</b> = [@Fate] <b>([|Unlicensed|Experimental|Innovative|Untested] ([|-|+]{1d3 +6}<i> [@ShiftRank]</i> with [@Skills]))</b>
+2:<b>[!Skills]</b> = [@Fate] <b>([|Darkweb|Illegal|Unauthorized|Forbidden] ([|-|+]{1d3 +8}<i> [@ShiftRank]</i> with [@Skills]))</b>
+
+Table: ShiftRank
+5:Chaos Factor
+1:Rank Shift
+
 Table: Fate
 1:Miniscule (1)
 2:Weak (2)
