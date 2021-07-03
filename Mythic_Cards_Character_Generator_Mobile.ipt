@@ -9,12 +9,20 @@ Define: skillset = <b>[!Skills]</b> = [!Fate]
 <img src="C:\\Users\\micro\\Documents\\GitHub\\inspiration\\MythicDeck4.png" height="400"><br><span style='font:24pt Arial'><b>{$mythicname}</b></span><br><span style='font:18pt Arial'><b>Attributes</b></span><br><b>Strength:</b> [@FateCards]<br><b>Agility:</b> [@FateCards]<br><b>Reflex:</b> [@FateCards]<br><b>IQ:</b> [@FateCards]<br><b>Intuition:</b> [@FateCards]<br><b>Willpower:</b> [@FateCards]<br><b>Toughness:</b> [@FateCards]<br><br><span style='font:18pt Arial'><b>Abilities</b></span> <br>[@{5d5} AbilityRand >> sort >> implode <br>]
 
 Table: AbilityRand
-20:<b>[!Skills]</b> = [@FateCards]
-2:<b>[!Skills]</b> = [@FateCards] <b>([|Amateur|Beginner|Novice|Untested]) ([|-|+]{1d3} <i>[@ShiftRank]</i> if/when [@Skills] [|>|<|=] [@FateCards])</b>
-2:<b>[!Skills]</b> = [@FateCards] <b>([|Intermediate|Standard|Common|Average]) ([|-|+]{1d3 +2}<i> [@ShiftRank]</i> if/when [@Skills] [|>|<|=] [@FateCards])</b>
-2:<b>[!Skills]</b> = [@FateCards] <b>([|Advanced|Progressive|Breakthrough]) ([|-|+]{1d3 +4}<i> [@ShiftRank]</i> if/when [@Skills] [|>|<|=] [@FateCards])</b>
-2:<b>[!Skills]</b> = [@FateCards] <b>([|Unlicensed|Experimental|Innovative|Untested]) ([|-|+]{1d3 +6}<i> [@ShiftRank]</i> if/when [@Skills] [|>|<|=] [@FateCards])</b>
-2:<b>[!Skills]</b> = [@FateCards] <b>([|Darkweb|Illegal|Unauthorized|Forbidden]) ([|-|+]{1d3 +8}<i> [@ShiftRank]</i> if/when [@Skills] [|>|<|=] [@FateCards])</b>
+10:<b>[!Skills]</b> = [@FateCards] <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[|-|+]1 <i>[@ShiftRank]</i></b> if/when <b>[@Skills] [|>|<|=] [@FateCards]</b><br>
+1:<b>[!Skills]</b> = [@FateCards] <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[|-|-|+]{1d3} <i>[@ShiftRank]</i></b> if/when <b>[@Skills] [|>|<|=] [@FateCards]</b><br>
+1:<b>[!Skills]</b> = [@FateCards] <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[|-|+]{2d3} <i>[@ShiftRank]</i></b> if/when <b>[@Skills] [|>|<|=] [@FateCards]</b><br>
+1:<b>[!Skills]</b> = [@FateCards] <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[|-|+|+]{3d3} <i>[@ShiftRank]</i></b> if/when <b>[@Skills] [|>|<|=] [@FateCards]</b><br>
+1:<b>[!Skills]</b> = [@FateCards] <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>([|Unlicensed|Experimental|Innovative|Untested]) [|-|-|+]{3d3 +2} <i>[@ShiftRank]</i></b> if/when <b>[@Skills] [|>|<|=] [@FateCards]</b><br>
+1:<b>[!Skills]</b> = [@FateCards] <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>([|Darkweb|Illegal|Unauthorized|Forbidden]) [|-|+|+]{3d3 +2} <i>[@ShiftRank]</i></b> if/when <b>[@Skills] [|>|<|=] [@FateCards]</b><br>
+
+##Table: AbilityRand
+##10:<b>[!Skills]</b> = [@FateCards] <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[|-|+]1 <i>[@ShiftRank]</i></b> if/when <b>[@Skills] [|>|<|=] [@FateCards]</b><br>
+##1:<b>[!Skills]</b> = [@FateCards] <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>([|Amateur|Beginner|Novice]) ([|-|-|+]{1d3} <i>[@ShiftRank]</i> if/when [@Skills] [|>|<|=] [@FateCards])</b>
+##1:<b>[!Skills]</b> = [@FateCards] <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>([|Intermediate|Standard|Common|Average]) ([|-|+]{2d3}<i> [@ShiftRank]</i> if/when [@Skills] [|>|<|=] [@FateCards])</b>
+##1:<b>[!Skills]</b> = [@FateCards] <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>([|Advanced|Progressive|Breakthrough]) ([|-|+|+]{3d3}<i> [@ShiftRank]</i> if/when [@Skills] [|>|<|=] [@FateCards])</b>
+##1:<b>[!Skills]</b> = [@FateCards] <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>([|Unlicensed|Experimental|Innovative|Untested]) ([|-|-|+]{3d3 +2}<i> [@ShiftRank]</i> if/when [@Skills] [|>|<|=] [@FateCards])</b>
+##1:<b>[!Skills]</b> = [@FateCards] <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>([|Darkweb|Illegal|Unauthorized|Forbidden]) ([|-|+|+]{3d3 +2}<i> [@ShiftRank]</i> if/when [@Skills] [|>|<|=] [@FateCards])</b>
 
 Table: ShiftRank
 5:Chaos Factor

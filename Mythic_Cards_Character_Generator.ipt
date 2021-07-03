@@ -9,12 +9,20 @@ Define: skillset = <b>[!Skills]</b> = [!Fate]
 <img src="C:\\Users\\micro\\Documents\\GitHub\\inspiration\\MythicDeck4.png" height="400"><br><span style='font:24pt Arial'><b>{$mythicname}</b></span><br><span style='font:18pt Arial'><b>Attributes</b></span><br><b>Strength:</b> [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end]<br><b>Agility:</b> [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end]<br><b>Reflex:</b> [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end]<br><b>IQ:</b> [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end]<br><b>Intuition:</b> [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end]<br><b>Willpower:</b> [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end]<br><b>Toughness:</b> [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end]<br><br><span style='font:18pt Arial'><b>Abilities</b></span> <br>[@{5d5} AbilityRand >> sort >> implode <br>]
 
 Table: AbilityRand
-20:<b>[!Skills]</b> = [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end]
-2:<b>[!Skills]</b> = [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end] <b>([|Amateur|Beginner|Novice|Untested]) ([|-|+]{1d3} <i>[@ShiftRank]</i> if/when [@Skills] [|>|<|=] [@FateCardsWeighted])</b>
-2:<b>[!Skills]</b> = [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end] <b>([|Intermediate|Standard|Common|Average]) ([|-|+]{1d3 +2}<i> [@ShiftRank]</i> if/when [@Skills] [|>|<|=] [@FateCardsWeighted])</b>
-2:<b>[!Skills]</b> = [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end] <b>([|Advanced|Progressive|Breakthrough]) ([|-|+]{1d3 +4}<i> [@ShiftRank]</i> if/when [@Skills] [|>|<|=] [@FateCardsWeighted])</b>
-2:<b>[!Skills]</b> = [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end] <b>([|Unlicensed|Experimental|Innovative|Untested]) ([|-|+]{1d3 +6}<i> [@ShiftRank]</i> if/when [@Skills] [|>|<|=] [@FateCardsWeighted])</b>
-2:<b>[!Skills]</b> = [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end] <b>([|Darkweb|Illegal|Unauthorized|Forbidden]) ([|-|+]{1d3 +8}<i> [@ShiftRank]</i> if/when [@Skills] [|>|<|=] [@FateCardsWeighted])</b>
+10:<b>[!Skills]</b> = [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end] <b><p>[|-|+]1 <i>[@ShiftRank]</i></b> if/when <b>[@Skills] [|>|<|=] [@FateCardsWeighted]</b>
+1:<b>[!Skills]</b> = [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end] <b>([|-|-|+]{1d3} <i>[@ShiftRank]</i></b> if/when <b>[@Skills] [|>|<|=] [@FateCardsWeighted])</b>
+1:<b>[!Skills]</b> = [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end] <b>([|-|+]{2d3}<i> [@ShiftRank]</i></b> if/when <b>[@Skills] [|>|<|=] [@FateCardsWeighted])</b>
+1:<b>[!Skills]</b> = [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end] <b>([|-|+|+]{3d3}<i> [@ShiftRank]</i></b> if/when <b>[@Skills] [|>|<|=] [@FateCardsWeighted])</b>
+1:<b>[!Skills]</b> = [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end] <b>([|-|-|+]{3d3 +2}<i> [@ShiftRank]</i></b> if/when <b>[@Skills] [|>|<|=] [@FateCardsWeighted])</b>
+1:<b>[!Skills]</b> = [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end] <b>([|-|+|+]{3d3 +4}<i> [@ShiftRank]</i></b> if/when <b>[@Skills] [|>|<|=] [@FateCardsWeighted])</b>
+
+##Table: AbilityRand
+##10:<b>[!Skills]</b> = [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end] <b>[|-|+]1 <i>[@ShiftRank]</i></b> if/when <b>[@Skills] [|>|<|=] [@FateCardsWeighted]</b>
+##1:<b>[!Skills]</b> = [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end] <b>([|Amateur|Beginner|Novice]) ([|-|-|+]{1d3} <i>[@ShiftRank]</i> if/when [@Skills] [|>|<|=] [@FateCardsWeighted])</b>
+##1:<b>[!Skills]</b> = [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end] <b>([|Intermediate|Standard|Common|Average]) ([|-|+]{2d3}<i> [@ShiftRank]</i> if/when [@Skills] [|>|<|=] [@FateCardsWeighted])</b>
+##1:<b>[!Skills]</b> = [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end] <b>([|Advanced|Progressive|Breakthrough]) ([|-|+|+]{3d3}<i> [@ShiftRank]</i> if/when [@Skills] [|>|<|=] [@FateCardsWeighted])</b>
+##1:<b>[!Skills]</b> = [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end] <b>([|Unlicensed|Experimental|Innovative|Untested]) ([|-|-|+]{3d3 +2}<i> [@ShiftRank]</i> if/when [@Skills] [|>|<|=] [@FateCardsWeighted])</b>
+##1:<b>[!Skills]</b> = [when] {$prompt1} = Average[do][@FateCards][else][@FateCardsWeighted][end] <b>([|Darkweb|Illegal|Unauthorized|Forbidden]) ([|-|+|+]{3d3 +4}<i> [@ShiftRank]</i> if/when [@Skills] [|>|<|=] [@FateCardsWeighted])</b>
 
 Table: ShiftRank
 5:Chaos Factor
