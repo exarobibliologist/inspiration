@@ -1,9 +1,10 @@
 MaxReps:1
 
 Table:MasterGen
-Define: Meal1 = <h2>Breakfast</h2>[!2 Breakfast >> implode &nbsp;or&nbsp; ]<br>[!2 BreakfastSides >> implode &nbsp;or&nbsp; ]<br>[!2 FruitVeggies >> implode &nbsp;or&nbsp; ]
-Define: Meal2 = <h2>Dinner</h2>[@2 Dinner >> implode &nbsp;or&nbsp; ]<br>[@1 DinnerSides >> implode &nbsp;or&nbsp; ]<br>[@1 DinnerSides2 >> implode &nbsp;or&nbsp; ]<br>[!2 FruitVeggies >> implode &nbsp;or&nbsp; ]
-Define: Drinks = <h3>Drinks</h3>[!2 Drinks >> implode &nbsp;or&nbsp; ]
+Define: PriceforMeal = (whole meal for {1d10}sp, extra items for {4d10}cp)
+Define: Meal1 = <h2>Breakfast {PriceforMeal}</h2>[!2 Breakfast >> implode &nbsp;or&nbsp; ]<br>[!2 BreakfastSides >> implode &nbsp;or&nbsp; ]<br>[!2 FruitVeggies >> implode &nbsp;or&nbsp; ]
+Define: Meal2 = <h2>Dinner {PriceforMeal}</h2>[@2 Dinner >> implode &nbsp;or&nbsp; ]<br>[@1 DinnerSides >> implode &nbsp;or&nbsp; ]<br>[@1 DinnerSides2 >> implode &nbsp;or&nbsp; ]<br>[!2 FruitVeggies >> implode &nbsp;or&nbsp; ]
+Define: Drinks = <h3>Drinks</h3>[!2 Drinks >> implode]
 <h1>[@TavernName]</h1><br><hr>Location\: [@CityDescriptions]<hr>{$Meal1}{$Drinks}<hr>{$Meal2}{$Drinks}<hr>
 
 Table:TavernName
@@ -16,10 +17,10 @@ Table:TavernName
 ; -------------------------------------------------------------------
 
 Table: CityDescriptions
-slums <br>Description\: A [|simple|drafty|old|dilapidated] [|wood|metal|] [|shack|building], with a thatched roof, near [@CityPlaces]<br>Rooms\: {1d2} common room (with room for {1d20} people on floor)
-a poor residential district <br>Description\: A [|simple|drafty|old] [|wood|metal|] [|shack|building], with a thatched roof, near [@CityPlaces]<br>Rooms\: {1d2} common room (with room for {1d20} people on floor), {2d2} individual rooms
-a middle class residential district <br>Description\: A [|grand|new|old] [|wood|metal|stone] [|building|manor|], with a [|thatched|tile|hammered metal] roof, near [@CityPlaces]<br>Rooms\: {2d2} common room (with room for {1d20} people on floor), {4d4} individual rooms
-an upper class residential district <br>Description\: A [|grand|new|exotic-looking|decorated] [|wood|marble|granite|] [|building|manor|], with a [|tile|hammered metal] roof, near [@CityPlaces]<br>Rooms\: {2d3} common room (with room for {1d20} people on floor), {4d6} individual rooms
+slums <br>Description\: A [|simple|drafty|old|dilapidated] [|wood|metal|] [|shack|building], with a thatched roof, near [@CityPlaces]<br>Rooms\: 1 common room (with room for {1d20} people on [|floor|sleeping mats|bunk beds]))
+a poor residential district <br>Description\: A [|simple|drafty|old] [|wood|metal|] [|shack|building], with a thatched roof, near [@CityPlaces]<br>Rooms\: {1d2} common room(s) (with room for {1d20} people on [|floor|sleeping mats|bunk beds])), {2d2} individual rooms
+a middle class residential district <br>Description\: A [|grand|new|old] [|wood|metal|stone] [|building|manor|], with a [|thatched|tile|hammered metal] roof, near [@CityPlaces]<br>Rooms\: {2d2} common room(s) (with room for {1d20} on [|floor|sleeping mats|bunk beds]), {4d4} individual rooms
+an upper class residential district <br>Description\: A [|grand|new|exotic-looking|decorated] [|wood|marble|granite|] [|building|manor|], with a [|tile|hammered metal] roof, near [@CityPlaces]<br>Rooms\: {2d3} common room(s) (with room for {1d20} people on [|sleeping mats|bunk beds])), {4d6} individual rooms, {2d6} double rooms
 
 Table: CityPlaces
 the palace district
@@ -46,33 +47,88 @@ a foreign enclave
 Table: Breakfast
 [|Scrambled|Poached|Fried|Boiled] Eggs
 [|Smoked|Honey] Ham
-[|Hard|Soft] Cheese
+[|Hard|Soft|Sharp|Pungent] Cheese
 [|Hot|Cold|Thick|Thin] Porridge
 [|Cinnamon|Sticky|Sweet] [|Roll|Bun]
 
 Table: BreakfastSides
 [|Crispy|Thick-cut|Soggy|Chewy] Bacon
-[|Sweet|Mild|Spicy|Hot] Sausage
+[|Sweet|Mild|Spicy|Hot|Pickled|Deer] Sausage
 [|Sour|Sweet|Plain] Yogurt
-[|Corn|Fresh|Crusty|Buttered|Pumpernickel] Bread
+[|Fried|Boiled] Potatoes
+[|Corn|Fresh|Crusty|Buttered|Sourdough|Beer|Pumpernickel|Rye|Wheat|Soft] Bread
 
 Table: Dinner
-[|Stewed|Roasted|Skewered|Boiled|Smoked|Grilled|Seared|Flame-broiled|Salted|Peppered] [|Rabbit|Duck|Pork|Fish|Venison|Deer|Squirrel|Pheasant|Mutton|Lamb]
+10:[@DinnerPrep] [@MealAnimal]
+[@MealAnimal] [|Sausage|Bacon|Steak]
+
+Table: DinnerPrep
+Stewed
+Roasted
+Fried
+Baked
+Breaded
+Battered
+Skewered
+Boiled
+Smoked
+Grilled
+Seared
+Flame-broiled
+Salted
+Peppered
+
+Table: MealAnimal
+Bear
+Beaver
+Boar
+Chicken
+Deer
+Duck
+Fish
+Goat
+Goose
+Hare
+Lamb
+Lobster
+Lizard
+Mockingbird
+Mouse
+Mutton
+Rabbit
+Pork
+Pheasant
+Quail
+Ram
+Snake
+Squid
+Squirrel
+Otter
+Venison
+Wolf
 
 Table: DinnerSides
+[|Fried|Boiled] Potatoes
+[|Large|[@MealAnimal]|] Dumplings
+[|Long|Short|Curly|Spiral] Pasta
 Lentils
-[|White|Red|Black] Beans
+Leeks
+[|White|Red|Black|Kidney|String] Beans
+Couscous
 Peas
 Turnips
 
 Table: DinnerSides2
-[|Corn|Fresh|Crusty|Buttered|Pumpernickel] Bread
-[|Hard|Soft] Cheese
+[|Corn|Fresh|Crusty|Buttered|Sourdough|Beer|Pumpernickel|Rye|Wheat|Soft] Bread
+[|Hard|Soft|Sharp|Pungent] Cheese
 
 Table: FruitVeggies
-[|Fried|Boiled] Potatoes
 Apples
+Asparagus
+Broccoli
+[|Red|White|Shredded] Cabbage
 Carrots
+Peas
 Cherries
 [|Blue|Black|Straw]berries
 Pears
@@ -80,7 +136,9 @@ Raisins
 Pine Nuts
 Cashews
 Almonds
-Olives
+Lemons
+Oranges
+[|Red|Green|Black] Olives
 [|Sliced|Crushed] Tomatoes
 [|Wild|Sliced] Mushrooms
 [|Sweet|Hot] Peppers
@@ -88,10 +146,13 @@ Spinach
 [|Green|White|Yellow|Red] Onions
 
 Table: Drinks
-[|Green|Black|Brown] Tea
+[|Green|Black|Brown|Floral|Herbal] Tea
 [|Strong|Weak] Coffee
 [@Colors >> Proper] [|Ale|Beer]
-[|Spiced ||]Wine
+[|Spiced |Sour |Red |Rice |||]Wine
+[|Spiced|Dry] Rum
+Porter
+Mead
 [|Orange|Apple|Grapefruit|Grape] Juice
 Water
 Milk
