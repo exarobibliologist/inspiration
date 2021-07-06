@@ -1,0 +1,347 @@
+// Inns and related places of accommodation in towns, large villages, and cities
+// Jonathan Dale
+
+Header: Inns and other places of accommodation in towns, large villages, and cities. Inns provide individual rooms, Rooming Houses (or Boarding Houses) provide individual rooms for longer periods of time, and Hostels provide space in common rooms (usually segregated by gender). 10 tp (tin piece) = 1 cp (copper piece).
+
+Table: Inn
+Set: Quality={1d10}
+Set: SocialClass={round({{1d10 + {Quality}} / 2})}
+Set: Type=[when]{SocialClass}>5[do]{1d2+1}[else]{1d3}[end]
+Set: Food=[@FoodMeals]
+Set: FareQuality={round({{1d10 + {Quality}} / 2})}
+Name: [#{Type} InnsName]\nRooms: [#{Type} NumRooms]\nQuality: [#{Quality} InnQuality]\nService: [@Service]\nFare: [#{Food} FoodType]\nRates: [when]{Ind}>0[do][@IndRates][when]{Common}>0[do], [end][end][when]{Common}>0[do][@ComRates][end]\nClientele: [#{SocialClass} Clientele]\nComments: [#{Type} Comments]
+
+Table: InnType
+Type: Lookup
+1:Type: Hostel
+2:Type: Rooming House
+3:Type: Inn
+
+// Lookup [#Type NumRooms]
+Table: NumRooms
+Type: Lookup
+1:{Common={1d3+1}} common rooms [|||and {Ind={1d6}} very small, plain individual rooms]
+2:{Ind={2d8+2}} individual rooms
+3:{Ind={2d10+2}} individual rooms [when]{SocialClass}<5[do][||and floor space in the common room{Common==1}][end]
+
+Table: InnQuality
+Type: Lookup
+1:Cheap, dirty, squalid, and probably unsafe.
+2:Dirty and squalid conditions.
+3:Simple, minimal accommodations.
+4:Rundown and low quality.
+5:Simple but well-tended.
+6:Once-luxious accommodations now run down.
+7:Simple but augmented here and there to imply luxury.
+8:Quality accommodations.
+9:Luxious accommodations.
+10:Luxuriously appointed and exquisitely maintained.
+
+Table: Service
+Type: Lookup
+Roll: 1d5
+1:[when]{SocialClass}>5[do][|Unpleasant|Snooty and elitist|Miserly|Distrusting|Dishonest][else][|Unpleasant|Abusive|Miserly|Distrusting|Dishonest][end]
+2:[|Unfriendly|Inattentive|Bad-mannered|Suspicious]
+3:[|Competent|Average|Acceptable]
+4:[|Attentive|Helpful|Well-mannered|Friendly]
+5:Attentive and helpful
+
+Table: FoodMeals
+[when]{Type}=3[do]{1d3}[else][when]{1d4}=4[do]{1d3}[else]{1d2}[end][end]
+
+Table: FoodType
+Type: Lookup
+1: No food provided.
+2: Breakfast only, [#{FareQuality} Fare].
+3: Full tavern, [#{FareQuality} Fare].
+
+Table: Fare
+Type: Lookup
+1:barely edible fare [when]{Food}=2[do]({1d2+1} tp)[else]({1d5+1} tp dinner, half for breakfast)[end]
+2:bland, uninteresting fare [when]{Food}=2[do]({1d3+1} tp)[else]({1d6+2} tp dinner, half for breakfast)[end]
+3:cheap peasant fare [when]{Food}=2[do]({1d4+1} tp)[else]({1d7+3} tp dinner, half for breakfast)[end]
+4:simple fare of low quality [when]{Food}=2[do]({1d4+2} tp)[else]({1d8+4} tp dinner, half for breakfast)[end]
+5-6:simple, mid-quality fare [when]{Food}=2[do]({1d5+2} tp)[else]({1d10+5} tp dinner, half for breakfast)[end]
+7:simple but good fare [when]{Food}=2[do]({1d5+3} tp)[else]({1d10+6} tp dinner, half for breakfast)[end]
+8:good quality fare [when]{Food}=2[do]({2d10+3} tp)[else]({2d20+7} tp dinner, half for breakfast)[end]
+9:very good food [when]{Food}=2[do]({2d15+4} tp)[else]({2d30+8} tp dinner, half for breakfast)[end]
+10:astounding food [when]{Food}=2[do]({3d25+5} tp)[else]({3d50+10} tp dinner, half for breakfast)[end]
+
+// 2 cp = 20 tp = average room
+Table: IndRates
+{ir=2d10+{Quality}+{SocialClass}} tp per room per night[when]{Type}=2[do] or {{1d3+3}*{ir}} tp per week[end]
+
+// 1 cp = 10 tp = typical common room rate
+Table: ComRates
+{cr=1d10+5} tp per night in common room
+
+// Based on social class
+Table: Clientele
+Type: Lookup
+1:Disreputable poor lower-class. [when]{Food}>1[do][|||It is popular with the locals at mealtimes.][end]
+2:Peasants, common pilgrims, and lower-class travelers. [when]{Food}>1[do][|||It is popular with the locals at mealtimes.][end]
+3-4:Peasants, pilgrims, and less-successful traders. [when]{Food}>1[do][|||It is popular with the locals at mealtimes.][end]
+5-6:Itinerant tradesmen and merchants. [when]{Food}>1[do][|||It is popular with the locals at mealtimes.][end]
+7-8:Traveling merchants and upper-class travelers. [when]{Food}>1[do][|||It is popular with the locals at mealtimes.][end]
+9-10:Nobles and wealthy merchants. [when]{Food}>1[do][|||It is popular with the locals at mealtimes.][end]
+
+Table: Comments
+Type: Lookup
+1:[@HostelComments]
+2:[@RoomingHouseComments]
+3:[@InnComments]
+
+Table: InnComments
+The building was originally a large home, and still retains the original layout with few modifications. [||Stables are also available, for 2 tp per horse per night.|Stables are also available, for 2 tp per horse per night, but with very limited space.]
+The building was originally a large home, but was extensively renovated to serve as an inn. [||Stables are also available, for 2 tp per horse per night.|Stables are also available, for 2 tp per horse per night, but with very limited space.]
+The building was built for its present purpose. [||Stables are also available, for 2 tp per horse per night.|Stables are also available, for 2 tp per horse per night, but with very limited space.]
+
+Table: HostelComments
+Accommodations in the common rooms are [|bare floor|sleeping mats on the floor|hammocks and bare floors|barracks-style bunk beds[|||&nbsp;for those able to claim them first, and bare floor for the rest]]. The Hostel primarily serves [|poor travelers and the indigent|religious pilgrims[||&nbsp;and is run by a retired priest|&nbsp;and is run by the clergy]|soldiers and mercenaries[||&nbsp;and is run by a retired soldier|&nbsp;and is run by a retired mercenary|&nbsp;and is owned by the military]]. The building [|was originally a large home|is a converted military barracks|was built as a warehouse and converted into a hostel|is a converted barn|was built to serve as a hostel]. [|||Stables are also available, for 2 tp per horse per night.]
+
+Table: RoomingHouseComments
+The building was originally a large home. The [|landlord|landlady] is [|very disapproving of any disturbances|a meddling busybody|does not want trouble with the law but otherwise is not too fussy|does not care what the residents do as long as they pay their bills and do not damage the property]. [when]{Food}>1[do][|||Meals are only available at very specific hours.][end]  [|||Stables are also available, for 2 tp per horse per night.]
+The building was originally a large home. The original resident is still in residence as the [|landlord|landlady], and [|is very disapproving of any disturbances|is a meddling busybody|does not want trouble with the law but otherwise is not too fussy|does not care what the residents do as long as they pay their bills and do not damage the property]. [when]{Food}>1[do][|||Meals are only available at very specific hours.][end] [|||Stables are also available, for 2 tp per horse per night.]
+The building was originally constructed by a local guild to house its newer members[||&nbsp;and is still owned by the guild]. [when]{Food}>1[do][|||Meals are only available at very specific hours.][end] [|||Stables are also available, for 2 tp per horse per night.]
+The building was originally quarters for lower ranked military officers[||&nbsp;and is owned by a military veteran]. [when]{Food}>1[do][|||Meals are only available at very specific hours.][end] [|||Stables are also available, for 2 tp per horse per night.]
+
+Table: InnsName
+Type: Lookup
+1:[@HostelName]
+2:[@RoomingHouseName]
+3:[@InnName]
+
+Table: HostelName
+The [#{round({{1d10 + {SocialClass}} / 2})} InnsA] [#{round({{1d10 + {SocialClass}} / 2})} InnsB] [when]{Food}=3[do][|Tavern|Tavern|Kitchen|Pub|Restaurant] [|||and Hostel][else]Hostel[end]
+The [#{round({{1d10 + {SocialClass}} / 2})} InnsB] and [#{round({{1d10 + {SocialClass}} / 2})} InnsB] [when]{Food}=3[do][|Tavern|Tavern|Kitchen|Pub|Restaurant] [|||and Hostel][else]Hostel[end]
+
+Table: RoomingHouseName
+The [#{round({{1d10 + {SocialClass}} / 2})} InnsA] [#{round({{1d10 + {SocialClass}} / 2})} InnsB] [|Rooming|Boarding] House [when]{Food}=3[do]and [|Tavern|Tavern|Kitchen|Pub|Restaurant][end]
+The [#{round({{1d10 + {SocialClass}} / 2})} InnsA] [#{round({{1d10 + {SocialClass}} / 2})} InnsB] [when]{Food}=3[do][|Tavern|Tavern|Kitchen|Pub|Restaurant] and [end][|Rooming|Boarding] House
+The [#{round({{1d10 + {SocialClass}} / 2})} InnsA] [#{round({{1d10 + {SocialClass}} / 2})} InnsB] [|Rooming|Boarding] House
+The [#{round({{1d10 + {SocialClass}} / 2})} InnsA] [#{round({{1d10 + {SocialClass}} / 2})} InnsB]
+The [#{round({{1d10 + {SocialClass}} / 2})} InnsB] and [#{round({{1d10 + {SocialClass}} / 2})} InnsB]
+The [#{round({{1d10 + {SocialClass}} / 2})} InnsB] and [#{round({{1d10 + {SocialClass}} / 2})} InnsB] [|Rooming|Boarding] House [when]{Food}=3[do]and [|Tavern|Tavern|Kitchen|Pub|Restaurant][end]
+The [#{round({{1d10 + {SocialClass}} / 2})} InnsB] and [#{round({{1d10 + {SocialClass}} / 2})} InnsB] [when]{Food}=3[do][|Tavern|Tavern|Kitchen|Pub|Restaurant] and [end][|Rooming|Boarding] House
+
+Table: InnName
+The [#{round({{1d10 + {SocialClass}} / 2})} InnsA] [#{round({{1d10 + {SocialClass}} / 2})} InnsB] Inn [when]{Food}=3[do]and [|Tavern|Tavern|Kitchen|Pub|Restaurant][end]
+The [#{round({{1d10 + {SocialClass}} / 2})} InnsA] [#{round({{1d10 + {SocialClass}} / 2})} InnsB] [when]{Food}=3[do][|Tavern|Tavern|Kitchen|Pub|Restaurant] and [end]Inn
+The [#{round({{1d10 + {SocialClass}} / 2})} InnsA] [#{round({{1d10 + {SocialClass}} / 2})} InnsB] Inn
+The [#{round({{1d10 + {SocialClass}} / 2})} InnsA] [#{round({{1d10 + {SocialClass}} / 2})} InnsB] House
+The [#{round({{1d10 + {SocialClass}} / 2})} InnsA] [#{round({{1d10 + {SocialClass}} / 2})} InnsB]
+The [#{round({{1d10 + {SocialClass}} / 2})} InnsB] and [#{round({{1d10 + {SocialClass}} / 2})} InnsB] Inn [when]{Food}=3[do]and [|Tavern|Tavern|Kitchen|Pub|Restaurant][end]
+The [#{round({{1d10 + {SocialClass}} / 2})} InnsB] and [#{round({{1d10 + {SocialClass}} / 2})} InnsB] [when]{Food}=3[do][|Tavern|Tavern|Kitchen|Pub|Restaurant] and [end]Inn
+
+Table: InnsA
+Type: Lookup
+Roll: 1d10
+1-3:[@InnsALower]
+4-7:[@InnsAMiddle]
+8-10:[@InnsAUpper]
+
+Table: InnsALower
+Bent
+Blind
+Broken
+Buxom
+Dirty
+Farmer's
+Fisherman's
+Guilty
+Herder's
+Orc's
+Otik's
+Pot
+Rusty
+
+Table: InnsAMiddle
+Amazing
+Angry
+Baron's
+Black
+Blue
+Blue and Red
+Bouncing
+Bronze
+Burning
+Carved
+Cat's
+Checkered
+Cobbler's
+Copper
+Crow's
+Dragon
+Dragon's
+Dwarven
+Eagle's
+Eastern
+Elven
+Falcon's
+Falling
+Fawning
+Flaming
+Flying
+Frolicking
+Frozen
+Genie's
+Gray
+Green
+Handsome
+Happy
+Hearty
+Hidden
+Humble
+Hunter's
+Icy
+Innocent
+Iron
+Licked
+Lion's
+Mended
+Musty
+Oaken
+Octopus
+Old
+Pink
+Red
+Red And Green
+Restful
+Ruby
+Running
+Scorpion's
+Sea
+Sexy
+Singing
+Sleeping
+Smith's
+Spiked
+Stone
+Strange
+Stumbling
+Swimming
+Tika's
+Tired
+Violet
+White
+Wild
+Wizard's
+Yawning
+Yellow
+
+Table: InnsAUpper
+Crystal
+Delicate
+Gilded
+Gold
+Golden
+Ivory
+King's
+Knight's
+Prince's
+Queen's
+Silver
+Shining
+
+//Roll: {round({{1d10 + {SocialClass}} / 2})}
+Table: InnsB
+Type: Lookup
+Roll: 1d10
+1-3:[@InnsBLower]
+4-7:[@InnsBMiddle]
+8-20:[@InnsBUpper]
+
+Table: InnsBLower
+Flea
+Dog
+Goblin
+Ogre
+Orc
+Pauper
+Pig
+Fist
+Pit
+Pikeman
+Pick
+Nail
+
+Table: InnsBMiddle
+Archer
+Axe
+Barrel
+Basilisk
+Beacon
+Blade
+Boar
+Bottle
+Bowman
+Breath
+Buckler
+Claw
+Coin
+Dagger
+Den
+Dragon
+Drum
+Duchess
+Dwarf
+Eagle
+Elf
+Glaive
+Griffon
+Gryphon
+Halberd
+Hammer
+Hand
+Head
+Hero
+Hook
+Horn
+Host
+Knight
+Lady
+Lantern
+Maiden
+Man-at-arms
+Minotaur
+Monk
+Nest
+Octopus
+Pike
+Place
+Portal
+Rain
+Ranger
+Respite
+Rest
+Sailor
+Scabbard
+Seagull
+Shark
+Shield
+Skirt
+Sleep
+Song
+Stool
+Swords
+Swordsman
+Tree
+Troll
+Turkey
+Turtle
+Unicorn
+Virgin
+Warrior
+Whale
+Wizard
+
+Table: InnsBUpper
+Pearl
+Swan
+Princess
+Flower
+Gem
+Wish
+Delight
+Peacock
+Dream
