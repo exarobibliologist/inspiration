@@ -1,7 +1,6 @@
-Header: <center><span style='font:24pt Arial'>Mythic Character Generator - Cards Version</span><br><span style='font:7pt Arial'><center><b>This generator is Open Game Content, and is licensed for public use under the terms of the Open Game License v1.0a.<br>Mythic Game Master Emulator Deck is © Copyright 2019 by Tana Pigeon and Word Mill Publishing.</b></span></center>
+Header: <center><span style='font:24pt Arial'>Mythic Cards Character Generator</span><br><span style='font:7pt Arial'><center><b>This generator is Open Game Content, and is licensed for public use under the terms of the Open Game License v1.0a.<br>Mythic Game Master Emulator Deck is © Copyright 2019 by Tana Pigeon and Word Mill Publishing.</b></span></center>
 
 MaxReps:1
-Prompt: Generation {Average|Better}Better
 
 Table: MessageTable
 Define: mythicname =[@AllNames>>Proper>>Implode]
@@ -17,7 +16,14 @@ Table: AbilityRand
 1:<b>[!Skills]</b> = [@FateCards] <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>([|Darkweb|Illegal|Unauthorized|Forbidden]) ([|-|+|+]{3d3 +2}<i> [@ShiftRank]</i> if/when [@Skills] [|>|<|=] [@FateCards])</b><br>
 
 Table: ShiftRank
-5:Chaos Factor
+1:Chaos
+1:Strength
+1:Agility
+1:Reflex
+1:IQ
+1:Intuition
+1:Willpower
+1:Toughness
 1:Rank Shift
 
 Table: FateCards

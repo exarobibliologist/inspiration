@@ -16,7 +16,14 @@ Table: AbilityRand
 1:<b>[!Skills]</b> = [@Fate] <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>([|Darkweb|Illegal|Unauthorized|Forbidden]) [|-|+|+]{3d3 +2} <i>[@ShiftRank]</i></b> if/when <b>[@Skills] [|>|<|=] [@Fate]</b><br>
 
 Table: ShiftRank
-5:Chaos Factor
+1:Chaos
+1:Strength
+1:Agility
+1:Reflex
+1:IQ
+1:Intuition
+1:Willpower
+1:Toughness
 1:Rank Shift
 
 Table: Fate
