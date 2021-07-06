@@ -16,10 +16,10 @@ Table:TavernName
 ; -------------------------------------------------------------------
 
 Table: CityDescriptions
-slums <br>Description\: A [|simple|drafty|old|dilapidated] [|wood|metal|] [|shack|building], with a thatched roof, near [@CityPlaces]<br>Rooms\: space on floor of {1d2} common room
-a poor residential district <br>Description\: A [|simple|drafty|old] [|wood|metal|] [|shack|building], with a thatched roof, near [@CityPlaces]<br>Rooms\: {1d2} common room, {2d2} individual rooms
-a middle class residential district <br>Description\: A [|grand|new|old] [|wood|metal|stone] [|building|manor|], with a [|thatched|tile|hammered metal] roof, near [@CityPlaces]<br>Rooms\: {2d2} common room, {4d4} individual rooms
-an upper class residential district <br>Description\: A [|grand|new|exotic-looking|decorated] [|wood|marble|granite|] [|building|manor|], with a [|tile|hammered metal] roof, near [@CityPlaces]<br>Rooms\: {2d3} common room, {4d6} individual rooms
+slums <br>Description\: A [|simple|drafty|old|dilapidated] [|wood|metal|] [|shack|building], with a thatched roof, near [@CityPlaces]<br>Rooms\: {1d2} common room (with room for {1d20} people on floor)
+a poor residential district <br>Description\: A [|simple|drafty|old] [|wood|metal|] [|shack|building], with a thatched roof, near [@CityPlaces]<br>Rooms\: {1d2} common room (with room for {1d20} people on floor), {2d2} individual rooms
+a middle class residential district <br>Description\: A [|grand|new|old] [|wood|metal|stone] [|building|manor|], with a [|thatched|tile|hammered metal] roof, near [@CityPlaces]<br>Rooms\: {2d2} common room (with room for {1d20} people on floor), {4d4} individual rooms
+an upper class residential district <br>Description\: A [|grand|new|exotic-looking|decorated] [|wood|marble|granite|] [|building|manor|], with a [|tile|hammered metal] roof, near [@CityPlaces]<br>Rooms\: {2d3} common room (with room for {1d20} people on floor), {4d6} individual rooms
 
 Table: CityPlaces
 the palace district
