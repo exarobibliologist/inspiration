@@ -1,27 +1,25 @@
 MaxReps:1
 
 Table:MasterGen
-Define: Meal1 = <h2>Breakfast</h2><br>[!2 Breakfast >> implode &nbsp;or&nbsp; ]<br>[!2 BreakfastSides >> implode &nbsp;or&nbsp; ]<br>[!2 FruitVeggies >> implode &nbsp;or&nbsp; ]
-Define: Meal2 = <h2>Dinner</h2><br>[@2 Dinner >> implode &nbsp;or&nbsp; ]<br>[@1 DinnerSides >> implode &nbsp;or&nbsp; ]<br>[@1 DinnerSides2 >> implode &nbsp;or&nbsp; ]<br>[!2 FruitVeggies >> implode &nbsp;or&nbsp; ]
+Define: Meal1 = <h2>Breakfast</h2>[!2 Breakfast >> implode &nbsp;or&nbsp; ]<br>[!2 BreakfastSides >> implode &nbsp;or&nbsp; ]<br>[!2 FruitVeggies >> implode &nbsp;or&nbsp; ]
+Define: Meal2 = <h2>Dinner</h2>[@2 Dinner >> implode &nbsp;or&nbsp; ]<br>[@1 DinnerSides >> implode &nbsp;or&nbsp; ]<br>[@1 DinnerSides2 >> implode &nbsp;or&nbsp; ]<br>[!2 FruitVeggies >> implode &nbsp;or&nbsp; ]
 Define: Drinks = <h3>Drinks</h3>[!2 Drinks >> implode &nbsp;or&nbsp; ]
-
 <h1>[@TavernName]</h1><br><hr>Location\: [@CityDescriptions]<hr>{$Meal1}{$Drinks}<hr>{$Meal2}{$Drinks}<hr>
 
 Table:TavernName
 1:[|The [|[@Professions >> Proper]|[@FantasyNouns >> Proper]]'s [@TavernTitles >> Proper]|The [@Professions >> Proper]'s [@TavernObjects >> Proper] [@TavernTitles >> Proper]]
 1:The [|[@Positives >> Proper]|[@Odd >> Proper]|[@Emotions >> Proper]|[@colors >> Proper]|[@TavernAdjPatrons >> Proper]] [@TavernTitles >> Proper]
 1:The [|[@Positives >> Proper]|[@Odd >> Proper]|[@Emotions >> Proper]|[@colors >> Proper]|[@TavernAdjPatrons >> Proper]] [|[@Professions >> Proper][||'s]|[@FantasyNouns >> Proper]] [@TavernTitles >> Proper]
-Endtable:
 
 ; -------------------------------------------------------------------
 ; ------------------------ City Districts ---------------------------
 ; -------------------------------------------------------------------
 
 Table: CityDescriptions
-slums <br>Description\: A [|simple|drafty|old|dilapidated] [|wood|metal|] [|shack|building], with a thatched roof, near [@CityPlaces]
-a poor residential district <br>Description\: A [|simple|drafty|old] [|wood|metal|] [|shack|building], with a thatched roof, near [@CityPlaces]
-a middle class residential district <br>Description\: A [|grand|new|old] [|wood|metal|stone] [|building|manor|], with a [|thatched|tile|hammered metal] roof, near [@CityPlaces]
-an upper class residential district <br>Description\: A [|grand|new|exotic-looking|decorated] [|wood|marble|granite|] [|building|manor|], with a [|tile|hammered metal] roof, near [@CityPlaces]
+slums <br>Description\: A [|simple|drafty|old|dilapidated] [|wood|metal|] [|shack|building], with a thatched roof, near [@CityPlaces]<br>Rooms\: space on floor of {1d2} common room
+a poor residential district <br>Description\: A [|simple|drafty|old] [|wood|metal|] [|shack|building], with a thatched roof, near [@CityPlaces]<br>Rooms\: {1d2} common room, {2d2} individual rooms
+a middle class residential district <br>Description\: A [|grand|new|old] [|wood|metal|stone] [|building|manor|], with a [|thatched|tile|hammered metal] roof, near [@CityPlaces]<br>Rooms\: {2d2} common room, {4d4} individual rooms
+an upper class residential district <br>Description\: A [|grand|new|exotic-looking|decorated] [|wood|marble|granite|] [|building|manor|], with a [|tile|hammered metal] roof, near [@CityPlaces]<br>Rooms\: {2d3} common room, {4d6} individual rooms
 
 Table: CityPlaces
 the palace district
