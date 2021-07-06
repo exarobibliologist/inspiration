@@ -1,0 +1,934 @@
+MaxReps:1
+
+Table:MasterGen
+Define: Meal1 = <h2>Breakfast</h2><br>[!2 Breakfast >> implode &nbsp;or&nbsp; ]<br>[!2 BreakfastSides >> implode &nbsp;or&nbsp; ]<br>[!2 FruitVeggies >> implode &nbsp;or&nbsp; ]
+Define: Meal2 = <h2>Dinner</h2><br>[@2 Dinner >> implode &nbsp;or&nbsp; ]<br>[@1 DinnerSides >> implode &nbsp;or&nbsp; ]<br>[@1 DinnerSides2 >> implode &nbsp;or&nbsp; ]<br>[!2 FruitVeggies >> implode &nbsp;or&nbsp; ]
+Define: Drinks = <h3>Drinks</h3>[!2 Drinks >> implode &nbsp;or&nbsp; ]
+
+<h1>[@TavernName]</h1><br><hr>Location\: [@CityDescriptions]<hr>{$Meal1}{$Drinks}<hr>{$Meal2}{$Drinks}<hr>
+
+Table:TavernName
+1:[|The [|[@Professions >> Proper]|[@FantasyNouns >> Proper]]'s [@TavernTitles >> Proper]|The [@Professions >> Proper]'s [@TavernObjects >> Proper] [@TavernTitles >> Proper]]
+1:The [|[@Positives >> Proper]|[@Odd >> Proper]|[@Emotions >> Proper]|[@colors >> Proper]|[@TavernAdjPatrons >> Proper]] [@TavernTitles >> Proper]
+1:The [|[@Positives >> Proper]|[@Odd >> Proper]|[@Emotions >> Proper]|[@colors >> Proper]|[@TavernAdjPatrons >> Proper]] [|[@Professions >> Proper][||'s]|[@FantasyNouns >> Proper]] [@TavernTitles >> Proper]
+Endtable:
+
+; -------------------------------------------------------------------
+; ------------------------ City Districts ---------------------------
+; -------------------------------------------------------------------
+
+Table: CityDescriptions
+slums <br>Description\: A [|simple|drafty|old|dilapidated] [|wood|metal|] [|shack|building], with a thatched roof, near [@CityPlaces]
+a poor residential district <br>Description\: A [|simple|drafty|old] [|wood|metal|] [|shack|building], with a thatched roof, near [@CityPlaces]
+a middle class residential district <br>Description\: A [|grand|new|old] [|wood|metal|stone] [|building|manor|], with a [|thatched|tile|hammered metal] roof, near [@CityPlaces]
+an upper class residential district <br>Description\: A [|grand|new|exotic-looking|decorated] [|wood|marble|granite|] [|building|manor|], with a [|tile|hammered metal] roof, near [@CityPlaces]
+
+Table: CityPlaces
+the palace district
+the temple district
+the crafting district
+the docks district
+the riverfront district
+the harbor district
+the university district
+the military district
+the market district
+the garden district
+the monument district
+the necropolis
+the theater district
+the civic center
+an ethnic enclave
+a foreign enclave
+
+; -------------------------------------------------------------------
+; ------------------------ Edibles ----------------------------------
+; -------------------------------------------------------------------
+
+Table: Breakfast
+[|Scrambled|Poached|Fried|Boiled] Eggs
+[|Smoked|Honey] Ham
+[|Hard|Soft] Cheese
+[|Hot|Cold|Thick|Thin] Porridge
+[|Cinnamon|Sticky|Sweet] [|Roll|Bun]
+
+Table: BreakfastSides
+[|Crispy|Thick-cut|Soggy|Chewy] Bacon
+[|Sweet|Mild|Spicy|Hot] Sausage
+[|Sour|Sweet|Plain] Yogurt
+[|Corn|Fresh|Crusty|Buttered|Pumpernickel] Bread
+
+Table: Dinner
+[|Stewed|Roasted|Skewered|Boiled|Smoked|Grilled|Seared|Flame-broiled|Salted|Peppered] [|Rabbit|Duck|Pork|Fish|Venison|Deer|Squirrel|Pheasant|Mutton|Lamb]
+
+Table: DinnerSides
+Lentils
+[|White|Red|Black] Beans
+Peas
+Turnips
+
+Table: DinnerSides2
+[|Corn|Fresh|Crusty|Buttered|Pumpernickel] Bread
+[|Hard|Soft] Cheese
+
+Table: FruitVeggies
+[|Fried|Boiled] Potatoes
+Apples
+Carrots
+Cherries
+[|Blue|Black|Straw]berries
+Pears
+Raisins
+Pine Nuts
+Cashews
+Almonds
+Olives
+[|Sliced|Crushed] Tomatoes
+[|Wild|Sliced] Mushrooms
+[|Sweet|Hot] Peppers
+Spinach
+[|Green|White|Yellow|Red] Onions
+
+Table: Drinks
+[|Green|Black|Brown] Tea
+[|Strong|Weak] Coffee
+[@Colors >> Proper] [|Ale|Beer]
+[|Spiced ||]Wine
+[|Orange|Apple|Grapefruit|Grape] Juice
+Water
+Milk
+
+; -----------------------------------------------------------------
+; ---------------------- Professions  -----------------------------
+; -----------------------------------------------------------------
+
+Table:Professions
+[@InnNounCommoners]
+[@NounWarriors]
+[@NounCasters]
+[@NounPriest]
+[@NounPeople]
+
+Table:InnNounCommoners
+drover
+explorer
+farmer
+gypsy
+herdsman
+merchant
+pilgrim
+rambler
+rover
+sailor
+seafarer
+sojourner
+tinkerer
+tradesman
+traveler
+trekker
+walker
+wanderer
+wayfarer
+wrangler
+
+Table:NounWarriors
+archer
+battler
+boxer
+brawler
+brute
+buccaneer
+champion
+conqueror
+defender
+duelist
+fencer
+fighter
+gladiator
+hero
+heroine
+jouster
+man-at-arms
+mercenary
+pikesman
+protector
+pugilist
+she-devil
+soldier
+swashbuckler
+swordsman
+trooper
+victor
+vindicator
+warlord
+warrior
+
+Table:NounCasters
+caster
+charmer
+conjurer
+diviner
+enchanter
+illusionist
+mage
+magician
+medium
+oracle
+sage
+seer
+shaman
+skald
+summoner
+thaumaturge
+trickster
+warlock
+witch
+wizard
+
+Table:NounPriest
+augur
+bishop
+cardinal
+chaplain
+cleric
+confessor
+druid
+frair
+magus
+monk
+parson
+preacher
+priest
+primate
+rector
+reverend
+seeress
+sibyl
+soothsayer
+vicar
+
+Table:NounPeople
+mother
+father
+son
+daughter
+uncle
+scion
+babe
+ancestor
+author
+creator
+root
+folk
+child
+people
+baby
+girl
+boy
+lass
+lad
+kid
+
+
+; -----------------------------------------------------------------
+; ---------------------Taverns and Bars----------------------------
+; -----------------------------------------------------------------
+
+Table:TavernTitles
+alehouse
+barroom
+[|ale|grog|beer|brew] [|shop|joint|haus|lodge]
+pub
+[|taphouse|taproom]
+tavern
+
+Table:TavernObjects
+bottle
+barrel
+bench
+bowl
+cask
+chair
+chalice
+cup
+dice
+draught
+flagon
+fork
+goblet
+grail
+jug
+keg
+mug
+pint
+plate
+platter
+rocker
+seat
+spoon
+stand
+stein
+tables
+tankard
+trencher
+tumbler
+vessle
+
+Table:TavernAdjPatrons
+thristy
+parched
+hungry
+dusty
+tipsy
+ravenous
+starving
+greedy
+eager
+[|drunk|drunkard|drunken]
+befuddled
+flying
+addled
+munching
+smoking
+smashed
+belching
+howling
+satisfied
+dazed
+happy
+dancing
+swaying
+[|infamous|famous]
+storied
+bawdy
+bolsterious
+smart
+sober
+cheerful
+
+; --------------------------------------------------------------------
+; ---------------------------Inns and Dens----------------------------
+; --------------------------------------------------------------------
+
+Table:InnTitles
+caravansary
+den
+flophouse
+hostel
+house
+inn
+lodge
+rest
+rooming
+stay
+
+Table:InnNounObjects
+bed
+bedspread
+berth
+blanket
+bunk
+chamber
+cloak
+cot
+couch
+cradle
+crib
+divan
+fleece
+hassock
+pallet
+pillow
+quilt
+rug
+sheets
+sleep
+
+
+; -----------------------------------------------------------------
+; --------------------- Positives ---------------------------------
+; -----------------------------------------------------------------
+
+Table:Positives
+[@AdjFaithful]
+[@AdjNoble]
+[@AdjImprove]
+[@AdjPerpetual]
+[@AdjGrand]
+[@AdjPowerful]
+
+Table:AdjFaithful
+ardent
+confiding
+devout
+dutifulk
+enduring
+faithful
+holy
+honest
+loving
+obedient
+
+
+Table:AdjShrewd
+cagey
+astute
+apt
+adept
+foxy
+cunning
+brilliant
+nimble
+handy
+pretty
+deep
+adroit
+sharp
+slick
+shrewd
+skillful
+talented
+wise
+knowing
+savvy
+
+Table:AdjInsane
+idiotic
+crazy
+insane
+daft
+raving
+wild
+rabid
+bizarre
+odd
+comical
+silly
+joking
+funny
+playful
+ribald
+sly
+racy
+fast
+juicy
+devilish
+
+Table:AdjWeird
+foolish
+flaky
+stupid
+weird
+strange
+eerie
+ghastly
+magical
+awful
+curious
+creepy
+queer
+secret
+uncanny
+fearful
+eccentric
+bizarre
+funny
+rare
+fantastic
+passionate
+pious
+sincere
+steady
+sure
+tried
+true
+trusty
+upright
+zealous
+
+Table:AdjNoble
+angelic
+distinquished
+esteemed
+fair
+holy
+honorable
+just
+noble
+peerless
+proper
+pure
+reliable
+reverent
+righteous
+sterling
+trustworthy
+truthful
+upright
+virtuous
+worthy
+
+Table:AdjImprove
+growing
+budding
+living
+waxing
+thriving
+blooming
+booming
+roaring
+rich
+prosperous
+
+Table:AdjPerpetual
+enduring
+abiding
+surviving
+lasting
+eternal
+steadfast
+persistent
+perpetual
+timeless
+immortal
+undying
+deathless
+endless
+constant
+durable
+stable
+immutable
+ageless
+perennial
+ceaseless
+
+Table:AdjGrand
+boss
+lusty
+robust
+potent
+stalwart
+puissant
+stout
+strong
+hardy
+great
+almighty
+cogent
+impressive
+superb
+splendid
+massive
+monumental
+grand
+august
+mighty
+
+Table:AdjPowerful
+powerful
+potent
+robust
+mighty
+forceful
+able
+almighty
+ruling
+supreme
+omnipotent
+compelling
+ruling
+vile
+evil
+nasty
+sinful
+rotten
+guilty
+heinous
+foul
+
+; -----------------------------------------------------------------
+; -----------------------------------------------------------------
+; -----------------------------------------------------------------
+
+Table:Colors
+[@AdjColorRed]
+[@AdjColorGreen]
+[@AdjColorYellow]
+[@AdjColorBlue]
+[@AdjColorBlack]
+[@AdjColorWhite]
+[@AdjColorPurple]
+[@AdjColorMetalic]
+[@AdjColorHearldric]
+
+Table:AdjColorRed
+bloody
+crimson
+maroon
+pink
+red
+scarlet
+
+Table:AdjColorGreen
+cyan
+green
+lime
+olive
+teal
+viridian
+
+Table:AdjColorYellow
+amber
+buff
+citrine
+golden
+saffron
+yellow
+
+Table:AdjColorBlue
+azure
+blue
+cerulean
+cobalt
+indigo
+sapphire
+turquoise
+
+Table:AdjColorBlack
+black
+cloudy
+dark
+jet
+gloomy
+inky
+murky
+somber
+
+Table:AdjColorWhite
+fair
+frosted
+ghastly
+ivory
+light
+silvery
+snowy
+white
+
+Table:AdjColorPurple
+grape
+lavender
+lilac
+magenta
+mauve
+plum
+purple
+violet
+
+Table:AdjColorMetalic
+Adamantite
+Bronze
+Cobalt
+Copper
+Darksteel
+Electrum
+Golden
+Iron
+Lead
+Mercury
+Mithril
+Nickel
+Orichalcum
+Quicksilver
+Rusty
+Silvery
+Steel
+Tin
+Titanium
+Zinc
+
+Table:AdjColorHearldric
+Azure
+Gold
+Gules
+Murray
+Purpure
+Sable
+Sanguine
+Silver
+Tawny
+Tenne
+Vert
+White
+
+; -----------------------------------------------------------------
+; -----------------------------------------------------------------
+; -----------------------------------------------------------------
+
+Table:FantasyNouns
+[@NounWeapon]
+[@NounMonstersOne]
+[@NounFaeCreatures]
+[@NounAstronomy]
+[@NounPlaces]
+
+table:NounPlaces
+tree
+forest
+hill
+mountain
+desert
+swamp
+marsh
+road
+trail
+vale
+crypt
+tomb
+ruin
+tower
+fort
+arch
+temple
+palace
+hovel
+maze
+
+Table:NounWeapon
+sword
+axe
+spear
+whip
+flail
+mace
+lance
+dagger
+blade
+bow
+dart
+arrow
+knife
+glaive
+pike
+trident
+spike
+shield
+fist
+staff
+
+Table:NounMonstersOne
+Imp
+Orc
+Goblin
+Kobold
+Hobgoblin
+Orge
+Giantess
+Troll
+Hag
+Dragon
+Wyrm
+Beholder
+Lich
+Bullette
+Gnoll
+Cyclops
+Griffon
+Hippogriff
+Rust Monster
+Flayer
+
+Table:NounFaeCreatures
+Brownie
+Centaur
+sprite
+pixie
+blink dog
+satyr
+nymph
+grig
+faun
+dryad
+
+Table:NounAstronomy
+sun
+moon
+star
+comet
+planet
+nova
+eclipse
+constellation
+
+; -----------------------------------------------------------------
+; -----------------------------------------------------------------
+; -----------------------------------------------------------------
+
+Table:Emotions
+[@AdjCalm]
+[@AdjAngry]
+[@AdjHappy]
+[@AdjMournful]
+
+Table:AdjCalm
+calm
+cool
+serene
+mild
+smooth
+soothing
+tranquil
+placid
+harmonious
+hushed
+still
+cordial
+amicable
+neutral
+quiet
+steady
+civil
+polite
+neighborly
+cozy
+
+Table:AdjAngry
+angry
+mad
+furious
+fierce
+hot
+enraged
+raging
+irate
+frenetic
+livid
+violent
+arsed
+demented
+boiling
+bent
+seething
+stormy
+blustering
+outrageous
+pissed
+
+Table:AdjHappy
+happy
+glad
+joyful
+joyous
+jubilant
+merry
+peaceful
+pleased
+cheerful
+gay
+rejoicing
+gleeful
+contented
+elated
+festive
+gladsome
+sunny
+crazy
+thrilled
+dreamy
+
+Table:AdjMournful
+mournful
+sad
+forlorn
+doleful
+lamentable
+woeful
+devastated
+morose
+troubled
+heartsick
+loveless
+tragic
+dire
+deadly
+grim
+hapless
+tortured
+sickly
+rueful
+sorry
+
+; -----------------------------------------------------------------
+; -----------------------------------------------------------------
+; -----------------------------------------------------------------
+
+Table:Odd
+[@AdjShrewd]
+[@AdjInsane]
+[@AdjWeird]
+
+Table:AdjShrewd
+cagey
+astute
+apt
+adept
+foxy
+cunning
+brilliant
+nimble
+handy
+pretty
+deep
+adroit
+sharp
+slick
+shrewd
+skillful
+talented
+wise
+knowing
+savvy
+
+Table:AdjInsane
+idiotic
+crazy
+insane
+daft
+raving
+wild
+rabid
+bizarre
+odd
+comical
+silly
+joking
+funny
+playful
+ribald
+sly
+racy
+fast
+juicy
+devilish
+
+Table:AdjWeird
+foolish
+flaky
+stupid
+weird
+strange
+eerie
+ghastly
+magical
+awful
+curious
+creepy
+queer
+secret
+uncanny
+fearful
+eccentric
+bizarre
+funny
+rare
+fantastic
+
