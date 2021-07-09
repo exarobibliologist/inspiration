@@ -1,0 +1,179 @@
+// Market stalls, based on http://ironcrown.com/blog/2019/08/14/49-market-stalls-for-a-fantasy-setting/
+// Jonathan Dale
+
+Table: MarketStalls
+Butcher ([@Quality] quality, [@Variety] variety, [@Price] prices).
+Cheesemonger/Dairy ([@Quality] quality, [@Variety] variety, [@Price] prices).
+Bread ([@Quality] quality, [@Variety] variety, [@Price] prices).
+Fishmonger ([@Quality] quality, [@Variety] variety, [@Price] prices).
+Herbs and spices ([@Quality] quality, [@Variety] variety, [@Price] prices).
+Plants and flowers ([@Quality] quality, [@Variety] variety, [@Price] prices).
+Wine ([@Quality] quality, [@Variety] variety, [@Price] prices).
+Baked goods ([@Quality] quality, [@Variety] variety, [@Price] prices).
+Fruit ([@Quality] quality, [@Variety] variety, [@Price] prices).
+Vegetables ([@Quality] quality, [@Variety] variety, [@Price] prices).
+Ordinary clothing ([@Quality] quality, [@Variety] variety, [@Price] prices).
+Fancy / exotic clothing ([@Quality] quality, [@Variety] variety, [@Price] prices).
+General household goods such as cutlery, crockery, pots, brooms, etc ([@Quality] quality, [@Variety] variety, [@Price] prices).
+Leather goods including [!{1d5} Leathergoods >> implode] ([@Quality] quality, [@Variety] variety, [@Price] prices).
+Jewelery / jewels[|||, mostly fake|, of questionable origin] ([@Quality] quality, [@Variety] variety, [@Price] prices).
+Exotic knick-knacks and mundane items from foreign lands ([@Quality] quality, [@Variety] variety, [@Price] prices).
+[|Minor magical charms|Lucky amulets with no real power|Crystals and other items considered magically helpful|Minor magical charms and a few items of actual potency] ([@Quality] quality, [@Variety] variety, [@Price] prices).
+Ironmonger / blacksmith: [!{1d5} Blacksmith >> implode] ([@Quality] quality, [@Variety] variety, [@Price] prices).
+Candles ([@Quality] quality, [@Variety] variety, [@Price] prices).
+Ropemakers selling rope, cord, etc ([@Quality] quality, [@Variety] variety, [@Price] prices).
+Messengers or courier service ([@Quality] reliability, [@Price] prices).
+Furs and pelts ([@Quality] quality, [@Variety] variety, [@Price] prices).
+Medicines and potions, [|mostly fraudulent|minor effects|a variety of effects and potency|and a few discreetly available drugs or poisons] ([@Variety] variety, [@Price] prices).
+Pets, animals and exotic creatures ([@Quality] quality, [@Variety] variety, [@Price] prices).
+Maps and guides ([@Quality] quality, [@Variety] variety, [@Price] prices).
+Musical instruments including [!{1d5} MusicalInstruments >> implode] ([@Quality] quality, [@Variety] variety, [@Price] prices).
+Toys ([@Quality] quality, [@Variety] variety, [@Price] prices).
+Carpentry items including [!{1d3} Carpentry >> implode] ([@Quality] quality, [@Variety] variety, [@Price] prices).
+Fortune teller using [|tarot|dice|palm-reading|tea leaves|spirit-talking] ([@Quality] talent, [@Price] prices).
+Books ([@Quality] quality, [@Variety] variety, [@Price] prices).
+Paper, ink, and scribal supplies ([@Quality] quality, [@Variety] variety, [@Price] prices).
+Firewood and accelerants, oils, wax fire starters, etc ([@Quality] quality, [@Variety] variety, [@Price] prices).
+Art including [|[!{1d3} Art >> implode]|[!{1d3} Statues >> implode]|[!{1d2} Art >> implode] and [!{1d3} Statues >> implode]] ([@Quality] quality, [@Variety] variety, [@Price] prices).
+Haberdasher with buttons, thread, needles, etc ([@Quality] quality, [@Variety] variety, [@Price] prices).
+Soaps and incense ([@Quality] quality, [@Variety] variety, [@Price] prices).
+Small livestock including [!{1d5} SmallLivestock >> implode] ([@Quality] quality, [@Variety] variety, [@Price] prices).
+Glass including [!{1d5} Glass >> implode] ([@Quality] quality, [@Variety] variety, [@Price] prices).
+Betting and gambling, [|honest|dishonest|reasonably fair], [|discreetly out of view|hidden behind another stall|on shell games and related challenges|on animal fights|dice games|card games].
+Beer ([@Quality] quality, [@Variety] variety, [@Price] prices).
+Spirits ([@Spirits]) ([@Quality] quality, [@Variety] variety, [@Price] prices).
+Transport on a merchant caravan, paid or working ([@Quality] reputation, [@Price] price).
+Slaves / servants ([@Quality] quality, [@Variety] variety, [@Price] prices).
+Clergy of a [|major religion|major religion|major religion|minor religion|minor religion|obscure faith|cult] offering blessings and minor spells to those who make donations.
+[|Horses|Beasts of burden] ([@Quality] quality, [@Variety] variety, [@Price] prices).
+Antiques of [@Quality] quality, including [@{1d4+2} Antiques >> implode].
+Guild representatives ([|recruiting members|enforcing guild pricing|providing public services]).
+Runes and spells provided by [|members of a magic guild|a traveling mage|a mage of questionable repute|a charlatan].
+
+Table: Quality
+excellent
+high
+average
+low
+poor
+
+Table: Variety
+lots of
+moderate
+very little
+
+Table: Price
+very high
+high
+average
+low
+
+Table: LeatherGoods
+pouches
+belts
+purses
+bags
+masks
+bracers
+light armor
+jerkins
+bodices
+clothing
+medium armor
+sheaths
+
+Table: Blacksmith
+nails
+horseshoes
+pots and pans
+tools
+kitchen knives
+belt knives
+maces and hammers
+swords
+spear heads
+arrow heads
+vambraces
+mail armor
+helms
+
+Table: MusicalInstruments
+bagpipes
+citoles (stringed instrument)
+crumhorns (curved woodwind)
+cymbals
+flageolets/shawm (straight woodwind)
+hammered dulcimers
+fiddles/rebecs
+gitterns (small stringed instrument)
+glockenspiels
+harps
+lutes/ouds
+lyres
+sackbuts/trombones
+drums
+timbrels (tambourines)
+viols
+
+Table: Carpentry
+wooden cutlery
+bowls and plates
+chairs and tables
+chests and boxes
+cabinets[|&nbsp;and wardrobes]
+walking sticks[|&nbsp;and quarterstaves]
+
+Table: Art
+landscapes
+portraits
+historical paintings
+religious iconography
+mosaics
+
+Table: Statues
+statues of people
+statues of historical figures
+architectural statues
+religious statues
+animal statues
+statues of mythological creatures
+statues or carvings of natural terrain
+statues of trees and plants
+
+Table: Antiques
+[!Art]
+[!Statues]
+[!Carpentry]
+[!Glass]
+[!MusicalInstruments]
+[!Blacksmith]
+[!LeatherGoods]
+
+Table: SmallLivestock
+piglets
+ducks
+geese
+chickens
+pigeons
+doves
+lambs
+goats
+
+Table: Glass
+glasses
+drinking horns
+vases
+pitchers
+bowls
+beads
+mirrors
+panes
+stained glass
+bracelets
+bead necklaces
+
+Table: Spirits
+hausbrand aka brandy
+whisky
+vodka
+aqua vitae

@@ -1,0 +1,82 @@
+; Castle Inhabitants.ipt
+; created 2/3/2020 8:31:52 AM
+Table: Castle Inhabitant
+Lord, with [@Lord Retainers], {3d6*10} guards[@FM Special]
+Superhero, with [@Superhero Retainers], {3d6*10} guards[@FM Special]
+Wizard, with [@Wizard Retainers], {3d6*10} guards[@MU Special]
+Necromancer, with [@Necromancer Retainers], {3d6*10} guards[@MU Special]
+Patriarch, with [@Patriarch Retainers], {3d6*10} guards[@Cleric Special]
+Evil High Priest, with [@EHP Retainers], {3d6*10} guards[@Cleric Special]
+
+Table: Lord Retainers
+{1d8} Champions 
+{1d6} Griffons ridden by Heroes 
+{1d10} Myrmidons 
+{1d4} Giants
+
+Table: Superhero Retainers
+{1d8} Myrmidons
+{1d4} Rocs ridden by Heroes
+{1d4} Ogres
+{1d10} Swashbucklers
+
+Table: Wizard Retainers
+{1d4} Dragons
+{1d4} Chimeras 
+{1d4} Wyverns
+{1d4} Basilisks
+
+Table: Necromancer Retainers
+{1d4} Chimeras
+{1d6} Manticores
+{1d12} Lycanthropes
+{1d12} Gargoyles
+
+Table: Patriarch Retainers
+{1d20} Heroes
+{1d6} Superheroes
+{1d10} Treants
+{1d8} Hippogriffs ridden by Heroes
+
+Table: EHP Retainers
+{1d10} Trolls
+{1d6} Vampires
+{1d20} White Apes 
+{1d10} Spectres
+
+Table: FM Special
+[@Magic User][@Cleric]
+
+Table: MU Special
+[@Fighting Man][@Apprentice]
+
+Table: Cleric Special
+Type: Lookup
+1: [@{1d6} Assistants]
+1: \z
+
+Table: Assistants
+, Assistant (level {1d4+3})
+
+
+Table: Magic User
+Type: Lookup
+Roll: 1d4
+1: , Magic User (level {1d4+4})
+2-4: \z
+
+Table: Cleric
+Type: Lookup
+1: , Cleric (level {1d4+2})
+1: \z
+
+Table: Fighting Man
+Type: Lookup
+Roll: 1d4
+1: , Fighting Man (level {1d4+4})
+2-4: \z
+
+Table: Apprentice
+Type: Lookup
+1: , Apprentice (level {1d4+3})
+1: \z

@@ -1,0 +1,65 @@
+// Random generator of factions in towns and other settlements.
+// Inspired by http: //blogofholding.com/?p=6992
+// but considerably expanded by Jonathan Dale
+// Each settlement is composed of some number of neighborhoods (1 for village, 1d4 for town, 1d6 for city, 1d10 for megacity)
+// For each neighborhood, roll on the ruler chart. The first ruler you roll is the most powerful, followed by the second, etc. if you want to know how any two neighborhood leaders get along, make a reaction roll (2d6, higher is friendlier). 
+
+Prompt: Settlement Size {Village|Town|City|Megacity} Town
+
+Header: Faction and influence generator for villages, towns, and (relatively disordered) cities. An influence may be a political powerful individual, an organization or faction, or a magical effect. When multiple influences are present, they may be distributed in different areas or neighborhoods, or overlap either in competition or cooperation.
+
+Table: SettlementFactions
+[@{$prompt1}Factions]
+
+Table: VillageFactions
+The major influence in the village is [@Factions].
+The major influence in the village is [@Factions].
+The major influence in the village is [@Factions].
+The major influence in the village is [@Factions].
+The major influence in the village is [!Factions]. A secondary influence is [!Factions].
+Two major influences in the village are [!Factions] and [!Factions].
+
+Table: TownFactions
+The major influence in the town is [@Factions]. 
+The major influence in the town is [!Factions]. A secondary influence is [!Factions].
+Two major influences in the town are [!Factions] and [!Factions].
+The major influence in the town is [!Factions]. Other influences are [!Factions] and [!Factions].
+The major influence in the town is [!Factions]. Other influences are [!Factions] and [!Factions]. 
+
+Table: CityFactions
+The major influence in the city is [@Factions]. 
+The major influence in the city is [!Factions]. A secondary influence is [!Factions].
+The major influence in the city is [!Factions]. Other influences are [!Factions] and [!Factions].
+The major influence in the city is [@Factions]. Other influences are [!2 Factions >> implode], and [!Factions].
+The major influence in the city is [@Factions]. Other influences are [!3 Factions >> implode], and [!Factions].
+The major influence in the city is [@Factions]. Other influences are [!4 Factions >> implode], and [!Factions].
+
+Table: MegacityFactions
+The major influence in the city is [!Factions]. Other influences include [!{2d4} Factions >> implode] and [!Factions]. 
+The major influences in the city are [!Factions] and [!Factions]. Other influences include [!{1d6} Factions >> implode] and [!Factions]. 
+
+
+Table: Factions
+\a noble with holdings in the area
+the appointed noble or other ruler of the settlement
+\a rich landowner
+a bureaucrat assigned to manage the area
+a trade guild
+\a [|rich|powerful] business owner (e.g. of a lumberyard, mine, etc)
+the local sheriff (or other law enforcement)
+the commander of the local militia
+\a [|well-respected|much loved|widely feared] [|elder|pair of elders|group of elders|council of elders|elder|elder]
+\a [|powerful|well-loved|influential|socially well-connected] cleric or priest
+the head of the local monastery
+\a [|powerful|intimidating|politically protected|murderous|religiously protected|well-loved|generous|highly protective] [|thief|bandit leader|brigand|highwayman|thieves' guild|smuggler|crime boss|"retired" crime boss]
+\a [|cult with extensive membership|deeply feared cult|subtle and manipulative cult|secretive cult|cult that everyone has heard of|cult that everyone knows is present but no one knows anything about|a recently arrived cult that most people know only as rumor]
+[|an eccentric mage|a mad wizard|a reckless and dangerous mage|a manipulative and dangerous mage|an institute of magical research|an experimental wizard whose magic has altered the area|a powerful spellcaster whose magic has altered the area|a bard or other master of entertaining magic|a wise seer|a manipulative seer who knows too much about everyone|a magical relic or structure undergoing extensive magical study]
+\a [|mercenary band|military leader|retired military leader|warlord|tribal leader|school for combat instruction|brigand leader]
+\a lasting magical effect which [|prevents entering/leaving under certain conditions|alters the weather|affects people's minds|punishes certain behaviors|summons or draws particular creatures|gradually transforms the inhabitants]
+disorder in at least one area that no one has been able to tame or control (possibly a no-man's land between two other factions)
+lawless [|rebels|exiles|cultists] [|who operate with impunity|who are too feared for anyone to oppose|who operate in secrecy|who have the general support of the settlement|who are known as protectors of the settlement|who make up nearly the entire population of the settlement]
+recurring appearances of minor monsters [|that have never been eradicated|that began appearing recently|in tremendous numbers|that the residents have learned to avoid]
+[|a powerful monster who demands sacrifices|a terrifying monster no one is willing to challenge|an unknown monstrous threat that grips the town in fear but which has [|left tracks|damaged property|caused disappearances|caused widespread nightmares|left people dead in attacks]]
+[|a [|violent and malicious|uncontrollable|lawless|undisciplined|oddly well-mannered|spoiled] group of children|a group of transplants from another country or region|an extremely fashionable group of high-status individuals|a club that meets regularly to play a game|a champion of a particular sport|addiction to a particular drug|widespread use of a particular type of magic]
+
+

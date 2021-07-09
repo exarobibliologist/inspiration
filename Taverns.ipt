@@ -1,11 +1,12 @@
 MaxReps:1
 
 Table:MasterGen
-Define: PriceforMeal = (whole meal for {1d10}sp, extra items for {4d10}cp)
-Define: Meal1 = <h2>Breakfast {PriceforMeal}</h2>[!2 Breakfast >> implode &nbsp;or&nbsp; ]<br>[!2 BreakfastSides >> implode &nbsp;or&nbsp; ]<br>[!2 FruitVeggies >> implode &nbsp;or&nbsp; ]
-Define: Meal2 = <h2>Dinner {PriceforMeal}</h2>[@2 Dinner >> implode &nbsp;or&nbsp; ]<br>[@1 DinnerSides >> implode &nbsp;or&nbsp; ]<br>[@1 DinnerSides2 >> implode &nbsp;or&nbsp; ]<br>[!2 FruitVeggies >> implode &nbsp;or&nbsp; ]
-Define: Drinks = <h3>Drinks</h3>[!2 Drinks >> implode]
-<h1>[@TavernName]</h1><br><hr>Location\: [@CityDescriptions]<hr>{$Meal1}{$Drinks}<hr>{$Meal2}{$Drinks}<hr>
+Define: MealCost = (Large {1d10}sp, Small {4d10}cp)
+Define: DrinkCost = ({2d20}cp, Refills [|free|extra])
+Define: Meal1 = <h2>Breakfast</h2>[!{2d3} Breakfast >> implode] (pick one){MealCost}<br>[!{2d3} BreakfastSides >> implode] (pick one){MealCost}<br>[!{2d3} FruitVeggies >> implode] (pick one){MealCost}
+Define: Meal2 = <h2>Dinner</h2>[@{2d3} Dinner >> implode] (pick one){MealCost}<br>[!{2d2} DinnerSides >> implode] (pick one){MealCost}<br>[!{2d2} DinnerSides2 >> implode] (pick one){MealCost}<br>[!{1d6} FruitVeggies >> implode] (pick one){MealCost}
+Define: Drinks = <h3>Drinks</h3>[!{2d3} Drinks >> implode] {DrinkCost}<hr>[@Coffee] {DrinkCost}
+<h1>[@TavernName]</h1><hr>Location\: [@CityDescriptions]<hr>{$Meal1}{$Drinks}<hr>{$Meal2}{$Drinks}<hr>
 
 Table:TavernName
 1:[|The [|[@Professions >> Proper]|[@FantasyNouns >> Proper]]'s [@TavernTitles >> Proper]|The [@Professions >> Proper]'s [@TavernObjects >> Proper] [@TavernTitles >> Proper]]
@@ -17,10 +18,9 @@ Table:TavernName
 ; -------------------------------------------------------------------
 
 Table: CityDescriptions
-slums <br>Description\: A [|simple|drafty|old|dilapidated] [|wood|metal|] [|shack|building], with a thatched roof, near [@CityPlaces]<br>Rooms\: 1 common room (with room for {1d20} people on [|floor|sleeping mats|bunk beds]))
-a poor residential district <br>Description\: A [|simple|drafty|old] [|wood|metal|] [|shack|building], with a thatched roof, near [@CityPlaces]<br>Rooms\: {1d2} common room(s) (with room for {1d20} people on [|floor|sleeping mats|bunk beds])), {2d2} individual rooms
-a middle class residential district <br>Description\: A [|grand|new|old] [|wood|metal|stone] [|building|manor|], with a [|thatched|tile|hammered metal] roof, near [@CityPlaces]<br>Rooms\: {2d2} common room(s) (with room for {1d20} on [|floor|sleeping mats|bunk beds]), {4d4} individual rooms
-an upper class residential district <br>Description\: A [|grand|new|exotic-looking|decorated] [|wood|marble|granite|] [|building|manor|], with a [|tile|hammered metal] roof, near [@CityPlaces]<br>Rooms\: {2d3} common room(s) (with room for {1d20} people on [|sleeping mats|bunk beds])), {4d6} individual rooms, {2d6} double rooms
+a poor residential district near [@CityPlaces]
+a middle class residential district near [@CityPlaces]
+an upper class residential district near [@CityPlaces]
 
 Table: CityPlaces
 the palace district
@@ -61,6 +61,7 @@ Table: BreakfastSides
 Table: Dinner
 10:[@DinnerPrep] [@MealAnimal]
 [@MealAnimal] [|Sausage|Bacon|Steak]
+[@MealAnimal] and Dumplings
 
 Table: DinnerPrep
 Stewed
@@ -108,19 +109,19 @@ Venison
 Wolf
 
 Table: DinnerSides
-[|Fried|Boiled] Potatoes
-[|Large|[@MealAnimal]|] Dumplings
+Dumplings
 [|Long|Short|Curly|Spiral] Pasta
 Lentils
 Leeks
 [|White|Red|Black|Kidney|String] Beans
-Couscous
 Peas
 Turnips
 
 Table: DinnerSides2
 [|Corn|Fresh|Crusty|Buttered|Sourdough|Beer|Pumpernickel|Rye|Wheat|Soft] Bread
 [|Hard|Soft|Sharp|Pungent] Cheese
+[|Fried|Boiled] Potatoes
+Couscous
 
 Table: FruitVeggies
 Apples
@@ -156,6 +157,175 @@ Mead
 [|Orange|Apple|Grapefruit|Grape] Juice
 Water
 Milk
+
+; -----------------------------------------------------------------
+; ------------------------- Coffee --------------------------------
+; -----------------------------------------------------------------
+
+Table: Coffee
+[|[@NameSavoryAdj]|[@NameSweetAdj]] [|[@NameSavoryNoun]|[@NameSweetNoun]] [@CoffeeFlav] [@CoffeeType]
+
+Table: CoffeeType
+Macchiato
+Coffee
+Latte
+Frapuccino
+Capuccino
+Frappe
+Espresso Shot
+Cafe Latte
+Cafe Macchiato
+Mocha
+Mocha Latte
+Mochacchino
+Au Lait
+
+Table: CoffeeFlav
+Dark Chocolate
+White Chocolate
+Milk Chocolate
+Dark Roast
+Light Roast
+Hazelnut
+Chestnut
+Pumpkin Spice
+Coconut
+Macadamia
+Gingerbread
+Cinnamon Spiced
+
+Table: NameSavoryAdj
+Big
+Buff
+Chunky
+Good
+Scrumptious
+Wholesome
+Tangy
+Pungent
+Legendary
+Mythical
+Fabulous
+Fabled
+Famous
+Handsome
+Tenacious
+Grand
+Great
+Carbolicious
+Swagtacular
+Thick
+Bombastic
+Heckin
+Solid
+Heavy
+Mighty
+Macho
+Stalwart
+
+Table: NameSavoryNoun
+Feast
+Beast
+Hero
+Boy
+Hunk
+Daredevil
+Pioneer
+Adventurer
+Pirate
+Marauder
+Outlaw
+Bandit
+Cool Cat
+Fella
+Plunder
+Glory
+Titan
+Adventure
+Rhino
+Ranch
+Hercules
+Bruno
+Man
+Macho Man
+Knight
+King
+
+Table: NameSweetAdj
+Fair
+Fantasy
+Shining
+Happy
+Lovely
+Little
+Sparkle
+Magical
+Jolly
+Blissful
+Enchanted
+Joyful
+Golden
+Silver
+Pink
+Bubbley
+Candied
+Honeyed
+Candy
+Syrup
+Sleepy
+Luscious
+Piquant
+Deluxe
+Swank
+Chic
+Fancy
+
+Table: NameSweetNoun
+Unicorn
+Fairy
+Maiden
+Starlight
+Moonlight
+Sunlight
+Flower
+Baby
+Dream
+Bubble
+Rainbow
+Princess
+Nymph
+Angel
+Star
+Moon
+Sun
+Destiny
+Love
+Sparkle
+Crystal
+Rose
+Lily
+Nectar
+Sugar
+Sweet
+Daydream
+Dance
+Bubble
+Sweetpea
+Bubblegum
+Honey
+Wish
+Peach
+Butterfly
+Girlfriend
+Boyfriend
+Bunny
+Kitten
+Cotton
+Cloud
+Naptime
+Sleepytime
+Breakfast
+Fancy Boy
 
 ; -----------------------------------------------------------------
 ; ---------------------- Professions  -----------------------------

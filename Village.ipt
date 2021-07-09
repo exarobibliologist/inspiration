@@ -1,0 +1,227 @@
+// Village generator
+// Jonathan Dale
+
+Table: Settlement
+5:[settlement==thorp][@Thorp]
+5:[settlement==thorp][@SeasonalThorp]
+7:[settlement==hamlet][@Hamlet]
+3:[settlement==hamlet][@TempHamlet]
+10:[settlement==village][@Village]
+1:[settlement==commune][@Commune]
+
+// A thorp is a small settlement, 20-80 people
+Table: Thorp
+Set: population={1d60+20}
+Set: age=[|{1d100+4}|{1d200+4}|{1d300+4}]
+Small, year-round thorp with a population of {population}. The primary occupation is [@ThorpOccupation]. [|The entire population is part of one extended family.|The entire population is made up of [@Numbers with {1d3+1}] extended families.|The population is an assortment of unrelated individuals, many of whom arrived only recently.] The thorp has been here, in some form or another, for {age} years, [|and has been stable in size for decades|but was a seasonal settlement until it began to grow and stabilize recently|but has been dwindling in size of late]. It is [|relatively unimportant to the powers that be and is left to run itself|nominally under the rule of a larger settlement nearby|largely controlled by [|a noble|a trading house|the military|bandits]].\n\n The terrain is [|primarily [@Terrain]|[!Terrain] and [!Terrain]]. [@Water] [@Roads] [@Ruins] [#{{round({population}/100)}+{3d20}} Fortifications]\n\nThe {settlement} [|has been relatively untroubled in the past|[@Disaster] {1d{age}} years ago|[!Disaster] {1d{age}} years ago and [!Disaster] {1d{age}} years ago|[@Disaster] many times over the years].\n\nTrades practiced here include {trades}[|&nbsp;and blacksmithing|&nbsp;and brewing|&nbsp;and hunting|, blacksmithing and [|brewing|hunting]].
+
+Table: ThorpOccupation
+[trades=mining]
+[trades=farming]
+[trades=farming]
+[trades=farming]
+[trades=fur trapping]
+[trades==road construction]maintaining the royal road
+[trades==farming]supporting the local [|temple|church|monastery]
+
+// A seasonal thorp is a seasonal trade base, e.g. a logging camp
+Table: SeasonalThorp
+Set: population={1d60+20}
+Set: age=[|{1d80+2}|{1d40+2}|{1d20+2}]
+Small, seasonal thorp-sized encampment with a population of {population} although most residents leave every winter[||&nbsp;({1d{round({population}/2)}} remain)]. The primary occupation is [@SeasonalThorpOccupation], with other trades present only to support those efforts. The {settlement} has been here, in some form or another, for {age} years, [|and has always been around this size|but it has grown in recent years|but has been dwindling in size in recent years]. It is [|relatively unimportant to the powers that be and is left to run itself|nominally under the rule of a larger settlement nearby|largely controlled by [|a noble|a trading house|the military|bandits]]. The majority of structures are temporary ones, including tents, huts, and lean-tos. [||[[@Numbers with {1d3+1}] >> proper] permanent structures remain from year to year however.]\n\n The terrain is [|primarily [@Terrain]|[!Terrain] and [!Terrain]]. [@Water] [@Roads] [@Ruins] [#{{round({population}/100)}+{3d15}} Fortifications]\n\nThe {settlement} [|has been relatively untroubled in the past|[@Disaster] {1d{age}} years ago|[!Disaster] {1d{age}} years ago and [!Disaster] {1d{age}} years ago|[@Disaster] many times over the years].\n\nTrades practiced here include {trades}[|&nbsp;and blacksmithing|&nbsp;and brewing|&nbsp;and hunting|, blacksmithing and [|brewing|hunting]].
+
+Table: SeasonalThorpOccupation
+[trades=fur trapping][settlement==hunting camp]
+[trades=hunting][settlement==hunting camp]
+[trades=fishing][settlement==fishing camp]
+[trades=logging][settlement==logging camp]
+[trades==construction]contructing a [|temple|church|monastery|fort|road]
+
+// A hamlet is a small village, 80-400 people
+Table: Hamlet
+Set: population={1d320+80}
+Set: age=[|{1d200+4}|{1d400+4}|{1d800+4}]
+Small, year-round hamlet with a population of {population}. The primary occupation is [@HamletOccupation]. [|The entire population is part of one extended family.|The entire population is made up of [@Numbers with {1d5+1}] extended families.|The population is an assortment of unrelated individuals, many of whom arrived only recently.] The {settlement} has been here, in some form or another, for {age} years, [|and has been stable in size for decades|but has been growing recently|but has been dwindling in size of late]. It is [|relatively unimportant to the powers that be and left to run itself|nominally under the rule of a larger settlement nearby|largely controlled by [|a noble|a trading house|the military|bandits]].\n\n The terrain is [|primarily [@Terrain]|[!Terrain] and [!Terrain]]. [@Water] [@Roads] [@Ruins] [#{{round({population}/100)}+{3d20}} Fortifications]\n\nThe {settlement} [|has been relatively untroubled in the past|[@Disaster] {1d{age}} years ago|[!Disaster] {1d{age}} years ago and [!Disaster] {1d{age}} years ago|[@Disaster] many times over the years].\n\nTrades practiced here include {trades}, [||blacksmithing,|blacksmithing,] [!{1d3} HamletTrades >> Implode], and [!HamletTrades].
+
+Table: HamletOccupation
+[trades=mining]
+[trades=farming]
+[trades=farming]
+[trades=farming]
+[trades=fur trapping]
+[trades==road construction]maintaining the royal road
+[trades==farming]supporting the local [|temple|church|monastery]
+
+Table: HamletTrades
+apothecary
+baking
+brewing
+farming
+fishing
+herding
+hunting
+leatherwork
+masonry
+mining
+stone cutting
+carpentry
+animal handling
+chandlery
+banditry
+pottery
+tailoring
+woodcutting
+tinkering
+weaving
+spinning
+trapping
+tanning
+
+// A seasonal hamlet is a seasonal trade base, e.g. a logging camp, but a fairly large one
+Table: TempHamlet
+Set: population={1d320+80}
+Set: age=[|{1d100+4}|{1d60+4}|{1d30+4}]
+Seasonal hamlet-sized encampment with a population of {population} although most residents leave every winter[||&nbsp;({1d{round({population}/2)}} remain)]. The primary occupation is [@SeasonalHamletOccupation], with other trades present only to support those efforts. The {settlement} has been here, in some form or another, for {age} years, [|and has always been around this size|but it has grown in recent years|but has been dwindling in size in recent years]. It is [|run by a local mayor|[||nominally ]under the rule of a larger settlement nearby|largely controlled by [|a noble|a trading house|a business|the military|bandits]]. The majority of structures are temporary ones, including tents, huts, and lean-tos. [||[[@Numbers with {1d5+1}] >> proper] permanent structures remain from year to year however.|[[@Numbers with {1d10+1}] >> proper] permanent structures remain from year to year however.]\n\n The terrain is [|primarily [@Terrain]|[!Terrain] and [!Terrain]]. [@Water] [@Roads] [@Ruins] [#{{round({population}/100)}+{3d18}} Fortifications]\n\nThe {settlement} [|has been relatively untroubled in the past|[@Disaster] {1d{age}} years ago|[!Disaster] {1d{age}} years ago and [!Disaster] {1d{age}} years ago|[@Disaster] many times over the years].\n\nTrades practiced here include {trades}, [||blacksmithing,|blacksmithing,] [||brewing, |brewing, ] [|and [!TempHamletTrades]|[!TempHamletTrades], and [!TempHamletTrades]|[!TempHamletTrades], [!TempHamletTrades], and [!TempHamletTrades]]. 
+
+Table: SeasonalHamletOccupation
+[trades=fur trapping][settlement==hunting camp]
+[trades=hunting][settlement==hunting camp]
+[trades=fishing][settlement==fishing encampment]
+[trades=logging][settlement==logging camp]
+[trades=mining][settlement==mining camp]
+[trades==construction]contructing a [|temple|church|monastery|fort|road]
+
+Table: TempHamletTrades
+baking
+leatherwork
+masonry
+carpentry
+animal handling
+chandlery
+banditry
+pottery
+tailoring
+woodcutting
+
+// A village is 400-1000 people
+Table: Village
+Set: population={1d600+400}
+Set: age=[|{1d200+4}|{1d500+4}|{1d1000+4}]
+Village with a population of {population}. The {settlement} has been here, in some form or another, for {age} years, [|and has been stable in size for decades|but has been growing recently|but has been dwindling in size of late]. It is [|relatively unimportant to the powers that be and left to run itself|run by a local mayor|[||nominally] under the rule of a larger settlement nearby|largely controlled by [|a noble|a trading house|the military|bandits]].\n\n The terrain is [|primarily [@Terrain]|[!Terrain] and [!Terrain]]. [@Water] [@Roads] [@Ruins] [#{{round({population}/100)}+{3d27}-1} Fortifications]\n\nThe {settlement} [|has been relatively untroubled in the past|[@Disaster] {1d{age}} years ago|[!Disaster] {1d{age}} years ago and [!Disaster] {1d{age}} years ago|[@Disaster] many times over the years].\n\nTrades practiced here include [||blacksmithing,|blacksmithing,|blacksmithing,] [||grain milling,|grain milling,|grain milling,] [||brewing,|brewing,|brewing,] [!{2d4} VillageTrades >> Implode], and [!VillageTrades].
+
+Table: VillageTrades
+apothecary
+baking
+farming
+fishing
+herding
+hunting
+leatherwork
+masonry
+mining
+stone cutting
+carpentry
+animal handling
+chandlery
+banditry
+pottery
+tailoring
+woodcutting
+tinkering
+weaving
+spinning
+trapping
+healing
+perfume making
+tanning
+wine making
+
+// A religiously-oriented settlement, 80-600 people (could be hamlet sized or small village)
+Table: Commune
+Set: population=[|{1d440+160}|{1d320+80}]
+Set: age=[|{1d30+3}|{1d100+3}|{1d400+3}]
+[|Religious|Spiritual|Cult|Heretical cult|Breakaway cult] commune with a population of {population}. [|The entire population is part of one extended family.|The entire population is made up of [@Numbers with {1d5+1}] extended families.|The population is an assortment of unrelated individuals, many of whom arrived only recently.] The {settlement} has been here, in some form or another, for {age} years, [|and has been stable in size for decades|but has been growing recently|but has been dwindling in size of late]. It is [|relatively unimportant to the powers that be and left to run itself|nominally under the rule of a larger settlement nearby|controlled by religious leaders|controlled by priests|led by a prophet|largely controlled by [|a noble|bandits]].\n\n The terrain is [|primarily [@Terrain]|[!Terrain] and [!Terrain]]. [@Water] [@Roads] [@Ruins] [#{{round({population}/100)}+{3d20}} Fortifications]\n\nThe {settlement} [|has been relatively untroubled in the past|[@Disaster] {1d{age}} years ago|[!Disaster] {1d{age}} years ago and [!Disaster] {1d{age}} years ago|[@Disaster] many times over the years].\n\nTrades practiced here include [||blacksmithing,|blacksmithing,] [!{1d6} VillageTrades >> Implode], and [!VillageTrades].
+
+Table: Terrain
+forested
+rocky
+hilly
+mountainous
+open fields
+barren lands (desert, waste, or rocky fields)
+swamps
+
+Table: Water
+The {settlement} relies on a well for water.
+A stream runs past the {settlement}.
+A stream runs through the {settlement}.
+The {settlement} is located near a river.
+A river runs through the {settlement}.
+The {settlement} is located alongside a river.
+The {settlement} is located near a lake.
+A river runs alongside the {settlement} to a nearby lake.
+The {settlement} is located on the shores of a lake.
+
+Table: Roads
+Nearby roads are [|decent|rough|crude|poor|dangerous] and lead only to [@Numbers with {1d3+1}] small settlements. [#{{round({population}/100)}+{1d10}+0} Inns]
+A [|decent|rough|well-constructed|poor|dangerous] road leads to a nearby town[|, and lesser roads to [@Numbers with {1d3+1}] small settlements|, and a lesser road to another small settlement]. [#{{round({population}/100)}+{1d10}+2} Inns]
+The {settlement} is on a  [|decent|rough|well-constructed|poor|dangerous] road connecting two larger towns[|, and lesser roads to [@Numbers with {1d3+1}] small settlements|, and a lesser road to another small settlement]. [#{{round({population}/100)}+{1d10}+4} Inns]
+A [|decent|rough|well-constructed|poor|well-maintained|stone-paved] road leads to a nearby city[|, and lesser roads to [@Numbers with {1d3+1}] small settlements|, and a lesser road to another small settlement]. [#{{round({population}/100)}+{1d10}+6} Inns]
+
+Table: Inns
+Type: Lookup
+1-10:There are no inns or hostels present.
+11-25:There is one inn or hostel in the area.
+26-31:There are two inns or hostels in the {settlement}.
+32-34:There are three inns or hostels in the {settlement}.
+35-36:There are four inns or hostels in the {settlement}.
+
+Table: Ruins
+20:[when]{age}>100[do]There are some old ruined buildings from the early history of the {settlement}, but no ruins of greater significance.[else]There are no ruins of significance in the area.[end]
+3:There are ruins of an older settlement nearby.
+3:The {settlement} is built on top of ruins of an older settlement.
+1:There are ruins of an older fortification nearby.
+1:The {settlement} is built upon ruins of an older fortification, which provides [|fortified structures that residents can retreat to in case of danger|defensive walls around {1d70+10}% of the {settlement}|watch towers and a fortified gate house|much more extensive defensive structure than is normal for a {settlement}].
+1:There are ancient ruins nearby.
+1:The {settlement} is built amidst ancient ruins and many of its buildings and structures are at least partially ancient structures.
+
+Table: Fortifications
+Type: Lookup
+1-20:\_
+21-30:The {settlement} has a loosely organized militia.
+31-40:The {settlement} has a well-organized militia.
+41-50:There is one strong stone structure which the residents can retreat to in times of danger.
+51-60:Watch towers provide the local militia with a good view of the nearby roads.
+61-70:Entry into the {settlement} is through a fortified gate and palisade.
+71-80:Most approaches to the {settlement} are protected by palisades or impassable terrain.
+81-88:Most approaches to the {settlement} are protected by palisades.
+89-94:The settlement is protected by watch towers and a combination of wooden palisades and stone walls.
+95-100:The settlement is protected by stone walls.
+
+Table: Disaster
+[|suffered a severe fire|burned to the ground]
+[|flooded|was nearly washed away by flooding]
+[|suffered a severe famine|was nearly abandoned due to famine]
+was [|was under attack|was nearly destroyed] by monsters
+was [|devastated|decimated|reduced] by plague
+was [|caught up in a local war|used as a battlefield during a war]
+
+
+Table: Numbers
+[when]{$1}<13[do][#{$1} Num][else]{$1}[end]
+
+Table: Num
+Type: Lookup
+1:one
+2:two
+3:three
+4:four
+5:five
+6:six
+7:seven
+8:eight
+9:nine
+10:ten
+11:eleven
+12:twelve
+

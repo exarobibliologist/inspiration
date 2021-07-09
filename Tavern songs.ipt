@@ -1,0 +1,121 @@
+// Tavern songs
+// inspired by, but not really based on, http://dndspeak.com/2019/06/100-bard-songs/
+// Jonathan Dale
+
+Table: TavernSong
+[@Who] \a [@Tone] [@SubjectMatter].
+
+Table: Who
+They are [@Performing]
+A minstrel is [@Performing]
+A bard is [@Performing]
+A group of commoners is [|trying to sing|enthusiastically singing|butchering|hesitantly trying to sing|drunkenly singing]
+A group of [|performers|minstrels] is [@Performing]
+The entire tavern is [|trying to sing|enthusiastically singing|butchering|hesitantly trying to sing|drunkenly singing] 
+
+Table: Performing
+5:singing
+4:performing
+rehearsing
+practicing
+learning
+
+Table: Tone
+[@Features] comedy
+[@Features] tragedy
+[@Features] romance
+[@Features] tale
+[@Features] love story
+[@Features] nursery rhyme
+[@Features] children's song
+[|rhyming|cheerful|dark|heroic|bawdy|brief|innuendo-filled|profane|popular|fast-paced|upbeat] marching song
+[|cheerful|exciting|tragic|dark|heroic|long|foreign|popular|slow-paced|sorrowful] epic
+[|rhyming|cheerful|dark|heroic|bawdy|brief|innuendo-filled|profane|popular|fast-paced|upbeat|sorrowful] sea shanty
+[|rhyming|cheerful|dark|heroic|bawdy|brief|innuendo-filled|profane|popular|fast-paced|upbeat|sorrowful] laborer's chant
+[@Features] ballad
+[|cheerful|exciting|tragic|dark|heroic|long|foreign|popular|slow-paced|sorrowful] saga
+
+Table: Features
+rhyming
+cheerful
+exciting
+tragic
+dark
+heroic
+bawdy
+epic
+long
+brief
+calming
+foreign
+innuendo-filled
+tongue-twisting
+profane
+[|somewhat|slightly|extremely|shockingly|hilariously] blasphemous
+[|locally|extremely|wildly|traditionally] popular
+fast-paced
+upbeat
+slow-paced
+melodious
+sorrowful
+alliterative
+
+Table: SubjectMatter
+[@Describing] a [|historical|traditional|cautionary] [|legend|fable|tale]
+[@Describing] a [|legendary|historical] [|battle led by [!Person]|war|fight between [!Person] and [!Person]|duel between [!Person] and [!Person]]
+[|[@Describing] a [|legendary|historical] monster|about the ravages of a [|legendary|historical] monster]
+[@Describing] a great act of hubris by [@Person]
+about a [|site|temple|fortress|city|monument|natural feature] of [|national|religious|local|regional] pride
+recounting [|a battle waged by|a hunt conducted by|an adventure of|the quest of|a disaster caused by|a disaster averted by] [@Person]
+[@Describing] [|a famine|a fire|a flood|a storm|a blizzard]
+[@Describing] the death of [!Person]
+[@Describing] the theft of [@Item]
+[@Describing] the [|adventures|swindling|exile] of [@Person]
+[@Describing] the swindling of [@Person]
+[@Describing] [!Person]'s quest [|for freedom|for treasure|for love|for redemption|for magic|for greatness|to destroy [@Item]|to rescue [!Person]|for revenge against [!Person]]
+[@Describing] [!Person]'s [|finding|winning] [|a lost|a new|a monster's|[!Person]'s] love
+[@Describing] [!Person]'s [|marrying|wooing] [|a lost love|a new love|a monster|[!Person]]
+[@Describing] revenge taken against [!Person] for [|a theft|an insult|a murder|stealing their love|being an uppity bastard]
+
+Table: Describing
+recounting
+telling
+retelling
+describing
+about
+
+Table: Person
+\a [|great|well-loved|widely-hated|absent-minded|beautiful] [|noble|baron|baroness|duke|duchess|queen|king|lord|lady|knight|dame]
+[|a famous|an infamous|a legendary|a fictional] [|bandit|brigand|thief|outlaw|rogue|bounty hunter]
+[|a god|a goddess|the gods]
+[|an honest|a dishonest|a popular|a friendly|a curmudgeonly|a generous|a forgetful|a brave|a courageous|a cowardly|a clever] [|miller|hunter|tailor|cook|baker|chef|spinster|weaver|cobbler|bard|minstrel|fisherman]
+[|a wise|a clever|a courteous|a friendly|a domineering|a terrifying|a powerful|a famous|a infamous|a legendary|a local|a noble|a courageous|a cowardly|a forgetful|an absent-minded|a beloved|a enchanting] [|wizard|witch|sorcerer|healer|hermit|priest|priestess|boy|girl|child|sorceress|grandmother|grandfather|druid|judge|magistrate]
+[|a wizard|a witch|a sorcerer|a healer|a smith|an alchemist]'s apprentice
+[|a cat|a frog|a raven|a fox|a wolf|a magpie|a hawk|a fish|a mermaid|a snake|a lion|a tree|a mountain|a river|a bear|a hedgehog|a rooster]
+[|a golem|a construct|an elemental|a demon|a devil|an angel|a dragon|Death|an ogre|a giant|a giantess|a ghoul|a ghost]
+
+Table: Item
+a royal treasure
+a noble's treasure
+a holy artifact
+an unholy artifact
+a pie
+an apple
+a pouch
+an anvil
+a pair of [|shoes|boots]
+a goose
+a duck
+a cow
+a crown
+a jewel
+a sword
+a turnip
+a melon
+vegetables
+money
+a king's ransom
+a ship
+the sun
+the moon
+

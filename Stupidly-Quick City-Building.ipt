@@ -1,0 +1,440 @@
+// From https://www.reddit.com/r/DnDBehindTheScreen/comments/4jl3xq/random_tables_stupidlyquick_citybuilding/?ref=search_posts
+// Posted by u/OrkishBlade with these comments:
+// One can spend a lot of time building a large, diverse, well-developed city. A city can be filled with hundreds of locations, thousands of pieces of merchandise, and more NPCs than a DM can name. You can do a lot of this building, mapping, and describing ahead of time, or you can do it mostly on-the-fly. However, even for filling in a city on-the-fly, having some sense of the city's geography, history, and culture is helpful. So, here are some tables to help get through those first few bits.
+// I'll also post in the comments two examples of cities that I put together using this cheat sheet—one without a map and only text, and one with a rough map. The key is to make decisions quickly and move on. Roll or choose one or more results from the tables, fit it into the city and then roll or choose the next thing.
+//For quickly sketching out a map of a city, town, or neighborhood:
+// [1] Choose or roll for a central landmark or district.
+// [2] Then roll or choose 2-6 street names.
+// [3] Sketch out these streets, leading away from the central landmark to other parts of the town or city.
+// [4] Fill in some details.
+// implemented in IPP by Jonathan Dale
+
+Header: OrkishBlade's Stupidly-Quick City-Building implemented (and slightly expanded) in IPP by Jonathan Dale.
+
+Table: RandomCity
+The city [|grew up around|developed near|was built at] [@CityGeography] and is [|near|in] a region ideal for [@CityResources] It is [||||justifiably|accurately|appropriately|unreasonably] [|widely known|famous|widely mocked|well regarded|popular] for its [@CityCulture] The city is [|governed|ruled|controlled] by [@CityGovernment] The city [|recently|long ago|once|supposedly long ago in history|just a few years ago|decades ago|centuries ago|a few years ago] [|experienced|suffered through|barely survived|triumphed over|rebuilt after] [@CityHistoricalEvent] [@CityThreats] The city is defended [@CityDefense], and the laws are [@CityLaw]. The most prominent landmark is [@CityLandmark] The major sections of the city are [!{1d3+1} CityDistricts >> implode] and [!CityDistricts]. The major streets are [!{1d5+1} Citystreets >> implode], and [!CityStreets].
+
+
+
+Table: CityGeography
+a coastal harbor
+a calm, coastal bay
+a large freshwater lake
+a wide, navigable river
+a river navigable by small craft
+the mouth of a river or a river delta
+the confluence of two rivers
+a series of natural springs
+a well-traveled crossroads
+a water source and a well-traveled road
+
+Table: CityResources
+mining iron ore.
+mining copper ore.
+mining [|gold|silver] deposits.
+mining clay or granite deposits.
+mining quartz or salt deposits.
+mining peat or coal deposits.
+hardwood timber production.
+growing barley and oats.
+growing beans and corn.
+growing nuts and olives.
+growing rice or wheat.
+growing potatoes and leeks.
+growing sugar cane.
+growing tobacco.
+growing cotton.
+growing fruit trees.
+growing cabbages and beets.
+grazing cattle.
+grazing dairy cows.
+grazing sheep.
+
+Table: CityCulture
+architectural style.
+architectural feats.
+artists and poets.
+inventive cuisine.
+traditional cuisine.
+suggestive dancing.
+gladiatorial games.
+horse races.
+scholars and sages.
+music and/or dance.
+romance.
+jousting games.
+superior soldiers.
+street festivals.
+religious feasts.
+religious fervor.
+traditional dress.
+unusual dress.
+theater scene.
+wine and/or ale.
+
+Table: CityGovernment
+the head of a noble family.
+a council of distinguished nobles.
+a council of wealthy merchants.
+a council of elected officials.
+an elected mayor.
+a benevolent sovereign.
+a wicked tyrant.
+a brutal warlord.
+a cabal of witches and wizards.
+the leaders of a religious order.
+
+Table: CityHistoricalEvent
+mass conversions.
+an earthquake.
+an age of exploration.
+a terrible famine.
+a disastrous flood.
+a legendary storm.
+an assassination of [|its ruler|its beloved priest|a beloved noble|its ruling tyrant|an important noble of a neighboring nation] leading to [|riots|war|disaster|divine retribution|the burning of the city].
+a series of riots.
+a great discovery.
+a vermin infestation.
+a destructive fire.
+a deadly plague.
+a bloody rebellion.
+a lengthy siege.
+religious wars.
+territorial wars.
+a foreign occupation.
+an economic boom.
+a great depression.
+a dragon attack.
+
+Table: CityThreats
+2:The people of the city are [|rightfully|justifiably|excessively|said to be] fearful of [@CityThreatItems].
+The rulers of the city fear [!CityThreatItems] but the populace is more concerned about [!CityThreatItems].
+
+Table: CityThreatItems
+bandits and outlaws
+barbarian invasions
+disease outbreaks
+a dragon or legendary beast
+destructive flooding
+food shortages
+occupation by a foreign empire
+the wrath of a vengeful god
+magic and new inventions
+pirates, smugglers, and bands of thieves
+a recently established religion
+a rival city
+
+Table: CityDefense
+[|effectively|adequately] by a disciplined military guard
+[|effectively|adequately] by a standing army of devoted soldiers
+[|adequately|poorly|surprisingly efficiently] by a company of sellswords and knaves
+[|effectively|adequately|poorly] by an order of holy knights
+by little; the city's been sacked many times
+[|effectively|adequately|poorly] by a huge fortress or citadel within the city
+[|effectively|adequately|poorly] by a series of watchtowers and forts spread throughout the region
+[|effectively|adequately|poorly] by thick stone walls and impenetrable gates
+[|effectively|adequately|poorly] by high stone walls, catapults, and scorpions
+[|effectively|adequately|poorly] by a powerful magical ward or gigantic golem
+
+Table: CityLaw
+enforced by a strict, orderly city watch
+enforced by a corrupt, roguish city watch
+not enforced among the wealthy elite
+enforced in a haphazard fashion, incomprehensible to visitors
+not enforced for those who pay bribes
+more like guidelines
+enforced by a secret society of assassins, mages, or priests
+enforced by a company of mercenaries
+simple, easy to learn and to follow
+extensive and complicated, nonsensical
+enforced by a cheerful drunken sheriff
+enforced by a rigid soldier-turned-sheriff
+
+Table: CityPower
+3:Within or outside the government, power is held by [@CityPowerPlayers].
+Power and influence are held equally by [!CityPowerPlayers] and [!CityPowerPlayers].
+Everyone knows the town is controlled by [!CityPowerPlayers] but [!CityPowerPlayers] begins to threaten that control.
+
+Table: CityPowerPlayers
+a ruthless assassins’ guild.
+a populist demagogue.
+the captain of a mercenary company.
+a [|champion knight|arena fighter].
+[|a crafting guild|several crafting guilds].
+a [|dangerous|popular|politically influential|unpredictable|mentally unstable] crime boss.
+one or more criminal gangs.
+a charismatic cult leader.
+[|a merchant guild|several merchant guilds].
+a scheming noble [|lord|lady].
+an outspoken [|philosopher|scholar].
+a celebrated poet and playwright.
+a popular [|priest|priestess].
+a secret society of lorekeepers.
+smugglers and black market dealers.
+the [|son|daughter] of a deposed ruler.
+a wealthy trader of exotic goods.
+a conniving vampire or fiend.
+a bold war hero.
+a clever [|witch|wizard].
+
+Table: CityLandmark
+an academy or university.
+an ancient ruin.
+an arena.
+a cemetery.
+a civic hall, council hall, or guild hall.
+a common or greenway.
+a fortress.
+a gateway or arch.
+a library.
+a lighthouse or watchtower.
+a marketplace.
+a memorial [|mausoleum|reflecting pool|statue|botanical garden].
+a monumental [|colossus|column|obelisk|plaque|statue garden|wall].
+a palace.
+a parade grounds or drilling yard.
+a pier, marina, or traveler's bazaar.
+a plaza or public square.
+a temple.
+a theater.
+[|an extensive|an expansive|a chaotic|an infamous] stockyard.
+
+Table: CityDistricts
+slums
+a poor residential district
+a middle class residential district
+an upper class residential district
+a nouveau riche residential district
+the palace district
+the temple district
+the crafting district
+the docks district
+the riverfront district
+the harbor district
+the university district
+the military district
+the market district
+the garden district
+the monument district
+the necropolis
+the theater district
+the civic center
+an ethnic enclave
+a foreign enclave
+
+Table: Street
+10:Street
+2:Lane
+3:Way
+Boulevard
+Court
+Loop
+Alley
+
+Table: CityStreets
+Armory [@Street]
+Barricade [@Street]
+Cavalry [@Street]
+Knight [@Street]
+Moat [@Street]
+Pike [@Street]
+Rampart [@Street]
+Shield [@Street]
+Soldiers [@Street]
+Spear [@Street]
+Vanguard [@Street]
+Watch [@Street]
+Arch [@Street]
+Bridge [@Street]
+Canal [@Street]
+Column [@Street]
+Cross [@Street]
+Falls [@Street]
+Ferryman [@Street]
+Pole [@Street]
+River [@Street]
+Whitewater [@Street]
+Castle [@Street]
+Cottage [@Street]
+House [@Street]
+Hovel [@Street]
+Inn [@Street]
+Keep [@Street]
+Manor [@Street]
+Rock [@Street]
+Stone [@Street]
+Tower [@Street]
+Cattle [@Street]
+Common [@Street]
+Green [@Street]
+Greenway [@Street]
+Harvest [@Street]
+Meadow [@Street]
+Orchard [@Street]
+Pasture [@Street]
+Wildflower [@Street]
+White [@Street]
+Anvil [@Street]
+Bell [@Street]
+Barrel [@Street]
+Carpenter [@Street]
+Chandler [@Street]
+Cooper [@Street]
+Dyer [@Street]
+Forge [@Street]
+Glass [@Street]
+Horseshoe [@Street]
+Iron [@Street]
+Mason [@Street]
+Smith [@Street]
+Steel [@Street]
+Tailor [@Street]
+Stone [@Street]
+Timber [@Street]
+Wood [@Street]
+Wright [@Street]
+Weaver [@Street]
+Bluff [@Street]
+Cliff [@Street]
+Crestline [@Street]
+High [@Street]
+Highland [@Street]
+Hill [@Street]
+Hilltop [@Street]
+Peak [@Street]
+Ridge [@Street]
+Ridgeline [@Street]
+Summit [@Street]
+Mountain [@Street]
+Crook's [|Alley|Lane|Way]
+Devil's [@Street]
+Low [@Street]
+Magpie [@Street]
+Paupers' [@Street]
+Penny [@Street]
+Rat's [@Street]
+Serpent's [@Street]
+Shady [|Alley|Lane|Way]
+8:Market [@Street]
+Baker [@Street]
+Hay [@Street]
+Hook [@Street]
+Farm [@Street]
+Feather [@Street]
+Mill [@Street]
+Pork [@Street]
+Sheep [@Street]
+Ranchers [@Street]
+Stockyard [@Street]
+Banner [@Street]
+Captains [@Street]
+Drum [@Street]
+Flag [@Street]
+March [@Street]
+Parade [@Street]
+Triumphant [|Way|Boulevard]
+Trumpet [@Street]
+Victory [@Street]
+Crown [@Street]
+King [@Street]
+Lords [@Street]
+Baron [@Street]
+Prince [@Street]
+Princess [@Street]
+Monarch [@Street]
+Palace [@Street]
+Queens [@Street]
+Royal [@Street]
+State [@Street]
+Bishops [@Street]
+Priests [@Street]
+Circle [@Street]
+Borderline [@Street]
+Brick [@Street]
+Curtain [@Street]
+Perimeter [@Street]
+Townline [@Street]
+Watch [@Street]
+Wall [@Street]
+Bay [@Street]
+Commerce [@Street]
+Dockside [@Street]
+Harbor [@Street]
+Lake [@Street]
+Pier [@Street]
+Portside [@Street]
+Water [@Street]
+Merchants [@Street]
+Ship [@Street]
+Bayview [@Street]
+Castleview [@Street]
+Gardenview [@Street]
+Greenview [@Street]
+Harborview [@Street]
+Marketview [@Street]
+Riverview [@Street]
+Waterview [@Street]
+Mountainview [@Street]
+Forestview [@Street]
+3:North [@Street]
+3:South [@Street]
+3:East [@Street]
+3:West [@Street]
+Sunset [@Street]
+Sunrise [@Street]
+Beech [@Street]
+Cedar [@Street]
+Cherry [@Street]
+Cypress [@Street]
+Fir [@Street]
+Maple [@Street]
+Oak [@Street]
+Palm [@Street]
+Pine [@Street]
+Spruce [@Street]
+Walnut [@Street]
+Willow [@Street]
+Sycamore [@Street]
+Magnolia [@Street]
+Northgate [@Street]
+Southgate [@Street]
+Eastgate [@Street]
+Westgate [@Street]
+Old Gate [@Street]
+Rivergate [@Street]
+Watchtower [@Street]
+Watergate [@Street]
+Forestgate [@Street]
+Mountaingate [@Street]
+Farmgate [@Street]
+Cattlegate [@Street]
+Harvestgate [@Street]
+Briar [@Street]
+Bush [@Street]
+Gardenia [@Street]
+Garden [@Street]
+Lilac [@Street]
+Lily [@Street]
+Petal [@Street]
+Poppy [@Street]
+Rose [@Street]
+Sunflower [@Street]
+Thorny [@Street]
+Violet [@Street]
+Iris [@Street]
+Copper [@Street]
+Crystal [@Street]
+Emerald [@Street]
+Jewelers [@Street]
+Golden [@Street]
+Rich [@Street]
+Ruby [@Street]
+Silver [@Street]
+Ancient [@Street]
+Bath [@Street]
+Fountain [@Street]
+Old Brick [@Street]
+Old Stone [@Street]
+Stone Ruin [@Street]
+Tumblestone [@Street]
+Well [@Street]
