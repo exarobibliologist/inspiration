@@ -1,0 +1,24 @@
+Prompt: Generate {Average|AboveAvg|Superhuman|God} Average
+
+Table: Echo
+Define: Average=5
+Define: AboveAvg=9
+Define: Superhuman=13
+Define: God=20
+Set: STR1={1d{${$prompt1}}+1}
+Set: STR2={1d{${$prompt1}}+1}
+Set: DEX1={1d{${$prompt1}}+1}
+Set: DEX2={1d{${$prompt1}}+1}
+Set: IQ1={1d{${$prompt1}}+1}
+Set: IQ2={1d{${$prompt1}}+1}
+Set: WIS1={1d{${$prompt1}}+1}
+Set: WIS2={1d{${$prompt1}}+1}
+Set: CHA1={1d{${$prompt1}}+1}
+Set: CHA2={1d{${$prompt1}}+1}
+Set: CON1={1d{${$prompt1}}+1}
+Set: CON2={1d{${$prompt1}}+1}
+Set: HP={{$CON1}*{$CON2}}
+Set: HP2={1d{$HP}}
+Set: ARMOR1={1d{${$prompt1}}+1}
+Set: ARMOR2={1d{${$prompt1}}+1}
+New {$prompt1} Character<hr>STR=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$STR1} <sup>e</sup>d {$STR2}<br>DEX=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$DEX1} <sup>e</sup>d {$DEX2}<br>IQ=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$IQ1} <sup>e</sup>d {$IQ2}<br>WIS=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$WIS1} <sup>e</sup>d {$WIS2}<br>CHA=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$CHA1} <sup>e</sup>d {$CHA2}<br>CON=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$CON1} <sup>e</sup>d {$CON2}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HP={$HP2} / {$HP}<br>ARMOR={$ARMOR1} <sup>e</sup>d {$ARMOR2}<hr>
