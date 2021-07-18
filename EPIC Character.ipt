@@ -4,7 +4,7 @@ Table: Echo
 Define: Average=5
 Define: AboveAvg=9
 Define: Superhuman=13
-Define: God=20
+Define: God=24
 Set: STR1={1d{${$prompt1}}+1}
 Set: STR2={1d{${$prompt1}}+1}
 Set: DEX1={1d{${$prompt1}}+1}
