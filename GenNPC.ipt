@@ -1,0 +1,276 @@
+Table: RandChar
+[@FacialFeat]\n[@PhysicalFeat]\n[@Accessories]\n[@Emotions]\n[@Religion]\n[@Flaws]
+
+Table: FacialFeat
+The person has [@Hair], [@Eyes], [@Nose], [@Ears], and [@Mouth] with \a [@Jaw]. They have [@FaceOther].
+
+Table: Hair
+thick hair
+wispy hair
+straight hair
+wavy hair
+curly hair
+wiry hair
+oily hair
+lush hair
+a shaved head (or is bald)
+
+Table: Eyes
+sleepy eyes
+shifty eyes
+watery eyes
+bright eyes
+cold eyes
+smiling eyes
+close-set eyes
+wild eyes
+distant eyes
+lazy eye
+
+Table: Nose
+crooked nose
+bulbous nose
+narrow nose
+button nose
+long nose
+broad nose
+angular nose
+round nose
+
+Table: Ears
+over-sized ears
+long ear lobes
+small ears
+hairy ears
+uneven ears
+pointy ears
+short ear lobes
+ears that stick out
+
+Table: Mouth
+full lips
+buck-teeth
+thin lips
+rotting teeth
+crooked teeth
+a broken or missing tooth
+pursed lips
+dry, cracked lips
+one or more false teeth
+a mouth that hangs open
+
+Table: Jaw
+pronounced chin
+cleft chin
+dimple on the chin
+rounded chin
+sharp jawline
+square jaw
+round jaw
+underbite
+
+Table: FaceOther
+high cheekbones
+tight, drawn cheeks
+chubby cheeks
+an unpleasant pustule
+a large mole
+a beauty mark
+freckles
+terrible scarring
+
+Table: PhysicalFeat
+They are [@Height], and their body is [@Body]. Their hands are [@Hands]. They have \a [@Scar].
+
+Table: Height
+unusually short
+short in stature
+average height
+slightly above average height
+well above average height
+unusually tall
+
+Table: Body
+thin and delicate
+of average build
+well-muscled
+slightly overweight
+grotesquely obese
+lean and lanky
+lithe and lean
+thin and wiry
+sinewy and strong
+flabby and weak
+lumpy or bent
+covered in hair
+
+Table: Hands
+powerful
+delicate
+rough
+soft
+a light touch
+a heavy touch
+
+Table: Scar
+jagged scar
+dark purple scar
+angry red scar
+long, thin scar
+
+Table: Accessories
+The clothing they are wearing is [@Clothing]. They are wearing [@Jewelry], and they have a [|prominent|hidden] [@Tattoo].
+
+Table: Clothing
+crisp and new
+fashionable and hip
+a bit old-fashioned
+of the highest quality
+faded, but in good condition
+faded and patched
+torn in places; missing buttons
+tattered and worn
+
+Table: Jewelry
+an earring
+two earrings
+a small chain about the neck
+a large chain about the neck
+a tight choker about the neck
+a brooch
+a ring
+several rings
+a bracelet
+a nose ring
+
+Table: Tattoo
+dagger tattoo
+arrow tattoo
+anchor tattoo
+skull tattoo
+pair of crossed bones tattoo
+snake tattoo
+scorpion tattoo
+spider web tattoo
+heart tattoo
+ring of thorns tattoo
+mermaid tattoo
+dragon tattoo
+
+Table: Emotions
+When calm, they are typically [@Calm], but when under stress they often become [@Stress]. Right now they are [@Now].
+
+Table: Calm
+compassionate
+cheerful
+reserved
+outspoken
+uninterested
+gruff
+eager
+deceitful
+foolish
+strict
+agreeable
+mischeivious
+angry
+fearful
+manipulative
+devout
+greedy
+funny
+dour
+fun-loving
+lazy
+driven
+boastful
+artistic
+assertive
+carefree
+cautious
+confident
+thoughtful
+loyal
+sophisticated
+weak-willed
+
+Table: Stress
+withdrawn
+murderous
+obsessive
+authoritarian
+determined
+brave
+spiteful
+belligerent
+caustic
+reckless
+argumentative
+gluttonous
+overly protective
+angry
+cowardly
+meticulous
+sarcastic
+stubborn
+destructive
+practical
+pushy
+fanatical
+secretive
+scornful
+courageous
+impractical
+calculating
+industrious
+manipulative
+destructive
+compulsive
+intolerant
+
+Table: Now
+agreeable
+carefree
+curious
+eager
+friendly
+happy
+hopeful
+upbeat
+indifferent
+bored
+focused
+suspicious
+tired
+withdrawn
+disagreeable
+agitated
+angry
+despondent
+gloomy
+nervous
+
+Table: Religion
+The person is, religiously speaking, \a [@Faith].
+
+Table: Faith
+quiet true believer
+casual observer
+critical student
+outspoken cynic
+open-minded seeker
+broken heretic
+cautious listener
+fanatical true believer
+confused convert
+
+Table: Flaws
+The person is prejudiced against [@Prejudice]
+
+Table: Prejudice
+other genders
+[|children|teenagers|the elderly]
+[|rulers|powerful rich|destitute poor]
+[|beggars|drunks|junkies]
+[|farmers|artists|clergy|soldiers|fishers|harlots|miners|merchants|scholars|herders|sailors|mages]
+[|dwarves|elves|gnomes|goblins|half-breeds|halflings|humans|orcs|reptilians]
