@@ -1,6 +1,3 @@
-// Village generator
-// Jonathan Dale
-
 Table: Settlement
 5:[settlement==thorp][@Thorp]
 5:[settlement==thorp][@SeasonalThorp]

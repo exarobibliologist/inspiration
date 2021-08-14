@@ -36,6 +36,7 @@ long nose
 broad nose
 angular nose
 round nose
+broken nose
 
 Table: Ears
 over-sized ears
@@ -117,15 +118,17 @@ jagged scar
 dark purple scar
 angry red scar
 long, thin scar
+acid scars
+battle scars
 
 Table: Accessories
 The clothing they are wearing is [@Clothing]. They are wearing [@Jewelry], and they have a [|prominent|hidden] [@Tattoo].
 
 Table: Clothing
+of the highest quality
 crisp and new
 fashionable and hip
 a bit old-fashioned
-of the highest quality
 faded, but in good condition
 faded and patched
 torn in places; missing buttons
@@ -156,6 +159,8 @@ heart tattoo
 ring of thorns tattoo
 mermaid tattoo
 dragon tattoo
+tattoo of a word in a foreign language
+tattoo of a word
 
 Table: Emotions
 When calm, they are typically [@Calm], but when under stress they often become [@Stress]. Right now they are [@Now].
