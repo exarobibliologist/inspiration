@@ -439,11 +439,11 @@ Yolanda
 Table: FrenchMaleNames
 Albert
 Alexandre
-André
+Andre
 Antoine
 Charles
 Claude
-François
+Francois
 Gabriel
 Gerard
 Gustave
@@ -467,7 +467,7 @@ Vincente
 Yves
 
 Table: FrenchFemaleNames
-Agnès
+Agnes
 Anna
 Aurore
 Bernadette
@@ -475,7 +475,7 @@ Catherine
 Claudine
 Colette
 Danielle
-Françoise
+Francoise
 Gabrielle
 Giselle
 Jacqueline
@@ -488,7 +488,7 @@ Michelle
 Nicole
 Renee
 Simone
-Thérèse
+Therese
 
 Table: JapanMaleNames
 Aguri
@@ -2978,7 +2978,7 @@ Alvarez
 Aranda
 Argones
 Arruza
-Avilés
+Aviles
 Baro
 Basoalto
 Batista
@@ -3002,13 +3002,13 @@ Fuentes
 Gallardo
 Garcia
 Garza
-Gómez
+Gomez
 Gonzalez
 Guardia
-Guzmán
-Gutiérrez
+Guzman
+Gutierrez
 Hernandez
-Ibañez
+Ibanez
 Lopez
 Lorca
 Mano
@@ -3022,7 +3022,7 @@ Moreno
 Ortega
 Patrone
 Paz
-Peña
+Pena
 Perales
 Perez
 Ramez
@@ -3039,7 +3039,7 @@ Terrones
 Thomas
 Toll
 Torres
-Vázquez
+Vazquez
 Valdez
 Vargas
 Verona
@@ -3054,7 +3054,7 @@ Bisset
 Chabroi
 Charbonneau
 Chomette
-Clément
+Clement
 Cloquet
 Donnadieu
 Douchain
@@ -3074,7 +3074,7 @@ Laurent
 Lecierc
 Loubert
 Maguet
-Mèllès
+Melles
 Mercier
 Montaigne
 Naud
@@ -3087,7 +3087,7 @@ Rampal
 Reneau
 Sorel
 Taillandier
-Thomé
+Thome
 Touzain
 Vettese
 Vianney
@@ -3344,7 +3344,7 @@ Table: ElfFirst
 Ær
 Æn
 Ael
-Áer
+aer
 Aer
 Aen
 Al
@@ -3359,7 +3359,7 @@ Mel
 Mer
 Mor
 Mal
-Mál
+Mal
 Niel
 Ril
 Rin
@@ -3388,7 +3388,7 @@ ad
 aen
 al
 an
-án
+an
 and
 ar
 as
@@ -3396,7 +3396,7 @@ asn
 asr
 eir
 el
-él
+el
 end
 er
 idr
@@ -4798,13 +4798,11 @@ Bo
 Ba
 Bra
 Bro
-Brø
 Bru  
 Da
 Dhu
 Dho
 Do  
-Dû
 Du  
 Fo  
 Ga
@@ -4813,14 +4811,12 @@ Gra
 Gro
 Groo
 Gru
-Grö
 Ha  
 Ho  
 Hu  
 Ka
 Khe
 Khu
-Khû
 Ko
 Ku
 Kra
@@ -4883,8 +4879,7 @@ in
 ir 
 o 
 og 
-ön
-ög
+on
 oin
 olin
 olir
