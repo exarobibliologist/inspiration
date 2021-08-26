@@ -37,7 +37,8 @@ EndTable:
 
 Table: Wealth
 Define: Wealth1=<td>Hoarded</td><td>[@Count]</td><td>Shared</td>
-<td><b>Wealth</b></td><tr>{Wealth1}<tr>
+Define: Wealth2=<td>Barter</td><td>[@Count]</td><td>Currency</td>
+<td><b>Wealth</b></td><tr>{Wealth1}<tr>{Wealth2}<tr>
 EndTable:
 
 Table: Tech
