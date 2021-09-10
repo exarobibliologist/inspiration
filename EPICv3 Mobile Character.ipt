@@ -1,5 +1,5 @@
 Table: v3Char
-Define: Generate=[|Average|AboveAvg|Superhuman|God]
+Set: Generate=[|Average|AboveAvg|Superhuman|God]
 Define: Average=10
 Define: AboveAvg=20
 Define: Superhuman=40
