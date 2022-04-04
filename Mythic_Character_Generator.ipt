@@ -8,23 +8,12 @@ Define: skillset = <b>[!Skills]</b> = [!Fate]
 <span style='font:24pt Arial'><b>{$mythicname}</b></span><br><span style='font:18pt Arial'><b>Attributes</b></span><br><b>Strength:</b> [@Fate]<br><b>Agility:</b> [@Fate]<br><b>Reflex:</b> [@Fate]<br><b>IQ:</b> [@Fate]<br><b>Intuition:</b> [@Fate]<br><b>Willpower:</b> [@Fate]<br><b>Toughness:</b> [@Fate]<br><br><span style='font:18pt Arial'><b>Abilities</b></span> <br>[@{5d5} AbilityRand >> sort >> implode <br>]
 
 Table: AbilityRand
-10:<b>[!Skills]</b> = [@Fate] <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[|-|+]1 <i>[@ShiftRank]</i></b> if/when <b>[@Skills] [|>|<|=] [@Fate]</b><br>
-1:<b>[!Skills]</b> = [@Fate] <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>([|Amateur|Beginner|Novice]) [|-|-|+]{1d3} <i>[@ShiftRank]</i></b> if/when <b>[@Skills] [|>|<|=] [@Fate]</b><br>
-1:<b>[!Skills]</b> = [@Fate] <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>([|Intermediate|Standard|Common|Average]) [|-|+]{2d3} <i>[@ShiftRank]</i></b> if/when <b>[@Skills] [|>|<|=] [@Fate]</b><br>
-1:<b>[!Skills]</b> = [@Fate] <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>([|Advanced|Progressive|Breakthrough]) [|-|+|+]{3d3} <i>[@ShiftRank]</i></b> if/when <b>[@Skills] [|>|<|=] [@Fate]</b><br>
-1:<b>[!Skills]</b> = [@Fate] <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>([|Unlicensed|Experimental|Innovative|Untested]) [|-|-|+]{3d3 +2} <i>[@ShiftRank]</i></b> if/when <b>[@Skills] [|>|<|=] [@Fate]</b><br>
-1:<b>[!Skills]</b> = [@Fate] <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>([|Darkweb|Illegal|Unauthorized|Forbidden]) [|-|+|+]{3d3 +2} <i>[@ShiftRank]</i></b> if/when <b>[@Skills] [|>|<|=] [@Fate]</b><br>
-
-Table: ShiftRank
-1:Chaos
-1:Strength
-1:Agility
-1:Reflex
-1:IQ
-1:Intuition
-1:Willpower
-1:Toughness
-1:Rank Shift
+20:<b>[!Skills]</b> = [@Fate]
+1:<b>[|Amateur|Beginner|Novice|Untested] [!Skills]</b> = [@Fate]
+1:<b>[|Intermediate|Standard|Common|Average] [!Skills]</b> = [@Fate]
+1:<b>[|Advanced|Progressive|Experimental|Breakthrough] [!Skills]</b> = [@Fate]
+1:<b>[|Unlicensed|Innovative|Untested] [!Skills]</b> = [@Fate]
+1:<b>[|Darkweb|Illegal|Unauthorized|Forbidden] [!Skills]</b> = [@Fate]
 
 Table: Fate
 1:Miniscule (1)

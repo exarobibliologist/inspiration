@@ -1,20 +1,5 @@
-// From https://www.reddit.com/r/DnDBehindTheScreen/comments/4jl3xq/random_tables_stupidlyquick_citybuilding/?ref=search_posts
-// Posted by u/OrkishBlade with these comments:
-// One can spend a lot of time building a large, diverse, well-developed city. A city can be filled with hundreds of locations, thousands of pieces of merchandise, and more NPCs than a DM can name. You can do a lot of this building, mapping, and describing ahead of time, or you can do it mostly on-the-fly. However, even for filling in a city on-the-fly, having some sense of the city's geography, history, and culture is helpful. So, here are some tables to help get through those first few bits.
-// I'll also post in the comments two examples of cities that I put together using this cheat sheet—one without a map and only text, and one with a rough map. The key is to make decisions quickly and move on. Roll or choose one or more results from the tables, fit it into the city and then roll or choose the next thing.
-//For quickly sketching out a map of a city, town, or neighborhood:
-// [1] Choose or roll for a central landmark or district.
-// [2] Then roll or choose 2-6 street names.
-// [3] Sketch out these streets, leading away from the central landmark to other parts of the town or city.
-// [4] Fill in some details.
-// implemented in IPP by Jonathan Dale
-
-Header: OrkishBlade's Stupidly-Quick City-Building implemented (and slightly expanded) in IPP by Jonathan Dale.
-
 Table: RandomCity
 The city [|grew up around|developed near|was built at] [@CityGeography] and is [|near|in] a region ideal for [@CityResources] It is [||||justifiably|accurately|appropriately|unreasonably] [|widely known|famous|widely mocked|well regarded|popular] for its [@CityCulture] The city is [|governed|ruled|controlled] by [@CityGovernment] The city [|recently|long ago|once|supposedly long ago in history|just a few years ago|decades ago|centuries ago|a few years ago] [|experienced|suffered through|barely survived|triumphed over|rebuilt after] [@CityHistoricalEvent] [@CityThreats] The city is defended [@CityDefense], and the laws are [@CityLaw]. The most prominent landmark is [@CityLandmark] The major sections of the city are [!{1d3+1} CityDistricts >> implode] and [!CityDistricts]. The major streets are [!{1d5+1} Citystreets >> implode], and [!CityStreets].
-
-
 
 Table: CityGeography
 a coastal harbor

@@ -1,0 +1,69 @@
+Category: Names/Fantasy
+
+Table: FantasyName_Male
+[@FantasyMaleName]
+
+
+EndTable:
+
+Define: v1 =[|a|e|i|o|u]
+Define: v2 =[|a|e|i|o|u]
+Define: v3 =[|a|e|i|o|u]
+Define: v4 =[|a|e|e|i|i|o|u]
+Define: v5 =[|a|e|e|i|i|o]
+Define: cn1 =[|b|br|c|ch|cr|d|dr|f|fl|g|gr|h|j|k|l|m|n|p|pr|r|s|sh|st|t|tr|v|w|y|z]
+Define: cn2 =[|b|c|ch|d|f|ff|g|gg|k|kk|l|ll|m|n|ng|p|ph|pp|r|rn|rm|s|st|t|th|tt|z]
+Define: cn3 =[|b|ch|d|f|g|h|k|kk|l|m|n|p|ph|r|s|st|t|tt|v|z|zz]
+Define: cn4 =[|l|ll|n|nn|p|ph|s|t|tt|z|zz]
+
+Table: FantasyFemaleName
+Define: ender=[@enderf]
+[@stf >> Proper]
+
+
+
+Table: FantasyMaleName
+Define: ender=[@enderm]
+[@stm >> Proper]
+
+Table: stm
+2:{$cn1}{$v1}{$cn2}{$ender}
+{$cn1}{$v1}{$cn2}{$v1}{$cn3}
+{$cn1}{$v1}{$cn2}{$v1}{$cn2}{$ender}
+{$v3}{$cn2}{$ender}
+{$v3}{$cn2}{$v1}{$cn3}
+{$v3}{$cn2}{$v1}{$cn2}{$ender}
+
+Table: stf
+2:{$cn1}{$v1}{$cn2}{$ender}
+{$cn1}{$v1}{$cn2}{$v4}{$cn4}
+{$cn1}{$v1}{$cn2}{$v4}{$cn2}{$ender}
+{$v5}{$cn2}{$ender}
+{$v5}{$cn2}{$v4}{$cn4}
+{$v5}{$cn2}{$v4}{$cn2}{$ender}
+
+
+
+Table: enderm
+ius
+us
+ian
+{$v2}cious
+{$v2}r
+ios
+eus
+ero
+o
+
+Table: enderf
+a
+ella
+ina
+ine
+ia
+{$v2}cia
+{$v2}ra
+ess
+issa
+essa
+ya

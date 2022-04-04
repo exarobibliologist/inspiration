@@ -1,0 +1,84 @@
+Header: <center>Stuff an orc or other low level humanoid might have on them</center>
+Category: Treasure/Fantasy
+
+Table: OrcHoard
+2:nothing.  poor fellow is broke.
+[@weapon]
+2:[@stuff]
+2:[@weapon], [@stuff]
+2:[@weapon], [@2 stuff >> implode]
+[@weapon], [@3 stuff >> implode]
+
+
+Table: stuff
+[@coins]
+[@things]
+
+Table: coins
+{1d6} cp [@container]
+{2d6} cp [@container]
+{3d6} cp [@container]
+{1d4} sp [@container]
+{2d4} sp [@container]
+{1d4} small [@gem](s)
+
+Table: gem
+topaz
+garnet
+polished stone
+sea shell
+
+Table: container
+loose
+wrapped in a piece of leather
+wrapped in a piece of hide
+wrapped in a leaf
+in a small hide pouch
+in a small leather pouch
+tucked into a crude belt
+
+Table: things
+{1d6} small humanoid fingers
+a bundle of {2d6} twigs
+a small wooden figurine of [@carvings]
+a feather headdress
+a bone necklace
+a stone carving of [@carvings]
+a rabbit carcass
+a squirrel carcass
+a rotting fish
+a bit of cooked meat
+a small bird carcass
+a horn
+{1d4} torch(s)
+a vial of some liquid ([@liquid])
+a flask of some liquid ([@liquid])
+a nice silver knife
+
+Table: weapon
+a rusty short sword
+a rustly long sword
+a club
+a fire sharpened spear
+a spiked club
+a crude stone knife
+a dull iron knife
+
+Table: liquid
+some ick he found by a stream
+poison
+an oitment for ticks
+a healing salve
+awful moonshine
+poisonous moonshine
+5:water
+
+Table: carvings
+an idol or god
+a fish
+a bird
+a deer or horse
+a bear
+a orc
+a human or humanoid
+a design

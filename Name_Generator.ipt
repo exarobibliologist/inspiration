@@ -1,38 +1,37 @@
-Header: <center><span style='font:24pt Arial'>The Name Generator</span><br><span style='font:7pt Arial'><center><b>This material is Open Game Content, and is licensed for public use under the terms of the Open Game License v1.0a.</span></center>
+Footer: <center><span style='font:7pt Arial'><b>This material is Open Game Content, and is licensed for public use under the terms of the Open Game License v1.0a.</span></center></b>
 
 Table: MessageTable
 Define: mythicname =[@AllNames>>Proper>>Implode]
 1:{$mythicname}
 
 Table: AllNames
-5:[@LatinName] [@SpanishSurnames]
-5:[@LatinName] [@WestSurnames]
-5:[@LatinName] [@FrenchSurnames]
-5:[@LatinName] [@JapanSurnames]
-5:[@LatinName] [@ChinaSurnames]
-10:[@LatinName] [@LatinName]
-10:[@HumanName] [@SpanishSurnames]
-10:[@HumanName] [@WestSurnames]
-10:[@HumanName] [@FrenchSurnames]
-10:[@HumanName] [@JapanSurnames]
-10:[@HumanName] [@ChinaSurnames]
-15:[@SpanishMaleNames] [@SpanishSurnames]
-15:[@SpanishFemaleNames] [@SpanishSurnames]
-15:[@WestMaleNames] [@WestSurnames]
-15:[@WestFemaleNames] [@WestSurnames]
-15:[@FrenchMaleNames] [@FrenchSurnames]
-15:[@FrenchFemaleNames] [@FrenchSurnames]
-15:[@JapanSurnames] [@JapanMaleNames]
-15:[@JapanSurnames] [@JapanFemaleNames]
-15:[@ChinaSurnames] [@ChinaMaleNames]
-15:[@ChinaSurnames] [@ChinaFemaleNames]
-5:[@HumanName]
-5:[@ElvishName]
-4:[@SkratName]
-3:[@OrcName]
-3:[@DwarfName]
-3:[@DemonName]
-EndTable:
+[@LatinName] [@SpanishSurnames]
+[@LatinName] [@WestSurnames]
+[@LatinName] [@FrenchSurnames]
+[@LatinName] [@JapanSurnames]
+[@LatinName] [@ChinaSurnames]
+[@LatinName] [@LatinName]
+[@HumanName] [@SpanishSurnames]
+[@HumanName] [@WestSurnames]
+[@HumanName] [@FrenchSurnames]
+[@HumanName] [@JapanSurnames]
+[@HumanName] [@ChinaSurnames]
+[@SpanishMaleNames] [@SpanishSurnames]
+[@SpanishFemaleNames] [@SpanishSurnames]
+[@WestMaleNames] [@WestSurnames]
+[@WestFemaleNames] [@WestSurnames]
+[@FrenchMaleNames] [@FrenchSurnames]
+[@FrenchFemaleNames] [@FrenchSurnames]
+[@JapanSurnames] [@JapanMaleNames]
+[@JapanSurnames] [@JapanFemaleNames]
+[@ChinaSurnames] [@ChinaMaleNames]
+[@ChinaSurnames] [@ChinaFemaleNames]
+[@HumanName]
+[@ElvishName]
+[@SkratName]
+[@OrcName]
+[@DwarfName]
+[@DemonName]
 
 Table:WestMaleNames
 Adam
@@ -443,7 +442,7 @@ Andre
 Antoine
 Charles
 Claude
-Francois
+François
 Gabriel
 Gerard
 Gustave
@@ -467,7 +466,7 @@ Vincente
 Yves
 
 Table: FrenchFemaleNames
-Agnes
+Agnès
 Anna
 Aurore
 Bernadette
@@ -475,7 +474,7 @@ Catherine
 Claudine
 Colette
 Danielle
-Francoise
+Françoise
 Gabrielle
 Giselle
 Jacqueline
@@ -488,7 +487,7 @@ Michelle
 Nicole
 Renee
 Simone
-Therese
+Therèse
 
 Table: JapanMaleNames
 Aguri
@@ -3002,10 +3001,10 @@ Fuentes
 Gallardo
 Garcia
 Garza
-Gomez
+Gómez
 Gonzalez
 Guardia
-Guzman
+Guzmán
 Gutierrez
 Hernandez
 Ibanez
@@ -3039,7 +3038,7 @@ Terrones
 Thomas
 Toll
 Torres
-Vazquez
+Vázquez
 Valdez
 Vargas
 Verona
@@ -3074,7 +3073,7 @@ Laurent
 Lecierc
 Loubert
 Maguet
-Melles
+Mèllès
 Mercier
 Montaigne
 Naud
@@ -3344,7 +3343,7 @@ Table: ElfFirst
 Ær
 Æn
 Ael
-aer
+Áer
 Aer
 Aen
 Al
@@ -3359,7 +3358,7 @@ Mel
 Mer
 Mor
 Mal
-Mal
+Mál
 Niel
 Ril
 Rin
@@ -3388,7 +3387,7 @@ ad
 aen
 al
 an
-an
+án
 and
 ar
 as
@@ -4798,11 +4797,13 @@ Bo
 Ba
 Bra
 Bro
+Brø
 Bru  
 Da
 Dhu
 Dho
 Do  
+Dû
 Du  
 Fo  
 Ga
@@ -4811,12 +4812,14 @@ Gra
 Gro
 Groo
 Gru
+Grö
 Ha  
 Ho  
 Hu  
 Ka
 Khe
 Khu
+Khû
 Ko
 Ku
 Kra
@@ -4879,7 +4882,8 @@ in
 ir 
 o 
 og 
-on
+ön
+ög
 oin
 olin
 olir

@@ -1,0 +1,71 @@
+Header: Things bandits or mercenaries might have on them
+Category: Treasure/Fantasy
+
+Table: BanditWealth
+Nothing, the poor fellow is broke!
+[!{1d3} BanditBasics >> implode]
+[!{1d3} BanditBasics >> implode], [@BanditCoins]
+[!{1d3} BanditMiscItems >> implode]
+[!{1d3} BanditBasics >> implode], [!{1d3} BanditMiscItems >> implode]
+[!{1d3} BanditBasics >> implode], [@BanditCoins], [!{1d3} BanditMiscItems >> implode]
+
+
+Table: BanditCoins
+10: {1d20} cp
+5: {1d20} cp, {1d20} sp
+2: {1d100} cp, {1d50} sp, {1d20} gp
+1: {1d100} cp, {1d50} sp, {1d100} gp
+
+
+Table: BanditBasics
+a backpack
+a bedroll
+a blanket
+[|a sack|{1d3+1} sacks]
+
+
+
+Table: BanditMiscItems
+a wine skin (full of wine)
+a wine skin (full of hard liquor)
+a wine skin [|(empty)|(water)]
+a bottle of hard liquor
+a bottle of [|fine|awful] [|wine|beer|mead]
+a small pouch of black lotus extract [|(mostly gone)|]
+a religious [|medallion|icon] worth ({!{1d10}*10} sp)
+a lock of hair [|(brunette)|(blonde)|(red)]
+a [|gold|silver|copper|steel] ring [|with small {1d4*10} sp gem||]
+a [|gold|silver|copper|steel] neck chain
+a [|gold|silver|copper|steel] nose ring
+a feather from an exotic bird
+a [|squirrel|rabbit|racoon|jaguar|lion|tiger] pelt 
+a fishing hook and line
+a fishing net
+a bottle of ink and quill [|(empty)|]
+[|a stick of chalk|{1d3+1} sticks of chalk]
+a pair of manacles
+a spade
+a sewing needle [|and some thread|]
+a chain ({1d6+6} ft)
+[|a sheet of parchment|{1d6+1} sheets of parchment]
+a small vial [|(empty)|(poison DC 12)|(sleeping draught)|(hallucinogen)|(unknown)]
+a small [|leather|cloth] bag with [|dice|figurine] game
+playing cards
+a silk rope ({2d10+10} ft)
+a small [|leather|cloth] bag of herbs ([|poison DC {1d6+9}|sleeping aid|hallucinogen|unknown|healing|stimulant|medicinal])
+a [|small|large] bag of [|nuts and raisins|vegetables|jerky|grain|hard candy|stones|seashells|[|dead|live] [|wasps|beetles|scorpions|spiders|ants|mice]]
+[|an iron|a copper|a brass|a] cooking pot
+[|an iron|a copper|a brass|a] [|spoon|spoon|fork|dinner knife]
+a hunting knife
+a whistle
+a drum
+a flute
+a metal cup
+a block of wax
+[|a candle|{1d3+1} candles]
+a lantern [|and a small bottle of lantern oil|]
+[|a torch|{1d3+1} torches]
+a list of names [|(some of them crossed off)|(and amounts owed)|]
+[|a love letter|{1d6+1} love letters [|(not all from the same person)|]]
+some dirty sketches
+a [|clay|stone|brass|silver|gold] figurine of a [|man|woman|horse|dragon|dog|lion|bird]

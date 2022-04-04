@@ -1,0 +1,77 @@
+Category: Names/Fantasy
+
+Table: Orc Name
+[@MasterOrcName]
+
+EndTable:
+//Common Orc/Humanoid style names
+
+Define: OrcVowel =[|a|o|u]
+Define: OrcVowCap =[|A|E|O|U]
+
+
+Table: MasterOrcName
+4:[@OrcNameStart][@OrcNameMiddle][@OrcNameEnd]
+[@OrcNameStart][@OrcNameMiddle][@OrcNameEnd] [@OrcNameStart][@OrcNameEnd]
+
+
+Table: OrcNameStart
+{$OrcVowCap}[@OrcNameMiddle]{$OrcVowel}
+Br{$OrcVowel}
+Cr{$OrcVowel}
+G{$OrcVowel}
+G'
+Gr{$OrcVowel}
+K'
+Kr{$OrcVowel}
+M{$OrcVowel}
+S{$OrcVowel}
+T{$OrcVowel}
+Th{$OrcVowel}
+Thr{$OrcVowel}
+
+Table: OrcNameMiddle
+g{$OrcVowel}
+gg{$OrcVowel}
+d{$OrcVowel}
+m{$OrcVowel}
+
+Table: OrcNameEnd
+r
+rth
+th
+5:k
+3:ng
+
+
+Table: OrcClan
+[@MasterOrcName][@OrcClanEnd]
+[@OrcClanStart][@OrcClanEnd]
+
+Table: OrcClanStart
+Blood
+Orc
+Skull
+Rock
+Spear
+Night
+Cave
+Wolf
+Bear
+Dog
+Bat
+
+Table: OrcClanEnd
+smasher
+bone
+crusher
+fang
+claw
+slammer
+killer
+eater
+axe
+tooth
+
+
+

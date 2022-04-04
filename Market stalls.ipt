@@ -1,5 +1,9 @@
-// Market stalls, based on http://ironcrown.com/blog/2019/08/14/49-market-stalls-for-a-fantasy-setting/
-// Jonathan Dale
+MaxReps:1
+Prompt: Number of Stalls {1|2|3|4|5|6|7|8|9}4
+
+Table: MasterMarket
+[@{$prompt1} MarketStalls >>Implode <br>]
+
 
 Table: MarketStalls
 Butcher ([@Quality] quality, [@Variety] variety, [@Price] prices).

@@ -1,0 +1,196 @@
+Header: <center><b>Elf Names</b></center>
+
+Table: Elf Name
+[@MasterElfName]
+
+
+EndTable:
+# Elf names
+
+Table: MasterElfName
+[@ElvishWordName]
+2:[@ElvishWordName] [@ElvishWordName]
+[@ElvishWordName] [@CommonDescriptiveElfName]
+[@ElvishWordName] [@ElfNameStart][@ElfNameLast][@ElvishDescriptB]
+
+Table: ElvishWordName
+[@ElfNameStart][@ElfNameMiddle][@ElfNameLast]
+[@ElfNameStart][@ElfNameMiddle][@ElfNameMiddle][@ElfNameLast]
+
+Table: CommonDescriptiveElfName
+[@ElvishDescriptA][@ElvishDescriptB]
+
+Table: Elf Names Old
+[@ElfNameStart][@ElfNameMiddle][@ElfNameLast] [@ElfNameStart][@ElfNameMiddle][@ElfNameLast]
+[@ElfNameStart][@ElfNameMiddle][@ElfNameMiddle][@ElfNameLast] [@ElfNameStart][@ElfNameMiddle][@ElfNameLast]
+[@ElfNameStart][@ElfNameMiddle][@ElfNameLast] [@ElfNameStart][@ElfNameMiddle][@ElfNameMiddle][@ElfNameLast]
+[@ElfNameStart][@ElfNameMiddle][@ElfNameMiddle][@ElfNameLast] [@ElfNameStart][@ElfNameMiddle][@ElfNameMiddle][@ElfNameLast]
+
+Table: ElfNameStart
+Ael
+Aer
+Al
+Ar
+El
+Krys
+Kyl
+Lin
+Lir
+Mar
+Mel
+Mer
+Mor
+Mál
+Niel
+Ril
+Rin
+Sil
+Sin
+Tal
+Tel
+Ten
+Tha
+The
+Thi
+Thra
+Thri
+Tir
+Tith
+Tril
+Tryl
+Tyl
+Tyr
+Áer
+Æl
+
+
+
+
+Table: ElfNameMiddle
+ad
+aen
+al
+an
+and
+ar
+as
+asn
+asr
+eir
+el
+end
+er
+idr
+il
+ilbr
+ilr
+in
+inbr
+ind
+ir
+len
+or
+orbr
+ri
+ril
+án
+él
+ow
+
+
+
+Table: ElfNameLast
+ael
+al
+4:as
+en
+eth
+i
+iad
+ial
+ian
+4:iel
+ien
+ies
+ion
+lan
+lir
+lith
+nal
+nar
+ni
+nil
+rieth
+ril
+ol
+yn
+
+
+
+
+Table: ElvishDescriptA
+Bear
+Blue
+Crescent
+Crystal
+Crow
+Dove
+Dragon
+Eagle
+Falcon
+Far
+Field
+Flame
+Fox
+Golden
+Green
+Honey
+Ice
+Jade
+Moon
+Mountain
+Onyx
+Owl
+Raven
+Riddle
+River
+Shadow
+Silver
+Snow
+Star
+Sun
+Tree
+Whither
+Wild
+Wind
+Winter
+World
+
+
+Table: ElvishDescriptB
+archer
+arrow
+blade
+bow
+dancer
+drifter
+fletcher
+flower
+heart
+horse
+hunter
+leaf
+light
+lover
+mist
+myth
+night
+oath
+shadow
+singer
+song
+walker
+wind
+
+
+

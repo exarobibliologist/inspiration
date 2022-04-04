@@ -1,0 +1,171 @@
+Header: Items you may get after picking someone's pocket, or cutting their purse/pouch.
+Category: Treasure/Fantasy
+
+Table: PickPocket
+22:you get [! PickPocketItems >> implode]
+10:you get [!{1d2+1} PickPocketItems >> implode]
+1:Trap! [@PickPocketTrap]
+
+Table: PickPocketTrap
+You find a threatening note from the theives guild warning non-member pick pockets from working on their turf.
+You prick your finger on a poisoned needle (DC {1d6+9})
+2: You prick your finger on a needle.  Make a silence check or be caught.
+2: A mouse trap snaps shut on your fingers. Make a silence check or be caught.
+2: You just tried to pick the pocket of a better pick pocket.  lose some stuff.
+You get shocked for {1d3} points of damage as a spell defending the owner's purse is triggered.
+You trigger an alarm spell, and are immediately illuminated with glitterdust.
+You find a note saying to meet someone [|tonight|tomorrow night] [|in an alley|at a spot in the woods|by the water] who will deliver the gold and gems.  Its a ploy by [|a group of vigilantes fed up with local pick pockets|the local thieves guild fed up with non-guild members working on their turf|the local town watch], who will ambush the thief if he/she shows up!
+You find a scroll, cursed with [|explosive runes|a polymorph spell (frog)|a petrification spell].  Viewing the text on the scroll triggers the effect.
+You find a small [|wooden box|jar|bottle].  If opened, take {1d6} points of fire damage from the magical trap.
+
+
+Table: PickPocketItems
+5: [!{1d3} PickPocketCoins >> implode]
+[!PickPocketGems]
+4:[!PickPocketMiscValuables]
+10: [!PickPocketOtherStuff]
+
+Table: PickPocketCoins
+[|\a [@PickPocketCoinDesc] copper piece|{1d20+1} [@PickPocketCoinDesc] copper pieces]
+[|\a [@PickPocketCoinDesc] silver piece|{1d20+1} [@PickPocketCoinDesc] silver pieces]
+[|\a [@PickPocketCoinDesc] gold piece|{1d20+1} [@PickPocketCoinDesc] gold pieces]
+[|\a [@PickPocketCoinDesc] electrum piece|{1d20+1} [@PickPocketCoinDesc] electrum pieces]
+[|\a [@PickPocketCoinDesc] platinum piece|{1d20+1} [@PickPocketCoinDesc] platinum pieces]
+
+Table: PickPocketCoinDesc
+15:\z
+ancient
+foreign
+freshly minted
+halved
+suspicious
+clearly fake
+
+Table: PickPocketMetal
+5:copper
+2:silver
+gold
+platinum
+5:iron
+steel
+2:pewter
+2:lead
+
+Table: PickPocketMaterials
+5:[@PickPocketMetal]
+wooden
+stone
+clay
+glass
+
+
+Table: PickPocketGems
+\a [|small||] [|uncut|poorly cut|very well cut] [!PickPocketGemTypes]
+
+
+Table: PickPocketGemTypes
+5: agate
+piece of amethyst
+aquamarine
+bloodstone
+2: carnelian
+piece of coral
+diamond
+emerald
+fire agate
+fire opal
+flourite
+5: garnet
+iolite
+malachite
+melanite
+moldavite
+moss opal
+obsidian
+onyx
+opal
+peridot
+5: piece of quartz
+sapphire
+serpentine
+2: piece of smokey quartz
+star ruby 
+star sapphire
+topaz
+5: piece of turquoise
+10: piece of [|red|blue|green|] glass
+
+Table: PickPocketMiscValuables
+[|a nugget of|{1d6+1} nuggets of] [|copper|silver|electrum|gold|fool's gold]
+\a [@PickPocketMaterials] religious icon
+a promissory note from a [|local|foreign] banker for {2d100} [|silver|gold|platinum] pieces
+5:\a [@PickPocketMetal] [|ring|ring|earring|bracelet|nose ring|(jewelry) chain|pendant] [|adorned with a [|small|large], [|poorly cut|finely cut] [@PickPocketGemTypes]||]
+\a [@PickPocketMaterials] figurine of a [|man|woman|horse|dog|bird|fish|lion|dragon]
+
+Table: PickPocketOtherStuff
+[@PickPocketCreepy]
+2:[@PickPocketTexts]
+\a [@PickPocketMaterials] spoon
+\a [@PickPocketMaterials] fork
+\a [@PickPocketMaterials] dinner knife
+\a [@PickPocketMaterials] drinking cup
+\a [@PickPocketMaterials] mug
+a candle
+a whetstone
+a fire starting kit
+a razor
+{1d6+1} [|iron|copper|brass] [|nails|tacks|pins|needles]
+a sewing kit and needle
+some [|string|twine]
+a sock
+a [|male|female] undergarment
+4:a [|small|large] [|glass|clay|ceramic] [|vial|jar|bottle] ([@PickPocketVialContents])
+a dice game
+a deck of [|(marked)|] cards
+a bar of soap
+some wooden toothpicks
+[|a human tooth|{1d3+1} human teeth]
+a [|broken|] [|kazoo|whistle]
+a [|snotty|] hankerchief
+a locket of hair ([|brunette|blonde|red|black])
+\a [|brass|copper|iron] key
+[|a piece of|{1d3+1} pieces of] [|red|blue|yellow|white|white] chalk
+[|a piece of|{1d3+1} pieces of] charcoal
+a hand full of [|hard candy|grain|raisins|nuts|nuts and raisins|grapes|jerky|carrots|beans|herbs]
+a quill pen
+
+Table: PickPocketTextDesc
+\z
+half-written
+
+
+Table: PickPocketTexts
+[|a love letter|{1d6+1} love letters [|(not all from the same person)|]]
+a [|half-written|] letter of [|vengence|complaint] targetting a local [|merchant|leader|entertainer|halfling|elf|cleric|gnome|wizard]
+a [|half-written|] letter complaining about all the pick-pockets in town
+a [|half-written|] [|political|religious|social] manifesto
+a map to a [|house|inn|tavern|mill|horse trader|brothel]
+a [|completely fake|] map to [|a dungeon|ruins|buried treasure|an island|a forgotten mine]
+a [|forged|] deed to a [|home|keep|mine|farm|ship]
+a [|'two for one'|'buy one, get one free'|10% discount] coupon from a local [|tavern|vegetable merchant|baker|brothel]
+\a [|wanted poster|arrest warrant] for [|one of the characters|a friend of the characters]
+a letter to the local [|magistrate|sheriff|councilman] demanding that they do something about all the [|were-rats|giant rats|were-muskrats|packs of wild dogs|unwashed dwarves] in the city
+a 'lost dog' flyer for a pooch named '[|Scruffy|Hooch|Max|Ginger|Daisy|Sir Barksalot]'
+a note saying to meet someone [|tonight|tomorrow night] [|in an alley|at a spot in the woods|by the water|in a tavern] who will deliver the [|coins|gems|magic item|prisoner] as promised
+a marker for a {1d100} gp bet on the results of tonight's fight.
+a [|losing|winning] marker for a {1d100} gp bet on the results of last night's fight.
+
+Table: PickPocketCreepy
+a severed [|bloody|still warm||] [|finger|toe|ear] [|wrapped in a leaf|wrapped in cloth|wrapped in leather|in a small wooden box]
+a [|small|large] [|bag|jar|bottle|wooden box] containing [|live|dead] [|beetles|ants|wasps|lizards|spiders]
+
+Table: PickPocketVialContents
+strong liquor
+[|powdered|] poison
+ink
+[|powdered|] sleeping aid
+[|powdered|] hallucigen
+[|powdered|] sexual aid
+[|powdered|] pain killer
+[|powdered|] home remedy
+cooking herbs

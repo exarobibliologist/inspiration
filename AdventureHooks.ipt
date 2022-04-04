@@ -1,0 +1,498 @@
+
+Table: AdventureHooks
+[@MasterAdventureHooks]
+
+EndTable:
+
+
+
+
+
+
+
+Header: <b>While in town...</b>
+MaxReps: 1
+
+Table: MasterAdventureHooks
+Set: R=[@MasterHumanName]
+Set: RulerName=[@NobilityTitles]\_[@MasterHumanName]
+Shuffle: Professions
+\a [!Professions], \a [!Professions], and \a [!Professions] were all found dead in the alleys this morning - killed in the same grisly manner.
+\a [!Professions], \a [!Professions], and \a [!Professions] were all found dead in the alleys this morning - killed in the same grisly manner.  \a [!Professions] named [@MasterHumanName] is missing.
+A stranger approaches.  He seeks revenge against a family enemy.  And will pay handsomely.
+An unknown assasin has taken an unfortunate interest in one of the character's demises.
+{$RulerName}'s daughter has been kidnapped by a neighboring ruler.  A king's ransom (well, a princess's ransom) for those brave enough to rescue her!
+{$RulerName} wishes to kidnap the daughter/son of a neighboring ruler to extract revenge.
+{$RulerName} has taken an infatuation and wishes the daughter/son of a neighboring ruler to be 'theirs'.
+A daughter of a top aid to {$RulerName} has been kidnapped.  Who will help him?
+It's rumored that just outside the city is an old [@FantasyRacesAdj] [|gold|silver|platinum|diamond|opal] mine.
+The [|good|evil] wizard {$R} who lives in a stronghold on a nearby mountain has not been seen for a while.
+A [|good|evil|\z] wizard is seeking an apprentice.  But applicants must first pass a test!
+A merchant named {$R} claims to have been attacked by a band of [|orcs|kobolds|goblins|bandits] on the way into town.  He wishes the party to retrieve what they can from the attackers.
+The city has been plagued by a group of bandits.
+The city has been plagued by a group of bandits (who are bankrolled by a neighboring ruler)
+The city has been plagued by a group of bandits (who are bankrolled by {$RulerName})
+Much wealth and honor can be obtained by doing well in the annual tournament!
+One of the characters wins an ugly painting in a [|card|dice|dart] game.  Hidden under the canvas is a treasure map!
+One of the character's wins \a [@NormalAnimals] in a drunken [|card|dice|dart] game.  [|When the polymorph spell wears off and {$RulerName} is restored, the characters have some 'splaining to do!| Of course, it was stolen, and now the original owner, an evil wizard, wants it back and the characters dead.|All heck breaks out when the spell wears off and the polymorphed [@Monsters] goes on a rampage!  Of course, since it belonged to the characters, they're expected to make things right]
+The city has been plagued by a group of humanoids.
+Something stalks the city at night, and kills those unlucky enough to be found alone.
+Something stalks the city, and is killing the city's elders.
+A beautiful woman runs into the arms of the characters.  She hopes he can help her escape a powerful man who wants to marry her.
+A beautiful woman runs into the arms of the characters.  She hopes he can help her escape a powerful person who wants to marry her (who happens to be the town ruler!)
+A rich merchant named {$R} wants to hire the characters to find his missing wife. [||(Who has run away to be with someone else)]
+One of the characters is mistaken for an infamous thief!
+One of the characters is mistaken for an infamous thief! (Whom {$RulerName} seeks for a different reason...)
+One of the characters is mistaken for a past ruler!
+A mysterious rebel tries to drag the characters into his plot of revenge against the city and {$RulerName} (the guy's a nut).
+A mysterious rebel tries to drag the characters into his plot of revenge against the city and {$RulerName} (the stranger is telling the truth).
+The party is offered an 'easy' job by a Mercenary captain named {$R}.
+The party is offered an 'easy' job by a Mercenary captain named {$R}. (as fodder, of course)
+One of the characters has an item that a mysterious stranger wants.
+One of the characters has an item that {$RulerName} wants.
+Someone stole {$R}'s prized cow.
+A street urchin named {$R} is dragged off by the city guard for a crime one of the character(s) know he/she didn't commit.
+There's some mysterious goings on at the city's largest cemetary.
+A wizard named {$R} approaches the group.  He's discovered the location of an important [|scroll|book|want|sword|shield|helm|staff|statue|map|gem|herb|potion], and wants to hire the party to retrieve it.
+The characters are framed for a crime they didn't commit!
+The characters are approached by {$RulerName} with a job offer.  Escort his/her daughter/son to a nearby city to attend a wedding.
+The characters are approached by {$RulerName} with a job offer.  Escort his/her daughter/son to a nearby city to attend a wedding. (of course, this is the perfect chance to get rid of this little pest...)
+The characters are approached by {$R}, a wealthy merchant, who seeks an armed escort to another city.
+Caravans traveling to and from the city have been plagued by humanoid bandits.
+It's rumored that somewhere in this town, a school of magic is run by one of the town's elders.
+The town is facing a crime spree - animals are stealing people's valuables!
+A plague has been decimating the members of the lower class.
+A plague has been killing the members of the upper class.
+
+EndTable:
+// General 'Human' name generator
+// Tweak to suit tastes for the cultures in your campaign
+
+Define: HumanConstanant =[|b|br|bl|c|cl|ch|cr|d|dr|f|fr|fl|g|gr|h|j|k|kr|l|m|n|ph|p|pr|r|s|sh|sh|t|th|v|w|z]
+Define: HumanEndConstanant =[|b|c|ch|d|f|g|h|j|k|l|m|n|ph|p|r|s|sh|sh|t|th|v|w|z]
+
+Table: MasterHumanName
+5:[@HumanNameFirst][@HumanNameMiddle]
+5:[@HumanNameFirst][@HumanNameEnd]
+5:[@HumanNameFirst][@HumanNameMiddle][@HumanNameEnd]
+
+Table: HumanNameVowel
+4:a
+5:e
+4:i
+4:o
+2:u
+1:y
+1:y[|a|e|i|o|u]
+
+Table: HumanNameVowelCap
+4:A
+5:E
+4:I
+4:O
+2:U
+
+
+Table: HumanNameFirst
+60:[@HumanNameVowelCap][@HumanNameMiddle]
+40:[@HumanNameVowelCap]{$HumanConstanant}[@HumanNameVowel]
+5:B[@HumanNameVowel]
+5:Br[@HumanNameVowel]
+5:Bl[@HumanNameVowel]
+5:C[@HumanNameVowel]
+5:Cl[@HumanNameVowel]
+1:Cz[@HumanNameVowel]
+5:Ch[@HumanNameVowel]
+5:Cr[@HumanNameVowel]
+5:D[@HumanNameVowel]
+5:Dr[@HumanNameVowel]
+5:F[@HumanNameVowel]
+5:Fr[@HumanNameVowel]
+5:Fl[@HumanNameVowel]
+5:G[@HumanNameVowel]
+5:Gr[@HumanNameVowel]
+5:H[@HumanNameVowel]
+5:J[@HumanNameVowel]
+5:K[@HumanNameVowel]
+1:Kr[@HumanNameVowel]
+5:L[@HumanNameVowel]
+5:M[@HumanNameVowel]
+5:N[@HumanNameVowel]
+5:P[@HumanNameVowel]
+5:Ph[@HumanNameVowel]
+5:Pr[@HumanNameVowel]
+1:Q[@HumanNameVowel]
+5:R[@HumanNameVowel]
+10:S[@HumanNameVowel]
+5:Sh[@HumanNameVowel]
+5:Shr[@HumanNameVowel]
+10:T[@HumanNameVowel]
+5:Th[@HumanNameVowel]
+5:V[@HumanNameVowel]
+1:Vr[@HumanNameVowel]
+5:W[@HumanNameVowel]
+1:Wh[@HumanNameVowel]
+1:X[@HumanNameVowel]
+5:Y[@HumanNameVowel]
+5:Z[@HumanNameVowel]
+
+Table: HumanNameMiddle
+5:b[@HumanNameVowel]
+5:br[@HumanNameVowel]
+5:bl[@HumanNameVowel]
+5:c[@HumanNameVowel]
+5:cl[@HumanNameVowel]
+1:cz[@HumanNameVowel]
+5:ch[@HumanNameVowel]
+5:cr[@HumanNameVowel]
+5:d[@HumanNameVowel]
+5:dr[@HumanNameVowel]
+5:f[@HumanNameVowel]
+5:fr[@HumanNameVowel]
+5:fl[@HumanNameVowel]
+5:g[@HumanNameVowel]
+5:gr[@HumanNameVowel]
+5:h[@HumanNameVowel]
+1:j[@HumanNameVowel]
+5:k[@HumanNameVowel]
+5:kr[@HumanNameVowel]
+5:l[@HumanNameVowel]
+5:m[@HumanNameVowel]
+5:n[@HumanNameVowel]
+5:ph[@HumanNameVowel]
+5:p[@HumanNameVowel]
+5:pr[@HumanNameVowel]
+1:q[@HumanNameVowel]
+5:r[@HumanNameVowel]
+5:s[@HumanNameVowel]
+5:sh[@HumanNameVowel]
+5:shr[@HumanNameVowel]
+5:t[@HumanNameVowel]
+5:th[@HumanNameVowel]
+5:v[@HumanNameVowel]
+1:vr[@HumanNameVowel]
+5:w[@HumanNameVowel]
+1:x[@HumanNameVowel]
+5:y[@HumanNameVowel]
+5:z[@HumanNameVowel]
+
+Table: HumanNameEnd
+b
+c
+ch
+ck
+d
+en
+f
+g
+h
+j
+k
+l
+m
+n
+ng
+o
+p
+rd
+rg
+rn
+rt
+sa
+sh
+si
+ssa
+sse
+ssi
+th
+ue
+us
+yn
+10:[|c|d|f|g|h|j|k|l|m|n|p|r|s|t|v|w|z]ar
+10:[|c|d|f|g|h|j|k|l|m|n|p|r|s|t|v|w|z]ia
+10:[|c|d|f|g|h|j|k|l|m|n|p|r|s|t|v|w|z]ias
+10:[|c|d|f|g|h|j|k|l|m|n|p|r|s|t|v|w|z]iel
+10:[|c|d|f|g|h|j|k|l|m|n|p|r|s|t|v|w|z]ien
+10:[|c|d|f|g|h|j|k|l|m|n|p|r|s|t|v|w|z]ius
+10:[|c|d|f|g|h|j|k|l|m|n|p|r|s|t|v|w|z]us
+5:que
+
+
+
+EndTable:
+
+Table: NobilityTitles
+4:Baron
+4:Baroness
+3:Prince
+3:Princess
+2:Duke
+2:Duchess
+Crown Prince
+King
+Queen
+
+EndTable:
+Table: FantasyRaces
+orc
+goblin
+ogre
+giant
+kobold
+doppleganger
+10:human
+5:elf
+5:dwarf
+5:halfling
+4:gnome
+
+
+
+Table: FantasyRacesAdj
+orcish
+goblin
+ogrish
+giant
+kobold
+doppleganger
+10:human
+5:elvish
+5:dwarven
+5:halfling
+4:gnomish
+
+EndTable:
+//'Normal' Medieval Professions
+
+Table: Professions
+actor
+advocate
+alchemist
+animal handler
+apothecary
+archer
+architect
+armorer
+artist
+astrologer
+baker
+banker
+barber
+bard
+barkeep
+barmaid
+bather
+beer-seller
+beggar
+blacksmith
+boatman
+bodyguard
+book binder
+book seller
+brewer
+buckle maker
+builder
+butcher
+carpenter
+cartographer
+chandler
+clerk
+clock maker
+clothworker
+concubine
+cook
+courtesan
+courtier
+cutler
+diplomat
+distiller
+farmer
+fisherman
+fishmonger
+furrier
+gardener
+glovemaker
+guard
+hat maker
+hay merchant
+healer
+herald
+herbalist
+herder
+hermit
+highwayman
+hunter
+illuminator
+innkeeper
+interpreter
+jailer
+jester
+jeweler
+judge
+knight
+laborer
+leatherworker
+locksmith
+madame
+maidservant
+mason
+merchant
+messenger
+midwife
+miller
+miner
+minstrel
+monk
+mortician
+mystic
+necromancer
+noble
+nurse
+page
+painter
+pastry cook
+peasant
+perfumer
+philosopher
+physician
+plasterer
+potter
+priest
+professor
+ratcatcher
+roofer
+rope maker
+rug maker
+saddler
+sailor
+sculptor
+servant
+servent
+shepherd
+shoe maker
+silversmith
+slave
+slaver
+smith
+soldier
+spice merchant
+stablehand
+steward
+storyteller
+surveyor
+tailor
+tanner
+tavern keeper
+tax collector
+teamster
+thatcher
+thief
+tinker
+torturer
+town crier
+trapper
+water carrier
+weaver
+wine seller
+wood seller
+woodcutter
+
+
+EndTable:
+Table: NormalAnimals
+alligator
+antelope
+bear
+bird
+boar
+bull
+calf
+cat
+chicken
+cow
+crow
+deer
+dog
+donkey
+duck
+eagle
+elephant
+fox
+frog
+goat
+goose
+hawk
+hen
+horse
+lion
+monkey
+mouse
+mule
+owl
+ox
+pig
+pigeon
+rabbit
+rat
+rooster
+sheep
+snake
+squirrel
+tiger
+toad
+wolf 
+
+
+Table: GameAnimals
+antelope
+bird
+wild boar
+deer
+wild goat
+moose
+wild ox
+
+EndTable:
+//commonly seen fantasy monsters
+Table: Monsters
+beholder
+basilisk
+cockatrice
+demon
+dragon
+fire giant
+giant
+goblin
+griffin
+gryphon
+harpy
+hill giant
+hippogryph
+hobgoblin
+hydra
+ice giant
+imp
+kolbold
+lizardman
+manticore
+minotaur
+ogre
+orc
+pegasus
+stone giant
+troll
+unicorn
+wyvern
+chimera
+doppleganger
+dryad
+efreeti
+water elemental
+air elemental
+fire elemental
+earth elemental
+gorgon
+hydra
+medusa
+nymph
+pixie

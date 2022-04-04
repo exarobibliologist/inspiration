@@ -1,0 +1,36 @@
+Category: Names/Fantasy
+
+Table: SkratName
+[@SkratNameStart >> Proper][@SkratNameEnd]
+[@SkratNameStart >> Proper][@SkratNameMiddle][@SkratNameEnd]
+[@SkratNameStart >> Proper][@SkratNameEnd] [@SkratNameStart >> Proper][@SkratNameEnd]
+
+
+Table: SkratNameStart
+skra
+skre
+ske
+ska
+gre
+gra
+ger
+gar
+garl
+gwa
+
+Table: SkratNameMiddle
+ta
+ka
+kra
+gra
+gri
+kwi
+kwa
+
+Table: SkratNameEnd
+at
+tle
+ttle
+t
+k
+ga
