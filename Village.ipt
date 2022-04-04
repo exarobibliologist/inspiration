@@ -1,3 +1,5 @@
+MaxReps:1
+
 Table: Settlement
 5:[settlement==thorp][@Thorp]
 5:[settlement==thorp][@SeasonalThorp]
@@ -32,7 +34,7 @@ Table: SeasonalThorpOccupation
 [trades=hunting][settlement==hunting camp]
 [trades=fishing][settlement==fishing camp]
 [trades=logging][settlement==logging camp]
-[trades==construction]contructing a [|temple|church|monastery|fort|road]
+[trades==construction]constructing a [|temple|church|monastery|fort|road]
 
 // A hamlet is a small village, 80-400 people
 Table: Hamlet
@@ -86,7 +88,7 @@ Table: SeasonalHamletOccupation
 [trades=fishing][settlement==fishing encampment]
 [trades=logging][settlement==logging camp]
 [trades=mining][settlement==mining camp]
-[trades==construction]contructing a [|temple|church|monastery|fort|road]
+[trades==construction]constructing a [|temple|church|monastery|fort|road]
 
 Table: TempHamletTrades
 baking
