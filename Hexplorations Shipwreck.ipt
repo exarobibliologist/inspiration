@@ -1,0 +1,54 @@
+; Hexplorations Shipwreck.ipt
+; created 1/16/2019 7:57:11 PM
+Table: Shipwreck
+MaxReps: 4
+[Age/Condition: >> Bold] [@Condition]\n&
+[Ship Type: >> Bold] [@Ship Type]\n&
+[Cause of Wreck: >> Bold] [@Cause of Wreck]\n&
+[Inhabitants: >> Bold] [@Inhabitants]\n&
+[Secret: >> Bold] [@Secret]\n\n\n
+Table: Condition
+Recent, partly above water during low tide, one gaping hole
+Recent, fully sunk, one gaping hole
+Recent, fully sunk, badly damaged
+Old, fully sunk, one gaping hole
+Old, fully sunk and overgrown with coral, only half left
+Ancient, fully sunk and overgrown with coral, only half left
+
+Table: Ship Type 
+Small Merchant Ship (pinnace/sloop/caravel)
+Medium Merchant Ship(barque/carrack/brigandine)
+Large Merchant Ship (galleon)
+Small Warship (cog)
+Medium Warship (frigate/man o’war)
+Large Warship (ship of the line)
+
+Table: Cause of Wreck
+Ran aground: rocks/coral/etc.
+Sunk during battle
+Hit sandbar, then tilted at low tide and flooded at high tide
+Crew killed by bad weather or disease, then ran aground
+Giant sea creature attacked
+Accidental: Pitch pot overturned, Dangerous cargo ignited, Water spout, Lightning, etc.
+
+Table: Inhabitants
+Just sea animals
+Sea animals, but a shark or sea serpent hunts the wreck often
+Merfolk family
+Stranded Crew or descendants
+Sahuagin or Merrow
+Rarer monster: sea hag,  skum/deep ones, marid, sea serpent, bronze dragon, or water elemental
+
+Table: Secret
+Haunted by evil undead: draugr, etc.
+Haunted by spirits who will ask they be put to rest via a task
+Had a precious cargo of gems or gold.
+Powerful magic item hidden in wreck
+Wreck has proof a war was started for dubious reasons
+Special [(These depend on your setting and should be rarer than 1 in 6): >> Italic] [@Special]
+
+Table: Special
+The ship was capable of traveling though space or the planes via technology or magic.
+The ship is just one of several wrecks that point to some mysterious force. Perhaps someone is turning off a nearby lighthouse. Or perhaps a sea hag or siren is causing ships to sink. Another possibility is magical forces mess with compasses while fog rolls in.
+The ship isn’t a wreck. (Ignore the other results.) Instead, it is simply adrift. All the crew is missing, but everything is in place–the mess table is even set with food and plates still in place.
+The shipwreck is the first attack by an army of merrow, sahuagin, etc.

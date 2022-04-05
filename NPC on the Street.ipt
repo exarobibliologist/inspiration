@@ -1,0 +1,117 @@
+use: nbos\professions.ipt
+use: nbos\adventuringprofessions.ipt
+use: nbos\TownBuildings.ipt
+use: nbos\names\human.ipt
+use: nbos\names\elf.ipt
+use: nbos\names\dwarf.ipt
+use: nbos\names\towns.ipt
+
+Header: Various people your PC's might meet on the street.
+
+Table: RandomNPC
+Set: Race=[@NPCRace >> Proper]
+Set: Profession=[@NPCProfession >> Proper]
+Set: 2ndProfession=[@NPC2ndProfession >> Proper]
+Set: Sex=[|Male|Female]
+1:<b>{$name}</b>\nRace: {$Race}\nSex: {$Sex}\nProfession: {$Profession}{$2ndProfession}\nDescription: [@{$Sex}Description]\n
+
+Table: NPCRace
+5:human[@NPCRaceHuman]
+2:dwarf[@NPCRaceDwarf]
+2:elf[@NPCRaceElf]
+1:halfling[@NPCRaceHuman]
+1:gnome[@NPCRaceHuman]
+
+Table: NPCRaceHuman
+Set: Name=[@MasterHumanName]
+\z
+
+Table: NPCRaceElf
+Set: Name=[@MasterElfName]
+\z
+
+Table: NPCRaceDwarf
+Set: Name=[@MasterDwarfName]
+\z
+
+
+Table: NPCProfession
+10:[@Professions]
+1:[@AdventuringProfessions]
+
+Table: NPC2ndProfession
+4:\z
+1:, [@NPCProfession]
+
+Table: MaleDescription
+{$name} is [@MaleLooks] [|young|adult|middle aged|old] man of [@NPCBuild] build. [@MaleHair]. He is [@NPCClothes].  He is [@NPCActivity]
+
+Table: FemaleDescription
+{$name} is [@FemaleLooks] [|young|adult|middle aged|old] woman of [@NPCBuild] build. She has [@NPCHair] [@NPCHairColor] hair.  She is [@NPCClothes].  She is [@NPCActivity]
+
+
+Table: NPCBuild
+1:very slight
+4:small
+8:normal
+4:large
+1:very large
+
+Table: MaleLooks
+2:an unattractive
+8:an unexceptional looking
+4:a handsome
+1:a stunningly handsome
+
+Table: FemaleLooks
+2:an unattractive
+8:an unexceptional looking
+4:an attractive
+1:a stunningly attractive
+
+Table: MaleHair
+1:He is completely bald
+2:He is balding, with [@NPCHairColor] hair
+4:He has [@NPCHair] [@NPCHairColor] hair
+
+Table: NPCHair
+4:\z
+unkempt
+well kept
+
+Table: NPCHairColor
+5:brown
+2:gray
+2:blonde
+2:black
+red
+
+Table: NPCClothes
+2:poorly dressed, in ragged and torn clothing
+4:poorly dressed in old clothes
+8:dressed normally for the area
+4:well dressed
+2:very well dressed
+1:exceptionally well dressed, with colors and accessories selected with a great sense of style.
+
+Table: NPCActivity
+2: [@NPCBehavior]
+[@NPCSchlep], and is [@NPCBehavior]
+
+Table: NPCSchlep
+carrying a [|large|small|gigantic] [|bag|set of books|set of scrolls|tub of water|jug|pile of firewood|crate of food]
+
+Table: NPCBehavior
+4: walking intently down the street.
+walking idly down the street.
+walking hastily down the street.
+looking around in a confused manner.
+stopping every passer by and asking them something.
+stopping people and asking them if they know [@NPCRandomOtherName]
+stopping people and asking them if they know where the [@FantasyTownBuildings] is.
+stopping people and asking them if they know the direction to [@MasterTownName].
+
+Table: NPCRandomOtherName
+4:[@MasterHumanName]
+2:[@MasterDwarfName]
+[@MasterElfName]

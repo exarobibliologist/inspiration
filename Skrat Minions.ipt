@@ -1,0 +1,135 @@
+Header: Generates a number of Skrats (muskrat-men)
+
+use: nbos/names/skrat.ipt
+
+Set: Name =[@SkratName >> Proper]
+
+Table: MakeSkrat
+1:<b>{$name}</b>\nhits: {2d4+8}\nBase Attack: +2\nArmor: [@SkratArmor]\nWeapon: [@SkratWeapon]\nSpecial Skills: [@SkratSkills]\nValuables: [@SkratThings]\nSpeaks: Skrat [@SkratLanguage]
+
+Table:SkratName
+[@MasterSkratName]
+
+Table: SkratWeapon
+Claws & Bite (1d3/1d3/1d3) [@SkratMissile]
+Dagger & Bite (1d4/1d3) [@SkratPoison] [@SkratMissile]
+Small Club (1d4) [@SkratMissile]
+Short Sword (1d6) [@SkratPoison] [@SkratMissile]
+Long Sword (1d8, wielded 2 handed) [@SkratMissile]
+
+Table: SkratMissile
+10:\z
+, Short Bow w/ {2d6+4} arrows (1d6)
+, Sling w/ {5d4} bullets (1d4)
+, Light crossbow w/{3d4} bolts (1d6)
+, Blowgun w/ {1d12} darts (1d4) [@SkratPoison]
+Table: SkratPoison
+10:\z
+weapon poisoned, DC 15 Fort save or take +2d6, double healing time.
+
+Table: SkratArmor
+5:None - AC 13
+Leather shirt - AC 14
+Shield - AC 14
+Leather and Shield - 14
+
+Table: SkratSkills
+10:\z
+Sneak Attack, +2d6
+Jump Skill +{1d6+4}
+Escape Artist +{1d6+4}
+
+Table: SkratThings
+4:None.  [@SkratExcuse]
+[@SkratCoin]
+[@SkratCoin], [@SkratOther]
+[@SkratOther]
+[@SkratOther], [@SkratOther]
+[@SkratCoin], [@SkratOther], [@SkratOther]
+[@SkratCoin], [@SkratOther], [@SkratOther], [@SkratOther]
+
+Table: SkratExcuse
+Set: enemyname=[@SkratName >> Proper]
+5:\z
+Lost it all in a card game
+Lost it all in a dice game
+Lost it all wagering on a brawl between [@SkratName  >> Proper] and [@SkratName >> Proper]
+Lost it all wagering on a brawl between [@SkratName >> Proper] and a glibling.
+Lost it all when he lost a fight with {$enemyname}
+It was all stolen from him by [@SkratName >> Proper].
+It was all stolen from him by {$enemyname} because {$name} made moves on {$enemyname}'s girl [@SkratName >> Proper].
+It was all stolen from him by [@{1d6} SkratName >> Proper >> implode] and [@SkratName >> Proper]
+
+
+Table: SkratCoin
+{1d6} cp
+{2d6} cp
+{2d6} cp, {1d6} sp
+{3d6} cp, {2d6} sp, {1d4} gp
+
+Table: SkratOther
+{1d6} small humanoid fingers
+a bundle of {2d6} twigs
+a small wooden figurine of [@carvings]
+a feather headdress
+a bone necklace
+a stone carving of [@carvings]
+a rat carcass
+a rabbit carcass
+a silk scarf
+a fashionable hat
+a rotting fish
+a bit of cooked meat
+a small bird carcass
+a horn
+{1d4} torch(s)
+a vial of some liquid ([@liquid])
+a flask of some liquid ([@liquid])
+a nice silver knife
+a pair of crude dice
+a pair of crude dice (weighted)
+a deck of skrat playing cards
+20 feet of rope
+500 feet of twine
+a small flute
+a broken mandolin
+a gold bowl
+[@gem]
+
+
+Table: carvings
+an idol or god
+a fish
+a bird
+a deer or horse
+a bear
+a grek
+a skrat
+a [|male|female|] human or humanoid
+a design
+
+Table: liquid
+some ick he found by a stream
+poison
+an oitment for ticks
+a healing salve
+awful moonshine
+poisonous moonshine
+5:water
+
+Table: gem
+a topaz ({4d4} sp)
+a garnet (4 sp)
+{2d4} polished stones
+{2d4-1} sea shells
+
+Table: SkratLanguage
+5:\z
+and very good common
+and passable common
+4:and Grek
+, Grek, and passable common
+, Grek, and a little Sunga (local glibling dialect)
+and a little common 
+and a little dwarf
+and a little Sunga (local glibling dialect)

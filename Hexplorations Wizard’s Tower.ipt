@@ -1,0 +1,48 @@
+; Hexplorations Wizard’s Tower.ipt
+; created 1/30/2019 7:56:01 PM
+Table: Wizards Tower
+MaxReps: 4
+[Age/Condition: >> Bold] [@Condition]\n&
+[Main Inhabitants: >> Bold] [@Inhabitants]\n&
+[Focus: >> Bold] [@Focus]\n&
+[Secret 1: >> Bold] [@Secret 1]\n&
+[Secret 2: >> Bold] [@Secret 2]\n\n\n
+Table: Condition
+New
+Recent, in great condition
+Recent, but badly damaged.
+Old, but fully restored
+Old, intact but showing signs of wear
+Old and badly damaged.
+
+Table: Inhabitants
+Recently (mostly) retired adventurer wizard and one apprentice
+Young but brilliant research wizard and a handful of apprentices almost the same age
+Older retired wizard passing his knowledge on to several apprentices and even more students.
+Older recluse wizard with a sole apprentice–the only person who can work with the wizard
+Council of three wizards and their apprentices
+Spellcasting creature: Dragon (assumes human form), Genie, Lich, Mummy Lord, Spinx, Vampire
+
+Table: Focus
+Researching new spells (randomly roll a school of magic)
+Researching unusual beasts and always has a few live specimens caged
+Wizard is the best known teacher of a particular specialty
+Focuses on teaching and benefiting the magic community and nearby non-magic community
+Wizard specializes in potions and has unusual/unique potions
+Wizard is creating an artifact
+
+Table: Secret 1
+A section of the library is infested with book-eating creatures
+Wizard has blackmail on nearby leaders and is using it
+The tower is one of several located at key points around the world that form a protective shield
+Tower contains a magical gate that connects with gates in other towers
+A powerful extra-planar creature is magically “bound” here–actually it is observing
+Tower has a special scrying artifact (orb, pool, etc.) that makes related spells more effective.
+
+Table: Secret 2
+Tower is located on a Ley line or magic font which makes magic easier/more powerful
+Tower has special protections against all types of energies (fire, cold, lightning, etc.)
+Tower has spells and items that mimic modern conveniences (central heat/AC, lighting, plumbing, clothes washing, etc.)
+Wizard is from another time or place and therefore has a lot of additional knowledge
+Tower has been cursed and the wizard(s) and apprentice(s) are working to undo it
+The wizard is being controlled (magically, via a device or organism attached, or simply blackmailed) to sabotage a major effort
