@@ -11,14 +11,16 @@ Define: Government2=<td>Oppressive</td><td>[@Count]</td><td>Freedom</td>
 Define: Government3=<td>Civil Unrest</td><td>[@Count]</td><td>Loyal</td>
 Define: Government4=<td>Unwelcoming</td><td>[@Count]</td><td>Open Borders</td>
 Define: Government5=<td>Aggressive</td><td>[@Count]</td><td>Peaceful</td>
-<td><b>Government</b></td><tr>{Government1}<tr>{Government2}<tr>{Government3}<tr>{Government4}<tr>{Government5}<tr>
+<td><b>Government</b></td><td></td><td><b>Government</b></td><tr>{Government1}<tr>{Government2}<tr>{Government3}<tr>{Government4}<tr>{Government5}<tr><tr><td><br></td></tr><tr><td><br></td></tr>
+
 EndTable:
 
 Table: Military
 Define: Military1=<td>Fierce Warriors</td><td>[@Count]</td><td>Large Numbers</td>
 Define: Military2=<td>Bad Conduct</td><td>[@Count]</td><td>Good Conduct</td>
 Define: Military3=<td>Small Cultural Influence</td><td>[@Count]</td><td>Large Cultural Influence</td>
-<td><b>Military</b></td><tr>{Military1}<tr>{Military2}<tr>{Military3}<tr>
+<td><b>Military</b></td><td></td><td><b>Military</b></td><tr>{Military1}<tr>{Military2}<tr>{Military3}<tr><tr><td><br></td></tr><tr><td><br></td></tr><tr><td><br></td></tr>
+
 EndTable:
 
 Table: Religion
@@ -26,24 +28,25 @@ Define: Religion1=<td>Atheism</td><td>[@Count]</td><td>God/Gods</td>
 Define: Religion2=<td>Oppressive</td><td>[@Count]</td><td>Freedom</td>
 Define: Religion3=<td>Small Commitment</td><td>[@Count]</td><td>Heavy Commitment</td>
 Define: Religion4=<td>Cremated</td><td>[@Count]</td><td>Burial</td>
-<td><b>Religion</b></td><tr>{Religion1}<tr>{Religion2}<tr>{Religion3}<tr>{Religion4}<tr>
+<td><b>Religion</b></td><td></td><td><b>Religion</b></td><tr>{Religion1}<tr>{Religion2}<tr>{Religion3}<tr>{Religion4}<tr><tr><td><br></td></tr><tr><td><br></td></tr>
 EndTable:
 
 Table: Magic
 Define: Magic1=<td>Small Cultural Influence</td><td>[@Count]</td><td>Large Cultural Influence</td>
 Define: Magic2=<td>Small Numbers</td><td>[@Count]</td><td>Large Numbers</td>
-<td><b>Magic</b></td><tr>{Magic1}<tr>{Magic2}<tr>
+<td><b>Magic</b></td><td></td><td><b>Magic</b></td><tr>{Magic1}<tr>{Magic2}<tr><tr><td><br></td></tr><tr><td><br></td></tr>
 EndTable:
 
 Table: Wealth
 Define: Wealth1=<td>Hoarded</td><td>[@Count]</td><td>Shared</td>
 Define: Wealth2=<td>Barter</td><td>[@Count]</td><td>Currency</td>
-<td><b>Wealth</b></td><tr>{Wealth1}<tr>{Wealth2}<tr>
+<td><b>Wealth</b></td><td></td><td><b>Wealth</b></td><tr>{Wealth1}<tr>{Wealth2}<tr><tr><td><br></td></tr><tr><td><br></td></tr>
 EndTable:
 
 Table: Tech
 Define: Tech1=<td>Low-Tech</td><td>[@Count]</td><td>High-Tech</td>
-<td><b>Technology</b></td><tr>{Tech1}<tr>
+Define: Tech2=<td>Concentrated</td><td>[@Count]</td><td>Distributed</td>
+<td><b>Technology</b></td><td></td><td><b>Technology</b></td><tr>{Tech1}<tr><tr>{Tech2}<tr><tr><td><br></td></tr><tr><td><br></td></tr>
 EndTable:
 
 Table: Architecture
@@ -52,25 +55,25 @@ Define: Architecture2=<td>Smooth</td><td>[@Count]</td><td>Angles</td>
 Define: Architecture3=<td>Soft Material</td><td>[@Count]</td><td>Hard Material</td>
 Define: Architecture4=<td>Destructive</td><td>[@Count]</td><td>Environmental</td>
 Define: Architecture5=<td>Plain</td><td>[@Count]</td><td>Decorated</td>
-<td><b>Architecture</b></td><tr>{Architecture1}<tr>{Architecture2}<tr>{Architecture3}<tr>{Architecture4}<tr>{Architecture5}<tr>
+<td><b>Architecture</b></td><td></td><td><b>Architecture</b></td><tr>{Architecture1}<tr>{Architecture2}<tr>{Architecture3}<tr>{Architecture4}<tr>{Architecture5}<tr><tr><td><br></td></tr><tr><td><br></td></tr>
 EndTable:
 
 Table: History
 Define: History1=<td>Recent</td><td>[@Count]</td><td>Old</td>
 Define: History2=<td>Steady Culture</td><td>[@Count]</td><td>Recent Upheaval</td>
-<td><b>History</b></td><tr>{History1}<tr>{History2}<tr>
+<td><b>History</b></td><td></td><td><b>History</b></td><tr>{History1}<tr>{History2}<tr><tr><td><br></td></tr><tr><td><br></td></tr>
 EndTable:
 
 Table: Characteristics
 Define: Characteristics1=<td>Repressed</td><td>[@Count]</td><td>Sexual</td>
-<td><b>Characteristics</b></td><tr>{Characteristics1}<tr>
+<td><b>Characteristics</b></td><td></td><td><b>Characteristics</b></td><tr>{Characteristics1}<tr><tr><td><br></td></tr><tr><td><br></td></tr>
 EndTable:
 
 Table: Language
 Define: Language1=<td>Illiterate</td><td>[@Count]</td><td>Literate</td>
 Define: Language2=<td>Rough</td><td>[@Count]</td><td>Smooth</td>
 Define: Language3=<td>Broken/Accented</td><td>[@Count]</td><td>Native</td>
-<td><b>Language</b></td><tr>{Language1}<tr>{Language2}<tr>{Language3}<tr>
+<td><b>Language</b></td><td></td><td><b>Language</b></td><tr>{Language1}<tr>{Language2}<tr>{Language3}<tr><tr><td><br></td></tr><tr><td><br></td></tr>
 EndTable:
 
 Table: Jewellery
@@ -80,7 +83,7 @@ Define: Jewellery3=<td>Shared</td><td>[@Count]</td><td>Status
 Define: Jewellery4=<td>Small Size</td><td>[@Count]</td><td>Large Size</td>
 Define: Jewellery5=<td>Single</td><td>[@Count]</td><td>Multiple</td>
 Define: Jewellery6=<td>Penetrating</td><td>[@Count]</td><td>Loose</td>
-<td><b>Jewellery</b></td><tr>{Jewellery1}<tr>{Jewellery2}<tr>{Jewellery3}<tr>{Jewellery4}<tr>{Jewellery5}<tr>{Jewellery6}<tr>
+<td><b>Jewellery</b></td><td></td><td><b>Jewellery</b></td><tr>{Jewellery1}<tr>{Jewellery2}<tr>{Jewellery3}<tr>{Jewellery4}<tr>{Jewellery5}<tr>{Jewellery6}<tr><tr><td><br></td></tr><tr><td><br></td></tr>
 EndTable:
 
 Table: Hairstyle
@@ -91,7 +94,7 @@ Define: Hairstyle4=<td>Individual</td><td>[@Count]</td><td>Shared</td>
 Define: Hairstyle5=<td>Gender Specific</td><td>[@Count]</td><td>Gender Neutral</td>
 Define: Hairstyle6=<td>Short Hair</td><td>[@Count]</td><td>Long Hair</td>
 Define: Hairstyle7=<td>Occasional</td><td>[@Count]</td><td>Permanent</td>
-<td><b>Hairstyle</b></td><tr>{Hairstyle1}<tr>{Hairstyle2}<tr>{Hairstyle3}<tr>{Hairstyle4}<tr>{Hairstyle5}<tr>{Hairstyle6}<tr>{Hairstyle7}<tr>
+<td><b>Hairstyle</b></td><td></td><td><b>Hairstyle</b></td><tr>{Hairstyle1}<tr>{Hairstyle2}<tr>{Hairstyle3}<tr>{Hairstyle4}<tr>{Hairstyle5}<tr>{Hairstyle6}<tr>{Hairstyle7}<tr><tr><td><br></td></tr><tr><td><br></td></tr>
 EndTable:
 
 Table: Makeup
@@ -100,7 +103,7 @@ Define: Makeup2=<td>Occasional</td><td>[@Count]</td><td>Permanent</td>
 Define: Makeup3=<td>Gender Specific</td><td>[@Count]</td><td>Gender Neutral</td>
 Define: Makeup4=<td>Simple</td><td>[@Count]</td><td>Intricate</td>
 Define: Makeup5=<td>Shared</td><td>[@Count]</td><td>Status</td>
-<td><b>Makeup</b></td><tr>{Makeup1}<tr>{Makeup2}<tr>{Makeup3}<tr>{Makeup4}<tr>{Makeup5}<tr>
+<td><b>Makeup</b></td><td></td><td><b>Makeup</b></td><tr>{Makeup1}<tr>{Makeup2}<tr>{Makeup3}<tr>{Makeup4}<tr>{Makeup5}<tr><tr><td><br></td></tr><tr><td><br></td></tr>
 EndTable:
 
 Table: Paint
@@ -111,7 +114,7 @@ Define: Paint4=<td>Small</td><td>[@Count]</td><td>Large</td>
 Define: Paint5=<td>Single</td><td>[@Count]</td><td>Multiple</td>
 Define: Paint6=<td>Occasional</td><td>[@Count]</td><td>Permanent</td>
 Define: Paint7=<td>Single Type</td><td>[@Count]</td><td>Varied</td>
-<td><b>Paint</b></td><tr>{Paint1}<tr>{Paint2}<tr>{Paint3}<tr>{Paint4}<tr>{Paint5}<tr>{Paint6}<tr>{Paint7}<tr>
+<td><b>Paint</b></td><td></td><td><b>Paint</b></td><tr>{Paint1}<tr>{Paint2}<tr>{Paint3}<tr>{Paint4}<tr>{Paint5}<tr>{Paint6}<tr>{Paint7}<tr><tr><td><br></td></tr><tr><td><br></td></tr>
 EndTable:
 
 Table: Tattoo
@@ -121,7 +124,7 @@ Define: Tattoo3=<td>Shared</td><td>[@Count]</td><td>Status</td>
 Define: Tattoo4=<td>Small</td><td>[@Count]</td><td>Large</td>
 Define: Tattoo5=<td>Single</td><td>[@Count]</td><td>Multiple</td>
 Define: Tattoo6=<td>Single Type</td><td>[@Count]</td><td>Varied</td>
-<td><b>Tattoo</b></td><tr>{Tattoo1}<tr>{Tattoo2}<tr>{Tattoo3}<tr>{Tattoo4}<tr>{Tattoo5}<tr>{Tattoo6}<tr>
+<td><b>Tattoo</b></td><td></td><td><b>Tattoo</b></td><tr>{Tattoo1}<tr>{Tattoo2}<tr>{Tattoo3}<tr>{Tattoo4}<tr>{Tattoo5}<tr>{Tattoo6}<tr><tr><td><br></td></tr><tr><td><br></td></tr>
 EndTable:
 
 Table: Manip
@@ -129,27 +132,27 @@ Define: Manip1=<td>Face</td><td>[@Count]</td><td>Body</td>
 Define: Manip2=<td>Small</td><td>[@Count]</td><td>Large</td>
 Define: Manip3=<td>Shared</td><td>[@Count]</td><td>Status</td>
 Define: Manip4=<td>Single</td><td>[@Count]</td><td>Multiple</td>
-<td><b>Body Manipulation</b></td><tr>{Manip1}<tr>{Manip2}<tr>{Manip3}<tr>{Manip4}<tr>
+<td><b>Body Manipulation</b></td><td></td><td><b>Body Manipulation</b></td><tr>{Manip1}<tr>{Manip2}<tr>{Manip3}<tr>{Manip4}<tr><tr><td><br></td></tr><tr><td><br></td></tr>
 EndTable:
 
 Table: Count
-<code>|1-------------------|</code>
-<code>|-2------------------|</code>
-<code>|--3-----------------|</code>
-<code>|---4----------------|</code>
-<code>|----5---------------|</code>
-<code>|-----6--------------|</code>
-<code>|------7-------------|</code>
-<code>|-------8------------|</code>
-<code>|--------9-----------|</code>
-<code>|--------10----------|</code>
-<code>|---------11---------|</code>
-<code>|----------12--------|</code>
-<code>|-----------13-------|</code>
-<code>|------------14------|</code>
-<code>|-------------15-----|</code>
-<code>|--------------16----|</code>
-<code>|---------------17---|</code>
-<code>|----------------18--|</code>
-<code>|-----------------19-|</code>
-<code>|------------------20|</code>
+<b><code>|1-------------------|</code></b>
+<b><code>|-2------------------|</code></b>
+<b><code>|--3-----------------|</code></b>
+<b><code>|---4----------------|</code></b>
+<b><code>|----5---------------|</code></b>
+<b><code>|-----6--------------|</code></b>
+<b><code>|------7-------------|</code></b>
+<b><code>|-------8------------|</code></b>
+<b><code>|--------9-----------|</code></b>
+<b><code>|--------10----------|</code></b>
+<b><code>|---------11---------|</code></b>
+<b><code>|----------12--------|</code></b>
+<b><code>|-----------13-------|</code></b>
+<b><code>|------------14------|</code></b>
+<b><code>|-------------15-----|</code></b>
+<b><code>|--------------16----|</code></b>
+<b><code>|---------------17---|</code></b>
+<b><code>|----------------18--|</code></b>
+<b><code>|-----------------19-|</code></b>
+<b><code>|------------------20|</code></b>
