@@ -1,0 +1,48 @@
+Table: Section
+<code>[@KeyGen] - [@KeyGen] - [@KeyGen] - [@KeyGen] - [@KeyGen]</code>
+
+Table: KeyGen
+1:[@3 Letter >> Upper]
+1:[@4 Letter >> Upper]
+20:[@5 Letter >> Upper]
+1:[@6 Letter >> Upper]
+1:[@7 Letter >> Upper]
+1:[@8 Letter >> Upper]
+
+Table: Letter
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+T
+U
+V
+W
+X
+Y
+Z
+1
+2
+3
+4
+5
+6
+7
+8
+9
+0
