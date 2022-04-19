@@ -1,0 +1,11 @@
+Prompt: Max Mind {}
+Prompt: Max Senses {}
+Prompt: Max Body {}
+Prompt: Max Armor {}
+
+Table: v3Char
+Set: MIND={1d{$prompt1}}
+Set: SENSES={1d{$prompt2}}
+Set: BODY={1d{$prompt3}}
+Set: ARMOR={1d{$prompt4}}
+MIND=[when]{$MIND} = 1[do][MIND==2][end]{$MIND}<br>SENSES=[when]{$SENSES} = 1[do][SENSES==2][end]{$SENSES}<br>BODY=[when]{$BODY} = 1[do][BODY==2][end]{$BODY}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>HP={$BODY*5}</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ARMOR=[when]{$ARMOR} = 1[do][ARMOR==2][end]{$ARMOR}<hr>Actual Level [LEVEL=={{{$MIND}+{$SENSES}+{$BODY}+{$ARMOR}} / 4}]{LEVEL}<hr>XP={{$MIND}*{$SENSES}*{$BODY}*{$ARMOR}}
