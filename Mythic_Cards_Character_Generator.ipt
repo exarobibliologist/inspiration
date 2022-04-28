@@ -11,15 +11,19 @@ Prompt: Bell-Curve {Normal|Inverted}Better
 Table: MessageTable
 Define: mythicname =[@AllNames>>Proper>>Implode]
 Define: skillset = <b>[!Skills]</b> = [!Fate]
-<img src="C:\\Users\\micro\\Documents\\Inspiration Pad Pro\\Generators\\My Generators\\MythicDeck4.png" height="400"><br><span style='font:24pt Arial'><b>{$mythicname}</b></span><br><span style='font:18pt Arial'><b>Attributes</b></span><br><b>Strength:</b> [@FateCards{$prompt1}]<br><b>Agility:</b> [@FateCards{$prompt1}]<br><b>Reflex:</b> [@FateCards{$prompt1}]<br><b>IQ:</b> [@FateCards{$prompt1}]<br><b>Intuition:</b> [@FateCards{$prompt1}]<br><b>Willpower:</b> [@FateCards{$prompt1}]<br><b>Toughness:</b> [@FateCards{$prompt1}]<br><br><span style='font:18pt Arial'><b>Abilities</b></span> <br>[@{5d5} AbilityRand >> sort >> implode <br>]
+<span style='font:24pt Arial'><b>{$mythicname}</b></span><br><span style='font:18pt Arial'><b>Attributes</b></span><br><b>Strength:</b> [@FateCards{$prompt1}]<br><b>Agility:</b> [@FateCards{$prompt1}]<br><b>Reflex:</b> [@FateCards{$prompt1}]<br><b>IQ:</b> [@FateCards{$prompt1}]<br><b>Intuition:</b> [@FateCards{$prompt1}]<br><b>Willpower:</b> [@FateCards{$prompt1}]<br><b>Toughness:</b> [@FateCards{$prompt1}]<br><br><span style='font:18pt Arial'><b>Abilities</b></span> <br>[@{5d5} AbilityRand >> sort >> implode <br>]
 
 Table: AbilityRand
 20:<b>[!Skills]</b> = [@FateCards{$prompt1}]
-1:<b>[!Skills] ([|Amateur|Beginner|Novice|Untested])</b> = [@FateCards{$prompt1}] ([|-1|-2|-3|-4|+1|+2] [|Rank|Crit] with [@Skills])
-1:<b>[!Skills] ([|Intermediate|Standard|Common|Average])</b> = [@FateCards{$prompt1}] ([|-1|-2|-3|+1|+2|+3] [|Rank|Crit] with [@Skills])
-1:<b>[!Skills] ([|Advanced|Progressive|Experimental|Breakthrough])</b> = [@FateCards{$prompt1}] ([|-1|-2|+1|+2|+3|+4] [|Rank|Crit] with [@Skills])
-1:<b>[!Skills] ([|Unlicensed|Innovative|Untested])</b> = [@FateCards{$prompt1}] ([|+/-2|+/-5|+/-8] [|Rank|Crit] with [@Skills])
-1:<b>[!Skills] ([|Darkweb|Illegal|Unauthorized|Forbidden])</b> = [@FateCards{$prompt1}] ([|+2|+5|+8] [|Rank|Crit] if not caught/observed)
+1:<b>[!Skills] ([|Amateur|Beginner|Novice|Untested])</b> = [@FateCards{$prompt1}] [@ExpandAbility]
+1:<b>[!Skills] ([|Intermediate|Standard|Common|Average])</b> = [@FateCards{$prompt1}] [@ExpandAbility]
+1:<b>[!Skills] ([|Advanced|Progressive|Experimental|Breakthrough])</b> = [@FateCards{$prompt1}] [@ExpandAbility]
+1:<b>[!Skills] ([|Unlicensed|Innovative|Untested])</b> = [@FateCards{$prompt1}] [@ExpandAbility]
+1:<b>[!Skills] ([|Darkweb|Illegal|Unauthorized|Forbidden])</b> = [@FateCards{$prompt1}] [@ExpandAbility] <b>and if not caught/observed)</b>
+
+Table: ExpandAbility
+<b>(gain [@Skills] @  [@FateCards{$prompt1}] while using this skill)</b>
+<b>(Odds to increase Skill on success by [@FateCards{$prompt1}])</b>
 
 Table: FateCardsNormal
 1:Impossible +2
