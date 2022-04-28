@@ -1,0 +1,270 @@
+Header: Scroll Creator
+
+Table: Main
+Shuffle: contain
+Shuffle: open
+Shuffle: marking
+Shuffle: ornament
+Shuffle: inky
+Shuffle: lang
+Shuffle: seal
+Shuffle: size
+Shuffle: sheet
+Shuffle: wrap
+Shuffle: ScrollType
+<b>Container:</b> A [@contain] shaped into a box [@open] [@marking] [@ornament]\n<b>Scroll 1:</b> This scroll has been written in [|black|black|black|black|black|blue|brown|gold|green|grey|orange|purple|red|silver|white] [@inky] in [@lang] with [@seal] for a seal. The pages are [@size] [@sheet] and there is [@wrap] for the wrap bar. It is a [@ScrollType].\n<b>Scroll 2:</b> This scroll has been written in [|black|black|black|black|black|blue|brown|gold|green|grey|orange|purple|red|silver|white] [@inky] in [@lang] with [@seal] for a seal. The pages are [@size] [@sheet] and there is [@wrap] for the wrap bar. It is a [@ScrollType].\n<b>Scroll 3:</b>This scroll has been written in [|black|black|black|black|black|blue|brown|gold|green|grey|orange|purple|red|silver|white] [@inky] in [@lang] with [@seal] for a seal. The pages are [@size] [@sheet] and there is [@wrap] for the wrap bar. It is a [@ScrollType].
+
+Table: contain
+leather
+animal hide
+monster hide
+bone
+ivory
+bamboo
+cloth
+metal
+porcelian
+ceramic
+softwood
+hardwood
+[|treated paper|thick] paper
+coiled [|rope|string]
+treated plant material
+stone
+[|glass|crystal]
+precious metal
+[|real|fake] gemstone
+
+Table: open
+that is always open
+that is double-hinged
+that has a flip top
+that pushes down then twists
+that is quad-hinged
+that is rotating
+with a simple slide off cover
+with an iris twist
+with a twist off cap
+
+Table: marking
+that has [|gemstone|feather|scale] decorations
+that has light acid damage
+that has a slight burn
+that has a crack
+with a complex pattern
+with a geometric pattern
+with a simple pattern
+with a [|symbol|crest] for local [|rulers|nobility]
+
+Table: ornament
+and has a [|belt loop|holding strap] made out of [|animal fur|monster fur|dragon hide|ribbon|animal hide]
+and has a [|belt loop|holding strap] made out of [|animal fur|monster fur|dragon hide|ribbon|animal hide]
+and has a [|belt loop|holding strap] made out of [|animal fur|monster fur|dragon hide|ribbon|animal hide]
+and it is decorated with ribbons
+and it is has beautiful, [|yet fake|real] gemstones
+and it has a [|gleaming|shining|dull], [|real|fake] [|precious|semi-precious]  metal.
+Table: lang
+1-2: an arcane language
+3-4: a dead language
+5-6: a divine language
+7: pictorgrams
+8: a obscure racial dialect language
+9-10: a regional racial tielect language
+11-13: a racial language
+14: runes
+
+Table: inky
+1-10: ink
+11: acid
+12-13: animal blood
+14: monster blood
+15: chalk
+16: crayon
+17: metalic ink
+18: paint
+
+Table: seal
+1-3: nothing
+4-5: soft wax
+6-7: hard wax
+8-9: resin
+10-11: easy lock
+12: average lock
+13: good lock
+14: excelent lock
+15-16: easy knot
+17: average knot
+18: good knot
+19: excelent knot
+
+table: sheet
+bamboo
+ivory
+brass
+copper
+gold
+platinum
+silver
+cotton
+linen
+rice
+wood pulp
+papyrus
+parchment
+slate
+ash wood planel
+cherry wood panel
+mahogany wood panel
+oak wood panel
+walnut wood panel
+
+table: size
+[@wid] by [@len] inches
+[@wid] by [@len] inches
+[@wid] by [@len] inches
+[@wid] by [@len] inches
+
+Table: wid
+1: 6
+2-3: 7
+4-10: 8
+11-12: 9
+13-14: 10
+15-16: 11
+17-18: 12
+19: {1d12}
+20: {2d12}
+
+Table: len
+1: 9
+2-3: 10
+4-10: 11
+11-12: 12
+13-14: 15
+15-16: 16
+17-18: 18
+19: {1d24}
+20: {2d24}
+
+Table: wrap
+1-10: nothing
+11-15: a bamboo
+16-20: a animal bone
+21-22: a humanoid bone
+23-24: a monster bone
+25: a clear crystal
+26: a colored crystal
+27: a glass
+28: a gold
+29: an iron
+30: a mithril
+31-50: an ivory
+51-70: a silver
+71-90: a steel
+91-93: a hardwood
+94-95: a softwood
+96: a real gemstone
+97: a fake gemstone
+
+Table: ScrollType
+1-50: [@mundane]
+51-75: [@enchant]
+
+table: mundane
+1-8: a blank scroll
+9: an IOU for a large sum
+10: a biography
+11: the blueprints for a fortification
+12: the blueprints for a house
+13: the blueprints of a settlement
+14: an expired bounty
+15: a valid bounty
+16: a business account
+17-18: a business contract
+19: a set of criminal investigation notes
+20: the deed to an animal
+21-22: the deed for a house
+23-24: the deed to an item
+25: the deed for a [|cave|forest]
+26-27: the deed for a vehicle
+28-29: a diary
+30: [|dissection|research] notes
+31: a family tree
+32: a draft of a fictional story
+33: a lost edition of a fictional story
+34-36: a story
+37: gibberish
+38: a pad invoice
+39: an unpaid invoice
+40: a birthday letter
+41-42: a general letter
+43-45: a legal letter
+46: a plea for help
+47: a romantic letter
+48: a htreatening letter
+49: a licence for dangerous animals
+50-51: a merchant licence
+52: a library card
+53: a licence to kill
+54: a check list
+55: a inventory list
+56: a map showing the directions to a specific meeting
+57: a map of a [|dungeon|cave system]
+58: a magical map of a building
+59-60: a map to [|real|fake] treasure
+61-62: a [|real|fake] medical history
+63: medical notes
+64: a cult membership roster
+65-66: a guild membership roster
+67: memoirs
+68-69: a [|fake|true] biography
+70: a dictionary
+71: an encyclopedia
+72: a historical document
+73-74: a planner
+75-77: a religious text
+78: a [|picture|image]
+79: a proposal of marriage
+80: a ransom note
+81-84: a [|drink|food] recipe
+85: a mixed piece of research notes
+86: magical research notes
+87: monster research notes
+88-89: technology research notes
+90: ritual details
+91: golem construction shopping list
+92: mundane shopping list
+93-94: a [|fake|real] suicide note
+9-6: a surrender [|acceptance|demand] 
+97-98: [|real|forged] tax records
+99: Unintelligible scribbles
+100: [@enchant]
+
+table: enchant
+1-3: a basic communication scroll
+4-8: a coded communication scroll
+9-11: a blank copying scroll
+12-15: a filled copying scroll
+16-18: a copying scroll carrying a secrect code
+19-21: a alignment detection scroll
+22-24: a curse detection scroll
+25-26: a disease detection scroll
+27-28: a lie detection scroll
+29-32: a magic detection scroll
+33-34: a poiso0n detection scroll
+35-43: a coded dictation scroll that is [|blank|filled]
+44-52: a dictation scroll that is [|blank|filled]
+53-60: a imaging scroll that is [|blank|filled]
+61-63: a mapping scroll leading to nearby treasure
+64-67: a mapping scroll that finds nearby creatures
+68-72: a mapping scroll that gives directions to nearby places
+73-76: a mapping scroll leading to nearby mundane items
+77-78: a mapping scroll leading to nearby secret doors.
+79-80: a portable library scroll
+81-83: a portable mirror Scroll
+84-86: a one-way portable window
+87-90: a dual way portable window
+91-92: a self-updating beings scroll
+93-94: a self-updating container scroll
+95-97: a self-updating item scroll
+98-100: a self-updating location scroll

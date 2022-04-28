@@ -1,0 +1,171 @@
+// Human.ipt
+// created 12/17/2015 7:21:06 PM
+Table: Human
+Set: Age={1d10}
+Set: HColor=[when]{Age}>{1d4 + 5}[do][@HumanHairColorAged][else][@HumanHairColor][end]
+He is [#{Age} AgeText] [when]{Age}>{1d6 + 1d5 + 3}[do][|and is bald|with thinning [@HumanMaleHairStyle]][else]with [@HumanMaleHairStyle][end][when]{Age}>3[do] [@HumanFacialHair][end], [@HumanEyes] eyes, [@HumanSkin] [@Skin], and [when]{Age}>3[do][@HumanMaleBuild][else][@HumanYouthBuild][end].
+She is [#{Age} AgeText] with [@HumanFemaleHairStyle], [@HumanEyes] eyes, [@HumanSkin] [@Skin], and [when]{Age}>3[do][@HumanFemaleBuild][else][@HumanYouthBuild][end].
+
+Table: AgeText
+Type: Lookup
+1: a child ({1d6+6})
+2-3: a teen ({12+1d7})
+4-7: an adult ({19+1d31})
+8-9: middle aged ({50+1d15})
+10: old ({65+1d30})
+
+Table: HumanSkin
+pale white
+white
+fair
+light brown
+medium brown
+olive
+brown
+dark brown
+very dark brown
+black
+
+Table: HumanHairColor
+white
+blonde
+strawberry blonde
+caramel
+red
+auburn
+brown
+chestnut
+brown
+black
+dark brown
+
+Table: HumanHairColorAged
+graying [@HumanHairColor]
+gray
+silver
+white
+
+Table: HumanEyes
+blue
+green
+brown
+hazel
+
+Table: HumanMaleHairStyle
+close-cropped {HColor} hair
+short curly {HColor} hair
+short straight {HColor} hair
+short unkempt {HColor} hair
+shoulder length {HColor} hair
+long straight {HColor} hair
+long wavy {HColor} hair
+long curly {HColor} hair
+long unkempt {HColor} hair
+braided {HColor} hair
+{HColor} hair in a long braid
+{HColor} hair in many braids
+{HColor} hair in many small, tight braids
+{HColor} dreadlocks
+\a {HColor} ponytail
+
+Table: HumanFemaleHairStyle
+short curly {HColor} hair
+short straight {HColor} hair
+short unkempt {HColor} hair
+shoulder length {HColor} hair
+long straight {HColor} hair
+long wavy {HColor} hair
+long curly {HColor} hair
+long unkempt {HColor} hair
+{HColor} hair in a bun
+{HColor} hair in buns
+{HColor} hair in pigtails
+braided {HColor} hair
+{HColor} hair in a long braid
+{HColor} hair in many braids
+{HColor} hair in many small, tight braids
+{HColor} braids wrapped into an elaborate bun
+{HColor} dreadlocks
+\a {HColor} ponytail
+
+Table: HumanFacialHair
+4: and is clean shaven
+4: and no facial hair
+4: and stubble
+2: and a mustache
+4: and \a [@HumanBeardColor] neatly trimmed short beard
+2: and \a [@HumanBeardColor] neatly trimmed medium beard
+4: and \a [@HumanBeardColor] goatee
+2: and \a [@HumanBeardColor] mustache and chin beard
+1: and \a [|gray|white|white-streaked|graying|lighter|darker] long beard
+1: and \a [|gray|white|white-streaked|graying|lighter|darker] full beard
+
+Table: HumanBeardColor
+10:
+4:lighter
+4:darker
+black
+brown
+dark brown
+gray
+white
+
+Table: Skin
+skin
+skin tone
+toned skin
+complexion
+
+Table: HumanYouthBuild
+is slender and small
+is tall and slender
+is unusually small
+is short
+is pudgy
+is tall
+is gangly
+is lanky
+is overweight
+is fat
+
+Table: HumanMaleBuild
+a stocky build
+is quite slender
+is slight of build
+a lean build
+is short and lean
+is a bit short
+is quite short
+a medium build
+is short and fat
+is fat
+is [|tall|short|average height] and barrel-chested
+is [|tall|short|average height] and muscular
+is overweight
+is tall and broad-shouldered
+5:average height and build
+is a bit taller than average
+is rather tall
+is extremely tall
+is tall and lean
+is tall and lanky
+
+Table: HumanFemaleBuild
+a stocky build
+is quite slender
+is slight of build
+is tall and lean
+a lean figure
+is short and lean
+is a bit taller than average
+is rather tall
+is extremely tall
+is [|tall|short|average height] and curvy
+is [|tall|short|average height] and muscular
+is a bit short
+is quite short
+a medium build
+is short and round
+is excessively fat
+is pleasantly overweight
+5:average height and build
