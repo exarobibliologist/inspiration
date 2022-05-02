@@ -1,13 +1,8 @@
-Prompt: {BelowAvg|Average|AboveAvg|Superhuman|God} Average
+Prompt: Max Level {}
 
 Table: v3Char
-Define: BelowAvg=5
-Define: Average=10
-Define: AboveAvg=20
-Define: Superhuman=40
-Define: God=100
-Set: MIND={1d{${$prompt1}}}
-Set: SENSES={1d{${$prompt1}}}
-Set: BODY={1d{${$prompt1}}}
-Set: ARMOR={1d{${$prompt1}}}
-New {$prompt1} Character<hr>Score={{$MIND}+{$SENSES}+{$BODY}+{$ARMOR}}00<hr>MIND={$MIND}<br>SENSES={$SENSES}<br>BODY={$BODY}<br><br>HP={$BODY*5}<br>ARMOR={$ARMOR}<hr>
+Set: MIND={1d{$prompt1}}
+Set: SENSES={1d{$prompt1}}
+Set: BODY={1d{$prompt1}}
+Set: ARMOR={1d{$prompt1}}
+MIND=[when]{$MIND} = 1[do][MIND==2][end]{$MIND}<br>SENSES=[when]{$SENSES} = 1[do][SENSES==2][end]{$SENSES}<br>BODY=[when]{$BODY} = 1[do][BODY==2][end]{$BODY}<br><br>HP={$BODY*5}<br>ARMOR=[when]{$ARMOR} = 1[do][ARMOR==2][end]{$ARMOR}<hr>XP = {$MIND}*{$SENSES}*{$BODY}*{$ARMOR} = {{$MIND}*{$SENSES}*{$BODY}*{$ARMOR}}<hr>Max Level {$prompt1}<br>Actual Level {{{$MIND}+{$SENSES}+{$BODY}+{$ARMOR}} / 4}
