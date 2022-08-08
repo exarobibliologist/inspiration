@@ -1,9 +1,0 @@
-Table: v3Char
-MaxReps:1
-Set: multitool={1d20}
-Set: lockpick={1d20}
-Set: pistolammo={1d20}
-Set: rifleammo={1d20}
-Set: credits={1d10000}
-Set: hraugcan={1d100}
-<h1>Deus Ex Cheated Character</h1><br>spawnmass multitool {$multitool}<br>spawnmass lockpick {$lockpick}<br>spawnmass ammo10mm {$pistolammo}<br>spawnmass ammo3006 {$rifleammo}<br>spawnmass credits {$credits}<br>spawnmass augmentationupgradecannister {$hraugcan}
