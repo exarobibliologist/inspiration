@@ -1,3 +1,45 @@
-Table: v3Char
 MaxReps:1
-<h1>Deus Ex Cheated Character</h1><br>spawnmass multitool {1d20}<br>spawnmass lockpick {1d20}<br>spawnmass ammo10mm {1d100}<br>spawnmass ammo3006 {1d100}<br>spawnmass credits {1d20}<br>spawnmass augmentationupgradecannister {1d100}
+Header: <h1>Deus Ex Revision Random Character<sub>(with Cheat Codes)</sub></h1>set Revision.RevJCDentonMale bcheatsenabled true
+
+Table: Generate
+[@BasicGen]<br><br>Human Revolution Hacks<br>[@HRStyle]<br><br>BioMod/Shifter Hacks<br>[@ShifterBioMod]
+
+Table: BasicGen
+<b>spawnmass</b> multitool {1d20}<br><b>spawnmass</b> lockpick {1d20}<br><b>spawnmass</b> ammo10mm {1d100}<br><b>spawnmass</b> ammo3006 {1d100}<br><b>spawnmass</b> credits {1d20}
+
+Table: HRStyle
+<b>spawnmass</b> augmentationupgradecannister {1d100}
+
+Table: ShifterBioMod
+[@Arms]<br>[@Legs]<br>[@Subdermal]<br>[@Cranium]<br>[@Torso]<br>[@Optics]
+
+Table: Arms
+<b>augadd</b> AugCombat
+<b>augadd</b> AugMuscle
+
+Table: Legs
+<b>augadd</b> AugStealth
+<b>augadd</b> AugSpeed
+
+Table: Subdermal
+<b>augadd</b> AugCloak
+<b>augadd</b> AugEMP
+<b>augadd</b> AugRadarTrans
+
+Table: Cranium
+<b>augadd</b> AugDrone
+<b>augadd</b> AugDefense
+<b>augadd</b> AugSkullGun
+
+Table: Torso
+<b>augadd</b> AugEnviro
+<b>augadd</b> AugBallistic
+<b>augadd</b> AugShield
+<b>augadd</b> AugHeartLung
+<b>augadd</b> AugPower
+<b>augadd</b> AugAqualung
+<b>augadd</b> AugHealing
+
+Table: Optics
+<b>augadd</b> AugVision
+<b>augadd</b> AugTarget
