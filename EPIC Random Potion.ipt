@@ -1,0 +1,13 @@
+Prompt: Mind {}
+Prompt: Senses {}
+Prompt: Body {}
+Prompt: Potion Strength {}
+
+Table: v3Char
+Set: MindRand1={1d{$prompt4}}
+Set: MindRand2={1d{$prompt4}}
+Set: SensesRand1={1d{$prompt4}}
+Set: SensesRand2={1d{$prompt4}}
+Set: BodyRand1={1d{$prompt4}}
+Set: BodyRand2={1d{$prompt4}}
+MIND = {prompt1} * {MindRand1} / {MindRand2} = {{prompt1}*{MindRand1}/{MindRand2}}<br>SENSES = {prompt2} * {SensesRand1} / {SensesRand2} = {{prompt2}*{SensesRand1}/{SensesRand2}}<br>BODY = {prompt3} * {BodyRand1} / {BodyRand2} = {{prompt3}*{BodyRand1}/{BodyRand2}}
