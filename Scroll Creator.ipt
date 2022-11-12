@@ -1,18 +1,37 @@
 Header: Scroll Creator
+use: \Common\srd\MageSpells.ipt
 
 Table: Main
-Shuffle: contain
-Shuffle: open
-Shuffle: marking
-Shuffle: ornament
-Shuffle: inky
-Shuffle: lang
-Shuffle: seal
-Shuffle: size
-Shuffle: sheet
-Shuffle: wrap
-Shuffle: ScrollType
-<b>Container:</b> A [@contain] shaped into a box [@open] [@marking] [@ornament]\n<b>Scroll 1:</b> This scroll has been written in [|black|black|black|black|black|blue|brown|gold|green|grey|orange|purple|red|silver|white] [@inky] in [@lang] with [@seal] for a seal. The pages are [@size] [@sheet] and there is [@wrap] for the wrap bar. It is a [@ScrollType].\n<b>Scroll 2:</b> This scroll has been written in [|black|black|black|black|black|blue|brown|gold|green|grey|orange|purple|red|silver|white] [@inky] in [@lang] with [@seal] for a seal. The pages are [@size] [@sheet] and there is [@wrap] for the wrap bar. It is a [@ScrollType].\n<b>Scroll 3:</b>This scroll has been written in [|black|black|black|black|black|blue|brown|gold|green|grey|orange|purple|red|silver|white] [@inky] in [@lang] with [@seal] for a seal. The pages are [@size] [@sheet] and there is [@wrap] for the wrap bar. It is a [@ScrollType].
+<b>Container:</b> A [@contain] shaped into a box [@open] [@marking] [@ornament]\n\n[@{5d5} NewScroll >> implode <br>]
+
+Table: NewScroll
+10:<b>Scroll:</b> This is \a [@SeeThis][@WhatThis][@WhatSeal][@ItsAWrap] It is [@ScrollType].\n
+
+Table: SeeThis
+[@process] [@sheet] scroll is [@size].
+
+Table: WhatThis
+It has been written in [@colors] [@inky] in [@lang].
+
+Table: WhatSeal
+3:
+1: It is sealed with \a [@seal]. 
+
+Table: ItsAWrap
+There is \a [@wrap] for the wrap bar.
+
+Table: colors
+black
+blue
+brown
+gold
+green
+grey
+orange
+purple
+red
+silver
+white
 
 Table: contain
 leather
@@ -63,208 +82,186 @@ and has a [|belt loop|holding strap] made out of [|animal fur|monster fur|dragon
 and it is decorated with ribbons
 and it is has beautiful, [|yet fake|real] gemstones
 and it has a [|gleaming|shining|dull], [|real|fake] [|precious|semi-precious]  metal.
+
 Table: lang
-1-2: an arcane language
-3-4: a dead language
-5-6: a divine language
-7: pictorgrams
-8: a obscure racial dialect language
-9-10: a regional racial tielect language
-11-13: a racial language
-14: runes
+\a [|dead|obscure|uncommon|common] [|arcane|divine|regional|racial] [|language|dialect|acrolect|patois|vernacular]
+pictorgrams
+runes
+cuneiform
+substitution cipher
 
 Table: inky
-1-10: ink
-11: acid
-12-13: animal blood
-14: monster blood
-15: chalk
-16: crayon
-17: metalic ink
-18: paint
+ink
+acid
+animal blood
+monster blood
+chalk
+crayon
+metalic ink
+paint
 
 Table: seal
-1-3: nothing
-4-5: soft wax
-6-7: hard wax
-8-9: resin
-10-11: easy lock
-12: average lock
-13: good lock
-14: excelent lock
-15-16: easy knot
-17: average knot
-18: good knot
-19: excelent knot
+soft wax
+hard wax
+resin
+easy lock
+average lock
+good lock
+excelent lock
+easy knot
+average knot
+good knot
+excelent knot
 
-table: sheet
-bamboo
-ivory
-brass
-copper
-gold
-platinum
-silver
-cotton
-linen
-rice
-wood pulp
-papyrus
-parchment
-slate
-ash wood planel
-cherry wood panel
-mahogany wood panel
-oak wood panel
-walnut wood panel
+Table: process
+10:
+1:recycled
+1:[|washed|erased] and reused
 
-table: size
-[@wid] by [@len] inches
-[@wid] by [@len] inches
-[@wid] by [@len] inches
-[@wid] by [@len] inches
+Table: sheet
+bamboo [|paper|sheet|material|||]
+ivory [|paper|sheet|material|||]
+[|brass|copper|gold|platinum|silver] [|paper|sheet|material|||]
+cotton [|paper|sheet|material|||]
+linen [|paper|sheet|material|||]
+rice [|paper|sheet|material|||]
+wood pulp [|paper|sheet|material|||]
+papyrus [|paper|sheet|material|||]
+parchment [|paper|sheet|material|||]
+slate [|paper|sheet|material|||]
+[|flimsy|durable] [|transparent|opaque] [|paper|sheet|material|||]
+thin [|ash|cherry|mahogany|oak|walnut] [|paper|sheet|material|||]
 
-Table: wid
-1: 6
-2-3: 7
-4-10: 8
-11-12: 9
-13-14: 10
-15-16: 11
-17-18: 12
-19: {1d12}
-20: {2d12}
-
-Table: len
-1: 9
-2-3: 10
-4-10: 11
-11-12: 12
-13-14: 15
-15-16: 16
-17-18: 18
-19: {1d24}
-20: {2d24}
+Table: size
+{2d12} by {2d12} inches
 
 Table: wrap
-1-10: nothing
-11-15: a bamboo
-16-20: a animal bone
-21-22: a humanoid bone
-23-24: a monster bone
-25: a clear crystal
-26: a colored crystal
-27: a glass
-28: a gold
-29: an iron
-30: a mithril
-31-50: an ivory
-51-70: a silver
-71-90: a steel
-91-93: a hardwood
-94-95: a softwood
-96: a real gemstone
-97: a fake gemstone
+bamboo
+animal bone
+humanoid bone
+monster bone
+clear crystal
+colored crystal
+glass
+gold
+iron
+mithril
+ivory
+silver
+steel
+hardwood
+softwood
+real gemstone
+fake gemstone
 
 Table: ScrollType
-1-50: [@mundane]
-51-75: [@enchant]
+10: [@mundane]
+[@enchant]
 
-table: mundane
-1-8: a blank scroll
-9: an IOU for a large sum
-10: a biography
-11: the blueprints for a fortification
-12: the blueprints for a house
-13: the blueprints of a settlement
-14: an expired bounty
-15: a valid bounty
-16: a business account
-17-18: a business contract
-19: a set of criminal investigation notes
-20: the deed to an animal
-21-22: the deed for a house
-23-24: the deed to an item
-25: the deed for a [|cave|forest]
-26-27: the deed for a vehicle
-28-29: a diary
-30: [|dissection|research] notes
-31: a family tree
-32: a draft of a fictional story
-33: a lost edition of a fictional story
-34-36: a story
-37: gibberish
-38: a pad invoice
-39: an unpaid invoice
-40: a birthday letter
-41-42: a general letter
-43-45: a legal letter
-46: a plea for help
-47: a romantic letter
-48: a htreatening letter
-49: a licence for dangerous animals
-50-51: a merchant licence
-52: a library card
-53: a licence to kill
-54: a check list
-55: a inventory list
-56: a map showing the directions to a specific meeting
-57: a map of a [|dungeon|cave system]
-58: a magical map of a building
-59-60: a map to [|real|fake] treasure
-61-62: a [|real|fake] medical history
-63: medical notes
-64: a cult membership roster
-65-66: a guild membership roster
-67: memoirs
-68-69: a [|fake|true] biography
-70: a dictionary
-71: an encyclopedia
-72: a historical document
-73-74: a planner
-75-77: a religious text
-78: a [|picture|image]
-79: a proposal of marriage
-80: a ransom note
-81-84: a [|drink|food] recipe
-85: a mixed piece of research notes
-86: magical research notes
-87: monster research notes
-88-89: technology research notes
-90: ritual details
-91: golem construction shopping list
-92: mundane shopping list
-93-94: a [|fake|real] suicide note
-9-6: a surrender [|acceptance|demand] 
-97-98: [|real|forged] tax records
-99: Unintelligible scribbles
-100: [@enchant]
+Table: mundane
+a blank scroll
+an IOU for a large sum
+a biography
+the blueprints for a fortification
+the blueprints for a house
+the blueprints of a settlement
+an expired bounty
+a valid bounty
+a business account
+a business contract
+a set of criminal investigation notes
+the deed to an animal
+the deed for a house
+the deed to an item
+the deed for a [|cave|forest]
+the deed for a vehicle
+a diary
+[|dissection|research] notes
+a family tree
+a draft of a fictional story
+a lost edition of a fictional story
+a story
+gibberish
+a pad invoice
+an unpaid invoice
+a birthday letter
+a general letter
+a legal letter
+a plea for help
+a romantic letter
+a htreatening letter
+a licence for dangerous animals
+a merchant licence
+a library card
+a licence to kill
+a check list
+a inventory list
+a map showing the directions to a specific meeting
+a map of a [|dungeon|cave system]
+a magical map of a building
+a map to [|real|fake] treasure
+a [|real|fake] medical history
+medical notes
+a cult membership roster
+a guild membership roster
+memoirs
+a [|fake|true] biography
+a dictionary
+an encyclopedia
+a historical document
+a planner
+a religious text
+a [|picture|image]
+a proposal of marriage
+a ransom note
+a [|drink|food] recipe
+a mixed piece of research notes
+magical research notes
+monster research notes
+technology research notes
+ritual details
+golem construction shopping list
+mundane shopping list
+a [|fake|real] suicide note
+a surrender [|acceptance|demand] 
+[|real|forged] tax records
+Unintelligible scribbles
 
-table: enchant
-1-3: a basic communication scroll
-4-8: a coded communication scroll
-9-11: a blank copying scroll
-12-15: a filled copying scroll
-16-18: a copying scroll carrying a secrect code
-19-21: a alignment detection scroll
-22-24: a curse detection scroll
-25-26: a disease detection scroll
-27-28: a lie detection scroll
-29-32: a magic detection scroll
-33-34: a poiso0n detection scroll
-35-43: a coded dictation scroll that is [|blank|filled]
-44-52: a dictation scroll that is [|blank|filled]
-53-60: a imaging scroll that is [|blank|filled]
-61-63: a mapping scroll leading to nearby treasure
-64-67: a mapping scroll that finds nearby creatures
-68-72: a mapping scroll that gives directions to nearby places
-73-76: a mapping scroll leading to nearby mundane items
-77-78: a mapping scroll leading to nearby secret doors.
-79-80: a portable library scroll
-81-83: a portable mirror Scroll
-84-86: a one-way portable window
-87-90: a dual way portable window
-91-92: a self-updating beings scroll
-93-94: a self-updating container scroll
-95-97: a self-updating item scroll
-98-100: a self-updating location scroll
+Table: enchant
+a basic communication scroll
+a coded communication scroll
+a blank copying scroll
+a filled copying scroll
+a copying scroll carrying a secrect code
+a alignment detection scroll
+a curse detection scroll
+a disease detection scroll
+a lie detection scroll
+a magic detection scroll
+a poison detection scroll
+a coded dictation scroll that is [|blank|filled]
+a dictation scroll that is [|blank|filled]
+a imaging scroll that is [|blank|filled]
+a mapping scroll leading to nearby treasure
+a mapping scroll that finds nearby creatures
+a mapping scroll that gives directions to nearby places
+a mapping scroll leading to nearby mundane items
+a mapping scroll leading to nearby secret doors.
+a portable library scroll
+a portable mirror Scroll
+a one-way portable window
+a dual way portable window
+a self-updating beings scroll
+a self-updating container scroll
+a self-updating item scroll
+a self-updating location scroll
+<font color=red>a scroll of [@SpellsMageLevel0]</font>
+<font color=red>a scroll of [@SpellsMageLevel1]</font>
+<font color=red>a scroll of [@SpellsMageLevel2]</font>
+<font color=red>a scroll of [@SpellsMageLevel3]</font>
+<font color=red>a scroll of [@SpellsMageLevel4]</font>
+<font color=red>a scroll of [@SpellsMageLevel5]</font>
+<font color=red>a scroll of [@SpellsMageLevel6]</font>
+<font color=red>a scroll of [@SpellsMageLevel7]</font>
+<font color=red>a scroll of [@SpellsMageLevel8]</font>
+<font color=red>a scroll of [@SpellsMageLevel9]</font>
