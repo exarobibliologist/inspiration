@@ -17,13 +17,13 @@ Table: AbilityRand
 20:<b>[!Skills]</b> = [@FateCards{$prompt1}]
 1:<b>[!Skills] ([|Amateur|Beginner|Novice|Untested])</b> = [@FateCards{$prompt1}] [@ExpandAbility]
 1:<b>[!Skills] ([|Intermediate|Standard|Common|Average])</b> = [@FateCards{$prompt1}] [@ExpandAbility]
-1:<b>[!Skills] ([|Advanced|Progressive|Experimental|Breakthrough])</b> = [@FateCards{$prompt1}] [@ExpandAbility]
-1:<b>[!Skills] ([|Unlicensed|Innovative|Untested])</b> = [@FateCards{$prompt1}] [@ExpandAbility]
-1:<b>[!Skills] ([|Darkweb|Illegal|Unauthorized|Forbidden])</b> = [@FateCards{$prompt1}] [@ExpandAbility] <b>and if not caught/observed)</b>
+1:<b>[!Skills] ([|Advanced|Progressive|Experimental|Breakthrough])</b> = [@FateCardsLight] [@ExpandAbility]
+1:<b>[!Skills] ([|Unlicensed|Innovative|Untested])</b> = [@FateCardsDark] [@ExpandAbility]
+1:<b>[!Skills] ([|Darkweb|Illegal|Unauthorized|Forbidden])</b> = [@FateCardsDark] [@ExpandAbility]
 
 Table: ExpandAbility
 <b>(gain [@Skills] @  [@FateCards{$prompt1}] while using this skill)</b>
-<b>(Odds to increase Skill on success by [@FateCards{$prompt1}])</b>
+<b>(Increase Skill on success = [@FateCards{$prompt1}])</b>
 
 Table: FateCardsNormal
 1:Impossible +2
@@ -50,6 +50,18 @@ Table: FateCardsInverted
 64:Has To Be
 128:Has To Be +1
 256:Has To Be +2
+
+Table: FateCardsDark
+1:Impossible
+2:Very Unlikely
+4:Unlikely
+2:50/50
+
+Table: FateCardsLight
+2:50/50
+4:Likely
+2:Very Likely
+1:Has To Be
 
 Table: Skills
 Able Seaman
