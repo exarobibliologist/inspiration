@@ -1,0 +1,378 @@
+Header: <center><span style='font:24pt Arial'>Mythic Character Generator - Cards Version</span><br><span style='font:7pt Arial'><center><b>This generator is Open Game Content, and is licensed for public use under the terms of the Open Game License v1.0a.<br>Mythic Game Master Emulator Deck is © Copyright 2019 by Tana Pigeon and Word Mill Publishing.</b></span></center>
+
+use: nbos\names\Human.ipt
+use: nbos\names\elf.ipt
+use: nbos\names\dwarf.ipt
+use: Generators\My Generators\Name_Generator.ipt
+
+MaxReps:1
+Prompt: Bell-Curve {Normal|Inverted}Better
+
+Table: MessageTable
+Define: mythicname =[@AllNames>>Proper>>Implode]
+Define: skillset = <b>[!Skills]</b> = [!Fate]
+<span style='font:24pt Arial'><b>{$mythicname}</b></span><br><span style='font:18pt Arial'><b>Attributes</b></span><br><b>Strength:</b> [@FateCards{$prompt1}]<br><b>Agility:</b> [@FateCards{$prompt1}]<br><b>Reflex:</b> [@FateCards{$prompt1}]<br><b>IQ:</b> [@FateCards{$prompt1}]<br><b>Intuition:</b> [@FateCards{$prompt1}]<br><b>Willpower:</b> [@FateCards{$prompt1}]<br><b>Toughness:</b> [@FateCards{$prompt1}]<br><br><span style='font:18pt Arial'><b>Abilities</b></span> <br>[@{5d5} AbilityRand >> sort >> implode <br>]
+
+Table: AbilityRand
+20:<b>[!Skills]</b> = [@FateCards{$prompt1}]
+1:<b>[!Skills] ([|Amateur|Beginner|Novice|Untested])</b> = [@FateCards{$prompt1}] [@ExpandAbility]
+1:<b>[!Skills] ([|Intermediate|Standard|Common|Average])</b> = [@FateCards{$prompt1}] [@ExpandAbility]
+1:<b>[!Skills] ([|Advanced|Progressive|Experimental|Breakthrough])</b> = [@FateCardsLight] [@ExpandAbility]
+1:<b>[!Skills] ([|Unlicensed|Innovative|Untested])</b> = [@FateCardsDark] [@ExpandAbility]
+1:<b>[!Skills] ([|Darkweb|Illegal|Unauthorized|Forbidden])</b> = [@FateCardsDark] [@ExpandAbility]
+
+Table: ExpandAbility
+<b>(gain [@Skills] @  [@FateCards{$prompt1}] while using this skill)</b>
+<b>({1d50}% Chance to Increase Skill = [|-2|-1||||+1|+2] ([|Strength|Agility|Reflex|IQ|Intuition|Willpower|Toughness]) level</b>
+
+Table: FateCardsNormal
+1:Impossible +2
+4:Impossible +1
+16:Impossible
+64:Very Unlikely
+128:Unlikely
+256:50/50
+128:Likely
+64:Very Likely
+16:Has To Be
+4:Has To Be +1
+1:Has To Be +2
+
+Table: FateCardsInverted
+256:Impossible +2
+128:Impossible +1
+64:Impossible
+16:Very Unlikely
+4:Unlikely
+1:50/50
+4:Likely
+16:Very Likely
+64:Has To Be
+128:Has To Be +1
+256:Has To Be +2
+
+Table: FateCardsDark
+1:Impossible
+2:Very Unlikely
+4:Unlikely
+2:50/50
+
+Table: FateCardsLight
+2:50/50
+4:Likely
+2:Very Likely
+1:Has To Be
+
+Table: Skills
+Able Seaman
+Accident Prevention
+Accounting
+Acrobatics
+Acting
+Activist
+Aeronautics
+Agriculture
+Alarm Operator
+Alchemy
+Alien Culture 
+Anarchy
+Anatomy
+Anesthesia
+Animal Calls
+Animal Care
+Animal Training
+Antidotes
+Antisocial Networking
+Appraise
+Arcane Lore
+Archery
+Architect
+Archivist
+Armory
+Aromatherapy
+Astrobiology
+Astrogation
+Astrology
+Astronomy
+Auction Clerk
+Auditor
+Autopsy
+Baker
+Balance
+Bartender
+Barter
+Basket Making
+Bee-keeping
+Begging
+Bioengineering
+Biology
+Biotech
+Blacksmith
+Bladed Weapons
+Blogging
+Bluff
+Boating
+Book-binder
+Boost Morale
+Boot-licking
+Bowyer/Fletcher
+Breaking & Entering 
+Bribery
+Bureaucracy
+Butcher
+Butler
+Camouflage
+Card Player
+Carpenter
+Cheerleading
+Chemistry
+Climbing
+Cloning
+Coffee Roasting
+Coin Tricks
+Colonization
+Commune with Spirits
+Composition
+[|VR|Computer|Hologram] Build/Repair 
+[|VR|Computer|Holograhic] Programming/Software
+[|VR|Computer|Holograhic] Hardware
+[|VR|Computer|Holograhic] Security
+Con
+Conservationist
+Contortionist
+Contraband
+Cooking
+Cosmetology
+Costuming
+Courtly Ways
+Cremation
+Criminology
+Critic
+Crossword Puzzles
+Cryptocurrency
+Cryptography
+Cryptozoology
+Crystal Cutting
+Crystal Growing
+Culinary Arts
+Current Events
+Customer Service
+Cytogenetics
+Dance
+Darts
+Data Entry
+Demolitions
+Dentistry
+Detective
+Detect Lies
+Dice
+Diplomacy
+Disc Jockey (DJ)
+Disguise
+Diving
+Doctoring
+Dodge
+Drawing
+Driving
+Drug Knowledge
+Dry Cleaning
+Economics
+Editor
+Education
+Electronics
+Embalming
+Emotional
+Engineer
+Escape Artist
+Etiquette
+Eugenics
+Exegesis
+Exercise
+Explosives
+Extremist
+Eyesight
+Falconry
+Farming
+Fast-Talk
+Fertility
+Fight
+Firearms
+Firefighter
+Firestarter
+First Aid
+Fishing
+Fisticuffs
+Flattery
+Flirting
+Floriculture
+Folklore
+Forage
+Forensics
+Forestry
+Forgery
+Fortune Telling
+Gambling
+Game Playing
+Gamer
+Gamekeeper
+Gardening
+Gem Cutting
+Genealogist
+Genetics
+Geography
+Ghost Tracking
+Glass Blowing
+Groundskeeping
+Guide
+Gunnery
+Gynecology
+Hacker
+Heraldry
+Herbology
+Herding
+History
+Hunting
+Hydroponics
+Illusion
+Illustration
+Impressionist
+Industry
+Infiltrate
+Information Broker
+Information Clerk
+Innkeeping
+Inspection
+Instructor
+Interrogation
+Interviewing
+Intimidate
+Invention
+Iridology
+Jailer
+Janitor
+Jeweler
+Judge
+Juggling
+Jumping
+Knots
+Kung-Fu
+Laboratory
+Languages
+Laureate
+Law
+Law Enforcement
+Leatherworking
+Levitation
+Library Skills
+Lifeguard
+Listening
+Literacy
+Literature
+Locate Traps
+Locksmith
+Lockpicking
+Lying
+Machine Operation
+Magic Lore
+Maintenance
+Make-up Artist
+Map Making
+Marketing
+Masonry
+Mathematics
+Mechanic
+Medicine
+Meditation
+Meteorology
+Microbiology
+Midwife
+Mime
+Model
+Moneylending
+Move Quietly
+Museology
+Musical Instruments
+Mythology
+Nature Lore
+Navigation
+Negotiation
+Networking
+News Writer
+Notary
+Novelist
+Nuclear Engineer
+Nursing
+Occultism
+Ophthalmology
+Oratory
+Painting
+Paleobiology
+Pantomime
+Persuade
+Philanthropy
+Photography
+Photojournalism
+Physics
+Pick Locks
+Pickpocketing
+Piloting
+Poisoning
+Pornography
+Pottery
+Priest
+Prostitution
+Psudeoscience
+Psychology
+Psychotherapy
+Quick-Draw
+Radio
+Religion
+Research
+Riding
+Rituals
+Running
+Salesmanship
+Salvage
+SCUBA
+Science
+Sculpting
+Seamanship
+Seduction
+Servant
+Shield
+Shiphandling
+Shopkeeping
+Singing
+Sleight of Hand 
+Smith
+Social Networking
+Sociobiology
+Sociology
+Spell Casting
+Sports
+Starship Repair 
+Stealth
+Storytelling
+Streetwise
+Surgery
+Survival
+Swimming
+Sword Fighting
+Tactics
+Tailor
+Tall Tales
+Tattoo Artist
+Teamster
+Teratology
+Terrorist
+Theology
+Throwing
+Tracking
+Trap [|Avoidance|Disarm|Design]
+Ventriloquism
+Veterinarian
+Vintner
+Weaving
+Witty Insults
+Wrestling
+Zero-G Maneuvering
