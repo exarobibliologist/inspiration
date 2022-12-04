@@ -1,5 +1,5 @@
 Table: BibleReading
-[!{1d4} RandChapter >> implode<br>]
+[!{3d2} RandChapter >> implode<br>]
 
 Table: RandChapter
 Genesis {1d50}
