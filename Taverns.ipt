@@ -3,11 +3,14 @@ MaxReps:1
 Table:MasterGen
 Define: MealCost = (Pick {3d2} Entree for {4d10}sp, Pick {1d2} Entree for {2d10}sp)
 Define: DrinkCost = ({2d20}cp)
+Define: CocktailCost = ({20d20}cp)
+Define: Refills = ([|Refills Free|1/2 Price Refills|1/2 Price Refills|1/2 Price Refills|1/2 Price During Happy Hour|1/2 Price During Happy Hour|1/2 Price During Happy Hour])
 Define: Meal1 = <h2>Breakfast {MealCost}</h2>[!{3d3} Breakfast >> implode <br>]<br><h3>Breakfast Sides</h3>[!{2d3} BreakfastSides >> implode <br>]<br>[!{2d3} FruitVeggies >> implode <br>]
 Define: Meal2 = <h2>Dinner {MealCost}</h2>[@{2d3} Dinner >> implode <br>]<br><h3>Dinner Sides</h3>[!{2d2} DinnerSides >> implode <br>]<br>[!{2d2} DinnerSides2 >> implode <br>]<br>[!{1d6} FruitVeggies >> implode <br>]
 Define: Drinks = <h3>Drinks {DrinkCost}</h3>[!{2d3} Drinks >> implode <br>]
-Define: Coffee = <h3>Coffee {DrinkCost}</h3> [@Coffee]
-<h1>[@TavernName]</h1><hr>Location\: [@CityDescriptions]<hr>{$Meal1}<hr>{$Meal2}<hr>{$Drinks}<hr>{Coffee}<hr><h3>Today's Cocktails {DrinkCost}</h3>[@Cocktails]<hr>
+Define: Coffee = <h3>Specialty Coffee {DrinkCost} {Refills}</h3> [@Coffee]
+Define: CocktailMenu = <h3>Today's Cocktails {CocktailCost} {Refills}</h3>[@Cocktails]
+<h1>[@TavernName]</h1><hr>Location\: [@CityDescriptions]<hr>{$Meal1}<hr>{$Meal2}<hr>{$Drinks}<hr>{Coffee}<hr>{CocktailMenu}<hr>
 
 Table:TavernName
 The [@Professions >> Proper]'s [@TavernTitles >> Proper]
@@ -160,6 +163,10 @@ Oranges
 [|Sweet|Hot] Peppers
 Spinach
 [|Green|White|Yellow|Red] Onions
+
+; -------------------------------------------------------------------
+; ------------------------ Drinks -----------------------------------
+; -------------------------------------------------------------------
 
 Table: Drinks
 [|Green|Black|Brown|Floral|Herbal] Tea
@@ -977,8 +984,8 @@ Democrat
 Tombstone
 
 Table: Suffix
-50:
-(comes in a souvenir glass that you can keep! for {1d10}sp)
+25:
+(comes in a souvenir glass that you can keep! for an extra {1d10}sp)
 with [@Adds]
 on the Rocks
 on Ice
