@@ -2,15 +2,19 @@ MaxReps:1
 
 Table:MasterGen
 Define: MealCost = (Pick {3d2} Entree for {4d10}sp, Pick {1d2} Entree for {2d10}sp)
-Define: DrinkCost = ({2d20}cp)
-Define: CocktailCost = ({20d20}cp)
-Define: Refills = ([|Refills Free|1/2 Price Refills|1/2 Price Refills|1/2 Price Refills|1/2 Price During Happy Hour|1/2 Price During Happy Hour|1/2 Price During Happy Hour])
+Define: DrinkCost = ({20d10}cp)
+Define: CocktailCost = ({50d10}cp)
+Define: HappyHour = ({4d5} Refills 1/{4d2} Price during Happy Hour from {1d3}-{3d4}pm)
 Define: Meal1 = <h2>Breakfast {MealCost}</h2>[!{3d3} Breakfast >> implode <br>]<br><h3>Breakfast Sides</h3>[!{2d3} BreakfastSides >> implode <br>]<br>[!{2d3} FruitVeggies >> implode <br>]
 Define: Meal2 = <h2>Dinner {MealCost}</h2>[@{2d3} Dinner >> implode <br>]<br><h3>Dinner Sides</h3>[!{2d2} DinnerSides >> implode <br>]<br>[!{2d2} DinnerSides2 >> implode <br>]<br>[!{1d6} FruitVeggies >> implode <br>]
 Define: Drinks = <h3>Drinks {DrinkCost}</h3>[!{2d3} Drinks >> implode <br>]
-Define: Coffee = <h3>Specialty Coffee {DrinkCost} {Refills}</h3> [@Coffee]
-Define: CocktailMenu = <h3>Today's Cocktails {CocktailCost} {Refills}</h3>[@Cocktails]
+Define: Coffee = <h3>Specialty Coffee {CocktailCost} ([@RefillMenu])<br>{HappyHour}</h3> [@3 Coffee >> implode <br>]
+Define: CocktailMenu = <h3>Today's Cocktails {CocktailCost} ([@RefillMenu])<br>{HappyHour}</h3>[@3 Cocktails >> implode <br>]
 <h1>[@TavernName]</h1><hr>Location\: [@CityDescriptions]<hr>{$Meal1}<hr>{$Meal2}<hr>{$Drinks}<hr>{Coffee}<hr>{CocktailMenu}<hr>
+
+; -------------------------------------------------------------------
+; ----------------------------- Taverns -----------------------------
+; -------------------------------------------------------------------
 
 Table:TavernName
 The [@Professions >> Proper]'s [@TavernTitles >> Proper]
@@ -60,11 +64,18 @@ a foreign enclave
 ; -------------------------------------------------------------------
 
 Table: Breakfast
+[|Scrambled|Fried] [@NounFaeCreatures] Eggs
 [|Scrambled|Fried] Eggs
-[|Poached|[|Hard|Soft] Boiled|Deviled] Eggs
-Egg [|Sunny-Side Up|Sandwich|Frittata]
-Egg Over-[|Easy|Medium|Hard]
+{2d2} [|Poached|[|Hard|Soft] Boiled|Deviled] [@NounFaeCreatures] Eggs
+{2d2} [|Poached|[|Hard|Soft] Boiled|Deviled] Eggs
+{2d2} [@NounFaeCreatures] Eggs [|Sunny-Side Up|Over-[|Easy|Medium|Hard]]
+{2d2} Eggs [|Sunny-Side Up|Over-[|Easy|Medium|Hard]]
+[@NounFaeCreatures] Egg [|Sandwich|Frittata]
+Egg [|Sandwich|Frittata]
 [|Smoked|Honey] Ham
+[|Smoked|Honey] [@NounMonstersOne] Ham
+Steak, [|Rare|Medium-Rare|Medium|Medium-Well|Well Done]
+[@NounMonstersOne] Steak, [|Rare|Medium-Rare|Medium|Medium-Well|Well Done]
 [|Hard|Soft|Sharp|Pungent] Cheese
 [|Hot|Cold|Thick|Thin] Porridge
 [|Cinnamon|Sticky|Sweet] [|Roll|Bun]
@@ -78,7 +89,10 @@ Table: BreakfastSides
 
 Table: Dinner
 10:[@DinnerPrep] [@MealAnimal]
+Buttery [@MealAnimal] Bites
 [@MealAnimal] [|Sausage|Bacon|Steak]
+Dragonfire [@MealAnimal] [|Chili|Chili con Carne]
+[@MealAnimal] [|Chili|Chili con Carne]
 [@MealAnimal] and Dumplings
 
 Table: DinnerPrep
@@ -167,6 +181,10 @@ Spinach
 ; -------------------------------------------------------------------
 ; ------------------------ Drinks -----------------------------------
 ; -------------------------------------------------------------------
+
+Table: RefillMenu
+4:{1d5} Refills Free
+32:{2d5} Refills 1/2 Price
 
 Table: Drinks
 [|Green|Black|Brown|Floral|Herbal] Tea
@@ -985,24 +1003,24 @@ Tombstone
 
 Table: Suffix
 25:
-(comes in a souvenir glass that you can keep! for an extra {1d10}sp)
-with [@Adds]
-on the Rocks
-on Ice
-...Shaken
-...Stirred
-...Shaken, not Stirred
-...Stirred, not Shaken
-...Blended
-...Chilled
-...Neat
-served [|Ice Cold|Chilled|at Room Temperature|Warm|Steaming Hot]
-with \a [@Booze] Chaser
-garnished with [@Standards]
-topped off with [@StandardsPre]
-topped off with [@BoozePre]
-topped off with [@FlavorsPre]
-[|on|by|under|against|in|over|above|behind|around|off] the [|Beach|Sand|Island|Sea|Floor|Bed|Floor|Wall|Ceiling|Lamppost|Sheets|Sea|Sky|Moon|Sun|Midnight Sun|Stars]
+1:(comes in a souvenir glass that you can keep! for an extra {1d20}sp)
+1:with [@Adds]
+1:on the Rocks
+1:on Ice
+1:...Shaken
+1:...Stirred
+1:...Shaken, not Stirred
+1:...Stirred, not Shaken
+1:...Blended
+1:...Chilled
+1:...Neat
+1:served [|Ice Cold|Chilled|at Room Temperature|Warm|Steaming Hot]
+1:with \a [@Booze] Chaser
+1:garnished with [@Standards]
+1:topped off with [@StandardsPre]
+1:topped off with [@BoozePre]
+1:topped off with [@FlavorsPre]
+1:[|on|by|under|against|in|over|above|behind|around|off] the [|Beach|Sand|Island|Sea|Floor|Bed|Floor|Wall|Ceiling|Lamppost|Sheets|Sea|Sky|Moon|Sun|Midnight Sun|Stars]
 
 Table: Adds
 a [|Rhubarb|Celery] Stalk
@@ -1838,18 +1856,18 @@ Griffon
 Hippogriff
 Rust Monster
 Flayer
+Centaur
 
 Table:NounFaeCreatures
 Brownie
-Centaur
-sprite
-pixie
-blink dog
-satyr
-nymph
-grig
-faun
-dryad
+Sprite
+Pixie
+Blink Dog
+Satyr
+Nymph
+Grig
+Faun
+Dryad
 
 Table:NounAstronomy
 sun
