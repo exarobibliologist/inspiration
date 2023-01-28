@@ -8,8 +8,8 @@ Define: HappyHour = ({4d5} Refills 1/{4d2} Price during Happy Hour from {1d3}-{3
 Define: Meal1 = <h2>Breakfast {MealCost}</h2>[!{3d3} Breakfast >> implode <br>]<br><h3>Breakfast Sides</h3>[!{2d3} BreakfastSides >> implode <br>]<br>[!{2d3} FruitVeggies >> implode <br>]
 Define: Meal2 = <h2>Dinner {MealCost}</h2>[@{2d3} Dinner >> implode <br>]<br><h3>Dinner Sides</h3>[!{2d2} DinnerSides >> implode <br>]<br>[!{2d2} DinnerSides2 >> implode <br>]<br>[!{1d6} FruitVeggies >> implode <br>]
 Define: Drinks = <h3>Drinks {DrinkCost}</h3>[!{2d3} Drinks >> implode <br>]
-Define: Coffee = <h3>Specialty Coffee {CocktailCost} ([@RefillMenu])<br>{HappyHour}</h3> [@3 Coffee >> implode <br>]
-Define: CocktailMenu = <h3>Today's Cocktails {CocktailCost} ([@RefillMenu])<br>{HappyHour}</h3>[@3 Cocktails >> implode <br>]
+Define: Coffee = <h3>Specialty Coffee {CocktailCost}<br>([@RefillMenu])<br>{HappyHour}</h3> [@3 Coffee >> implode <br>]
+Define: CocktailMenu = <h3>Today's Cocktails {CocktailCost}<br>([@RefillMenu])<br>{HappyHour}</h3>[@3 Cocktails >> implode <br>]
 <h1>[@TavernName]</h1><hr>Location\: [@CityDescriptions]<hr>{$Meal1}<hr>{$Meal2}<hr>{$Drinks}<hr>{Coffee}<hr>{CocktailMenu}<hr>
 
 ; -------------------------------------------------------------------
@@ -183,7 +183,7 @@ Spinach
 ; -------------------------------------------------------------------
 
 Table: RefillMenu
-4:{1d5} Refills Free
+2:{2d2} Refills Free
 32:{2d5} Refills 1/2 Price
 
 Table: Drinks
