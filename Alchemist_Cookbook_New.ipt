@@ -1,0 +1,3895 @@
+Header:<center><span style='font:24pt Arial'>The Master Alchemist's Cookbook</span><br><span style='font:12pt Arial'>Complex Recipes, Ruminations, and Potions</span></center></span><br><span style='font:8pt Arial'><center><b>This material is Open Game Content, and is licensed for public use under the terms of the Open Game License v1.0a.</span></center>
+Footer:<span style='font:8pt Arial'>* Because of variations in test conditions, recorded studies may have yielded wildly varying results. Ultimately it is up to the GM to interpret these results.
+MaxReps:1
+
+Table: AlchemistCookbookGen
+Set: HeaderOpenFormat =<span style='font:11pt Arial'><i><b>
+Set: HeaderCloseFormat =</i></b></span>
+Set: WarningFormatting =<span style='font:8pt Arial'>
+Set: BodyFormatting =<span style='font:10pt Arial'>
+Set: recipenumber =[|{4d4}|{3d4}|{3d4}|{2d4}|{2d4}|{2d4}]
+{HeaderOpenFormat}Ingredients{HeaderCloseFormat}<br>{$BodyFormatting}[@{$recipenumber} IngredientTable]<br>[@RecipeDirections]<br>{HeaderOpenFormat}Notes - Sorted by Age and Relevance*{HeaderCloseFormat}<br>{$BodyFormatting}[@Sideeffects]</span>
+
+Table: IngredientTable
+<li>[@IngredientTable2>>Implode<li></li>]</li>
+
+Table: IngredientTable2
+Define: Item =[@AmountTable] [@RandomIngredient]
+{$Item}
+
+Table: AmountTable
+1/{1d9+1} [@Containers]
+1 [@Containers]
+{1d24+1} [@Containers]
+
+Table: Containers
+tsp
+tbsp
+cup
+pt
+qt
+gal
+oz
+fl oz
+lb
+
+Table: RandomIngredient
+Set: ingredientlanguage =[@Language]
+Set: ingredientname =[@Get{$ingredientlanguage}Word>>Proper]
+Define: masteringredientplantrandom =[||{$masteringredientname}] [!Plants]
+Define: masteringredientmonsterrandom =[||{$masteringredientname}] [!Monsters]
+Define: masteringredientmetalrandom =[||{$masteringredientname}] [!Metals]
+Define: masteringredientnormanrandom =[||{$masteringredientname}] [!NormalAnimals]
+Define: masteringredientmineralrandom =[||{$masteringredientname}] [!Minerals]
+Define: masteringredientalloyrandom =[||{$masteringredientname}] [!Alloys]
+Define: masteringredientelementrandom =[||{$masteringredientname}] [!Elements]
+6000:[|[@TypeBefore]||] {$masteringredientplantrandom} [|[@PlantAfter]||]
+1000:[|[@TypeBefore]||] {$masteringredientmonsterrandom} [|[@MonsterAfter]||]
+500:[|[@TypeBefore]||] {$masteringredientmetalrandom} [|[@MetalMineralAlloyAfter]||]
+500:[|[@TypeBefore]||] {$masteringredientmineralrandom} [|[@MetalMineralAlloyAfter]||]
+500:[|[@TypeBefore]||] {$masteringredientalloyrandom} [|[@MetalMineralAlloyAfter]||]
+500:[|[@TypeBefore]||] {$masteringredientnormanrandom} [|[@MonsterAfter]||]
+500:[|[@TypeBefore]||] {$masteringredientelementrandom}
+100:[@TypeBefore] {$masteringredientelementrandom}
+50:{$masteringredientelementrandom}
+100:{$masteringredientelementrandom}
+10:[@TypeBefore] {$masteringredientelementrandom}
+
+Table: TypeBefore
+partially hydrogenated
+crushed
+essence of
+stewed
+sliced
+chopped
+shredded
+dried
+diced
+fresh
+frozen
+distilled
+powdered
+
+Table: PotType
+5:[||cooking] pot
+4:double boiler
+4:Dutch oven
+3:[||roasting] pan
+4:stewpot
+3:wok
+2:bowl
+1:pitcher
+
+Table: BasePotIngredient
+6:water
+5:milk
+4:[||fruit] juice
+4:cream
+3:ale
+3:whiskey
+2:brandy
+2:beer
+2:wine
+1:vinegar
+1:stout
+1:mead
+1:firewater
+
+Table: BaseTinctureIngredient
+3:ale
+3:whiskey
+2:brandy
+2:beer
+2:wine
+1:vinegar
+1:stout
+1:mead
+1:firewater
+
+Table: Colors
+white
+black
+gray
+brown
+red
+orange
+yellow
+green
+blue
+purple
+
+; ---------------- RECIPES ---------------
+; ---------------- RECIPES ---------------
+; ---------------- RECIPES ---------------
+
+Table: RecipeDirections
+{$HeaderOpenFormat}Soup Directions{HeaderCloseFormat}<br>{$BodyFormatting}[@Soup]<br><br>{$HeaderOpenFormat}Garnish Table{HeaderCloseFormat}<br>{$BodyFormatting}[@GarnishTable]<br>
+{$HeaderOpenFormat}Liquid Infusion Directions{HeaderCloseFormat}<br>{$BodyFormatting}[@Infusion]<br>
+{$HeaderOpenFormat}Powder Directions{HeaderCloseFormat}<br>{$BodyFormatting}[@Powder]<br>
+{$HeaderOpenFormat}Syrup Directions{HeaderCloseFormat}<br>{$BodyFormatting}[@Syrup]<br>
+{$HeaderOpenFormat}Tincture Directions{HeaderCloseFormat}<br>{$BodyFormatting}[@Tincture]<br>
+{$HeaderOpenFormat}Ointment Directions{HeaderCloseFormat}<br>{$BodyFormatting}[@Ointment]<br>
+
+; ---------------- SOUP ---------------
+; ---------------- SOUP ---------------
+; ---------------- SOUP ---------------
+
+Table: Soup
+[@SoupDirections1]<br>[@SoupDirections2]<br>[@SoupDirections3]<br>[@SoupDirections4]<br>[@SoupDirections5]<br>[@SoupDirections6]<br>[@SoupDirections7]<br>[@SoupDirections8]
+
+Table: SoupDirections1
+Set: Pottypessoup =[@PotType]
+Set: Baseingredient =[@BasePotIngredient]
+Put {$Baseingredient} in a [|small|medium|large] {$Pottypessoup} and [|boil|heat to {1d200+100}°|heat but do not boil].
+
+Table: SoupDirections2
+Set: seperatewhatingredient =[|monster|animal|plant|mineral|alloy]
+Set: mixingaction =[|Combine|Puree|Blend|Fold|Grate|Knead|Mince|Mix|Roast|Saute|Scramble|Steam|Stew|Stir|Stir-fry|Whip|Whisk]
+Set: ingredientsaction =[|place in {$Pottypessoup}|pour over remaining ingredients]
+{$mixingaction} all the {$seperatewhatingredient} ingredients in a seperate [@PotType]<br>Mix {$seperatewhatingredient} ingredients till [@MixingActionTable]<br>Take {$seperatewhatingredient} ingredients and {$ingredientsaction}.
+Add 1/{1d9+1} of the ingredients to the {$Pottypessoup} and bring to a slow simmer.
+{$mixingaction} all the {$seperatewhatingredient} ingredients in a seperate [@PotType]<br>Add {1d9+1} cups of boiling water<br>Reduce mixture over heat, and {$ingredientsaction}.
+
+Table: SoupDirections3
+Add remaining ingredients to the {$Pottypessoup} in increments of 1/{1d9+1}, stirring [|slowly|occasionally|constantly|frequently|clockwise|counter-clockwise].
+Add remaining ingredients to the {$Pottypessoup} {1d2} at a time, stirring [|slowly|occasionally|constantly|frequently|clockwise|counter-clockwise].
+Add all remaining ingredients to the {$Pottypessoup}, stirring [|slowly|occasionally|constantly|frequently|clockwise|counter-clockwise].
+
+Table: SoupDirections4
+Add [@SoupDirections4Thicken] to [|thicken|season|reconstitute|refresh|preserve|taste] as needed.
+Add [@SoupDirections4Needs] as needed.
+Add [@SoupDirections4Taste] to taste.
+
+Table: SoupDirections4Thicken
+flour
+baking soda
+oats
+cheese
+whey
+{$addthistoo}
+
+Table: SoupDirections4Needs
+baking soda
+cheese
+cream
+eggs
+flour
+oats
+oil
+salt
+sugar
+wine
+whey
+{$addthistoo}
+
+Table: SoupDirections4Taste
+eggs
+cheese
+cream
+oil
+wine
+salt
+sugar
+{$addthistoo}
+
+Table: SoupDirections5
+1:Seperate solids from the soup into a seperate [@PotType].<br>[@SoupDirectionsSolid]
+1:Pour liquids off into a seperate [@PotType]. Discard solids.
+
+Table: SoupDirectionsSolid
+Set: solidmethod= [|Grate|Mince|Mix|Roast|Stir-fry]
+{$solidmethod} the solids and place them back in the soup.
+
+Table: SoupDirections6
+Let soup [@SoupDirections6Action1] for [|{1d60+30} minutes|{1d3}hour(s), {1d60} minute(s)].
+[@SoupDirections6Action1 >>Proper] soup for [|{1d60+30} minutes|{1d3}hour(s), {1d60} minute(s)].
+Reduce soup to 1/{1d4+1} by [@SoupDirections6Action1]ing for [|{1d60+30} minutes|{1d3} hour(s), {1d60} minute(s)].
+
+Table: SoupDirections6Action1
+boil
+bake
+simmer
+cook
+broil
+fry
+parbroil
+stand
+
+Table: SoupDirections7
+Add {$Baseingredient} to soup, then garnish [||to taste\_]with [|one|one or more] of the items from table below
+Garnish [||to taste\_]with [|one|one or more] of the items from table below.
+
+Table: SoupDirections8
+Serve[@SoupDirections8Action].
+
+Table: SoupDirections8Action
+5:\z
+\_immediately
+\_cold
+\_hot
+\_chilled
+\_lukewarm
+\_at room temperature
+\_at {1d200+100}°
+
+Table: GarnishTable
+160:[@{[|2|3]d2} IngredientTable]
+40:[@{[|4|5]d2} IngredientTable]
+10:[@{[|6|7]d2} IngredientTable]
+
+; ---------------- LIQUID INFUSION ---------------
+; ---------------- LIQUID INFUSION ---------------
+; ---------------- LIQUID INFUSION ---------------
+
+Table: Infusion
+[@InfusionDirections1]<br>[@InfusionDirections2]
+
+Table: InfusionDirections1
+Set: Pottypesinfusion =[@PotType]
+Set: powdercolor= [@Colors]
+Grind all the ingredients with a mortar in a {$Pottypesinfusion}.<br>Allow the ground mixture to dry into powder.<br>Powder will be ready for infusion when it's color is {$powdercolor}.
+
+Table: InfusionDirections2
+Set: sizeofdose =[@AmountTable]
+Set: liquidtype =[@BasePotIngredient]
+Take 1 gallon of {$liquidtype} and [|boil|heat to {1d200+100}°|heat but do not boil].<br>Take {$sizeofdose} of the {$powdercolor} powder and dissolve it in the {$liquidtype}.<br>Let stand for {1d10} minutes.<br>Drink.
+Take 1 gallon of cold {$liquidtype} and dissolve some of the {$powdercolor} powder in it.<br>Let stand for {1d10} [|minutes|hours].<br>Drink.
+
+; ---------------- POWDER ---------------
+; ---------------- POWDER ---------------
+; ---------------- POWDER ---------------
+
+Table: Powder
+[@InfusionDirections1]<br>[@PowderDirections2]
+
+Table: PowderDirections2
+Set: powdercolor= [@Colors]
+Allow the ground mixture to dry into powder.<br>Powder will be ready when it's color is {$powdercolor}.<br>Powder can be taken with or sprinkled on food and drink.
+Heat the ground mixture over a small fire to dry it into a powder.<br>Powder will be ready when it's color is {$powdercolor}.<br>Powder can be taken with or sprinkled on food and drink.
+
+; ---------------- SYRUP ---------------
+; ---------------- SYRUP ---------------
+; ---------------- SYRUP ---------------
+
+Table: Syrup
+[@SyrupDirections1]<br>[@SyrupDirections2]<br>[@SyrupDirections3]
+
+Table: SyrupDirections1
+Set: Pottypessyrup =[@PotType]
+Put {3d3} [@Containers] of [|brown\_||]sugar in {1d3} [@Containers] of [@BasePotIngredient] in a {$Pottypessyrup} and heat. Reduce until it reaches a syrupy texture.
+
+Table: SyrupDirections2
+Set: Pottypespowder =[@PotType]
+Grind all the ingredients with a mortar in a seperate {$Pottypespowder}.
+
+Table: SyrupDirections3
+Set: powdercolor= [@Colors]
+Allow the ground powder to dry.<br>Powder will be ready when it's color is {$powdercolor}.<br>Add powder in {Pottypespowder} to the syrup in {Pottypessyrup} and strain syrup through a cloth into a seperate container.
+Heat the ground powder over a small fire to dry.<br>Powder will be ready when it's color is {$powdercolor}.<br>Add powder in {Pottypespowder} to the syrup in {Pottypessyrup} and strain syrup through a cloth into a seperate container.
+
+; ---------------- TINCTURE ---------------
+; ---------------- TINCTURE ---------------
+; ---------------- TINCTURE ---------------
+
+Table: Tincture
+[@InfusionDirections1]<br>[@TinctureDirections2]<br>[@TinctureDirections3]
+
+Table: TinctureDirections2
+Set: powdercolor= [@Colors]
+Allow the ground mixture to dry into a powder.<br>Powder will be ready when it's color is {$powdercolor}.
+
+Table: TinctureDirections3
+Set: Basetincture =[@BaseTinctureIngredient]
+Combine 1-4 oz. of the {$powdercolor} powder with 8 to 12 oz. {$Basetincture}.<br>Add water to make a 50% alcohol solution.<br>Let stand for two weeks, shaking once or twice a day.<br>Strain and pour liquid into a bottle suitable for storage.
+
+; ---------------- OINTMENT ---------------
+; ---------------- OINTMENT ---------------
+; ---------------- OINTMENT ---------------
+
+Table: Ointment
+[@OintmentDirections1]<br>[@OintmentDirections2]
+
+Table: OintmentDirections1
+Set: Pottypestincture =[@PotType]
+Grind all the ingredients with a mortar in a {$Pottypestincture} and add to enough water to make a thick, but flowable mixture.
+
+Table: OintmentDirections2
+Add the decoction to olive or other vegetable oil, and simmer until the water has completely evaporated.<br>Add beeswax as needed to get a firm consistency.<br>Place the firm mixture into a different {$Pottypestincture} and melt the mixture by heating slowly, and stir until completely blended.
+
+
+; ---------------- PLANTS ---------------
+; ---------------- PLANTS ---------------
+; ---------------- PLANTS ---------------
+
+Table: Plants
+aaron's beard
+abelmosk
+acacia
+acanthus
+acerola
+aconite
+adam's needle
+adder's tongue
+aechmea
+afican violet
+agapanthus
+agave
+ageratum
+agrimony
+alder
+alfalfa
+alkanet
+allamanda
+allium
+allspice
+almond
+aloe
+althea
+alyssum
+amaranth
+amaryllis
+amazon lily
+amole
+anchusa
+anemone
+angelica
+anise
+annatto
+apricot
+arnica
+artichoke
+arugula
+arum
+asafetida
+asarum
+asparagus
+aspic
+asphodel
+aster
+astilbe
+aubrietia
+auricula
+autumn crocus
+avens
+avocado
+azalea
+baby's breath
+bachelor's button
+balm
+balsam
+banana
+baobab
+barberry
+barley
+basil
+basswood
+basket flower
+basket-of-gold
+bay leaf
+bearberry
+bearded darnel
+bearsfoot
+beautybush
+bedstraw
+bee balm
+beech
+begonia
+belladonna
+bellflower
+bennet
+bergamot
+bergenia
+betony
+bilberry
+billbergia
+bindweed
+birch
+bird-of-paradise
+birthroot
+birthwort
+blackberry
+black pepper
+bladderwort
+blanket-flower
+bleeding heart
+bluebell
+borage
+bougainvillea
+boxwood
+bracken
+bramble
+bridal wreath
+broccoli
+brooklime
+broom
+browallia
+bryony
+buchu
+buckwheat
+buddleia
+bugloss
+burdock
+burning bush
+butterbur
+buttercup
+butternut
+cabbage
+cacao
+cactus
+calceolaria
+calendula
+calla lily
+calliopsis
+camelia
+campanula
+campion
+candytuft
+canna
+cannabis
+cantaloupe
+Canterbury bell
+capers
+capsicum
+caraway
+cardamon
+carnation
+carnauba
+carrot
+cashew
+cassia
+catchfly
+catechu
+catnip
+cattleya orchid
+cauliflower
+cayenne
+ceanothus
+cedar
+celandine
+celery
+celosia
+century plant
+chamomile
+chard
+cherry
+chervil
+chestnut
+chicory
+chili powder
+china rose
+chinese lantern
+chive
+christmas cactus
+chrysanthemum
+chufa
+cilantro
+cineraria
+cinnamon
+cinquefoil
+clarkia
+clematis
+clianthus
+clivia
+clover
+clove
+cockscomb
+coconut
+coffee
+coleus
+collard
+columbine
+comfrey
+coneflower
+convolvulvus
+coreopsis
+coriander
+cornflower
+corydalis
+cosmos
+costmary
+cowbell
+cowslip
+cranberry
+cranesbill
+creamcups
+creeping jenny
+crocus
+crowfoot
+crown of thorns
+cubeb
+cucumber
+cuckoo flower
+cuckoopint
+cumin
+currant
+curry powder
+cyclamen
+cymbidium
+cypress
+daffodil
+dahlia
+daisy
+dandelion
+datura
+daylily
+delphinium
+dianthus
+dill
+dill seed
+dittany
+dogbane
+dogrose
+dogtooth violet
+dog violet
+dogwood
+dropwort
+dulse
+easter lily
+echinacea
+edelweiss
+eggplant
+eglantine
+elecampane
+endive
+english daisy
+english walnut
+epiphyllum
+ergot
+eyebright
+eucalyptus
+eucharis
+euphorbia
+exacum
+fennel
+fenugreek
+ferula
+feverfew
+firethorn
+flax
+fleabane
+fleur-de-lis
+flowering quince
+forget-me-not
+forsythia
+foxglove
+frangipani
+freesia
+fritillary
+fuchsia
+fustic
+gaillardia
+galangel
+gardenia
+garlic
+gazania
+gentian
+geranium
+gerbera daisy
+germander
+ghostweed
+gillyflower
+ginger
+ginkgo
+ginseng
+gladiolus
+globeflower
+globe thistle
+gloxinia
+goatsbeard
+golden bell
+goldenrod
+goldenseal
+goldflower
+granadilla
+grape
+guava
+gypsophila
+harebell
+hawkweed
+hawthorn
+hazelnut
+heather
+heliotrope
+hellebore
+hemlock
+henna
+hibiscus
+hickory
+holly
+hollyhock
+honeysuckle
+hops
+horehound
+horseradish
+hoya
+hyacinth
+hydrangea
+hypericum
+hyssop
+impatiens
+indigo
+iris
+ironweed
+ivy
+japonica
+jasmine
+jessamine
+jojoba
+jonquil
+juniper
+kalanchoe
+kale
+kelp
+knapweed
+knotweed
+kohlrabi
+kousso
+laburnum
+larch
+larkspur
+laurel
+lavender
+lettuce
+licorice
+lilac
+lily
+lime
+linden
+lipstick plant
+lobelia
+lotus
+lovage
+lungwort
+lupine
+mace
+magnolia
+mahogany
+ma-huang
+majoram
+mallow
+maltese cross
+mandrake
+mango
+maple
+marguerite
+marigold
+mayflower
+meadow rue
+meadowsweet
+mecanopsis
+merrybells
+mesquite
+mignonette
+milfoil
+milkwort
+mimosa
+mint
+mistletoe
+monarda
+moneywort
+monkshood
+montbretia
+moonflower
+morning glory
+moschatel
+moss
+mulberry
+mullein
+musk rose
+mustard
+narcissus
+nasturtium
+nemesia
+nettle
+nicotiana
+nierembergia
+nightshade
+nutmeg
+oak
+oat
+okra
+oleander
+olive
+onion
+opium poppy
+opuntia
+orchid
+orange
+oregano
+oxalis
+oxeye daisy
+painted tongue
+pansy
+papaya
+paprika
+parsley
+parsnip
+peanut
+peony
+peppercorn
+periwinkle
+petunia
+peyote
+phlox
+pimento
+pimpernel
+pistachio
+plantain
+plum
+poinsettia
+pokeweed
+polyanthus
+poplar
+poppy
+poppy seed
+portulaca
+potentilla
+potherb
+pot marigold
+prickly poppy
+primrose
+primula
+privet
+quassia
+quince
+radish
+ragged robin
+ragwort
+ranunculus
+raspberry
+rhododendron
+rhubarb
+rock cress
+rose
+rosemary
+rowan
+rudbeckia
+rutabaga
+rye
+safflower
+saffron
+sage
+sainfoin
+salad burnet
+salpiglossis
+salvia
+sanicle
+sarsaparilla
+savory
+saxifrage
+scabious
+sedum
+senna
+sesame seed
+shallot
+shooting star
+shrimp plant
+silverweed
+slipperwort
+snapdragon
+snowdrop
+soapwort
+solomon's seal
+sorghum
+sorrel
+sowbread
+speedwell
+spikenard
+spinach
+spirea
+spruce
+spurge
+spurry
+squill
+star anise
+statice
+stephanotis
+stitchwort
+strawflower
+strelitzia
+streptocarpus
+sumac
+sunflower
+sun rose
+sweetbrier
+syringa
+tamarind
+tangerine
+tansy
+tassel flower
+tarragon
+tea rose
+teasel
+thistle
+thorn apple
+thrift
+thunbergia
+thyme
+tiger lily
+toad lily
+tomato
+tormentil
+tradescantia
+trillium
+trumpet creeper
+trumpet flower
+tuberose
+tulip
+turmeric
+valerian
+vanilla
+vanilla bean
+verbena
+veronica
+vervain
+vetch
+viburnum
+vinca
+viola
+violet
+wallflower
+walnut
+watercress
+watermelon
+weld
+wheat
+windflower
+wintergreen
+wisteria
+woadwaxen
+wolfsbane
+wood sorrel
+woolflower
+wormwood
+woundwort
+yarrow
+yerba buena
+yerba santa
+yew
+ylang-ylang
+yucca
+zinnia
+zucchini
+
+Table: PlantAfter
+root
+stem
+leaves
+flowers
+petals
+seeds
+paste
+juice
+oil
+extract
+
+; ---------------- MONSTERS ---------------
+; ---------------- MONSTERS ---------------
+; ---------------- MONSTERS ---------------
+
+Table: Monsters
+air elemental
+amphisbaena
+ankheg
+banshee
+beholder
+basilisk
+behemoth
+boogeyman
+brown bear
+bunyip
+cave bear
+centaur
+chimera
+cockatrice
+demon
+doppleganger
+dragon
+drake
+dryad
+earth elemental
+efreeti
+firedrake
+fire elemental
+fire giant
+frost giant
+garuda
+ghost
+ghoul
+giant
+giant ant
+goblin
+golem
+gorgon
+gremlin
+griffin
+gryphon
+harpy
+hill giant
+hippogryph
+hobbit
+hobgoblin
+hydra
+ice giant
+imp
+jinn
+kelpie
+kolbold
+kraken
+krenshar
+lamia
+leprechaun
+lizardman
+manticore
+medusa
+mermaid
+merman
+minotaur
+nymph
+ogre
+oni
+orc
+pegasus
+phantom
+phoenix
+pixie
+poltergeist
+rat
+roc
+satyr
+scorpion
+shade
+shadow
+siren
+snark
+spectre
+sphinx
+spirit
+stirges
+stone giant
+succubus
+thunderbird
+trapdoor spider
+troll
+unicorn
+vampire
+viper
+water elemental
+werewolf
+wight
+wraith
+wyvern
+yeti
+zombie
+
+Table: NormalAnimals
+alligator
+antelope
+[|||black|brown|red] bear
+bird
+boar
+bull
+calf
+cat
+chicken
+cow
+crane
+crow
+deer
+dinosaur
+dog
+donkey
+duck
+eagle
+elephant
+falcon
+flamingo
+fox
+frog
+goat
+goose
+hawk
+hen
+horse
+lion
+monkey
+moose
+mouse
+mule
+oceanic bird
+owl
+ox
+pig
+pigeon
+rabbit
+rat
+rooster
+sheep
+snake
+sparrow
+squirrel
+tiger
+toad
+wild boar
+wild goat
+wild ox
+woodpecker
+wolf
+
+Table: MonsterAfter
+paste
+dressing
+seasoning
+extract
+oil
+chunks
+
+; --------------------- METALS -- MINERALS -- ALLOYS ------------------------
+; --------------------- METALS -- MINERALS -- ALLOYS ------------------------
+; --------------------- METALS -- MINERALS -- ALLOYS ------------------------
+
+Table: Elements
+actinium
+aluminum
+americium
+antimony
+argon
+arsenic
+astatine
+barium
+berkellium
+beryllium
+bismuth
+bohrium
+boron
+bromine
+cadmium
+calcium
+calfornium
+carbon
+cerium
+cesium
+chlorine
+chromium
+cobalt
+copper
+curium
+dubmium
+dysprosium
+einsteinium
+erbium
+europium
+fermium
+flourine
+francium
+gadolinium
+gallium
+germanium
+gold
+hafnium
+hassium
+helium
+holmium
+hydrogen
+indium
+iodine
+iridium
+iron
+krypton
+lanthanum
+lawrencium
+lead
+lithium
+luteium
+magnesium
+manganese
+meitnerium
+mendelevium
+mercury
+molybdenum
+neodymium
+neon
+neptunium
+nickel
+niobium
+nitrogen
+nobelium
+osmium
+oxygen
+palladium
+phosphorus
+platinum
+plutonium
+potassium
+praseodymium
+promethium
+protactinum
+radium
+radon
+rhenium
+rhodium
+rubidium
+ruthenium
+rutherfordium
+samarium
+scandium
+seaborgium
+selenium
+silicon
+silver
+sodium
+strontium
+sulfur
+tantalum
+technetium
+tellurium
+terbium
+thallium
+thorium
+thullium
+tin
+titanium
+tungsten
+ununbium
+ununhexium
+ununnillium
+ununoctium
+ununquadium
+unununium
+uranium
+vanadium
+xenon
+ytterbium
+yttrium
+zinc
+zirconium
+
+Table: Minerals
+acanthite
+acmite
+actinolite
+adamite
+agate
+alabaster
+albite
+alexandrite
+allanite
+almandine
+alunite
+amber
+amethyst
+andradite
+anhydrite
+apatite
+aquamarine
+aragonite
+arkose
+arsenic
+arsenopyrite
+aurichalcite
+asbestos
+aventurine
+axinite
+azurite
+barite
+benitoite
+beryl
+biotite
+bismuth
+bloodstone
+borax
+boronite
+breccia
+carbuncle
+calcite
+carnallite
+celestite
+chalcanthrite
+chalcedony
+chlorite
+chrondrodite
+chrysoberyl
+chrysocolla
+chrysolite
+chrysoprase
+cinnabar
+citrine
+colbaltite
+copper
+corundum
+covellite
+cryolite
+dendrite
+diamond
+diopside
+dioptase
+dolomite
+emerald
+emery
+epidote
+feldspar
+fire opal
+flint
+fluorite
+garnet
+galena
+gniess
+granite
+graphite
+gypsum
+halite
+heliotrope
+hematite
+hyacinth
+hylite opal
+jacinth
+jade
+jadeite
+jasper
+kaolinite
+kernite
+kunzite
+lapis lazuli
+lazulite
+lazurite
+lepidolite
+limestone
+magnetite
+malachite
+marble
+melanite
+mesolite
+mica
+milky quartz
+molybdenite
+moonstone
+nephrite
+olivine
+onyx
+opal
+pectolite
+peridot
+polybasite
+pumice
+pyrite
+pyrolusite
+pyromorphite
+pyrope
+pyrophyllite
+pyroxene
+quartz
+red jasper
+rhodochrosite
+rose quartz
+ruby
+ryolite
+sandstone
+sapphire
+sard
+sardonyx
+scapolite
+scoria
+selenite
+serpentine
+smoky quartz
+smoky topaz
+sodalite
+sphalerite
+sphene
+spinel
+star sapphire
+strontianite
+sulfur
+sunstone
+talc
+tetrahedrite
+thorite
+topaz
+tourmaline
+tremoline
+tyrolite
+turquoise
+wavelite
+white sapphire
+wollastonite
+vanadinite
+zeolite
+zircon
+
+Table: Metals
+aluminum
+americium
+antimony
+arsenic
+barium
+beryllium
+bismuth
+cadmium
+cerium
+cesium
+chromium
+cobalt
+columbium
+copper
+dyprosium
+erbium
+europium
+gadolinum
+gallium
+germanium
+gold
+hafium
+holmium
+indium
+iridium
+iron
+lanthanum
+lead
+lithium
+lutetium
+magnesium
+manganese
+mercury
+molybdenum
+neodymium
+nickel
+niobium
+osmium
+palladium
+phosphorus
+platinum
+polonium
+potassium
+praseodymium
+promethium
+protactinum
+radium
+rhenium
+rubidium
+ruthenium
+samarium
+scandium
+silver
+sodium
+strontium
+tantalum
+technetium
+terbium
+thallium
+thorium
+thulium
+tin
+titanium
+tungsten
+uranium
+vanadium
+ytterbium
+yttrium
+zinc
+zirconium
+
+Table: Alloys
+brass
+bronze
+carbon steel
+cast iron
+chrome
+damask
+electrum
+elinvar
+graphite steel
+invar
+permalloy
+pewter
+pink gold
+solder
+stainless steel
+steel
+sterling silver
+white gold
+wrought iron
+
+Table: MetalMineralAlloyAfter
+extract
+chunks
+clusters
+shards
+deposits
+grit
+aggregate
+
+; --------------------- LANGUAGES ------------------------
+; --------------------- LANGUAGES ------------------------
+; --------------------- LANGUAGES ------------------------
+
+Table: Language
+90:Latin
+90:Greek
+90:Common
+50:Elvish
+30:Demon
+30:Dwarf
+10:Orcish
+10:Skrat
+
+Table: GetCommonWord
+[@HumanName]
+
+Table: GetGreekWord
+[@GreekName]
+
+Table: GetElvishWord
+[@ElvishName]
+
+Table: GetOrcishWord
+[@OrcName]
+
+Table: GetLatinWord
+[@LatinName]
+
+Table: GetSkratWord
+[@SkratName]
+
+Table: GetDemonWord
+[@DemonName]
+
+Table: GetDwarfWord
+[@MasterDwarfName]
+
+Table: GreekName 
+10:[@GreekNameStart >> Proper][@GreekNameEnd]
+8:[@GreekNameStart >> Proper][@GreekNameMiddle][@GreekNameEnd]
+[@GreekNameStart >> Proper][@GreekNameMiddle][@GreekNameStart][@GreekNameEnd]
+[@GreekNameStart >> Proper][@GreekNameMiddle][@GreekNameMiddle][@GreekNameEnd]
+[@GreekNameStart >> Proper][@GreekNameMiddle][@GreekNameStart][@GreekNameMiddle][@GreekNameEnd]
+
+Table: GreekNameStart
+a
+ni
+lef
+leph
+e
+cha
+cor
+ar
+her
+my
+ti
+ar
+py
+spa
+o
+oly
+ha
+za
+an
+de
+the
+kno
+vro
+rho
+em
+ch
+chi
+smy
+mi
+eph
+pri
+kar
+sy
+me
+hy
+se
+ak
+pae
+pa
+cre
+ith
+el
+ely
+ma
+ol
+oly
+am
+i
+io
+thou
+gry
+thra
+nea
+pro
+vre
+ad
+sky
+di
+as
+te
+sa
+at
+cla
+co
+le
+pho
+po
+pos
+ge
+cu
+rhe
+ta
+ly
+cha
+oe
+pe
+pel
+ab
+ap
+dy
+du
+ke
+or
+dry
+
+Table: GreekNameMiddle
+the
+cho
+kan
+ret
+l
+in
+ai
+ce
+r
+n
+li
+go
+dro
+sso
+u
+d
+bo
+le
+es
+e
+na
+ra
+rac
+cu
+ga
+bla
+s
+ta
+pon
+ca
+a
+ys
+th
+m
+ymp
+be
+gi
+ro
+fi
+phi
+po
+ryth
+phe
+io
+i
+ri
+ti
+la
+ki
+thi
+ad
+ke
+ken
+dy
+zo
+lo
+pho
+be
+sei
+do
+al
+ki
+kid
+ba
+ssa
+on
+yd
+ol
+rhy
+rha
+cy
+pha
+kyn
+kho
+me
+o
+op
+
+Table: GreekNameEnd
+nai
+ria
+di
+kis
+th
+give
+on
+nae
+ryns
+gos
+los
+ta
+thus
+eis
+ra
+gora
+s
+lia
+des
+es
+rio
+ios
+os
+na
+tus
+sos
+ene
+ne
+se
+use
+ia
+nus
+gas
+dia
+te
+ca
+thon
+pus
+us
+bes
+ous
+essa
+res
+n
+i
+nia
+ce
+tis
+phon
+a
+ni
+kos
+fos
+phos
+ai
+ae
+ma
+phi
+dus
+eus
+ea
+la
+mae
+dike
+ike
+ris
+oe
+nes
+um
+thos
+nos
+mis
+pia
+
+Table: HumanName
+Define: HumanConstanant =[|b|br|bl|c|cl|ch|cr|d|dr|f|fr|fl|g|gr|h|j|k|kr|l|m|n|ph|p|pr|r|s|sh|sh|t|th|v|w|z]
+Define: HumanEndConstanant =[|b|c|ch|d|f|g|h|j|k|l|m|n|ph|p|r|s|sh|sh|t|th|v|w|z]
+5:[@HumanNameFirst][@HumanNameMiddle][@HumanNameMiddle][@HumanNameEnd]
+4:[@HumanNameFirst][@HumanNameMiddle][@HumanNameEnd]
+5:[@HumanNameFirst][@HumanNameMiddle]
+5:[@HumanNameFirst][@HumanNameEnd]
+
+Table: HumanNameVowel
+4:a
+5:e
+4:i
+4:o
+2:u
+1:y
+1:y[|a|e|i|o|u]
+
+Table: HumanNameVowelCap
+4:A
+5:E
+4:I
+4:O
+2:U
+1:Y
+1:Y[|a|e|i|o|u]
+
+
+Table: HumanNameFirst
+60:[@HumanNameVowelCap][@HumanNameMiddle]
+40:[@HumanNameVowelCap]{$HumanConstanant}[@HumanNameVowel]
+5:B[@HumanNameVowel]
+5:Br[@HumanNameVowel]
+5:Bl[@HumanNameVowel]
+5:C[@HumanNameVowel]
+5:Cl[@HumanNameVowel]
+1:Cz[@HumanNameVowel]
+5:Ch[@HumanNameVowel]
+5:Cr[@HumanNameVowel]
+5:D[@HumanNameVowel]
+5:Dr[@HumanNameVowel]
+5:F[@HumanNameVowel]
+5:Fr[@HumanNameVowel]
+5:Fl[@HumanNameVowel]
+5:G[@HumanNameVowel]
+5:Gr[@HumanNameVowel]
+5:H[@HumanNameVowel]
+5:J[@HumanNameVowel]
+5:K[@HumanNameVowel]
+1:Kr[@HumanNameVowel]
+5:L[@HumanNameVowel]
+5:M[@HumanNameVowel]
+5:N[@HumanNameVowel]
+5:P[@HumanNameVowel]
+5:Ph[@HumanNameVowel]
+5:Pr[@HumanNameVowel]
+1:Q[@HumanNameVowel]
+5:R[@HumanNameVowel]
+10:S[@HumanNameVowel]
+5:Sh[@HumanNameVowel]
+5:Shr[@HumanNameVowel]
+10:T[@HumanNameVowel]
+5:Th[@HumanNameVowel]
+5:V[@HumanNameVowel]
+1:Vr[@HumanNameVowel]
+5:W[@HumanNameVowel]
+1:Wh[@HumanNameVowel]
+1:X[@HumanNameVowel]
+5:Y[@HumanNameVowel]
+5:Z[@HumanNameVowel]
+
+Table: HumanNameMiddle
+5:b[@HumanNameVowel]
+5:br[@HumanNameVowel]
+5:bl[@HumanNameVowel]
+5:c[@HumanNameVowel]
+5:cl[@HumanNameVowel]
+1:cz[@HumanNameVowel]
+5:ch[@HumanNameVowel]
+5:cr[@HumanNameVowel]
+5:d[@HumanNameVowel]
+5:dr[@HumanNameVowel]
+5:f[@HumanNameVowel]
+5:fr[@HumanNameVowel]
+5:fl[@HumanNameVowel]
+5:g[@HumanNameVowel]
+5:gr[@HumanNameVowel]
+5:h[@HumanNameVowel]
+1:j[@HumanNameVowel]
+5:k[@HumanNameVowel]
+5:kr[@HumanNameVowel]
+5:l[@HumanNameVowel]
+5:m[@HumanNameVowel]
+5:n[@HumanNameVowel]
+5:ph[@HumanNameVowel]
+5:p[@HumanNameVowel]
+5:pr[@HumanNameVowel]
+1:q[@HumanNameVowel]
+5:r[@HumanNameVowel]
+5:s[@HumanNameVowel]
+5:sh[@HumanNameVowel]
+5:shr[@HumanNameVowel]
+5:t[@HumanNameVowel]
+5:th[@HumanNameVowel]
+5:v[@HumanNameVowel]
+1:vr[@HumanNameVowel]
+5:w[@HumanNameVowel]
+1:x[@HumanNameVowel]
+5:y[@HumanNameVowel]
+5:z[@HumanNameVowel]
+
+Table: HumanNameEnd
+b
+c
+ch
+ck
+d
+en
+f
+g
+h
+j
+k
+l
+m
+n
+ng
+o
+p
+rd
+rg
+rn
+rt
+sa
+sh
+si
+ssa
+sse
+ssi
+th
+ue
+us
+yn
+10:[|c|d|f|g|h|j|k|l|m|n|p|r|s|t|v|w|z]ar
+10:[|c|d|f|g|h|j|k|l|m|n|p|r|s|t|v|w|z]ia
+10:[|c|d|f|g|h|j|k|l|m|n|p|r|s|t|v|w|z]ias
+10:[|c|d|f|g|h|j|k|l|m|n|p|r|s|t|v|w|z]iel
+10:[|c|d|f|g|h|j|k|l|m|n|p|r|s|t|v|w|z]ien
+10:[|c|d|f|g|h|j|k|l|m|n|p|r|s|t|v|w|z]ius
+10:[|c|d|f|g|h|j|k|l|m|n|p|r|s|t|v|w|z]us
+5:que
+
+Table: ElvishName
+[@ElfFirst][@ElfMiddle][@ElfLast]
+[@ElfFirst][@ElfMiddle][@ElfMiddle][@ElfLast]
+
+Table: ElfFirst
+Æl
+Ær
+Æn
+Ael
+Áer
+Aer
+Aen
+Al
+Ar
+El
+Krys
+Kyl
+Lin
+Lir
+Mar
+Mel
+Mer
+Mor
+Mal
+Mál
+Niel
+Ril
+Rin
+Sil
+Sin
+Tal
+Tel
+Ten
+Tha
+The
+Thi
+Thra
+Thri
+Tir
+Tith
+Tril
+Tryl
+Tyl
+Tyr
+
+Table: ElfMiddle
+æd
+æn
+æil
+ad
+aen
+al
+an
+án
+and
+ar
+as
+asn
+asr
+eir
+el
+él
+end
+er
+idr
+il
+ilbr
+ilr
+in
+inbr
+ind
+ir
+len
+or
+orbr
+ri
+ril
+ow
+
+Table: ElfLast
+ael
+æl
+al
+4:as
+en
+eth
+i
+iad
+ial
+ian
+4:iel
+ien
+ies
+ion
+lan
+lir
+lith
+nal
+nar
+ni
+nil
+rieth
+ril
+ol
+yn
+
+Table: SkratName
+Shuffle: SkratNameStart
+Shuffle: SkratNameMiddle
+Shuffle: SkratNameEnd
+[@SkratNameStart][@SkratNameEnd]
+[@SkratNameStart][@SkratNameMiddle][@SkratNameEnd]
+
+Table: SkratNameStart
+[!{1d3} SkratNameStart]
+skra
+skre
+skri
+ske
+ska
+ski
+gre
+gra
+gri
+ger
+gar
+gir
+garl
+gerl
+girl
+gwa
+gwe
+gwi
+kre
+kra
+kri
+ker
+kar
+kir
+karl
+kerl
+kirl
+kwa
+kwe
+kwi
+
+Table: SkratNameMiddle
+[!{1d3} SkratNameMiddle]
+ta
+te
+ti
+ka
+ke
+ki
+kra
+kre
+kri
+gra
+gre
+gri
+kwi
+kwa
+kwe
+
+Table: SkratNameEnd
+[!{1d3} SkratNameEnd]
+at
+et
+it
+tl
+tla
+tle
+tli
+ttla
+ttle
+ttli
+t
+k
+ga
+ge
+gi
+
+Table: LatinName
+1:[@LatinNameStart][@LatinNameEnd]
+4:[@LatinNameStart][@LatinNameMiddle][@LatinNameEnd]
+1:[@LatinNameStart][@LatinNameMiddle][@LatinNameMiddle][@LatinNameEnd]
+
+Table: LatinNameStart
+83:a
+1:ab
+1:abs
+4:ac
+11:ad
+1:ae
+1:an
+10:au
+3:aut
+1:ba
+9:be
+1:bea
+5:bo
+6:ca
+8:cau
+4:ce
+5:chri
+1:ci
+1:ciui
+42:co
+1:coa
+2:coe
+1:cor
+16:cre
+1:cri
+3:cru
+7:cu
+5:cui
+3:cuius
+17:cum
+1:cypria
+3:da
+21:de
+2:dei
+1:deus
+26:di
+1:die
+1:diem
+2:dies
+9:do
+5:du
+91:e
+4:ea
+1:eam
+1:ei
+2:eis
+4:eius
+7:eo
+3:eos
+2:es
+11:est
+39:et
+6:eum
+3:ex
+16:fa
+9:fe
+5:fi
+1:fie
+1:fle
+2:fo
+5:fra
+1:fru
+3:fue
+3:fui
+3:fuit
+1:gau
+1:ge
+1:gla
+8:gra
+1:graua
+3:graui
+1:grauio
+1:grauius
+1:gre
+5:ha
+4:haec
+1:hanc
+1:hi
+2:hinc
+1:his
+10:ho
+3:hoc
+2:hu
+1:huic
+1:huius
+1:hunc
+100:i
+3:iam
+3:id
+33:in
+8:iu
+1:iuue
+2:la
+1:lae
+1:lau
+6:li
+10:lo
+1:lu
+20:ma
+1:mae
+1:maio
+16:me
+2:mea
+1:meae
+2:meam
+1:meas
+4:mei
+1:meis
+1:meo
+2:meum
+14:mi
+17:mo
+1:mors
+4:mu
+1:na
+5:nam
+20:ne
+3:nec
+7:ni
+16:no
+37:non
+4:nos
+2:noue
+1:noui
+1:nouit
+7:nu
+3:nunc
+36:o
+14:pa
+4:pae
+1:pau
+20:pe
+3:per
+1:pie
+1:pla
+1:ple
+29:po
+7:post
+14:prae
+4:pri
+2:prius
+19:pro
+1:proui
+1:prouo
+1:pru
+13:pu
+24:qua
+10:quae
+12:quam
+1:quas
+1:que
+1:quem
+18:qui
+2:quia
+5:quid
+2:quis
+16:quo
+21:quod
+2:quos
+20:re
+2:ro
+1:ru
+15:sa
+5:sae
+1:sce
+1:sci
+1:scie
+4:scri
+1:scru
+11:se
+10:sed
+21:si
+5:sic
+1:sint
+1:sit
+11:so
+1:spem
+1:spes
+1:sple
+2:sta
+2:stu
+16:su
+2:suam
+1:sum
+3:sunt
+31:ta
+10:tam
+32:te
+9:ti
+3:to
+2:tot
+1:tru
+1:tu
+6:tua
+3:tuae
+5:tuam
+2:tuas
+2:tui
+3:tuis
+3:tunc
+1:tuo
+1:tuos
+1:tuus
+14:u
+2:ua
+19:ue
+3:uel
+17:ui
+1:uia
+1:uio
+1:uir
+1:uix
+3:uo
+1:uos
+20:ut
+
+Table: LatinNameMiddle
+83:a
+1:ab
+1:abs
+4:ac
+11:ad
+1:ae
+1:an
+10:au
+3:aut
+15:ba
+20:be
+1:bea
+7:bo
+8:ca
+8:cau
+24:ce
+5:chri
+12:ci
+1:ciui
+44:co
+1:coa
+2:coe
+1:cor
+18:cre
+1:cri
+3:cru
+16:cu
+6:cui
+3:cuius
+17:cum
+1:cypria
+7:da
+47:de
+2:dei
+1:deus
+40:di
+3:die
+1:diem
+2:dies
+10:do
+6:du
+91:e
+4:ea
+1:eam
+1:ei
+2:eis
+4:eius
+7:eo
+3:eos
+2:es
+11:est
+39:et
+6:eum
+3:ex
+19:fa
+13:fe
+9:fi
+1:fie
+1:fle
+2:fo
+5:fra
+1:fru
+3:fue
+3:fui
+3:fuit
+1:gau
+13:ge
+1:gla
+8:gra
+1:graua
+3:graui
+1:grauio
+1:grauius
+1:gre
+5:ha
+4:haec
+1:hanc
+2:hi
+2:hinc
+1:his
+10:ho
+3:hoc
+2:hu
+1:huic
+1:huius
+1:hunc
+100:i
+3:iam
+3:id
+33:in
+8:iu
+1:iuue
+9:la
+1:lae
+1:lau
+35:li
+12:lo
+7:lu
+23:ma
+1:mae
+1:maio
+21:me
+2:mea
+1:meae
+2:meam
+1:meas
+4:mei
+1:meis
+1:meo
+2:meum
+43:mi
+17:mo
+1:mors
+4:mu
+7:na
+5:nam
+35:ne
+3:nec
+28:ni
+22:no
+37:non
+4:nos
+2:noue
+1:noui
+1:nouit
+9:nu
+3:nunc
+36:o
+17:pa
+4:pae
+1:pau
+30:pe
+3:per
+2:pie
+1:pla
+1:ple
+31:po
+7:post
+14:prae
+4:pri
+2:prius
+19:pro
+1:proui
+1:prouo
+1:pru
+14:pu
+25:qua
+10:quae
+12:quam
+1:quas
+8:que
+1:quem
+18:qui
+2:quia
+5:quid
+2:quis
+16:quo
+21:quod
+2:quos
+47:re
+5:ro
+1:ru
+15:sa
+5:sae
+10:sce
+2:sci
+3:scie
+7:scri
+1:scru
+19:se
+10:sed
+25:si
+5:sic
+1:sint
+1:sit
+11:so
+1:spem
+1:spes
+1:sple
+8:sta
+8:stu
+16:su
+2:suam
+1:sum
+3:sunt
+56:ta
+10:tam
+43:te
+18:ti
+3:to
+2:tot
+1:tru
+6:tu
+6:tua
+3:tuae
+5:tuam
+2:tuas
+3:tui
+3:tuis
+3:tunc
+1:tuo
+1:tuos
+1:tuus
+14:u
+2:ua
+19:ue
+3:uel
+17:ui
+1:uia
+1:uio
+1:uir
+1:uix
+3:uo
+1:uos
+20:ut
+11:bi
+1:biu
+1:bla
+4:bli
+1:bra
+2:bri
+1:bsce
+2:bse
+1:bstri
+3:bue
+3:bui
+3:cca
+2:cce
+3:cci
+9:ccle
+2:ccu
+1:cia
+2:cio
+1:cla
+1:cra
+2:cta
+3:ctio
+4:cto
+1:ctri
+1:ctu
+2:dia
+2:dio
+1:diu
+1:dti
+2:due
+1:ffa
+2:ffe
+2:ffi
+1:ffra
+3:ga
+7:gi
+2:gio
+6:gna
+2:gni
+5:gno
+2:go
+1:gri
+1:he
+1:lci
+21:le
+4:lia
+3:lio
+1:lla
+5:lle
+3:lli
+5:llo
+1:lpe
+1:lta
+1:lti
+1:ltiu
+2:lue
+1:lui
+2:mme
+1:mmu
+3:mni
+3:mpe
+2:mpo
+1:mui
+4:nce
+2:ncu
+2:nda
+3:nde
+10:ndi
+1:ndu
+2:nfe
+1:nfi
+1:nfla
+2:ngu
+1:nhae
+2:nie
+4:niu
+1:niue
+2:niuo
+1:nlo
+2:nno
+1:npro
+1:npu
+1:nsce
+1:nscie
+5:nse
+3:nsi
+2:nso
+1:nsta
+1:nsti
+2:nsu
+1:nsue
+3:nta
+8:nte
+12:nti
+1:ntia
+1:nue
+2:nui
+9:pi
+1:ppa
+1:ppli
+1:pse
+1:pte
+1:pti
+16:ra
+1:rba
+1:rbi
+6:rce
+2:rcu
+1:rfe
+1:rfi
+3:rga
+24:ri
+1:ria
+2:rie
+1:rio
+1:rma
+2:rmi
+3:rmo
+1:rna
+1:rno
+1:rpe
+3:rpo
+1:rra
+3:rre
+1:rsa
+2:rse
+2:rta
+1:rte
+1:rtha
+2:rti
+1:rtra
+4:rtu
+1:rue
+1:rui
+3:sco
+1:sia
+2:spe
+1:spi
+1:spo
+1:sru
+2:sse
+5:ssi
+4:ssio
+2:ste
+4:sti
+3:stia
+1:stre
+1:taue
+1:tia
+2:tie
+4:tio
+1:tre
+1:tri
+5:tte
+1:tue
+1:xa
+1:xce
+4:xe
+13:xi
+3:xo
+1:xpre
+1:za
+
+Table: LatinNameEnd
+83:a
+1:ab
+1:abs
+4:ac
+11:ad
+1:ae
+1:an
+10:au
+3:aut
+15:ba
+20:be
+1:bea
+7:bo
+10:ca
+8:cau
+25:ce
+5:chri
+14:ci
+1:ciui
+46:co
+1:coa
+2:coe
+1:cor
+18:cre
+1:cri
+3:cru
+16:cu
+7:cui
+4:cuius
+23:cum
+1:cypria
+7:da
+47:de
+2:dei
+1:deus
+42:di
+6:die
+1:diem
+2:dies
+16:do
+6:du
+91:e
+4:ea
+1:eam
+1:ei
+2:eis
+4:eius
+7:eo
+3:eos
+2:es
+11:est
+39:et
+6:eum
+3:ex
+19:fa
+13:fe
+9:fi
+1:fie
+1:fle
+2:fo
+5:fra
+1:fru
+3:fue
+3:fui
+3:fuit
+1:gau
+13:ge
+1:gla
+8:gra
+1:graua
+3:graui
+1:grauio
+1:grauius
+1:gre
+5:ha
+4:haec
+1:hanc
+10:hi
+2:hinc
+1:his
+10:ho
+3:hoc
+2:hu
+1:huic
+1:huius
+1:hunc
+100:i
+3:iam
+3:id
+33:in
+8:iu
+1:iuue
+11:la
+1:lae
+1:lau
+41:li
+17:lo
+7:lu
+25:ma
+1:mae
+1:maio
+23:me
+2:mea
+1:meae
+2:meam
+1:meas
+4:mei
+1:meis
+1:meo
+2:meum
+44:mi
+21:mo
+1:mors
+4:mu
+12:na
+6:nam
+48:ne
+4:nec
+31:ni
+24:no
+37:non
+4:nos
+2:noue
+1:noui
+1:nouit
+9:nu
+3:nunc
+36:o
+17:pa
+5:pae
+1:pau
+31:pe
+4:per
+2:pie
+1:pla
+1:ple
+31:po
+7:post
+14:prae
+4:pri
+2:prius
+19:pro
+1:proui
+1:prouo
+1:pru
+14:pu
+25:qua
+10:quae
+14:quam
+1:quas
+17:que
+2:quem
+18:qui
+2:quia
+9:quid
+2:quis
+17:quo
+21:quod
+2:quos
+80:re
+11:ro
+1:ru
+19:sa
+7:sae
+13:sce
+3:sci
+3:scie
+7:scri
+1:scru
+20:se
+10:sed
+31:si
+5:sic
+1:sint
+1:sit
+12:so
+1:spem
+1:spes
+1:sple
+13:sta
+8:stu
+16:su
+2:suam
+1:sum
+4:sunt
+66:ta
+16:tam
+48:te
+24:ti
+11:to
+2:tot
+1:tru
+8:tu
+6:tua
+3:tuae
+5:tuam
+2:tuas
+3:tui
+3:tuis
+3:tunc
+1:tuo
+1:tuos
+1:tuus
+14:u
+2:ua
+19:ue
+3:uel
+17:ui
+1:uia
+1:uio
+1:uir
+1:uix
+3:uo
+1:uos
+20:ut
+22:bi
+1:biu
+1:bla
+4:bli
+1:bra
+2:bri
+1:bsce
+2:bse
+1:bstri
+3:bue
+3:bui
+3:cca
+3:cce
+3:cci
+9:ccle
+2:ccu
+2:cia
+5:cio
+1:cla
+1:cra
+3:cta
+3:ctio
+4:cto
+1:ctri
+1:ctu
+3:dia
+3:dio
+1:diu
+1:dti
+3:due
+1:ffa
+2:ffe
+2:ffi
+1:ffra
+3:ga
+7:gi
+3:gio
+8:gna
+3:gni
+5:gno
+6:go
+1:gri
+1:he
+1:lci
+22:le
+5:lia
+4:lio
+4:lla
+9:lle
+6:lli
+11:llo
+1:lpe
+1:lta
+1:lti
+1:ltiu
+2:lue
+1:lui
+2:mme
+1:mmu
+4:mni
+3:mpe
+2:mpo
+1:mui
+4:nce
+2:ncu
+4:nda
+5:nde
+18:ndi
+1:ndu
+2:nfe
+1:nfi
+1:nfla
+2:ngu
+1:nhae
+2:nie
+4:niu
+1:niue
+2:niuo
+1:nlo
+2:nno
+1:npro
+1:npu
+1:nsce
+1:nscie
+5:nse
+3:nsi
+2:nso
+1:nsta
+1:nsti
+2:nsu
+1:nsue
+7:nta
+18:nte
+20:nti
+8:ntia
+1:nue
+2:nui
+11:pi
+1:ppa
+1:ppli
+3:pse
+1:pte
+1:pti
+21:ra
+2:rba
+1:rbi
+6:rce
+2:rcu
+1:rfe
+1:rfi
+7:rga
+40:ri
+1:ria
+3:rie
+1:rio
+1:rma
+2:rmi
+3:rmo
+1:rna
+1:rno
+1:rpe
+3:rpo
+1:rra
+6:rre
+1:rsa
+2:rse
+2:rta
+4:rte
+1:rtha
+3:rti
+1:rtra
+4:rtu
+1:rue
+1:rui
+3:sco
+1:sia
+2:spe
+1:spi
+1:spo
+1:sru
+35:sse
+7:ssi
+5:ssio
+4:ste
+11:sti
+4:stia
+1:stre
+1:taue
+6:tia
+2:tie
+7:tio
+2:tre
+2:tri
+5:tte
+1:tue
+1:xa
+1:xce
+4:xe
+14:xi
+3:xo
+1:xpre
+1:za
+1:bam
+4:bant
+1:bar
+2:bas
+8:bat
+1:beat
+1:ber
+1:best
+1:bet
+8:bis
+1:bor
+1:brae
+1:brius
+2:bsit
+1:bsunt
+20:bus
+1:cans
+1:cauit
+1:ceam
+2:cem
+1:cens
+1:cet
+1:ciam
+3:ciis
+1:cis
+3:cium
+1:cors
+2:cos
+1:cquid
+1:cro
+1:ctam
+1:cte
+1:cti
+2:ctis
+1:ctos
+1:ctum
+1:ctus
+3:cus
+2:cut
+3:dam
+1:dear
+3:dem
+1:dens
+4:deo
+1:des
+1:dhuc
+1:diam
+1:dit
+2:dium
+1:dor
+1:dua
+1:dunt
+1:gam
+3:gis
+1:git
+1:gne
+1:gnum
+1:gunt
+2:hil
+1:lam
+7:lem
+1:leo
+2:les
+1:let
+1:lios
+5:lis
+2:liud
+3:lium
+2:lius
+1:llam
+2:llic
+1:llis
+3:llius
+1:llos
+1:llud
+5:llum
+2:lor
+1:lsis
+1:lto
+2:ltum
+1:luit
+9:lum
+1:lut
+5:mam
+1:mas
+1:maui
+1:mbo
+6:men
+1:ment
+1:mio
+1:mior
+2:mis
+2:mmo
+3:mnes
+2:mnia
+1:mniae
+1:mnium
+2:mor
+1:mpiam
+1:mpsi
+1:mptus
+1:mpus
+4:mquam
+3:mque
+1:msi
+1:muis
+1:muit
+1:mul
+1:mur
+11:mus
+3:nae
+1:ncis
+1:ncta
+1:nctae
+2:ncti
+1:nctio
+1:nctis
+1:nctos
+1:ndaui
+1:ndens
+3:ndis
+7:ndo
+1:ndor
+4:ndum
+4:nem
+1:ner
+2:nes
+2:neum
+1:ngi
+1:ngit
+3:niam
+7:nim
+1:nior
+7:nis
+1:nit
+1:nruit
+2:ntae
+2:ntea
+3:ntem
+8:nter
+1:ntes
+1:ntiae
+4:ntiam
+2:ntii
+2:ntis
+1:ntium
+1:ntius
+8:nto
+1:ntra
+4:ntum
+12:ntur
+1:ntus
+3:num
+1:nuo
+1:nus
+1:nxia
+1:pius
+2:ppe
+1:pso
+1:psum
+2:pta
+4:pud
+1:puis
+1:pus
+1:quio
+1:quot
+4:ram
+2:rans
+5:ras
+8:rat
+1:rbis
+2:rde
+1:rdia
+2:rea
+16:rem
+1:rent
+2:rer
+6:res
+11:ret
+2:rgo
+1:rgui
+2:riam
+1:rias
+2:rim
+15:ris
+4:rit
+2:rium
+4:rius
+2:rne
+1:rque
+2:rro
+1:rsam
+1:rtet
+1:rtim
+2:rtis
+1:rtyris
+1:rua
+1:ruans
+17:rum
+3:runt
+2:rus
+2:sam
+2:sas
+1:scio
+1:sciunt
+2:scum
+1:sdam
+1:sens
+5:siae
+3:siam
+1:sio
+3:sque
+2:ssa
+2:ssam
+5:ssem
+1:ssent
+2:sses
+11:sset
+2:ssit
+1:ssos
+2:ssu
+1:ssum
+1:ssus
+1:stas
+1:sthac
+1:stiis
+3:stis
+1:sto
+2:stra
+1:stram
+2:strum
+3:sus
+2:tae
+10:tas
+1:teat
+8:tem
+3:teor
+6:ter
+1:tes
+1:test
+3:tiae
+19:tiam
+2:tias
+1:tiens
+1:tior
+12:tis
+1:tium
+5:tius
+1:tos
+2:tque
+1:tres
+1:tris
+1:tsi
+11:tum
+22:tur
+12:tus
+1:xit
+EndTable:
+
+Table: OrcName
+Define: OrcVowel =[|a|o|u]
+Define: OrcVowCap =[|A|E|O|U]
+4:[@OrcNameStart][@OrcNameMiddle][@OrcNameEnd]
+3:[@OrcNameStart][@OrcNameMiddle][@OrcNameMiddle][@OrcNameEnd]
+2:[@OrcNameStart][@OrcNameEnd]
+
+Table: OrcNameStart
+{$OrcVowCap}[@OrcNameMiddle]{$OrcVowel}
+Br{$OrcVowel}
+Cr{$OrcVowel}
+G{$OrcVowel}
+G'
+Gr{$OrcVowel}
+K'
+Kr{$OrcVowel}
+M{$OrcVowel}
+S{$OrcVowel}
+T{$OrcVowel}
+Th{$OrcVowel}
+Thr{$OrcVowel}
+
+Table: OrcNameMiddle
+g{$OrcVowel}
+gg{$OrcVowel}
+d{$OrcVowel}
+m{$OrcVowel}
+
+Table: OrcNameEnd
+r
+rth
+th
+5:k
+3:ng
+
+Table: DemonName
+[@DemonNameCompounded>>Proper]
+
+Table: DemonNameCompounded
+[@{1d3} BeginMiddleDemonName][@EndDemonName]
+
+Table: BeginMiddleDemonName
+Shuffle: Demonsecondnames
+Define: contractionplacement=[|||']
+[@Demonfirstname]{$contractionplacement}
+
+Table: EndDemonName
+Shuffle: Demonsecondnames
+Define: contractionplacement=[|||']
+[@Demonfirstname]
+
+Table: Contraction
+1:[|||']
+
+Table: Demonfirstname
+Define: alphavowel =[|a|ab|ac|ad|af|ag|ah|ak|al|am|an|ap|ar|as|at|av|aw|ax|ay|az|e|eb|ed|ef|eg|eh|ek|el|em|en|ep|eq|er|es|et|ev|ew|ex|ey|ez|i|ib|ic|id|if|ig|ih|ik|il|im|in|ip|ir|is|it|iv|iw|ix|iy|iz|o|ob|od|of|oh|ok|ol|om|on|op|or|os|ot|ov|ow|ox|oy|oz|u|ub|ud|ug|uh|uk|ul|um|un|up|ur|us|ut|uv|uw|ux|uy|uz]
+Define: alphaconsonant =[|b|br|by|c|cr|cz|d|de|dr|dy|f|fr|g|gr|gu|gy|h|j|k|kr|ku|ky|l|m|mu|n|p|ph|pr|py|q|r|ra|ry|s|si|st|t|ta|ti|tr|tu|ty|q|qu|r|ra|ry|s|sh|si|st|t|ta|ti|tr|tu|ty|v|vy|w|we|wy|x|xy|y|z|ze|zy]
+{$alphavowel}
+{$alphaconsonant}
+{$alphavowel}{$alphaconsonant}
+{$alphaconsonant}{$alphavowel}
+
+Table: MasterDwarfName
+10:[@DwarfNameFirst][@DwarfNameMiddle][@DwarfNameLast]
+
+Table: DwarfNameFirst
+A
+Bo
+Ba
+Bra
+Bro
+Brø
+Bru  
+Da
+Dhu
+Dho
+Do  
+Dû
+Du  
+Fo  
+Ga
+Go
+Gra
+Gro
+Groo
+Gru
+Grö
+Ha  
+Ho  
+Hu  
+Ka
+Khe
+Khu
+Khû
+Ko
+Ku
+Kra
+Kro
+Mo  
+Mu  
+Ne
+No
+O
+Sa  
+Si  
+Thi 
+Tho 
+Tha
+Thra
+Thro
+Thu 
+Tu  
+
+Table: DwarfNameMiddle
+b
+br
+d
+dr
+f 
+fr
+gr
+gg
+gn
+k
+kh
+kr
+lm
+mn
+r 
+rg
+rn
+rd
+rm
+rs
+rf
+v 
+vr
+
+Table: DwarfNameLast
+ain
+ak
+an
+ar 
+arn
+en
+ën
+i  
+ick
+ik
+ili
+ilin
+ilir
+in
+ir 
+o 
+og 
+ön
+ög
+oin
+olin
+olir
+omli
+rin
+u 
+ug
+ur 
+us
+
+; ---------------- SIDE EFFECTS ---------------
+; ---------------- SIDE EFFECTS ---------------
+; ---------------- SIDE EFFECTS ---------------
+
+Table: Sideeffects
+Define: wizardmessage =[@WizardMessageTable]
+1:{$wizardmessage} if prepared in accordance with the recipe, this recipe yields no negative symptoms, diseases, or side-effects.
+5:[@UncommonSideeffectsMasterTable]
+
+Table: UncommonSideeffectsMasterTable
+Shuffle: UncommonSideeffectsTable
+Shuffle: RiskAssessmentTable
+1:[@UncommonSideeffects]
+1:[!{2d2} UncommonSideeffects>>Implode<br>]
+
+Table: UncommonSideeffects
+Shuffle: UncommonSideeffectsTable
+Shuffle: RiskAssessmentTable
+Set: variableone ={1d9+1}
+Define: wizardmessage =[@WizardMessageTable]
+Set: assessmentnumber1 =[|{1d5}|{1d10}|{1d15}|{1d20}]
+Define: assessmentphrase =Do not use if you or a family member are pregnant, nursing, of childbearing age, have a history of or are at risk from [!{$assessmentnumber1} RiskAssessmentTable>>Implode>>Sort]. If negative symptoms [|develop|persist], see [@WhoCanHeal] immediately.
+1:{$wizardmessage} this may [|cause|cure] the following symptoms:\_[!{1d20} UncommonSideeffectsTable>>Implode>>Sort]. {$assessmentphrase} [@UncommonSideeffects2MasterTable] [@DiseaseAssessment]
+1:{$wizardmessage} there is a {1d100}% chance this recipe may [|cause|cure] [!{1d20} UncommonSideeffectsTable>>Implode>>Sort]. {$assessmentphrase} [@UncommonSideeffects2MasterTable] [@DiseaseAssessment]
+1:{$wizardmessage} {1d100}% of people who used this recipe [|experienced|were cured of] the following symptoms:\_[!{1d10+{$variableone}} UncommonSideeffectsTable>>Implode>>Sort]. {$assessmentphrase} [@UncommonSideeffects2MasterTable] [@DiseaseAssessment]
+1:{$wizardmessage} {1d100}% of people who used this recipe [|experienced|were cured of] [|up to {$variableone}|{$variableone} or more] of the following symptoms:\_[!{1d10+{$variableone}} UncommonSideeffectsTable>>Implode>>Sort]. {$assessmentphrase} [@UncommonSideeffects2MasterTable] [@DiseaseAssessment]
+1:{$wizardmessage} 1 in {1d249+1} people [|experienced|were cured of] the following symptoms:\_[!{1d20} UncommonSideeffectsTable>>Implode>>Sort]. {$assessmentphrase} [@UncommonSideeffects2MasterTable] [@DiseaseAssessment]
+1:{$wizardmessage} 1 in {1d249+1} people [|experienced|were cured of] [|up to {$variableone}|{$variableone} or more] of the following symptoms: [!{1d10+{$variableone}} UncommonSideeffectsTable>>Implode>>Sort]. {$assessmentphrase} [@UncommonSideeffects2MasterTable] [@DiseaseAssessment]
+1:{$wizardmessage} this may [|cause|cure] the following symptoms:\_[!{1d40} UncommonSideeffectsTable>>Implode>>Sort]. {$assessmentphrase} [@UncommonSideeffects2MasterTable] [@DiseaseAssessment]
+1:{$wizardmessage} there is a {1d100}% chance this recipe may [|cause|cure] [!{1d40} UncommonSideeffectsTable>>Implode>>Sort]. {$assessmentphrase} [@UncommonSideeffects2MasterTable] [@DiseaseAssessment]
+1:{$wizardmessage} {1d100}% of people who used this recipe [|experienced|were cured of] the following symptoms:\_[!{1d20+{$variableone}} UncommonSideeffectsTable>>Implode>>Sort]. {$assessmentphrase} [@UncommonSideeffects2MasterTable] [@DiseaseAssessment]
+1:{$wizardmessage} {1d100}% of people who used this recipe [|experienced|were cured of] [|up to {$variableone}|{$variableone} or more] of the following symptoms:\_[!{1d20+{$variableone}} UncommonSideeffectsTable>>Implode>>Sort]. {$assessmentphrase} [@UncommonSideeffects2MasterTable] [@DiseaseAssessment]
+1:{$wizardmessage} 1 in {1d249+1} people [|experienced|were cured of] the following symptoms:\_[!{1d40} UncommonSideeffectsTable>>Implode>>Sort]. {$assessmentphrase} [@UncommonSideeffects2MasterTable] [@DiseaseAssessment]
+1:{$wizardmessage} 1 in {1d249+1} people [|experienced|were cured of] [|up to {$variableone}|{$variableone} or more] of the following symptoms: [!{1d20+{$variableone}} UncommonSideeffectsTable>>Implode>>Sort]. {$assessmentphrase} [@UncommonSideeffects2MasterTable] [@DiseaseAssessment]
+
+Table: WizardMessageTable
+Set: wizardlanguage =[@Language]
+Set: wizardname =[@Get{$wizardlanguage}Word>>Proper]
+Set: labname =[@Get{$wizardlanguage}Word>>Proper]
+100:{$wizardname}'s [@BookType] [|showed|indicated|concluded] that
+15:Personal [@BookType] [|showed|indicated|concluded] that
+10:[|Independant laboratory|Laboratory] [|observations|studies|experiments|tests] have [|shown|indicated|concluded]
+5:Personal [|observations|studies|experiments|tests] have [|shown|indicated|concluded] that 
+
+Table: UncommonSideeffects2MasterTable
+1:[!{1d8} UncommonSideeffects2]
+1:[!{1d7} UncommonSideeffects2]
+1:[!{1d6} UncommonSideeffects2]
+1:[!{1d5} UncommonSideeffects2]
+1:[!{1d4} UncommonSideeffects2]
+
+Table: UncommonSideeffects2
+Set: uncommonformatting =<br><br><span style='font:10pt Arial'>
+Define: wizardmessage =[@WizardMessageTable]
+Define: assessmentphrase =Do not use if you or a family member are pregnant, nursing, of childbearing age, have a history of or are at risk from [!{$assessmentnumber1} RiskAssessmentTable>>Implode>>Sort]. If negative symptoms [|develop|persist], see [@WhoCanHeal] immediately.
+1:{$uncommonformatting}{$wizardmessage} <u>[!{1d4} FantasyRaces>>Proper>>Implode]</u>, and <u>[!FantasyRaces>>Proper>>Implode]'s</u> have [|a|up to] {1d100}% immunity to [|the|any|1/{1d9+1} of the] effects of this recipe.</li></b></span>
+1:{$uncommonformatting}{$wizardmessage} <u>[!{1d6} Monsters>>Proper>>Implode]</u>, and <u>[!Monsters>>Proper>>Implode]'s</u> have [|a|up to] {1d100}% immunity to [|the|any|1/{1d9+1} of the] effects of this recipe.</li></b></span>
+1:{$uncommonformatting}{$wizardmessage} <u>[!{1d3} CharacterAlignment>>Implode]</u> and <u>[!CharacterAlignment]</u> aligned characters have [|a|up to] {1d100}% immunity to [|the|any|1/{1d9+1} of the] effects of this recipe.</li></b></span>
+1:{$uncommonformatting}{$wizardmessage} <u>[!{1d3} CharacterClass>>Implode]</u> and <u>[!CharacterClass]'s</u> have [|a|up to] {1d100}% immunity to [|the|any|1/{1d9+1} of the] effects of this recipe.</li></b></span>
+1:{$uncommonformatting}{$wizardmessage} <u>[!{1d4} FantasyRaces>>Proper>>Implode]</u>, and <u>[!FantasyRaces>>Proper>>Implode]'s</u> are at {1d100}% more risk to [|the|any|1/{1d9+1} of the] effects of this recipe. [|||||{$assessmentphrase}|]</li></b></span>
+1:{$uncommonformatting}{$wizardmessage} <u>[!{1d6} Monsters>>Proper>>Implode]</u>, and <u>[!Monsters>>Proper>>Implode]'s</u> are at {1d100}% more risk to [|the|any|1/{1d9+1} of the] effects of this recipe. [|||||{$assessmentphrase}|]</li></b></span>
+1:{$uncommonformatting}{$wizardmessage} <u>[!{1d3} CharacterAlignment>>Implode]</u> and <u>[!CharacterAlignment]</u> aligned characters are at {1d100}% more risk to [|the|any|1/{1d9+1} of the] effects of this recipe. [|||||{$assessmentphrase}|]</li></b></span>
+1:{$uncommonformatting}{$wizardmessage} <u>[!{1d3} CharacterClass>>Implode]</u> and <u>[!CharacterClass]'s</u> are at {1d100}% more risk to [|the|any|1/{1d9+1} of the] effects of this recipe. [|||||{$assessmentphrase}|]</li></b></span>
+1:{$uncommonformatting}{$wizardmessage} <u>[@FantasyRaces>>Proper]'s</u> have [|a|up to] {1d100}% immunity to [|the|any|1/{1d9+1} of the] effects of this recipe.</li></b></span>
+1:{$uncommonformatting}{$wizardmessage} <u>[@Monsters>>Proper]'s</u> have [|a|up to] {1d100}% immunity to [|the|any|1/{1d9+1} of the] effects of this recipe.</li></b></span>
+1:{$uncommonformatting}{$wizardmessage} <u>[@CharacterAlignment]</u> aligned characters have [|a|up to] {1d100}% immunity to [|the|any|1/{1d9+1} of the] effects of this recipe.</li></b></span>
+1:{$uncommonformatting}{$wizardmessage} <u>[@CharacterClass]'s</u> have [|a|up to] {1d100}% immunity to [|the|any|1/{1d9+1} of the] effects of this recipe.</li></b></span>
+1:{$uncommonformatting}{$wizardmessage} <u>[@FantasyRaces>>Proper]'s</u> are at {1d100}% more risk to [|the|any|1/{1d9+1} of the] effects of this recipe. [|||||{$assessmentphrase}|]</li></b></span>
+1:{$uncommonformatting}{$wizardmessage} <u>[@Monsters>>Proper]'s</u> are at {1d100}% more risk to [|the|any|1/{1d9+1} of the] effects of this recipe. [|||||{$assessmentphrase}|]</li></b></span>
+1:{$uncommonformatting}{$wizardmessage} <u>[@CharacterAlignment]</u> aligned characters are at {1d100}% more risk to [|the|any|1/{1d9+1} of the] effects of this recipe. [|||||{$assessmentphrase}|]</li></b></span>
+1:{$uncommonformatting}{$wizardmessage} <u>[@CharacterClass]'s</u> are at {1d100}% more risk to [|the|any|1/{1d9+1} of the] effects of this recipe. [|||||{$assessmentphrase}|]</li></b></span>
+
+Table: DiseaseAssessment
+Set: diseaseformatting =<br><br><span style='font:10pt Arial'>
+Define: wizardmessage =[@WizardMessageTable]
+Set: Diseasenumber1 ={1d4}
+Set: Diseasenumber2 ={1d10}
+Set: Diseasenumber3 ={1d10}
+96:[!{1d4} DiseaseAssessment]
+8:{$diseaseformatting}{$wizardmessage} each time the victim takes {2d5} or more damage from this recipe, he must make another Fortitude save or be [|||temporarily|permanently] [|blinded|deafened|stunned|confused|fatigued].
+8:{$diseaseformatting}{$wizardmessage} each time the victim takes {{$Diseasenumber1}d{$Diseasenumber2}+{$Diseasenumber3}} or more damage from this recipe, he must make another Fortitude save or [|1/{1d9+1} of all|all] damage incurred is permanent.
+8:{$diseaseformatting}{$wizardmessage} when damaged by this recipe, character must succeed on another saving throw or {{$Diseasenumber1}d{$Diseasenumber2}+{$Diseasenumber3}} points of damage is permanent drain instead.
+8:{$diseaseformatting}{$wizardmessage} the victim must make {2d6} successful Fortitude saving throws in a row to recover from any illnesses caused from this recipe.
+8:{$diseaseformatting}{$wizardmessage} successful saves do not allow the character to recover. Only magical healing can save the character.
+8:{$diseaseformatting}{$wizardmessage} there is a {1d100}% chance that any illnesses contracted from eating this recipe are [|communicable|not communicable]. All players within {1d490+10} feet must make a Fortitude saving roll or risk becoming infected.
+8:{$diseaseformatting}{$wizardmessage} there is a {1d100}% chance that additional servings will [|cure|relieve|aggravate] any negative symptoms by a factor of {1d9+1}.
+8:{$diseaseformatting}{$wizardmessage} there is a {1d100}% chance that character will become addicted or dependant to the recipe. Addiction will require {1d10}+(Number of days addicted) successful Will savings rolls [||in a row] to cure.
+8:{$diseaseformatting}{$wizardmessage} there is a {1d100}% chance that the cook will obtain a [|magical|natural] immunity to [|any|{1d100}% of the] [|||negative] side-effects.
+
+Table: WhoCanHeal
+a healer
+a shaman
+a wizard
+a witch
+a druid
+a medicine man
+a sorcerer
+an alchemist
+
+Table: BookType
+3:experiment[||s]
+4:journal[||s]
+3:report[||s]
+3:cookbook[||s]
+4:experiment[||s]
+4:stud[|y|ies]
+3:record[||s]
+4:observation[||s]
+3:guide[||s]
+2:encyclopedia[||s]
+3:manual[||s]
+3:tome[||s]
+4:scroll[||s]
+3:essay[||s]
+4:handbook[||s]
+3:treatises
+4:grimoire[||s]
+3:codex[||es]
+4:test[||s]
+
+Table: FantasyRaces
+orc
+goblin
+ogre
+giant
+kobold
+doppleganger
+20:human
+10:drow
+10:elf
+10:dwarf
+10:halfling
+8:gnome
+
+Table: CharacterAlignment
+lawful good
+neutral good
+chaotic good
+lawful neutral
+true neutral
+chaotic neutral
+lawful evil
+neutral evil
+chaotic evil
+
+Table: CharacterClass
+barbarian
+bard
+cleric
+druid
+fighter
+monk
+paladin
+ranger
+rogue
+sorcerer
+wizard
+merchant
+soldier
+farmer
+
+Table: UncommonSideeffectsTable
+Shuffle: UncommonSideeffectsTable
+6:inability to cast [|arcane|divine|any] spells
+6:age reversal
+4:albinism
+4:alopecia
+4:anal leakage
+4:anemia
+4:aneurysm
+4:angina
+4:apnea
+4:artificial insemination
+4:asthma
+4:atopy
+4:atrophy
+4:autism
+4:bad breath
+4:bedwetting
+4:blood clots
+4:blurred vision
+4:cataplexy
+4:chills
+4:choking
+4:coronavirus
+4:coughing
+4:cramps
+4:cysts
+4:delierium
+4:dementia
+4:difficulty swallowing
+4:dizziness
+4:double vision
+4:dry mouth
+4:ectopic pregnancy
+4:eunuchoidism
+4:freckles
+4:fugues
+4:hallucinations
+4:headaches
+4:heart attack
+4:hemorrhoids
+4:hot flashes
+4:incontinence
+4:ingrown toenails
+4:itching
+4:kidney failure
+4:menorrhagia
+4:migraines
+4:muscular atrophy
+4:paranoia
+4:priapism
+4:rosacea
+4:stroke
+4:sneezing
+4:upset stomach
+4:vertigo
+4:vomiting
+4:warts
+4:zits
+3:hair growth up to [|1/{1d9+1} inch|1 inch|{1d9+1} inches]
+3:height [|growth|shrinkage] of at least [|1/{1d9+1} inch|1 inch|{1d9+1} inches]
+3:[|skin|hair] color changes
+3:[|gender|alignment] [|reversal|changes]
+3:temperature {1d10}°F [|cooler|warmer] than normal
+2:blinding sickness
+2:cackle fever
+2:demon fever
+2:devil chills
+2:filth fever
+2:mindfire
+2:mummy rot
+2:abnormal [|shrinkage of current|growth of extra] body parts
+1:ablutophobia <i>(fear of bathing)</i>
+1:acarophobia <i>(fear of small objects)</i>
+1:acerophobia <i>(fear of sourness)</i>
+1:acousticophobia <i>(fear of sound)</i>
+1:acrophobia <i>(fear of heights)</i>
+1:aeroacrophobia <i>(fear of open, high places)</i>
+1:aeronausiphobia <i>(fear of airsickness)</i>
+1:aerophagiaphobia <i>(fear of swallowing air)</i>
+1:aerophobia <i>(fear of air, wind)</i>
+1:agoraphobia <i>(fear of open places, crowds)</i>
+1:agrizoophobia <i>(fear of wild animals)</i>
+1:agyiophobia <i>(fear of being in streets)</i>
+1:agyrophobia <i>(fear of crossing streets)</i>
+1:aichurophobia <i>(fear of pointed objects)</i>
+1:ailurophobia <i>(fear of cats)</i>
+1:alektorophobia <i>(fear of chickens)</i>
+1:allodoxaphobia <i>(fear of opinions)</i>
+1:amathophobia <i>(fear of dust)</i>
+1:androphobia <i>(fear of men)</i>
+1:anthophobia <i>(fear of flowers)</i>
+1:anthropophobia <i>(fear of people)</i>
+1:antlophobia <i>(fear of floods)</i>
+1:anuptaphobia <i>(fear of staying single)</i>
+1:apiphobia <i>(fear of bees)</i>
+1:arachnophobia <i>(fear of spiders)</i>
+1:arithmophobia <i>(fear of numbers)</i>
+1:astraphobia <i>(fear of thunder and lightning)</i>
+1:atephobia <i>(fear of ruins)</i>
+1:aulophobia <i>(fear of flutes)</i>
+1:aurophobia <i>(fear of gold)</i>
+1:auroraphobia <i>(fear of auroras)</i>
+1:automysophobia <i>(fear of being dirty)</i>
+1:autophobia <i>(fear of loneliness)</i>
+1:ballistophobia <i>(fear of bullets and missiles)</i>
+1:basiphobia <i>(fear of walking)</i>
+1:batophobia <i>(fear of high buildings)</i>
+1:batrachophobia <i>(fear of frogs, reptiles)</i>
+1:bibliophobia <i>(fear of books)</i>
+1:botanophobia <i>(fear of plants)</i>
+1:bromidrophobia <i>(fear of body odor)</i>
+1:cainophobia <i>(fear of newness, novelty)</i>
+1:carnophobia <i>(fear of meat)</i>
+1:cathisophobia <i>(fear of sitting)</i>
+1:catoptrophobia <i>(fear of mirrors)</i>
+1:cenophobia <i>(fear of empty rooms)</i>
+1:chaetophobia <i>(fear of hair)</i>
+1:cheimaphobia <i>(fear of cold)</i>
+1:chionophobia <i>(fear of snow, winter)</i>
+1:chorophobia <i>(fear of dancing)</i>
+1:chrematophobia <i>(fear of money)</i>
+1:cibophobia <i>(fear of food)</i>
+1:claustrophobia <i>(fear of enclosed places)</i>
+1:climacophobia <i>(fear of stairs)</i>
+1:clinophobia <i>(fear of beds)</i>
+1:cnidophobia <i>(fear of insect stings)</i>
+1:coimetrophobia <i>(fear of cemeteries)</i>
+1:cometophobia <i>(fear of comets)</i>
+1:coprophobia <i>(fear of feces)</i>
+1:cremnophobia <i>(fear of precipices)</i>
+1:cryophobia <i>(fear of ice, stasis)</i>
+1:crystallophobia <i>(fear of crystals)</i>
+1:cynophobia <i>(fear of dogs)</i>
+1:decidophobia <i>(fear of decisions)</i>
+1:demonophobia <i>(fear of demons)</i>
+1:dendrophobia <i>(fear of trees)</i>
+1:dikephobia <i>(fear of justice)</i>
+1:dinophobia <i>(fear of dizziness)</i>
+1:dipsophobia <i>(fear of drinking)</i>
+1:dromophobia <i>(fear of motion)</i>
+1:dystychiphobia <i>(fear of accidents)</i>
+1:ecclesiophobia <i>(fear of churches)</i>
+1:ergophobia <i>(fear of work)</i>
+1:erythrophobia <i>(fear of blushing, color red)</i>
+1:euphobia <i>(fear of good news)</i>
+1:feminophobia <i>(fear of women)</i>
+1:gephyrophobia <i>(fear of bridges)</i>
+1:gerascophobia <i>(fear of growing old)</i>
+1:gerontophobia <i>(fear of old people)</i>
+1:graphophobia <i>(fear of writing)</i>
+1:gymnophobia <i>(fear of nudity)</i>
+1:hagiophobia <i>(fear of holy things, saints)</i>
+1:haptophobia <i>(fear of touch)</i>
+1:heliophobia <i>(fear of sunlight)</i>
+1:hematophobia <i>(fear of blood)</i>
+1:hierophobia <i>(fear of religious objects)</i>
+1:hippophobia <i>(fear of horses)</i>
+1:hodophobia <i>(fear of travel)</i>
+1:homichlophobia <i>(fear of fog)</i>
+1:hyalophobia <i>(fear of glass)</i>
+1:hydrophobia <i>(fear of water)</i>
+1:hypnophobia <i>(fear of hypnosis)</i>
+1:iatrophobia <i>(fear of doctors, hospitals)</i>
+1:iophobia <i>(fear of rust)</i>
+1:kopophobia <i>(fear of fatigue)</i>
+1:lachanophobia <i>(fear of vegetables)</i>
+1:ligyrophobia <i>(fear of noise)</i>
+1:lygophobia <i>(fear of the dark)</i>
+1:melophobia <i>(fear of music)</i>
+1:metallophobia <i>(fear of metal)</i>
+1:methyphobia <i>(fear of alcohol)</i>
+1:metrophobia <i>(fear of poetry)</i>
+1:myrmecophobia <i>(fear of ants)</i>
+1:necrophobia <i>(fear of corpses)</i>
+1:odynesophobia <i>(fear of pain)</i>
+1:oenophobia <i>(fear of wine)</i>
+1:panphobia <i>(fear of everything)</i>
+1:pedophobia <i>(fear of young children)</i>
+1:polyphobia <i>(fear of many things)</i>
+1:prosophobia <i>(fear of progress)</i>
+1:pyrophobia <i>(fear of fire)</i>
+1:rhabdophobia <i>(fear of rods, wands)</i>
+1:scelerophobia <i>(fear of attack by the wicked)</i>
+1:sciaphobia <i>(fear of shadows)</i>
+1:selenophobia <i>(fear of the moon)</i>
+1:siderophobia <i>(fear of the stars)</i>
+1:stasiphobia <i>(fear of standing)</i>
+1:symbolophobia <i>(fear of symbols, magic)</i>
+1:teratophobia <i>(fear of monsters)</i>
+1:triskadekaphobia <i>(fear of the number thirteen)</i>
+1:tropophobia <i>(fear of change)</i>
+1:vestiphobia <i>(fear of clothing)</i>
+1:xerophobia <i>(fear of dryness)</i>
+1:[|skill|ability|all] checks [|–|+]{1d5} per serving
+1:[|attack|saving|all] rolls [|–|+]{1d5} per serving
+
+Table: RiskAssessmentTable
+Shuffle: RiskAssessmentTable
+AIDS or other autoimmune deficiencies
+Addison's disease
+adenitis
+adenocarcinoma
+Alzheimer's
+amebiasis
+amebic dysentry
+amyotrophic lateral sclerosis
+arteriosclerosis
+arthritis
+beriberi
+black lung
+blastomycosis
+[|high|low] blood pressure
+bubonic plague
+cancer
+cardiac arrest
+cellulitis
+cerebrospinal fever
+chickenpox
+chlamydia
+cholera
+chronic fatigue disorder
+cold and fever symptoms
+conjunctivitis
+contact dermatitis
+coronary heart disease
+Crohn's disease
+croup
+dengue
+diabetes
+diptheria
+diverticulitis
+diverticulosis
+dysentery
+dystrophy
+emphysema
+endocarditis
+epilepsy
+gastric ulcers
+genital herpes
+gingivitis
+glaucoma
+gonorrhea
+gout
+heart attack
+herpes
+Hodgkin's disease
+hookworm
+hyperactive thyroid
+[|hypo|hyper]glycemia
+infantile paralysis
+kala-azar
+laryngitis
+leprosy
+leukemia
+lockjaw
+louse
+lung cancer
+lupus
+Lyme disease
+lymphoma
+malaria
+mastitis
+measles
+melanoma
+meningitis
+multiple sclerosis
+mumps
+muscular dystrophy
+neuropathy
+peritonitis
+pernicious anemia
+pertussis
+pinkeye
+pneumonia
+polio
+rabies
+scurvy
+shingles
+smallpox
+snail fever
+strep throat
+stroke
+tapeworm
+tetanus
+thrush
+toxicosis
+trachoma
+tuberculosis
+yellow fever
