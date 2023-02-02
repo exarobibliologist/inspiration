@@ -8,8 +8,8 @@ Define: HappyHour = ({4d5} Refills 1/{4d2} Price during Happy Hour from {1d3}-{3
 Define: Meal1 = <h2>Breakfast {MealCost}</h2>[!{3d3} Breakfast >> implode <br>]<br><h3>Breakfast Sides</h3>[!{2d3} BreakfastSides >> implode <br>]<br>[!{2d3} FruitVeggies >> implode <br>]
 Define: Meal2 = <h2>Dinner {MealCost}</h2>[@{2d3} Dinner >> implode <br>]<br><h3>Dinner Sides</h3>[!{2d2} DinnerSides >> implode <br>]<br>[!{2d2} DinnerSides2 >> implode <br>]<br>[!{1d6} FruitVeggies >> implode <br>]
 Define: Drinks = <h3>Drinks {DrinkCost}</h3>[!{2d3} Drinks >> implode <br>]
-Define: Coffee = <h3>Specialty Coffee {CocktailCost}<br>([@RefillMenu])<br>{HappyHour}</h3> [@3 Coffee >> implode <br>]
-Define: CocktailMenu = <h3>Today's Cocktails {CocktailCost}<br>([@RefillMenu])<br>{HappyHour}</h3>[@3 Cocktails >> implode <br>]
+Define: Coffee = <h3>Specialty Coffee {CocktailCost} ([@RefillMenu])<br>{HappyHour}</h3> [@3 Coffee >> implode <br>]
+Define: CocktailMenu = <h3>Today's Cocktails {CocktailCost} ([@RefillMenu])<br>{HappyHour}</h3>[@3 Cocktails >> implode <br>]
 <h1>[@TavernName]</h1><hr>Location\: [@CityDescriptions]<hr>{$Meal1}<hr>{$Meal2}<hr>{$Drinks}<hr>{Coffee}<hr>{CocktailMenu}<hr>
 
 ; -------------------------------------------------------------------
@@ -17,6 +17,21 @@ Define: CocktailMenu = <h3>Today's Cocktails {CocktailCost}<br>([@RefillMenu])<b
 ; -------------------------------------------------------------------
 
 Table:TavernName
+[@WordBuilder]'s Tavern
+[@WordBuilder]'s [@Professions >> Proper]'s [@TavernTitles >> Proper]
+[@WordBuilder]'s [@FantasyNouns >> Proper]'s [@TavernTitles >> Proper]
+[@WordBuilder]'s [@Positives >> Proper] [@TavernTitles >> Proper]
+[@WordBuilder]'s [@Odd >> Proper] [@TavernTitles >> Proper]
+[@WordBuilder]'s [@Emotions >> Proper] [@TavernTitles >> Proper]
+[@WordBuilder]'s [@colors >> Proper] [@TavernTitles >> Proper]
+[@WordBuilder]'s [@TavernAdjPatrons >> Proper] [@TavernTitles >> Proper]
+[@WordBuilder]'s [@Professions >> Proper]'s [@TavernObjects >> Proper] [@TavernTitles >> Proper]
+[@WordBuilder]'s [@FantasyNouns >> Proper]'s [@TavernObjects >> Proper] [@TavernTitles >> Proper]
+[@WordBuilder]'s [@Positives >> Proper] [@TavernObjects >> Proper] [@TavernTitles >> Proper]
+[@WordBuilder]'s [@Odd >> Proper] [@TavernObjects >> Proper] [@TavernTitles >> Proper]
+[@WordBuilder]'s [@Emotions >> Proper] [@TavernObjects >> Proper] [@TavernTitles >> Proper]
+[@WordBuilder]'s [@colors >> Proper] [@TavernObjects >> Proper] [@TavernTitles >> Proper]
+[@WordBuilder]'s [@TavernAdjPatrons >> Proper] [@TavernObjects >> Proper] [@TavernTitles >> Proper]
 The [@Professions >> Proper]'s [@TavernTitles >> Proper]
 The [@FantasyNouns >> Proper]'s [@TavernTitles >> Proper]
 The [@Positives >> Proper] [@TavernTitles >> Proper]
@@ -183,7 +198,7 @@ Spinach
 ; -------------------------------------------------------------------
 
 Table: RefillMenu
-2:{2d2} Refills Free
+4:{1d5} Refills Free
 32:{2d5} Refills 1/2 Price
 
 Table: Drinks
@@ -2052,3 +2067,23 @@ funny
 rare
 fantastic
 
+; -------------------------------------------------------------------
+; -------------------------- Word Builder ---------------------------
+; -------------------------------------------------------------------
+
+
+Table: WordBuilder
+[[@{2d2} SyllableMaker] >> Proper]
+
+Table: SyllableMaker
+[@RandVowel][@RandConsonant]
+[@RandVowel][@RandVowel][@RandConsonant]
+[@RandConsonant][@RandVowel]
+[@RandConsonant][@RandConsonant][@RandVowel]
+
+Table: RandConsonant
+20:[|b|c|d|f|g|h|j|k|l|m|n|p|r|s|t|v|w|x|y|z]
+1:qu
+
+Table: RandVowel
+[|a|e|i|o|u]
