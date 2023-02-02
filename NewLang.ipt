@@ -1,0 +1,15 @@
+Table: WordBuilder
+[[@{2d2} SyllableMaker] >> Proper]
+
+Table: SyllableMaker
+[@RandVowel][@RandConsonant]
+[@RandVowel][@RandVowel][@RandConsonant]
+[@RandConsonant][@RandVowel]
+[@RandConsonant][@RandConsonant][@RandVowel]
+
+Table: RandConsonant
+20:[|b|c|d|f|g|h|j|k|l|m|n|p|r|s|t|v|w|x|y|z]
+1:qu
+
+Table: RandVowel
+[|a|e|i|o|u]
