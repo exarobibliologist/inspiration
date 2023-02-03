@@ -7,7 +7,7 @@ Set: HeaderOpenFormat =<span style='font:11pt Arial'><i><b>
 Set: HeaderCloseFormat =</i></b></span>
 Set: WarningFormatting =<span style='font:8pt Arial'>
 Set: BodyFormatting =<span style='font:10pt Arial'>
-Set: recipenumber =[|{4d4}|{3d4}|{3d4}|{2d4}|{2d4}|{2d4}]
+Set: recipenumber =[|{2d4}|{4d4}|{4d4}|{8d4}|{8d4}|{8d4}]
 {HeaderOpenFormat}Ingredients{HeaderCloseFormat}<br>{$BodyFormatting}[@{$recipenumber} IngredientTable]<br>[@RecipeDirections]<br>{HeaderOpenFormat}Notes - Sorted by Age and Relevance*{HeaderCloseFormat}<br>{$BodyFormatting}[@Sideeffects]</span>
 
 Table: IngredientTable
