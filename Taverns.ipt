@@ -1,12 +1,12 @@
 MaxReps:1
 
 Table:MasterGen
-Define: MealCost = (Pick {3d2} Entree for {4d10}sp, Pick {1d2} Entree for {2d10}sp)
+Define: MealCost = ({3d2} for {4d10}sp) or ({1d2} for {2d10}sp)
 Define: DrinkCost = ({20d10}cp)
 Define: CocktailCost = ({50d10}cp)
 Define: HappyHour = ({4d5} Refills 1/{4d2} Price during Happy Hour from {1d3}-{3d4}pm)
-Define: Meal1 = <h2>Breakfast {MealCost}</h2>[!{3d3} Breakfast >> implode <br>]<br><h3>Breakfast Sides</h3>[!{2d3} BreakfastSides >> implode <br>]<br>[!{2d3} FruitVeggies >> implode <br>]
-Define: Meal2 = <h2>Dinner {MealCost}</h2>[@{2d3} Dinner >> implode <br>]<br><h3>Dinner Sides</h3>[!{2d2} DinnerSides >> implode <br>]<br>[!{2d2} DinnerSides2 >> implode <br>]<br>[!{1d6} FruitVeggies >> implode <br>]
+Define: Meal1 = <h2>Breakfast<br>{MealCost}</h2><h3>Breakfast Entree List</h3>[!{3d3} Breakfast >> implode <br>]<br><h3>Breakfast Sides (Each Entree comes with {1d2} sides)</h3>[!{2d2} BreakfastSides >> implode <br>]<br>[!{2d3} FruitVeggies >> implode <br>]
+Define: Meal2 = <h2>Dinner<br>{MealCost}</h2>[@{2d3} Dinner >> implode <br>]<br><h3>Dinner Sides (Each Entree comes with {1d3} sides)</h3>[!{2d2} DinnerSides >> implode <br>]<br>[!{2d2} DinnerSides2 >> implode <br>]<br>[!{2d3} FruitVeggies >> implode <br>]
 Define: Drinks = <h3>Drinks {DrinkCost}</h3>[!{2d3} Drinks >> implode <br>]
 Define: Coffee = <h3>Specialty Coffee {CocktailCost} ([@RefillMenu])<br>{HappyHour}</h3> [@3 Coffee >> implode <br>]
 Define: CocktailMenu = <h3>Today's Cocktails {CocktailCost} ([@RefillMenu])<br>{HappyHour}</h3>[@3 Cocktails >> implode <br>]
@@ -87,15 +87,16 @@ Table: Breakfast
 {2d2} Eggs [|Sunny-Side Up|Over-[|Easy|Medium|Hard]]
 [@NounFaeCreatures] Egg [|Sandwich|Frittata]
 Egg [|Sandwich|Frittata]
-[|Smoked|Honey] Ham
-[|Smoked|Honey] [@NounMonstersOne] Ham
+[|Smoked|Honey-Glazed] Ham
+[|Smoked|Honey-Glazed] [@NounMonstersOne] Ham
 Steak, [|Rare|Medium-Rare|Medium|Medium-Well|Well Done]
 [@NounMonstersOne] Steak, [|Rare|Medium-Rare|Medium|Medium-Well|Well Done]
-[|Hard|Soft|Sharp|Pungent] Cheese
 [|Hot|Cold|Thick|Thin] Porridge
-[|Cinnamon|Sticky|Sweet] [|Roll|Bun]
+
 
 Table: BreakfastSides
+[|Cinnamon|Sticky|Sweet] [|Roll|Bun]
+[|Hard|Soft|Sharp|Pungent] Cheese
 [|Crispy|Thick-cut|Soggy|Chewy] Bacon
 [|Sweet|Mild|Spicy|Hot|Pickled|Deer] Sausage
 [|Sour|Sweet|Plain] Yogurt
