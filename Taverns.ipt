@@ -2074,7 +2074,7 @@ fantastic
 
 
 Table: WordBuilder
-[[@{2d2} SyllableMaker >> replace /aa/a/ >> replace /ee/e/ >> replace /ii/i/ >> replace /oo/o/ >> replace /uu/u/] >> Upper]
+[[@{2d2} SyllableMaker >> replace /aa/a/ >> replace /ee/e/ >> replace /ii/i/ >> replace /oo/o/ >> replace /uu/u/] >> Proper]
 
 Table: SyllableMaker
 5:[@RandVowel][@RandConsonant]
