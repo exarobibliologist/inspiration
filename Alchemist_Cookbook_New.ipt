@@ -8,7 +8,8 @@ Set: HeaderCloseFormat =</i></b></span>
 Set: WarningFormatting =<span style='font:8pt Arial'>
 Set: BodyFormatting =<span style='font:10pt Arial'>
 Set: recipenumber =[|{2d4}|{4d4}|{4d4}|{8d4}|{8d4}|{8d4}]
-{HeaderOpenFormat}Ingredients{HeaderCloseFormat}<br>{$BodyFormatting}[@{$recipenumber} IngredientTable]<br>[@RecipeDirections]<br>{HeaderOpenFormat}Notes - Sorted by Age and Relevance*{HeaderCloseFormat}<br>{$BodyFormatting}[@Sideeffects]</span>
+Define: assessmentphrase =Do not use if you or a family member are pregnant, nursing, of childbearing age, have a history of or are at risk from [!{4d5} RiskAssessmentTable>>Implode>>Sort]. If negative symptoms [|develop|persist], see [@WhoCanHeal] immediately.
+{HeaderOpenFormat}Ingredients{HeaderCloseFormat}<br>{$BodyFormatting}[@{$recipenumber} IngredientTable]<br>[@RecipeDirections]<br>{HeaderOpenFormat}Notes - Sorted by Age and Relevance*{HeaderCloseFormat}<br><b>{assessmentphrase}</b><br><br>{$BodyFormatting}[@Sideeffects]</span>
 
 Table: IngredientTable
 <li>[@IngredientTable2>>Implode<li></li>]</li>
@@ -3447,83 +3448,52 @@ us
 ; ---------------- SIDE EFFECTS ---------------
 
 Table: Sideeffects
+Shuffle: UncommonSideeffectsTable
+Shuffle: RiskAssessmentTable
 Define: wizardmessage =[@WizardMessageTable]
 1:{$wizardmessage} if prepared in accordance with the recipe, this recipe yields no negative symptoms, diseases, or side-effects.
-5:[@UncommonSideeffectsMasterTable]
-
-Table: UncommonSideeffectsMasterTable
-Shuffle: UncommonSideeffectsTable
-Shuffle: RiskAssessmentTable
-1:[@UncommonSideeffects]
-1:[!{2d2} UncommonSideeffects>>Implode<br>]
-
-Table: UncommonSideeffects
-Shuffle: UncommonSideeffectsTable
-Shuffle: RiskAssessmentTable
-Set: variableone ={1d9+1}
-Define: wizardmessage =[@WizardMessageTable]
-Set: assessmentnumber1 =[|{1d5}|{1d10}|{1d15}|{1d20}]
-Define: assessmentphrase =Do not use if you or a family member are pregnant, nursing, of childbearing age, have a history of or are at risk from [!{$assessmentnumber1} RiskAssessmentTable>>Implode>>Sort]. If negative symptoms [|develop|persist], see [@WhoCanHeal] immediately.
-1:{$wizardmessage} this may [|cause|cure] the following symptoms:\_[!{1d20} UncommonSideeffectsTable>>Implode>>Sort]. {$assessmentphrase} [@UncommonSideeffects2MasterTable] [@DiseaseAssessment]
-1:{$wizardmessage} there is a {1d100}% chance this recipe may [|cause|cure] [!{1d20} UncommonSideeffectsTable>>Implode>>Sort]. {$assessmentphrase} [@UncommonSideeffects2MasterTable] [@DiseaseAssessment]
-1:{$wizardmessage} {1d100}% of people who used this recipe [|experienced|were cured of] the following symptoms:\_[!{1d10+{$variableone}} UncommonSideeffectsTable>>Implode>>Sort]. {$assessmentphrase} [@UncommonSideeffects2MasterTable] [@DiseaseAssessment]
-1:{$wizardmessage} {1d100}% of people who used this recipe [|experienced|were cured of] [|up to {$variableone}|{$variableone} or more] of the following symptoms:\_[!{1d10+{$variableone}} UncommonSideeffectsTable>>Implode>>Sort]. {$assessmentphrase} [@UncommonSideeffects2MasterTable] [@DiseaseAssessment]
-1:{$wizardmessage} 1 in {1d249+1} people [|experienced|were cured of] the following symptoms:\_[!{1d20} UncommonSideeffectsTable>>Implode>>Sort]. {$assessmentphrase} [@UncommonSideeffects2MasterTable] [@DiseaseAssessment]
-1:{$wizardmessage} 1 in {1d249+1} people [|experienced|were cured of] [|up to {$variableone}|{$variableone} or more] of the following symptoms: [!{1d10+{$variableone}} UncommonSideeffectsTable>>Implode>>Sort]. {$assessmentphrase} [@UncommonSideeffects2MasterTable] [@DiseaseAssessment]
-1:{$wizardmessage} this may [|cause|cure] the following symptoms:\_[!{1d40} UncommonSideeffectsTable>>Implode>>Sort]. {$assessmentphrase} [@UncommonSideeffects2MasterTable] [@DiseaseAssessment]
-1:{$wizardmessage} there is a {1d100}% chance this recipe may [|cause|cure] [!{1d40} UncommonSideeffectsTable>>Implode>>Sort]. {$assessmentphrase} [@UncommonSideeffects2MasterTable] [@DiseaseAssessment]
-1:{$wizardmessage} {1d100}% of people who used this recipe [|experienced|were cured of] the following symptoms:\_[!{1d20+{$variableone}} UncommonSideeffectsTable>>Implode>>Sort]. {$assessmentphrase} [@UncommonSideeffects2MasterTable] [@DiseaseAssessment]
-1:{$wizardmessage} {1d100}% of people who used this recipe [|experienced|were cured of] [|up to {$variableone}|{$variableone} or more] of the following symptoms:\_[!{1d20+{$variableone}} UncommonSideeffectsTable>>Implode>>Sort]. {$assessmentphrase} [@UncommonSideeffects2MasterTable] [@DiseaseAssessment]
-1:{$wizardmessage} 1 in {1d249+1} people [|experienced|were cured of] the following symptoms:\_[!{1d40} UncommonSideeffectsTable>>Implode>>Sort]. {$assessmentphrase} [@UncommonSideeffects2MasterTable] [@DiseaseAssessment]
-1:{$wizardmessage} 1 in {1d249+1} people [|experienced|were cured of] [|up to {$variableone}|{$variableone} or more] of the following symptoms: [!{1d20+{$variableone}} UncommonSideeffectsTable>>Implode>>Sort]. {$assessmentphrase} [@UncommonSideeffects2MasterTable] [@DiseaseAssessment]
+10:[!{2d2} UncommonSideeffects>>Implode<br><br>]
 
 Table: WizardMessageTable
 Set: wizardlanguage =[@Language]
 Set: wizardname =[@Get{$wizardlanguage}Word>>Proper]
-Set: labname =[@Get{$wizardlanguage}Word>>Proper]
-100:{$wizardname}'s [@BookType] [|showed|indicated|concluded] that
-15:Personal [@BookType] [|showed|indicated|concluded] that
-10:[|Independant laboratory|Laboratory] [|observations|studies|experiments|tests] have [|shown|indicated|concluded]
-5:Personal [|observations|studies|experiments|tests] have [|shown|indicated|concluded] that 
+100:<b>{$wizardname}'s [@BookType]</b> [|showed|indicated|concluded] that
+15:<b>Personal [@BookType]</b> [|showed|indicated|concluded] that
+10:<b>[|Independant laboratory|Laboratory] [|observations|studies|experiments|tests]</b> have [|shown|indicated|concluded] that
+5:<b>Personal [|observations|studies|experiments|tests]</b> have [|shown|indicated|concluded] that 
+
+Table: UncommonSideeffects
+Shuffle: UncommonSideeffectsTable
+Shuffle: RiskAssessmentTable
+Define: wizardmessage =[@WizardMessageTable]
+1:{$wizardmessage} this may [|cause|cure][||||&nbsp;up to {2d5}|&nbsp;{2d5} or more] the following symptoms:\_[!{4d5} UncommonSideeffectsTable>>Implode>>Sort]. [@UncommonSideeffects2MasterTable] [!{1d4} DiseaseAssessment]
+1:{$wizardmessage} {1d100}% of people who used this recipe [|experienced|were cured of][||||&nbsp;up to {2d5}|&nbsp;{2d5} or more] the following symptoms:\_[!{1d10+{2d5}} UncommonSideeffectsTable>>Implode>>Sort]. [@UncommonSideeffects2MasterTable] [!{1d4} DiseaseAssessment]
+1:{$wizardmessage} 1 in {1d249+1} people [|experienced|were cured of][||||&nbsp;up to {2d5}|&nbsp;{2d5} or more] the following symptoms:\_[!{1d20} UncommonSideeffectsTable>>Implode>>Sort]. [@UncommonSideeffects2MasterTable] [!{1d4} DiseaseAssessment]
+1:{$wizardmessage} this may [|cause|cure][||||&nbsp;up to {2d5}|&nbsp;{2d5} or more] the following symptoms:\_[!{1d40} UncommonSideeffectsTable>>Implode>>Sort]. [@UncommonSideeffects2MasterTable] [!{1d4} DiseaseAssessment]
+1:{$wizardmessage} there is a {1d100}% chance this recipe may [|cause|cure][||||&nbsp;up to {2d5}|&nbsp;{2d5} or more] the following symptoms: [!{1d40} UncommonSideeffectsTable>>Implode>>Sort]. [@UncommonSideeffects2MasterTable] [!{1d4} DiseaseAssessment]
 
 Table: UncommonSideeffects2MasterTable
-1:[!{1d8} UncommonSideeffects2]
-1:[!{1d7} UncommonSideeffects2]
-1:[!{1d6} UncommonSideeffects2]
-1:[!{1d5} UncommonSideeffects2]
-1:[!{1d4} UncommonSideeffects2]
+400:[!{4d2} UncommonSideeffects2]
+100:[!{3d2} UncommonSideeffects2]
+25:[!{2d2} UncommonSideeffects2]
 
 Table: UncommonSideeffects2
 Set: uncommonformatting =<br><br><span style='font:10pt Arial'>
 Define: wizardmessage =[@WizardMessageTable]
-Define: assessmentphrase =Do not use if you or a family member are pregnant, nursing, of childbearing age, have a history of or are at risk from [!{$assessmentnumber1} RiskAssessmentTable>>Implode>>Sort]. If negative symptoms [|develop|persist], see [@WhoCanHeal] immediately.
-1:{$uncommonformatting}{$wizardmessage} <u>[!{1d4} FantasyRaces>>Proper>>Implode]</u>, and <u>[!FantasyRaces>>Proper>>Implode]'s</u> have [|a|up to] {1d100}% immunity to [|the|any|1/{1d9+1} of the] effects of this recipe.</li></b></span>
-1:{$uncommonformatting}{$wizardmessage} <u>[!{1d6} Monsters>>Proper>>Implode]</u>, and <u>[!Monsters>>Proper>>Implode]'s</u> have [|a|up to] {1d100}% immunity to [|the|any|1/{1d9+1} of the] effects of this recipe.</li></b></span>
-1:{$uncommonformatting}{$wizardmessage} <u>[!{1d3} CharacterAlignment>>Implode]</u> and <u>[!CharacterAlignment]</u> aligned characters have [|a|up to] {1d100}% immunity to [|the|any|1/{1d9+1} of the] effects of this recipe.</li></b></span>
-1:{$uncommonformatting}{$wizardmessage} <u>[!{1d3} CharacterClass>>Implode]</u> and <u>[!CharacterClass]'s</u> have [|a|up to] {1d100}% immunity to [|the|any|1/{1d9+1} of the] effects of this recipe.</li></b></span>
-1:{$uncommonformatting}{$wizardmessage} <u>[!{1d4} FantasyRaces>>Proper>>Implode]</u>, and <u>[!FantasyRaces>>Proper>>Implode]'s</u> are at {1d100}% more risk to [|the|any|1/{1d9+1} of the] effects of this recipe. [|||||{$assessmentphrase}|]</li></b></span>
-1:{$uncommonformatting}{$wizardmessage} <u>[!{1d6} Monsters>>Proper>>Implode]</u>, and <u>[!Monsters>>Proper>>Implode]'s</u> are at {1d100}% more risk to [|the|any|1/{1d9+1} of the] effects of this recipe. [|||||{$assessmentphrase}|]</li></b></span>
-1:{$uncommonformatting}{$wizardmessage} <u>[!{1d3} CharacterAlignment>>Implode]</u> and <u>[!CharacterAlignment]</u> aligned characters are at {1d100}% more risk to [|the|any|1/{1d9+1} of the] effects of this recipe. [|||||{$assessmentphrase}|]</li></b></span>
-1:{$uncommonformatting}{$wizardmessage} <u>[!{1d3} CharacterClass>>Implode]</u> and <u>[!CharacterClass]'s</u> are at {1d100}% more risk to [|the|any|1/{1d9+1} of the] effects of this recipe. [|||||{$assessmentphrase}|]</li></b></span>
-1:{$uncommonformatting}{$wizardmessage} <u>[@FantasyRaces>>Proper]'s</u> have [|a|up to] {1d100}% immunity to [|the|any|1/{1d9+1} of the] effects of this recipe.</li></b></span>
-1:{$uncommonformatting}{$wizardmessage} <u>[@Monsters>>Proper]'s</u> have [|a|up to] {1d100}% immunity to [|the|any|1/{1d9+1} of the] effects of this recipe.</li></b></span>
-1:{$uncommonformatting}{$wizardmessage} <u>[@CharacterAlignment]</u> aligned characters have [|a|up to] {1d100}% immunity to [|the|any|1/{1d9+1} of the] effects of this recipe.</li></b></span>
-1:{$uncommonformatting}{$wizardmessage} <u>[@CharacterClass]'s</u> have [|a|up to] {1d100}% immunity to [|the|any|1/{1d9+1} of the] effects of this recipe.</li></b></span>
-1:{$uncommonformatting}{$wizardmessage} <u>[@FantasyRaces>>Proper]'s</u> are at {1d100}% more risk to [|the|any|1/{1d9+1} of the] effects of this recipe. [|||||{$assessmentphrase}|]</li></b></span>
-1:{$uncommonformatting}{$wizardmessage} <u>[@Monsters>>Proper]'s</u> are at {1d100}% more risk to [|the|any|1/{1d9+1} of the] effects of this recipe. [|||||{$assessmentphrase}|]</li></b></span>
-1:{$uncommonformatting}{$wizardmessage} <u>[@CharacterAlignment]</u> aligned characters are at {1d100}% more risk to [|the|any|1/{1d9+1} of the] effects of this recipe. [|||||{$assessmentphrase}|]</li></b></span>
-1:{$uncommonformatting}{$wizardmessage} <u>[@CharacterClass]'s</u> are at {1d100}% more risk to [|the|any|1/{1d9+1} of the] effects of this recipe. [|||||{$assessmentphrase}|]</li></b></span>
+1:{$uncommonformatting}<u>[|[!{1d4} FantasyRaces>>Proper>>Implode]</u>, and <u>[!FantasyRaces>>Proper>>Implode]|[!FantasyRaces>>Proper]]'s</u> have [|a|up to] {1d100}% immunity to [|the|any|1/{1d9+1} of the] effects of this recipe.</li></b></span>
+1:{$uncommonformatting}<u>[|[!{1d4} FantasyRaces>>Proper>>Implode]</u>, and <u>[!FantasyRaces>>Proper>>Implode]|[!FantasyRaces>>Proper>>Implode]]'s</u> are at {1d100}% more risk to [|the|any|1/{1d9+1} of the] effects of this recipe.</li></b></span>
+1:{$uncommonformatting}<u>[|[!{1d6} Monsters>>Proper>>Implode]</u>, and <u>[!Monsters>>Proper>>Implode]|[!Monsters>>Proper>>Implode]]'s</u> have [|a|up to] {1d100}% immunity to [|the|any|1/{1d9+1} of the] effects of this recipe.</li></b></span>
+1:{$uncommonformatting}<u>[|[!{1d6} Monsters>>Proper>>Implode]</u>, and <u>[!Monsters>>Proper>>Implode]|[!Monsters>>Proper>>Implode]]'s</u> are at {1d100}% more risk to [|the|any|1/{1d9+1} of the] effects of this recipe.</li></b></span>
+1:{$uncommonformatting}<u>[|[!{1d3} CharacterAlignment>>Proper>>Implode]</u> and <u>[!CharacterAlignment>>Proper]|[!CharacterAlignment>>Proper]]</u> aligned characters have [|a|up to] {1d100}% immunity to [|the|any|1/{1d9+1} of the] effects of this recipe.</li></b></span>
+1:{$uncommonformatting}<u>[|[!{1d3} CharacterAlignment>>Proper>>Implode]</u> and <u>[!CharacterAlignment>>Proper]|[!CharacterAlignment>>Proper]]</u> aligned characters are at {1d100}% more risk to [|the|any|1/{1d9+1} of the] effects of this recipe.</li></b></span>
+1:{$uncommonformatting}<u>[|[!{1d3} CharacterClass>>Proper>>Implode]</u> and <u>[!CharacterClass>>Proper]|[!CharacterClass>>Proper]]'s</u> have [|a|up to] {1d100}% immunity to [|the|any|1/{1d9+1} of the] effects of this recipe.</li></b></span>
+1:{$uncommonformatting}<u>[|[!{1d3} CharacterClass>>Proper>>Implode]</u> and <u>[!CharacterClass>>Proper]|[!CharacterClass>>Proper]]'s</u> are at {1d100}% more risk to [|the|any|1/{1d9+1} of the] effects of this recipe.</li></b></span>
 
 Table: DiseaseAssessment
 Set: diseaseformatting =<br><br><span style='font:10pt Arial'>
 Define: wizardmessage =[@WizardMessageTable]
-Set: Diseasenumber1 ={1d4}
-Set: Diseasenumber2 ={1d10}
-Set: Diseasenumber3 ={1d10}
-96:[!{1d4} DiseaseAssessment]
-8:{$diseaseformatting}{$wizardmessage} each time the victim takes {2d5} or more damage from this recipe, he must make another Fortitude save or be [|||temporarily|permanently] [|blinded|deafened|stunned|confused|fatigued].
-8:{$diseaseformatting}{$wizardmessage} each time the victim takes {{$Diseasenumber1}d{$Diseasenumber2}+{$Diseasenumber3}} or more damage from this recipe, he must make another Fortitude save or [|1/{1d9+1} of all|all] damage incurred is permanent.
-8:{$diseaseformatting}{$wizardmessage} when damaged by this recipe, character must succeed on another saving throw or {{$Diseasenumber1}d{$Diseasenumber2}+{$Diseasenumber3}} points of damage is permanent drain instead.
+8:{$diseaseformatting}{$wizardmessage} each time the victim takes {2d5} or more damage from this recipe, he must make another Fortitude save or [|[|1/{1d9+1} of all|all] damage incurred is permanent.|be [|||temporarily|permanently] [|blinded|deafened|stunned|confused|fatigued].]
+8:{$diseaseformatting}{$wizardmessage} when damaged by this recipe, character must succeed on another saving throw or {{1d4}d{1d10}+{1d10}} points of damage is permanent drain instead.
 8:{$diseaseformatting}{$wizardmessage} the victim must make {2d6} successful Fortitude saving throws in a row to recover from any illnesses caused from this recipe.
 8:{$diseaseformatting}{$wizardmessage} successful saves do not allow the character to recover. Only magical healing can save the character.
 8:{$diseaseformatting}{$wizardmessage} there is a {1d100}% chance that any illnesses contracted from eating this recipe are [|communicable|not communicable]. All players within {1d490+10} feet must make a Fortitude saving roll or risk becoming infected.
@@ -3563,18 +3533,18 @@ Table: BookType
 4:test[||s]
 
 Table: FantasyRaces
-orc
-goblin
-ogre
-giant
-kobold
-doppleganger
 20:human
 10:drow
 10:elf
 10:dwarf
 10:halfling
 8:gnome
+orc
+goblin
+ogre
+giant
+kobold
+doppleganger
 
 Table: CharacterAlignment
 lawful good
@@ -3602,9 +3572,9 @@ wizard
 merchant
 soldier
 farmer
+NPC
 
 Table: UncommonSideeffectsTable
-Shuffle: UncommonSideeffectsTable
 6:inability to cast [|arcane|divine|any] spells
 6:age reversal
 4:albinism
@@ -3801,7 +3771,6 @@ Shuffle: UncommonSideeffectsTable
 1:[|attack|saving|all] rolls [|–|+]{1d5} per serving
 
 Table: RiskAssessmentTable
-Shuffle: RiskAssessmentTable
 AIDS or other autoimmune deficiencies
 Addison's disease
 adenitis
