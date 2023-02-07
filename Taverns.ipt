@@ -2074,17 +2074,18 @@ fantastic
 
 
 Table: WordBuilder
-[[@{2d2} SyllableMaker] >> Proper]
+[[@{2d2} SyllableMaker >> replace /aa/a/ >> replace /ee/e/ >> replace /ii/i/ >> replace /oo/o/ >> replace /uu/u/] >> Upper]
 
 Table: SyllableMaker
-[@RandVowel][@RandConsonant]
-[@RandVowel][@RandVowel][@RandConsonant]
-[@RandConsonant][@RandVowel]
-[@RandConsonant][@RandConsonant][@RandVowel]
+5:[@RandVowel][@RandConsonant]
+5:[@RandConsonant][@RandVowel]
 
 Table: RandConsonant
-20:[|b|c|d|f|g|h|j|k|l|m|n|p|r|s|t|v|w|x|y|z]
-1:qu
+20:[|t|n|s|h|r|l|d|c|ch|m]
+10:[|w|f|g|gh|y|p|ph|b|br|v|k|j]
+1:[|x|xh][@RandVowel]
+1:[|z|zh][@RandVowel]
+1:[|q|qa|qi|qu][@RandVowel]
 
 Table: RandVowel
 [|a|e|i|o|u]
