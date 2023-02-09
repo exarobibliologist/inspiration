@@ -3458,9 +3458,9 @@ Table: WizardMessageTable
 Set: wizardlanguage =[@Language]
 Set: wizardname =[@Get{$wizardlanguage}Word>>Proper]
 100:<b>{$wizardname}'s [@BookType]</b> [|showed|indicated|concluded] that
-15:<b>Personal [@BookType]</b> [|showed|indicated|concluded] that
+25:<b>My Personal [|observations|studies|experiments|tests]</b> have [|shown|indicated|concluded] that 
 10:<b>[|Independant laboratory|Laboratory] [|observations|studies|experiments|tests]</b> have [|shown|indicated|concluded] that
-5:<b>Personal [|observations|studies|experiments|tests]</b> have [|shown|indicated|concluded] that 
+5:<b>Personal [@BookType]</b> [|showed|indicated|concluded] that
 
 Table: UncommonSideeffects
 Shuffle: UncommonSideeffectsTable
@@ -3479,7 +3479,6 @@ Table: UncommonSideeffects2MasterTable
 
 Table: UncommonSideeffects2
 Set: uncommonformatting =<br><br><span style='font:10pt Arial'>
-Define: wizardmessage =[@WizardMessageTable]
 1:{$uncommonformatting}<u>[|[!{1d4} FantasyRaces>>Proper>>Implode]</u>, and <u>[!FantasyRaces>>Proper>>Implode]|[!FantasyRaces>>Proper]]'s</u> have [|a|up to] {1d100}% immunity to [|the|any|1/{1d9+1} of the] effects of this recipe.</li></b></span>
 1:{$uncommonformatting}<u>[|[!{1d4} FantasyRaces>>Proper>>Implode]</u>, and <u>[!FantasyRaces>>Proper>>Implode]|[!FantasyRaces>>Proper>>Implode]]'s</u> are at {1d100}% more risk to [|the|any|1/{1d9+1} of the] effects of this recipe.</li></b></span>
 1:{$uncommonformatting}<u>[|[!{1d6} Monsters>>Proper>>Implode]</u>, and <u>[!Monsters>>Proper>>Implode]|[!Monsters>>Proper>>Implode]]'s</u> have [|a|up to] {1d100}% immunity to [|the|any|1/{1d9+1} of the] effects of this recipe.</li></b></span>
@@ -3767,8 +3766,8 @@ Table: UncommonSideeffectsTable
 1:tropophobia <i>(fear of change)</i>
 1:vestiphobia <i>(fear of clothing)</i>
 1:xerophobia <i>(fear of dryness)</i>
-1:[|skill|ability|all] checks [|–|+]{1d5} per serving
-1:[|attack|saving|all] rolls [|–|+]{1d5} per serving
+1:[|skill|ability|all] checks [|–|+]{1d10} per serving
+1:[|attack|saving|all] rolls [|–|+]{1d10} per serving
 
 Table: RiskAssessmentTable
 AIDS or other autoimmune deficiencies
