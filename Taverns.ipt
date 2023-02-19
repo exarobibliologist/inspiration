@@ -203,10 +203,10 @@ Table: RefillMenu
 
 Table: Drinks
 [|Green|Black|Brown|Floral|Herbal] Tea
-[|Strong|Weak] Coffee
+[|Strong|Weak|Watery] Coffee
 [@Colors >> Proper] [|Ale|Beer]
-[|Spiced |Sour |Red |Rice |||]Wine
-[|Spiced|Dry] Rum
+House [|Spiced |Sour |Red |Rice |||]Wine
+House [|Spiced|Dry] Rum
 Porter
 Mead
 [|Orange|Apple|Grapefruit|Grape] Juice
@@ -1066,14 +1066,13 @@ Define: Coffee1 = [|[@NameSavoryAdj]|[@NameSweetAdj]]
 Define: Coffee2 = [|[@NameSavoryNoun]|[@NameSweetNoun]]
 Define: Coffee3 = [@CoffeeFlav]
 Define: Coffee4 = [@CoffeeType]
-2: {Coffee1} {Coffee2} {Coffee3} {Coffee4}
-5: {Coffee2} {Coffee3} {Coffee4}
+3: {Coffee1} {Coffee2} {Coffee3} {Coffee4}
+10: {Coffee2} {Coffee3} {Coffee4}
 10: {Coffee3} {Coffee4}
-20: {Coffee4}
+1: {Coffee4}
 
 Table: CoffeeType
 Macchiato
-Coffee
 Latte
 Frapuccino
 Capuccino
@@ -1085,6 +1084,15 @@ Mocha
 Mocha Latte
 Mochacchino
 Au Lait
+Americano
+Black Coffee
+Bulletproof Coffee
+Cortado
+Flat White
+Iced Coffee
+Long Black
+Red Eye
+Ristretto
 
 Table: CoffeeFlav
 Dark Chocolate
@@ -1092,6 +1100,7 @@ White Chocolate
 Milk Chocolate
 Dark Roast
 Light Roast
+Caramel
 Hazelnut
 Chestnut
 Pumpkin Spice
