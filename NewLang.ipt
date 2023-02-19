@@ -1,16 +1,21 @@
 Table: WordBuilder
-[[@{2d2} SyllableMaker >> replace /aa/a/ >> replace /ee/e/ >> replace /ii/i/ >> replace /oo/o/ >> replace /uu/u/] >> Proper]
+[@MasterWordTable >> replace /ququ/qu'qu/ >> replace /aa/a'a/ >> replace /ee/e'e/ >> replace /ii/i'i/ >> replace /oo/o'o/ >> replace /uu/u'u/ >> replace /yy/y'y/ >> Proper]
+
+Table: MasterWordTable
+[@SyllableMaker][@{1d2} SyllableMakerMiddle]
 
 Table: SyllableMaker
-5:[@RandVowel][@RandConsonant]
-5:[@RandConsonant][@RandVowel]
+[@RandVowel][@RandConsonant]
+[@RandConsonant][@RandVowel]
+
+Table: SyllableMakerMiddle
+[@RandVowel][@RandConsonant][@RandVowel]
+[@RandConsonant][@RandVowel][@RandConsonant]
 
 Table: RandConsonant
-20:[|t|n|s|h|r|l|d|c|ch|m]
-10:[|w|f|g|gh|y|p|ph|b|br|v|k|j]
-1:[|x|xh][@RandVowel]
-1:[|z|zh][@RandVowel]
-1:[|q|qa|qi|qu][@RandVowel]
+50:[|b|c|d|f|g|h|j|k|l|m|n|p|r|s|t|v|w|y|z]
+1:qu
+1:x
 
 Table: RandVowel
 [|a|e|i|o|u]
