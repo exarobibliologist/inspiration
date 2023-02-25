@@ -1,37 +1,28 @@
 MaxReps:1
 
-Table:MasterGen
-Define: MealCost = (Pick {3d2} Entree for {4d10}sp, Pick {1d2} Entree for {2d10}sp)
-Define: DrinkCost = ({20d10}cp)
-Define: CocktailCost = ({50d10}cp)
-Define: HappyHour = ({4d5} Refills 1/{4d2} Price during Happy Hour from {1d3}-{3d4}pm)
-Define: Meal1 = <h2>Breakfast {MealCost}</h2>[!{3d3} Breakfast >> implode <br>]<br><h3>Breakfast Sides</h3>[!{2d3} BreakfastSides >> implode <br>]<br>[!{2d3} FruitVeggies >> implode <br>]
-Define: Meal2 = <h2>Dinner {MealCost}</h2>[@{2d3} Dinner >> implode <br>]<br><h3>Dinner Sides</h3>[!{2d2} DinnerSides >> implode <br>]<br>[!{2d2} DinnerSides2 >> implode <br>]<br>[!{1d6} FruitVeggies >> implode <br>]
-Define: Drinks = <h3>Drinks {DrinkCost}</h3>[!{2d3} Drinks >> implode <br>]
-Define: Coffee = <h3>Specialty Coffee {CocktailCost} ([@RefillMenu])<br>{HappyHour}</h3> [@3 Coffee >> implode <br>]
-Define: CocktailMenu = <h3>Today's Cocktails {CocktailCost} ([@RefillMenu])<br>{HappyHour}</h3>[@3 Cocktails >> implode <br>]
-<h1>[@TavernName]</h1><hr>Location\: [@CityDescriptions]<hr>{$Meal1}<hr>{$Meal2}<hr>{$Drinks}<hr>{Coffee}<hr>{CocktailMenu}<hr>
+Table: MasterGenMasterGen
+[@MasterGen]
 
 ; -------------------------------------------------------------------
 ; ----------------------------- Taverns -----------------------------
 ; -------------------------------------------------------------------
 
 Table:TavernName
-5:[@WordBuilder]'s Tavern
-5:[@WordBuilder]'s [@Professions >> Proper]'s [@TavernTitles >> Proper]
-5:[@WordBuilder]'s [@FantasyNouns >> Proper]'s [@TavernTitles >> Proper]
-5:[@WordBuilder]'s [@Positives >> Proper] [@TavernTitles >> Proper]
-5:[@WordBuilder]'s [@Odd >> Proper] [@TavernTitles >> Proper]
-5:[@WordBuilder]'s [@Emotions >> Proper] [@TavernTitles >> Proper]
-5:[@WordBuilder]'s [@colors >> Proper] [@TavernTitles >> Proper]
-5:[@WordBuilder]'s [@TavernAdjPatrons >> Proper] [@TavernTitles >> Proper]
-5:[@WordBuilder]'s [@Professions >> Proper]'s [@TavernObjects >> Proper] [@TavernTitles >> Proper]
-5:[@WordBuilder]'s [@FantasyNouns >> Proper]'s [@TavernObjects >> Proper] [@TavernTitles >> Proper]
-5:[@WordBuilder]'s [@Positives >> Proper] [@TavernObjects >> Proper] [@TavernTitles >> Proper]
-5:[@WordBuilder]'s [@Odd >> Proper] [@TavernObjects >> Proper] [@TavernTitles >> Proper]
-5:[@WordBuilder]'s [@Emotions >> Proper] [@TavernObjects >> Proper] [@TavernTitles >> Proper]
-5:[@WordBuilder]'s [@colors >> Proper] [@TavernObjects >> Proper] [@TavernTitles >> Proper]
-5:[@WordBuilder]'s [@TavernAdjPatrons >> Proper] [@TavernObjects >> Proper] [@TavernTitles >> Proper]
+10:[@WordBuilder]'s Tavern
+10:[@WordBuilder]'s [@Professions >> Proper] [@TavernTitles >> Proper]
+10:[@WordBuilder]'s [@FantasyNouns >> Proper] [@TavernTitles >> Proper]
+10:[@WordBuilder]'s [@Positives >> Proper] [@TavernTitles >> Proper]
+10:[@WordBuilder]'s [@Odd >> Proper] [@TavernTitles >> Proper]
+10:[@WordBuilder]'s [@Emotions >> Proper] [@TavernTitles >> Proper]
+10:[@WordBuilder]'s [@colors >> Proper] [@TavernTitles >> Proper]
+10:[@WordBuilder]'s [@TavernAdjPatrons >> Proper] [@TavernTitles >> Proper]
+10:[@WordBuilder]'s [@Professions >> Proper] [@TavernObjects >> Proper] [@TavernTitles >> Proper]
+10:[@WordBuilder]'s [@FantasyNouns >> Proper] [@TavernObjects >> Proper] [@TavernTitles >> Proper]
+10:[@WordBuilder]'s [@Positives >> Proper] [@TavernObjects >> Proper] [@TavernTitles >> Proper]
+10:[@WordBuilder]'s [@Odd >> Proper] [@TavernObjects >> Proper] [@TavernTitles >> Proper]
+10:[@WordBuilder]'s [@Emotions >> Proper] [@TavernObjects >> Proper] [@TavernTitles >> Proper]
+10:[@WordBuilder]'s [@colors >> Proper] [@TavernObjects >> Proper] [@TavernTitles >> Proper]
+10:[@WordBuilder]'s [@TavernAdjPatrons >> Proper] [@TavernObjects >> Proper] [@TavernTitles >> Proper]
 The [@Professions >> Proper]'s [@TavernTitles >> Proper]
 The [@FantasyNouns >> Proper]'s [@TavernTitles >> Proper]
 The [@Positives >> Proper] [@TavernTitles >> Proper]
@@ -52,9 +43,10 @@ The [@TavernAdjPatrons >> Proper] [@TavernObjects >> Proper] [@TavernTitles >> P
 ; -------------------------------------------------------------------
 
 Table: CityDescriptions
-a poor residential district near [@CityPlaces]
-a middle class residential district near [@CityPlaces]
-an upper class residential district near [@CityPlaces]
+a poor district near [@CityPlaces] {@BaseValue==(1d5)}
+a Middle Class district near [@CityPlaces] {@BaseValue==(3d5)}
+an Upper Class district near [@CityPlaces] {@BaseValue==(5d5)}
+an Elite district near [@CityPlaces] {@BaseValue==(10d5)}
 
 Table: CityPlaces
 the palace district
@@ -132,6 +124,7 @@ Beaver
 Boar
 Chicken
 Deer
+Dragon
 Duck
 Fish
 Goat
@@ -154,6 +147,7 @@ Squirrel
 Otter
 Venison
 Wolf
+Wyvern
 
 Table: DinnerSides
 Dumplings
@@ -198,15 +192,15 @@ Spinach
 ; -------------------------------------------------------------------
 
 Table: RefillMenu
-4:{1d5} Refills Free
-32:{2d5} Refills 1/2 Price
+4:{@BaseValue} Refills Free
+32:{round({{10d10}/{@BaseValue}})} Refills 1/2 Price
 
 Table: Drinks
 [|Green|Black|Brown|Floral|Herbal] Tea
-[|Strong|Weak|Watery] Coffee
+[|Strong|Weak] Coffee
 [@Colors >> Proper] [|Ale|Beer]
-House [|Spiced |Sour |Red |Rice |||]Wine
-House [|Spiced|Dry] Rum
+[|Spiced |Sour |Red |Rice |||]Wine
+[|Spiced|Dry] Rum
 Porter
 Mead
 [|Orange|Apple|Grapefruit|Grape] Juice
@@ -1018,7 +1012,7 @@ Tombstone
 
 Table: Suffix
 25:
-1:(comes in a souvenir glass that you can keep! for an extra {1d20}sp)
+1:(comes in a souvenir glass that you can keep! for an extra {@BaseValue}sp)
 1:with [@Adds]
 1:on the Rocks
 1:on Ice
@@ -1062,10 +1056,10 @@ a splash of [@Booze]
 ; -----------------------------------------------------------------
 
 Table: Coffee
-Define: Coffee1 = [|[@NameSavoryAdj]|[@NameSweetAdj]]
-Define: Coffee2 = [|[@NameSavoryNoun]|[@NameSweetNoun]]
-Define: Coffee3 = [@CoffeeFlav]
-Define: Coffee4 = [@CoffeeType]
+Define: Coffee1 = [|[!NameSavoryAdj]|[!NameSweetAdj]]
+Define: Coffee2 = [|[!NameSavoryNoun]|[!NameSweetNoun]]
+Define: Coffee3 = [!CoffeeFlav]
+Define: Coffee4 = [!CoffeeType]
 3: {Coffee1} {Coffee2} {Coffee3} {Coffee4}
 10: {Coffee2} {Coffee3} {Coffee4}
 10: {Coffee3} {Coffee4}
@@ -1085,7 +1079,7 @@ Mocha Latte
 Mochacchino
 Au Lait
 Americano
-Black Coffee
+Dark Roast
 Bulletproof Coffee
 Cortado
 Flat White
@@ -1142,7 +1136,6 @@ Table: NameSavoryNoun
 Feast
 Beast
 Hero
-Boy
 Hunk
 Daredevil
 Pioneer
@@ -1161,7 +1154,6 @@ Rhino
 Ranch
 Hercules
 Bruno
-Man
 Macho Man
 Knight
 King
@@ -2102,3 +2094,21 @@ Table: RandConsonant
 
 Table: RandVowel
 [|a|e|i|o|u]
+
+; -------------------------------------------------------------------
+; -------------------------- The Last Main Table ---------------------------
+; -------------------------------------------------------------------
+
+Table:MasterGen
+Define: MealCost = (Pick {3d2} Entree for {{4d10}*{@BaseValue}}cp, Pick {1d2} Entree for {{2d10}*{@BaseValue}}cp)
+Define: MealCost2 = {{4d10}*{@BaseValue}*{ExtraCost}}cp
+Define: DrinkCost = ({{2d10}*{@BaseValue}}cp)
+Define: CoffeeCost = ({{7d10}*{@BaseValue}}cp)
+Define: CocktailCost = ({{10d10}*{@BaseValue}}cp)
+Define: HappyHour = ({1d5} Refills 1/{@BaseValue} Price during Happy Hour from {1d3}-{3d4}pm)
+Define: Meal1 = <h2>Breakfast {MealCost}</h2>[!{3d3} Breakfast >> implode <br>]<br><h3>Breakfast Sides</h3>[!{2d3} BreakfastSides >> implode <br>]<br>[!{2d3} FruitVeggies >> implode <br>]
+Define: Meal2 = <h2>Dinner {MealCost}</h2>[@{2d3} Dinner >> implode <br>]<br><h3>Dinner Sides</h3>[!{2d2} DinnerSides >> implode <br>]<br>[!{2d2} DinnerSides2 >> implode <br>]<br>[!{1d6} FruitVeggies >> implode <br>]
+Define: Drinks = <h3>Drinks {DrinkCost}</h3>[!{2d3} Drinks >> implode <br>]
+Define: Coffee = <h3>Specialty Coffee {CoffeeCost}<br>{HappyHour}</h3> [@3 Coffee >> implode <br>]
+Define: CocktailMenu = <h3>Today's Cocktails {CocktailCost}<br>{HappyHour}</h3>[@3 Cocktails >> implode <br>]
+<h1>[@TavernName]</h1><hr>Location\: [@CityDescriptions]<hr>{$Meal1}<hr>{$Meal2}<hr>{$Drinks}<hr>{Coffee}<hr>{CocktailMenu}<hr>
