@@ -1,8 +1,9 @@
-Header: <center><span style='font:24pt Arial'>Instant Plot</span><br><span style='font:7pt Arial'><center><b>Do not confuse with a pressure cooker with a similar name.<br>This material is Open Game Content, and is licensed for public use under the terms of the Open Game License v1.0a.</b><br>This generator helps you design a plot for a game by pre-generating elements that you can weave into a story. The Setting determines where the story takes place. The Tone determines what style of storytelling the campaign has. Things generated can introduce interesting elements into the story.</span></center>
+Header: <center><span style='font:24pt Arial'>Instant Plot</span><br><span style='font:7pt Arial'><center><b>Do not confuse with a pressure cooker with a similar name.<br>This material is Open Game Content, and is licensed for public use under the terms of the Open Game License v1.0a.</b></span><br><span style='font:9pt Arial'>This generator is designed to be used with OpenAI. Copy/paste the output of the generator directly into the window at chat.openai.com/chat and the AI can design you a campaign in seconds!</span></center>
+
+MaxReps:1
 
 Table: Instant
-<b>Setting</b> = [@Setting]<br><b>Tone</b> = [@Tone]<br><b>Population</b> = [@Population]<br><b>Things</b> = [!2 Things >> Sort >> Implode]<br><b>Other Things</b> = [!5 Other >> Sort >> Implode]
-###<br><b>Actions</b> = [!5 Actions >> Sort >> Implode]
+<b>Setting</b> = [@Setting]<br><b>Tone</b> = [@Tone]<br><b>Population</b> = [@Population]<br><b>Things</b> = [!2 Things >> Sort >> Implode]<br><b>Other Things</b> = [!5 Other >> Sort >> Implode]<br><b>Actions</b> = [!5 Actions >> Sort >> Implode]<br><br><b>Prompt:</b> Write a tabletop RPG campaign in this Setting, with this Tone, that uses the Things provided as plot points, and Actions that can be used to solve the plot. It must be 1000 words or longer.
 
 Table: Setting
 Alien Occupied Earth
