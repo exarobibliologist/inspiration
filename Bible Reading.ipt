@@ -1,70 +1,70 @@
 Table: BibleReading
-[!{3d2} RandChapter >> implode<br>]
+[!{3d2} RandChapter >> implode ; ]
 
 Table: RandChapter
-Genesis {1d50}
-Exodus {1d40}
-Leviticus {1d27}
-Numbers {1d36}
-Deuteronomy {1d34}
-Joshua {1d24}
-Judges {1d21}
+Gen {1d50}
+Ex {1d40}
+Lev {1d27}
+Num {1d36}
+Deut {1d34}
+Jos {1d24}
+Jud {1d21}
 Ruth {1d4}
-1 Samuel {1d31}
-2 Samuel {1d24}
-1 Kings {1d22}
-2 Kings {1d25}
-1 Chronicles {1d29}
-2 Chronicles {1d36}
+1 Sam {1d31}
+2 Sam {1d24}
+1 Ki {1d22}
+2 Ki {1d25}
+1 Chr {1d29}
+2 Chr {1d36}
 Ezra {1d10}
-Nehemiah {1d13}
-Esther {1d10}
+Neh {1d13}
+Est {1d10}
 Job {1d42}
-Psalms {1d150}
-Proverbs {1d31}
-Ecclesiastes {1d12}
+Ps {1d150}
+Pro {1d31}
+Eccl {1d12}
 Song of Solomon {1d8}
-Isaiah {1d66}
-Jeremiah {1d52}
-Lamentations {1d5}
-Ezekiel {1d48}
-Daniel {1d12}
-Hosea {1d14}
+Isa {1d66}
+Jer {1d52}
+Lam {1d5}
+Eze {1d48}
+Dan {1d12}
+Hos {1d14}
 Joel {1d3}
 Amos {1d9}
-Obadiah 1
-Jonah {1d4}
-Micah {1d7}
-Nahum {1d3}
-Habakkuk {1d3}
-Zephaniah {1d3}
-Haggai {1d2}
-Zechariah {1d14}
-Malachi {1d4}
-Matthew {1d28}
+Oba 1
+Jon {1d4}
+Mic {1d7}
+Nah {1d3}
+Hab {1d3}
+Zeph {1d3}
+Hag {1d2}
+Zech {1d14}
+Mal {1d4}
+Mat {1d28}
 Mark {1d16}
 Luke {1d24}
 John {1d21}
 Acts {1d28}
-Romans {1d16}
-1 Corinthians {1d16}
-2 Corinthians {1d13}
-Galatians {1d6}
-Ephesians {1d6}
-Philippians {1d4}
-Colossians {1d4}
-1 Thessalonians {1d5}
-2 Thessalonians {1d3}
-1 Timothy {1d6}
-2 Timothy {1d4}
-Titus {1d3}
-Philemon 1
-Hebrews {1d13}
+Rom {1d16}
+1 Cor {1d16}
+2 Cor {1d13}
+Gal {1d6}
+Eph {1d6}
+Phil {1d4}
+Col {1d4}
+1 Ths {1d5}
+2 Ths {1d3}
+1 Tim {1d6}
+2 Tim {1d4}
+Tit {1d3}
+Phil 1
+Heb {1d13}
 James {1d5}
-1 Peter {1d5}
-2 Peter {1d3}
+1 Pet {1d5}
+2 Pet {1d3}
 1 John {1d5}
 2 John 1
 3 John 1
 Jude 1
-Revelation {1d22}
+Rev {1d22}
