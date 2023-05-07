@@ -1,7 +1,24 @@
 MaxReps:1
 
-Table: MasterGenMasterGen
-[@MasterGen]
+Table:MasterGen
+Set: BreakfastOne = {1d10}
+Set: BFMult = {2d2}
+Set: BreakfastDiscount = {1d{BreakfastOne}}
+Set: DinnerOne = {1d10}
+Set: DinMult = {2d2}
+Set: DinnerDiscount = {1d{DinnerOne}}
+Set: BreakfastCost = 1 Entree for {BreakfastOne}sp, {BFMult} Entree for {{{BreakfastOne}*{BFMult}}-{BreakfastDiscount}}sp
+Set: DinnerCost = 1 Entree for {DinnerOne}sp, {DinMult} Entree for {{{DinnerOne}*{DinMult}}-{DinnerDiscount}}sp
+Define: Meal1 = <h2>Breakfast<br>{BreakfastCost}</h2>[!{3d3} Breakfast >> implode <br>]<br><h3>Breakfast Sides</h3>[!{2d3} BreakfastSides >> implode <br>]<br>[!{2d3} FruitVeggies >> implode <br>]
+Define: Meal2 = <h2>Dinner<br>{DinnerCost}</h2>[@{2d3} Dinner >> implode <br>]<br><h3>Dinner Sides</h3>[!{2d2} DinnerSides >> implode <br>]<br>[!{2d2} DinnerSides2 >> implode <br>]<br>[!{1d6} FruitVeggies >> implode <br>]
+Define: DrinkCost = {20d10}cp
+Define: CocktailCost = {50d10}cp
+Define: Refills = {2d2} Refills 1/2 Price
+Define: HappyHour = {4d5} Refills 1/{4d2} Price during Happy Hour from {1d3}-{4d2}pm
+Define: Drinks = <h2>Drinks for {DrinkCost}</h2>[!{2d3} Drinks >> implode <br>]
+Define: Coffee = <h2>Specialty Coffee for {CocktailCost}<br>{Refills}<br>{HappyHour}</h2> [@3 Coffee >> implode <br>]
+Define: CocktailMenu = <h2>Today's Cocktails for {CocktailCost}<br>{Refills}<br>{HappyHour}</h2>[@3 Cocktails >> implode <br>]
+<h1>[@TavernName]</h1><hr>Location\: [@CityDescriptions]<hr>{$Meal1}<hr>{$Meal2}<hr>{$Drinks}<hr>{Coffee}<hr>{CocktailMenu}<hr>
 
 ; -------------------------------------------------------------------
 ; ----------------------------- Taverns -----------------------------
@@ -43,10 +60,10 @@ The [@TavernAdjPatrons >> Proper] [@TavernObjects >> Proper] [@TavernTitles >> P
 ; -------------------------------------------------------------------
 
 Table: CityDescriptions
-a poor district near [@CityPlaces] {@BaseValue==(1d5)}
-a Middle Class district near [@CityPlaces] {@BaseValue==(3d5)}
-an Upper Class district near [@CityPlaces] {@BaseValue==(5d5)}
-an Elite district near [@CityPlaces] {@BaseValue==(10d5)}
+a poor district near [@CityPlaces]
+a Middle Class district near [@CityPlaces]
+an Upper Class district near [@CityPlaces]
+an Elite district near [@CityPlaces]
 
 Table: CityPlaces
 the palace district
@@ -190,10 +207,6 @@ Spinach
 ; -------------------------------------------------------------------
 ; ------------------------ Drinks -----------------------------------
 ; -------------------------------------------------------------------
-
-Table: RefillMenu
-4:{@BaseValue} Refills Free
-32:{round({{10d10}/{@BaseValue}})} Refills 1/2 Price
 
 Table: Drinks
 [|Green|Black|Brown|Floral|Herbal] Tea
@@ -2094,21 +2107,3 @@ Table: RandConsonant
 
 Table: RandVowel
 [|a|e|i|o|u]
-
-; -------------------------------------------------------------------
-; -------------------------- The Last Main Table ---------------------------
-; -------------------------------------------------------------------
-
-Table:MasterGen
-Define: MealCost = (Pick {3d2} Entree for {{4d10}*{@BaseValue}}cp, Pick {1d2} Entree for {{2d10}*{@BaseValue}}cp)
-Define: MealCost2 = {{4d10}*{@BaseValue}*{ExtraCost}}cp
-Define: DrinkCost = ({{2d10}*{@BaseValue}}cp)
-Define: CoffeeCost = ({{7d10}*{@BaseValue}}cp)
-Define: CocktailCost = ({{10d10}*{@BaseValue}}cp)
-Define: HappyHour = ({1d5} Refills 1/{@BaseValue} Price during Happy Hour from {1d3}-{3d4}pm)
-Define: Meal1 = <h2>Breakfast {MealCost}</h2>[!{3d3} Breakfast >> implode <br>]<br><h3>Breakfast Sides</h3>[!{2d3} BreakfastSides >> implode <br>]<br>[!{2d3} FruitVeggies >> implode <br>]
-Define: Meal2 = <h2>Dinner {MealCost}</h2>[@{2d3} Dinner >> implode <br>]<br><h3>Dinner Sides</h3>[!{2d2} DinnerSides >> implode <br>]<br>[!{2d2} DinnerSides2 >> implode <br>]<br>[!{1d6} FruitVeggies >> implode <br>]
-Define: Drinks = <h3>Drinks {DrinkCost}</h3>[!{2d3} Drinks >> implode <br>]
-Define: Coffee = <h3>Specialty Coffee {CoffeeCost}<br>{HappyHour}</h3> [@3 Coffee >> implode <br>]
-Define: CocktailMenu = <h3>Today's Cocktails {CocktailCost}<br>{HappyHour}</h3>[@3 Cocktails >> implode <br>]
-<h1>[@TavernName]</h1><hr>Location\: [@CityDescriptions]<hr>{$Meal1}<hr>{$Meal2}<hr>{$Drinks}<hr>{Coffee}<hr>{CocktailMenu}<hr>
