@@ -3,14 +3,16 @@ MaxReps:1
 Table:MasterGen
 Set: BreakfastOne = {1d10}
 Set: BFMult = {2d2}
+Set: BFSides = {1d3}
 Set: BreakfastDiscount = {1d{BreakfastOne}}
 Set: DinnerOne = {1d10}
 Set: DinMult = {2d2}
+Set: DinSides = {1d3}
 Set: DinnerDiscount = {1d{DinnerOne}}
-Set: BreakfastCost = 1 Entree for {BreakfastOne}sp, {BFMult} Entree for {{{BreakfastOne}*{BFMult}}-{BreakfastDiscount}}sp
-Set: DinnerCost = 1 Entree for {DinnerOne}sp, {DinMult} Entree for {{{DinnerOne}*{DinMult}}-{DinnerDiscount}}sp
-Define: Meal1 = <h2>Breakfast<br>{BreakfastCost}</h2>[!{3d3} Breakfast >> implode <br>]<br><h3>Breakfast Sides</h3>[!{2d3} BreakfastSides >> implode <br>]<br>[!{2d3} FruitVeggies >> implode <br>]
-Define: Meal2 = <h2>Dinner<br>{DinnerCost}</h2>[@{2d3} Dinner >> implode <br>]<br><h3>Dinner Sides</h3>[!{2d2} DinnerSides >> implode <br>]<br>[!{2d2} DinnerSides2 >> implode <br>]<br>[!{1d6} FruitVeggies >> implode <br>]
+Set: BreakfastCost = 1 Entree and {BFSides} Sides for {BreakfastOne}sp<br>{BFMult} Entree and {{BFMult}*{BFSides}} sides for {{{BreakfastOne}*{BFMult}}-{BreakfastDiscount}}sp
+Set: DinnerCost = 1 Entree and {DinSides} sides for {DinnerOne}sp<br>{DinMult} Entree and {{DinMult}*{DinSides}} sides for {{{DinnerOne}*{DinMult}}-{DinnerDiscount}}sp
+Define: Meal1 = <h2>Breakfast<br>{BreakfastCost}</h2><h3>Breakfast Entrees</h3>[!{3d3} Breakfast >> implode <br>]<br><h3>Breakfast Sides</h3>[!{2d3} BreakfastSides >> implode <br>]<br>[!{2d3} FruitVeggies >> implode <br>]
+Define: Meal2 = <h2>Dinner<br>{DinnerCost}</h2><h3>Dinner Entrees</h3>[@{2d3} Dinner >> implode <br>]<br><h3>Dinner Sides</h3>[!{2d2} DinnerSides >> implode <br>]<br>[!{2d2} DinnerSides2 >> implode <br>]<br>[!{1d6} FruitVeggies >> implode <br>]
 Define: DrinkCost = {20d10}cp
 Define: CocktailCost = {50d10}cp
 Define: Refills = {2d2} Refills 1/2 Price
