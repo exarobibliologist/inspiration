@@ -1,3 +1,7 @@
+Header: <center><span style='font:24pt Arial'>Daily Bible Reading</span></center>
+
+MaxReps:1
+
 Table: BibleReading
 [!{3d2} RandChapter >> implode ; ]
 
