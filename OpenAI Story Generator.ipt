@@ -1,0 +1,398 @@
+Table: PasteThisIntoOpenAI
+Give me some story suggestions I can start writing, the genre should be \[Genre\] and about \[Context\]. Start giving me suggestions on how I can start writing and slowly progress the story and then some suggestions of the plot. Give possible branches as well. When creating the output or generating the text, make sure to be as verbose, vivid and descriptive as possible, make sure to use web novel style of writing.<br><br>Here's an example of the output:<br><br>\[Output\]<br>Novel Name:<br>Novel Genre:<br><br>Arc Name:<br>- Lengthy description of the first arc.<br>- Spanning sub-arcs and their titles, descriptions of happenings.<br>- Suggested chapter count for the sub-arc including mini arcs within the sub-arcs.<br><br>List of characters introduced in the arc:<br>- Name: Backstory, appearance, small character sheet.<br>List of challenges to create:<br>- Title of the challenge, description of the challenge<br>List of over-arching plots to start cooking:<br>- Title of the challenge, description of the challenge<br><br>Writer Tips:<br><br><br>First, generate the first arc.<br><br>\[Genre\] = [@Tone], [@Setting]<br>\[Context\] = [@{3d3} Things >> Sort >> Implode]
+
+Table: Setting
+Alien Occupied Earth
+All Supers World
+Alternate history
+Ancient Egypt
+Ape World
+Arabian Nights
+Archaic/Biblical
+Arkship
+Artificial World
+Atlantis
+Barbarian Europe
+Bizarro World
+Boston MA, circa {1d400 + 1630}
+Camping Out
+City Under Siege
+Classical (Greek/Roman/Peloponnesian)
+Cloud City
+Cold War
+Contemporary
+Correctional System
+Cyberpunk
+Darkworld
+Dawn of Civilization
+Depopulated Earth
+Desert Planet
+Dragon
+Dreamworld
+Dungeon
+Dying World
+Dystopia
+Early Space Exploration
+Edwardian Era
+Elizabethan England
+Fallen Civilization
+Farm
+Festival
+First Alien Contact
+Forest
+French Revolution
+Frontier
+Frozen Wasteland
+Future Earth
+Galactic Empires
+Golden Age of Comics
+Grimm's Fairy Tales
+Historical
+Industrial Revolution
+Institution/Institutionalized
+Interdimensional Space
+Isolated Space Probe
+Jungle World
+Limbo
+London
+Lost Civilization
+Lost/Stranded
+Mars
+Mechanized Planet
+Medieval
+Microworld
+Military Installation
+Modern Day Las Vegas
+Modern Day Amusement Park
+Modern Day Milwaukee
+Moon
+Mystical Orient
+Near Future
+Neverland/Childworld
+Orwellian Future
+Outpost
+Post-Apocalyptic
+Pre-European Americas
+Psychic Near Future
+Realm of the Gods
+Remote Future
+Renaissance
+Resort/Spa
+School of Magic
+Sea Adventures
+Skyscraper
+Snowed-in Town
+Space Colony
+Spinning Restaurant
+Steampunk
+Stone Age
+Suburban Retail Center
+Sword & Sorcery
+Tiny People
+Tokyo
+Traveling Circus
+Treetop Civilization
+Tropical Paradise
+Underground
+Underwater
+Victorian Era
+Viking Explorers
+Virtual Reality
+War
+World War [||I|II|III|]
+Wild West
+Wilderness
+Wildlife Preserve
+World Government HQ
+Your Place
+
+Table: Tone
+Action/Adventure
+B-Movie
+Campy
+Conspiracy Theory
+Despair
+Epic
+Fantasy
+Gothic
+Heroic
+Horror
+Intrigue
+Mystery
+Mythic
+Parable/Moralistic
+Pulp
+Realistic
+Romance
+Suspense
+Swashbuckling
+Tactical
+
+Table: Things
+Advanced Intelligence
+Afterlife
+Alien
+Alliance
+Alternate History
+Animal
+Anthropomorphic Objects
+Artificial Intelligence
+Atomic Monster
+Big Business
+Blood
+Bogeyman
+Castle
+Church
+Computers
+Conspiracy
+Correctional System
+Dam
+Demon
+Deity
+Disaster
+Disease
+Dragons
+Dungeon
+Elves
+Empire
+Epic Heroes
+Espionage
+Exploration
+Fairy
+Fire
+Frontier
+Furry
+Gang Warfare
+Garbage
+Genetic Engineering
+Ghost Town
+Giant
+Heaven & Hell
+High Magic
+Hotel
+Immortals
+Insanity
+Invaders/Outsiders
+Limbo
+Lost Tribe
+Low Magic
+Mass Transit
+Mecha
+Military
+Monkeys
+Movie Monsters
+Music
+Mutants/Mutations
+Mysterious Energy
+Nanotech
+Neutral Ground
+Neutrality
+Ninjas
+Occult
+Organized Crime
+Pirate
+Political Intrigue
+Pollution
+Powers
+Prophesy
+Psychic Ability
+Realm of the Gods
+Robots/Automatons
+Royal Bloodline
+Ruins
+Sci-Fi
+Secret Society
+Serial Killer
+Ship
+Space
+Special Ops
+Spy
+Steampunk
+Street Gangs
+Stronghold
+Suburb
+Supernatural
+Supers
+Territory
+Terrorist
+Time Travel
+Trade
+Troubled Youth
+Ultimate Weapon
+Undead
+Underground Pariahs
+Unusual Phenomena
+Vampire
+Virtual Reality
+War
+Water
+Werewolf
+Wild Animals
+Wilderness
+World Domination
+
+Table: Other
+Armory
+Artifact
+Auditorium
+Blackmail
+Brains
+Bugs
+Burrow
+Business Office
+Cannonfodder
+Child
+Confinement
+Cover Up
+Crash Site
+Disguise
+Docks
+Door
+Dreams
+Duel
+Elected	Official
+Election
+Elvis
+Faith
+Farm
+Festival
+Fight
+Gambling
+Government Agents
+Government Office
+Grave
+Grudge
+Guard
+Guide
+Heir
+Heist
+Hired Muscle
+Honor
+Horseman
+Hostage
+Hunt
+Illness
+Intrigue
+Invention
+Island
+Janitor
+Kingpin
+Lair
+Launch
+Law	Enforcement
+Lawyer
+Leader
+Marketplace	
+Martial	Arts
+Mask	
+Mechanic	
+Mercenaries	
+Mindless Horde
+Mob	
+Murder	
+Mystery	
+Natural	Disaster
+Newborn	
+Nightclub/Rave	
+Noble	
+Note	
+Park	
+People	
+Poison	
+Political Group
+Prayer	
+Prisoner	
+Prostitute	
+Rebels	
+Red	Herring
+Religious Fanatics
+Research
+Restaurant
+Revenge
+Road
+Romance
+School
+Secret
+Security Forces
+Sleep
+Soldier
+Sporting Event
+Store
+Student
+Survival
+Tavern
+Teacher
+Theatre
+Town Square
+Traitor
+Travel
+Treasure
+Treaty
+Untimely Death
+Vehicle
+Warehouse
+Wedding
+
+Table: Population
+1: <20
+1: 100
+1: 600
+1: 3,000
+1: 15,000
+1: 80,000
+1: 400,000
+1: 2,000,000
+1: 10,000,000
+1: >10,000,000
+
+Table: Actions
+Alert
+Assassinate
+Blackmail
+Brainwash
+Build
+Celebrate
+Clean
+Clear
+Collect
+Convince
+Cover Up
+Defend
+Deliver
+Destroy
+Discover
+Disguise
+Duel
+Escape
+Explore
+Fight
+Fire
+Guard
+Guide
+Hide
+Humiliate
+Hunt
+Infiltrate
+Intimidate
+Kidnap
+Launch
+Liberate
+Lose
+Mimic
+Murder
+Negotiate
+Poison
+Purchase
+Recover
+Reject
+Rescue
+Research
+Scare
+Seduce
+Spy
+Steal
+Survive
+Teach
+Trade
+Travel
+Win
