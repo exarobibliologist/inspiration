@@ -3,7 +3,7 @@ Header: <center><span style='font:24pt Arial'>Instant Plot</span><br><span style
 MaxReps:1
 
 Table: Instant
-<b>Setting</b> = [@Setting];<br><b>Tone</b> = [@Tone];<br><b>Population</b> = [@Population];<br><b>Things</b> = [!{2d4} Things >> Sort >> Implode];<br><b>Actions</b> = [!{2d4} Actions >> Sort >> Implode];<br><br><b>Prompt:</b> Write a tabletop RPG campaign in this Setting, with this Tone, that uses the Things provided as plot points, and Actions that can be used to solve the plot. It must be 2000 words or longer.
+<b>Setting</b> = [@Setting];<br><b>Tone</b> = [@Tone];<br><b>Population</b> = [@Population];<br><b>Things</b> = [!{2d4} Things >> Sort >> Implode];<br><b>Actions</b> = [!{4d4} Actions >> Sort >> Implode];<br><br><b>Prompt:</b> Write a tabletop RPG campaign in this Setting, with this Tone, that uses the Things provided as plot points, and Actions that can be used to solve the plot. It must be 2000 words or longer.
 
 Table: Setting
 Alien Occupied Earth
