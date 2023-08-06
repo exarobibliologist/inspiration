@@ -3,7 +3,7 @@ Header: <center><span style='font:24pt Arial'>Instant Plot</span><br><span style
 MaxReps:1
 
 Table: Instant
-Write a tabletop RPG campaign that can be played by 4-10 players, The genre should be \[\Setting\] and about \[\Tone\]. Start giving me suggestions on how the campaign starts and slowly progress the story, using \[\Things\]\ to give some suggestions of the plot, using \[\Actions\]\ to drive the plot. Give possible branches as well. When creating the output or generating the text, make sure to be as verbose, vivid and descriptive as possible.<br><br><b>Setting</b> = [@Setting];<br><b>Tone</b> = [@Tone];<br><b>Things</b> = [!{3d4} Things >> Sort >> Implode]<br><b>Other Things</b> = [!{3d4} Other >> Sort >> Implode];<br><b>Actions</b> = [!{5d4} Actions >> Sort >> Implode]
+Write a tabletop RPG campaign that can be played by 4-10 players, The genre should be \[\Setting\] and about \[\Tone\]. Start giving me suggestions on how the campaign starts and slowly progress the story, using \[\Things\]\ to give some suggestions of the plot, using \[\Actions\]\ to drive the plot.<br><br>Give possible branches as well.<br><br>At each branch, include a possible ChatGPT prompt that can be used later to generate even more detail.<br><br>When creating the output or generating the text, make sure to be as verbose, vivid and descriptive as possible.<br><br><b>Setting</b> = [@Setting];<br><b>Tone</b> = [@Tone];<br><b>Things</b> = [!{3d4} Things >> Sort >> Implode]<br><b>Other Things</b> = [!{3d4} Other >> Sort >> Implode];<br><b>Actions</b> = [!{5d4} Actions >> Sort >> Implode]
 
 Table: Setting
 A dark forest full of traps and magical creatures
@@ -1245,18 +1245,6 @@ Untimely Death
 Vehicle
 Warehouse
 Wedding
-
-Table: Population
-1: <20
-1: 100
-1: 600
-1: 3,000
-1: 15,000
-1: 80,000
-1: 400,000
-1: 2,000,000
-1: 10,000,000
-1: >10,000,000
 
 Table: Actions
 Alert
