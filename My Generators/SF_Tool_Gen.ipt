@@ -1,0 +1,284 @@
+Table: Generate
+[@GimmeATool >> Proper]
+
+Table: GimmeATool
+[@Descriptor] [@GeneralTool]
+[@Descriptor] [@SpecificTool]
+[@SFObject] [@GeneralTool]
+[@SFObject] [@SpecificTool]
+[@Biological] [@GeneralTool]
+[@Biological] [@Generic]
+[@MedPrefix][@GeneralTool]
+[@MedPrefix][@Generic]
+[@MedPrefix][@Suffix]
+[@GenPrefix][@GeneralTool]
+[@Descriptor] [@Biological] [@GeneralTool]
+[@Descriptor] [@Biological] [@Generic]
+[@Descriptor] [@MedPrefix][@GeneralTool]
+[@Descriptor] [@MedPrefix][@Generic]
+[@Descriptor] [@MedPrefix][@Suffix]
+[@Descriptor] [@GenPrefix][@GeneralTool]
+[@SFObject] [@MedPrefix][@GeneralTool]
+[@SFObject] [@MedPrefix][@Generic]
+[@SFObject] [@MedPrefix][@Suffix]
+[@Biological] [@GenPrefix][@GeneralTool]
+[@Biological] [@GenPrefix][@Generic]
+
+Table: Descriptor
+adaptable
+bionic
+computerized
+configurable
+cybernetic
+3: dimensional
+dynamic
+interfaced
+phased
+spatial
+3: spatial
+stabilized
+variable
+virtual
+
+Table: SFObject
+antimatter
+atomic
+catalytic
+circuit
+cosmic
+covalent
+electromagnetic
+energized
+energy
+flux
+gravitic
+hyperspatial
+ionic
+laser
+magnetic
+magnetized
+maser
+maser
+6: morphic
+nanotech
+neutronium
+nuclear
+particle
+protonic
+psionic
+quantum
+3: resonant
+resonating
+singularity
+sonic
+subspace
+ultrasonic
+vortex
+warp
+zero-gravity
+zero-point
+
+Table: Biological
+adrenaline 
+adipose 
+artery 
+bacteria 
+bile 
+bladder 
+blood 
+bone 
+brain 
+cancer 
+cartilage 
+cell 
+cerebellum 
+clot 
+colon 
+cranium 
+digit 
+ear
+earwax 
+encephalon 
+eye 
+gland 
+galbladder 
+heart 
+intestine 
+joint 
+kidney 
+larynx 
+liver 
+lung 
+lymph 
+mucus 
+muscle 
+nerve 
+neurotransmitter 
+organ 
+retina 
+saliva 
+skin 
+tooth 
+tissue 
+tumor 
+vein 
+vertebrae 
+viscera 
+virus 
+
+Table: MedPrefix
+acouso
+adeno
+adipo
+adreno
+angio
+arterio
+bacterio
+bio
+brachio
+bronchi
+carcino
+cardio
+cephalo
+cerebello
+3: chemo
+cholecysto
+chondrio
+colono
+costo
+cranium
+cutane
+cyto
+dacrio
+dento
+dermo
+deuodeno
+encephalo
+entero
+facio
+4: fibro
+gastro
+gingivo
+glosso
+hemato
+hepato
+histo
+ileo
+irido
+ischio
+karyo
+kerato
+lacrimo
+laparo
+laryngo
+linguo
+lympho
+meningo
+musculo
+myo
+myelo
+naso
+necro
+nephor
+neuro
+oculo
+onco
+opthalmo
+optico
+osteo
+pharyngo
+phelbo
+pleuro
+retino
+salpingo
+sangui
+sialo
+sigmoido
+somato
+splanchno
+spleno
+stomato
+thoraco
+thrombo
+tracheo
+typmano
+umbilico
+ungui
+uro
+utero
+vaso
+vasculo
+ventro
+vesico
+viscero
+
+Table: GenPrefix
+aqua
+astro
+atomi
+bioni
+cosmo
+cryo
+cyber
+dyna
+electro
+fluro
+gyro
+helio
+hydro
+iso
+litho
+macro
+micro
+mega
+4: nucleo
+pseudo
+psi
+pyro
+quasi
+soni
+terra
+ultra
+vibro
+xeno
+
+Table: GeneralTool
+brace
+clamp
+forceps
+5: probe
+7: resuscitator
+retractor
+5: sanitizer
+scalpel
+scalpel
+splint
+5: sterilizer
+
+Table: SpecificTool
+aspirator
+defibrillator
+endoscope
+hypodermic
+opthalmascope
+otoscope
+retinoscope
+stethoscope
+thermometer
+
+Table: Generic
+cauterizer
+cutter
+eliminator
+enhancer
+fuser
+healer
+inducer
+remover
+separator
+supporter
+sticher
+
+Table: Suffix
+meter
+scope

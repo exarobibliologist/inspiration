@@ -1,0 +1,1271 @@
+Header: <center><span style='font:24pt Arial'>Instant Plot</span><br><span style='font:7pt Arial'><center><b>Do not confuse with a pressure cooker with a similar name.<br>This material is Open Game Content, and is licensed for public use under the terms of the Open Game License v1.0a.</b></span><br><span style='font:9pt Arial'>This generator is designed to be used with OpenAI. Copy/paste the output of the generator directly into the window at chat.openai.com/chat and the AI can design you a campaign in seconds!</span></center>
+
+MaxReps:1
+
+Table: Instant
+Write a tabletop RPG campaign that can be played by 4-10 players, The genre should be \[\Setting\] and about \[\Tone\]. Start giving me suggestions on how the campaign starts and slowly progress the story, using \[\Things\]\ to give some suggestions of the plot, using \[\Actions\]\ to drive the plot. Give possible branches as well. When creating the output or generating the text, make sure to be as verbose, vivid and descriptive as possible.<br><br><b>Setting</b> = [@Setting];<br><b>Tone</b> = [@Tone];<br><b>Things</b> = [!{3d4} Things >> Sort >> Implode]<br><b>Other Things</b> = [!{3d4} Other >> Sort >> Implode];<br><b>Actions</b> = [!{5d4} Actions >> Sort >> Implode]
+
+Table: Setting
+A dark forest full of traps and magical creatures
+The seafloor
+A derelict space station floating in orbit around a distant planet
+An abandoned amusement park at night
+The surface of an unknown planet, far away from Earth
+The center of a massive mountain range where nobody has ever ventured
+A massive library full of real, physical books that no one has ever read before
+The very tip-top floor of a massive skyscraper
+An isolated prison in the middle of an endless desert
+The house at the end of a long, winding road leading to nowhere else but more road with no landmarks or distinguishing characteristics
+A small farmhouse on a large plot of farmland, surrounded by woods and swamps on all sides
+An abandoned warehouse filled with secret passageways that are impossible to find without help from someone who knows them by heart
+The surface of Mars during sunrise over Olympus Mons Crater
+On an elevated platform at the center of a small island
+The very, very bottom floor of a massive skyscraper that has been abandoned since construction was completed
+An underground cave system where one can go for days without seeing sunlight or another living being
+A space shuttle orbiting around Jupiter
+In the belly of a massive whale as it swims through dark, frigid waters filled with horrific monsters and other life forms from Earth’s deepest nightmares.
+On the surface of Venus during sunrise over Sif Mons Crater
+In a massive library filled to the brim with books so old, they crumble to dust when touched by human hands, at least if their age is not protected by magic or advanced technology beyond what humanity understands today
+A massive tree with a labyrinth of interconnected rooms and underground tunnels deep within its roots, filled with strange creatures like nothing ever seen on Earth before
+The center of the sun
+In the mouth of a massive dragon as it flies through the sky
+On an abandoned oil platform in the middle of an ocean where strange sea creatures lurk, and unknowable horrors hide just out of sight under dark, stormy waters
+Beneath the surface of Europa during sunrise over Valhalla Crater
+A massive cave system that has been occupied by orcs for centuries upon centuries
+An endless desert where sandstorms strike without warning and can carry entire structures away if they aren’t built properly to withstand the elements
+A small, floating island somewhere in the Indian Ocean that is only accessible every seven years when the tides pull it closer to other islands and civilizations ashore
+In a tent at a massive music festival miles away from civilization
+Underground while being chased by trolls with weapons forged from precious metals and stones no human has ever seen before
+On a far-off planet orbiting a distant star where friendly inhabitants will welcome you with open arms, but be careful about what you accept or take from them–the planetary economy might not be able to handle Earth’s money supply
+Inside Amazon forest
+In a small town in the center of a large valley surrounded by dense forests and thick swamps
+In a dark alley in New York City at night, desperately trying to find your way home from work before something bad happens
+A small town that has been cut off from civilization for centuries upon centuries, isolated from humanity behind seemingly impenetrable walls built to keep out dangerous monsters that lurk outside the village’s limits
+A small shuttlecraft piloted by an AI on its way to explore Pluto and beyond
+In a massive city made of towers stacking high into the sky, each one attached to another by bridges and elevators that stretch from floor to floor
+A single room in an apartment complex near a major city where strange noises and smells come from beneath the floorboards late at night
+The depths of an ancient jungle filled with giant trees and nocturnal predators whose roars echo through the forest like nothing ever heard before on Earth
+Atop a large mountain looking down upon a vast desert filled with sand dunes as far as the eye can see
+On an abandoned oil platform in the middle of an ocean where strange sea creatures lurk, and unknowable horrors hide just out of sight under dark, stormy waters
+Across the surface of Europa during sunrise over Valhalla Crater
+Outdoor Skating Rink
+Seaside Towns
+Caves
+Parisian Cafe
+Catacombs
+Ski Slopes
+China Town
+The Moon
+Middle Eastern Bazaar
+Rain Forest
+Hollywood Theatre
+Moto X Track
+Train Station
+Castle Dungeon
+Greek Island Resort
+Suburbs
+Alaskan Wilderness
+Redwood Forest
+Subway Station
+Ocean Liner
+Space Shuttle LaunchPad
+English Countryside Manor House
+Brooklyn Academy of Music (BAM) Theatre
+Disneyland Park
+Sports Stadiums and Arenas
+Military Bases and
+Airfields
+Palace and Gardens of Versailles
+Hanging Gardens of Babylon
+Central Park in New York City
+Amusement Parks
+Water Parks and Theme Piers
+Stadiums and Arenas (Indoor)
+Museum of Natural History (NYC)
+Casinos & Gentlemen’s Clubs
+Lighthouses
+The White House (Washington, DC)
+Fruit and Vegetable Market in South Central LA
+Airports and Airlines
+Ships Before They Sink
+Space Satellite Control Center (Houston)
+High-Rise Buildings (NYC, Chicago, etc.)
+Châteaus
+The Planet Mars
+Mountain Ranges on Earth
+Urban Streets of Any Large City
+Rural Towns in Any Region of the World
+Movie Premiere Venues, Awards Shows & Conventions
+Night Clubs & Bars (NYC)
+The Great Wall of China (Northern China)
+Russian State Duma Building (Moscow)
+Cliffs of Moher (Ireland)
+Rio de Janeiro City Streets During Carnival
+Harbor Alley in Hong Kong at Night
+Abandoned Amusement Parks (Asbury Park, New Jersey)
+The North Pole and the Arctic Ocean
+Concert Halls & Opera Houses
+Any Major Sports Stadium or Arena
+Movie Theatres
+Public Parks
+Downtown Zoos & Aquariums
+Gas Stations & Convenience Stores
+Clothing Racks in High-End Department Stores
+Shopping Malls
+Museums, Art Galleries, Libraries & Historical Sites
+War Memorials and Monuments
+Historic Homes and Buildings
+Restaurants with Diners Outside
+Boardwalks with Shops and Stands
+Famous Hotel Pools & Resorts
+The Great Pyramids of Giza (Northern Egypt)
+Miles of Seawall in Galveston, Texas
+Inside a Presidential Limousine Riding Through Town
+Carnival Cruise Ships
+A dark forest full of traps and magical creatures
+The seafloor
+A derelict space station floating in orbit around a distant planet
+An abandoned amusement park at night
+A futuristic manufacturing facility
+A world filled with genetically modified creatures
+An old-west town that has been magically restored to its 19th century glory days (and beyond!)
+A lighthouse on an isolated island
+A rickety old wooden bridge collapsed into the raging river below it
+An abandoned amusement park at night
+An industrial complex filled with glowing debris and strange machinery
+A castle in the middle of a deep, dark forest
+A boarding school built on an alien planet
+The edge of space broken by an enormous asteroid field and marked with craters and jagged ridges where stars have fallen to Earth (and beyond!)
+A tropical archipelago filled with exotic wildlife that is home to dangerous sea life
+A quiet coastal town full of quaint little houses sitting at the bottom end of a steep cliffside overlooking calm, glassy waters
+An untamed wilderness filled with wild creatures and beasts of many kinds
+A world where the sun is just a bright point in the sky, but there are entire civilizations out there that have completely abandoned their own star for another one entirely. There’s no way to travel between them without making a trip through an inter-dimensional rift or wormhole
+A futuristic mega-city at night, full of glowing billboards advertising products that no one will ever buy (and there's a great deal more to discover!)
+A forgotten temple complex nestled in the foothills of a dormant volcano
+An isolated corner of the cosmos, lit only by distant stars and several smaller moons
+A frozen wasteland
+The Oval Office of the White House
+Slum Areas in Any Major City Around the World
+Abandon Prison Camps from WWI and WWII
+In a cave deep beneath a mountain on another world
+Entirely Inside a Computer Program
+The deck of a pirate ship sailing the open seas
+A tropical island forgotten by time
+A train caught in an avalanche
+Inside the body of a giant monster rampaging through the countryside, looking for something to eat
+A city made entirely out of ice and snow.
+An empty school after everyone has gone home for the day
+A derelict luxury liner adrift in space (with a secret inside!)
+Inside an Imaginarium (or similar fantasy machine)
+Construction Sites
+Any city street, alleyway, or back-alley
+A cruise ship adrift at sea
+An aircraft carrier or battleship sitting in the middle of an abandoned port
+An ancient temple deep within a jungle
+The inside of a spaceship or space station has crash-landed on an alien world (and beyond!)
+A barren desert with nothing more than dead land for as far as the eye can see
+Any massive stadium or sports arena that has been abandoned by its owners
+A crowded subway train at rush hour
+The inside of a refrigerator, freezer, walk-in cooler, meat locker, etc.
+A wealthy man’s lavish estate sitting alone on top of a hill overlooking the city below it
+The peak of an active volcano
+Ancient Underground Cities
+On the set of a cheesy old science fiction movie from the 1960s
+A lush jungle of tall, sprawling trees that are completely covered in thick vines and tangled undergrowth
+A strange world where everything looks wrong (that’s how it always starts!)
+A post-apocalyptic wasteland populated by desperate survivors scavenging for resources to survive another day. There are still pockets of civilization here and there, but they have fallen into chaos as the population has dwindled due to starvation or plague. The landscape is littered with debris from the former days, while the skies are a burning orange and red. The air is thick with ash and dust, making breathing difficult at best.
+A mysterious technological planet filled with massive construction projects that seem to have no purpose whatsoever
+An alien world full of colorful plants/animals (and other creatures) that somehow still manages to be boring as hell. There aren’t many places for settlers to set up shop, so it’s mostly just a large.
+A beautiful world filled to the brim with dragons and other amazing creatures, but also completely devoid of life.
+A peaceful world with lush fields, rolling hills, and deep forests where life is bright and cheery. The sky is always clear blue; there are no storms or hurricanes to be found.
+Mount Rushmore
+The inside of a giant glass dome where the air is breathable, no one can see in or out. The inhabitants are completely cut off from the outside world (except radio communications)
+A once proud civilization was reduced to ruins by an unknown enemy.
+The cold vacuum of space, where nothing lives or grows
+A quiet little town that has been completely abandoned for reasons still being investigated. It’s everyone for themselves out here in the wasteland, and sometimes people just get sick of living life on their own
+The inside of a massive haunted house or castle
+The inside of a giant amusement park filled with all sorts of rides and attractions. Unfortunately, the park has been deserted for decades, so anything that can move is inoperable. The vast majority of people who went missing over the years were just sucked into this place when they happened to be in the wrong place at the wrong time.
+A peaceful village in the mountains where everything is quiet and calm. It’s all fun and games until someone shows up with a gun, demanding whatever valuables you might be hiding away. Once they get what they want, you’re either forced into servitude or simply executed on the spot (depending on how nice their boss happens to be feeling at the time)
+The inside of a department store during the busiest shopping day of the year
+A dark and dangerous world where mutants, robots, cyborgs, zombies, and other vile creatures are constantly trying to kill each other.
+Inside the great pyramid of Giza
+A massive cruise ship that has been stranded at sea
+A futuristic manufacturing facility with
+A city of the undead
+A post-apocalyptic wasteland
+A futuristic sports arena inside a mountain range
+A great white wasteland covered entirely in snow and ice. The temperature is far too cold for any sort of human settlement.
+A crowded coffee shop
+An abandoned mansion
+A field in springtime
+An erupting volcano
+The cockpit of an airplane during takeoff or landing in rough weather (I like this one. I’d go for the cockpit of a passenger airliner.)
+A library at night
+The first row at a rock concert
+Mount Everest
+Underwater (Like “20,000 Leagues Under the Sea.”)
+On top of a skyscraper during a thunderstorm at night (Like that part in Spiderman 3 where Spidey’s fighting the Lizard and what’s-his-name.)
+On the ring road around Paris at rush hour (I’ve never been to France, but it sure sounds like hell in this instance.)
+Alien Occupied Earth
+All Supers World
+Alternate history
+Ancient Egypt
+Ape World
+Arabian Nights
+Archaic/Biblical
+Arkship
+Artificial World
+Atlantis
+Barbarian Europe
+Bizarro World
+Boston MA, circa {1d400 + 1630}
+Camping Out
+City Under Siege
+Classical (Greek/Roman/Peloponnesian)
+Cloud City
+Cold War
+Contemporary
+Correctional System
+Cyberpunk
+Darkworld
+Dawn of Civilization
+Depopulated Earth
+Desert Planet
+Dragon
+Dreamworld
+Dungeon
+Dying World
+Dystopia
+Early Space Exploration
+Edwardian Era
+Elizabethan England
+Fallen Civilization
+Farm
+Festival
+First Alien Contact
+Forest
+French Revolution
+Frontier
+Frozen Wasteland
+Future Earth
+Galactic Empires
+Golden Age of Comics
+Grimm's Fairy Tales
+Historical
+Industrial Revolution
+Institution/Institutionalized
+Interdimensional Space
+Isolated Space Probe
+Jungle World
+Limbo
+London
+Lost Civilization
+Lost/Stranded
+Mars
+Mechanized Planet
+Medieval
+Microworld
+Military Installation
+Modern Day Las Vegas
+Modern Day Amusement Park
+Modern Day Milwaukee
+Moon
+Mystical Orient
+Near Future
+Neverland/Childworld
+Orwellian Future
+Outpost
+Post-Apocalyptic
+Pre-European Americas
+Psychic Near Future
+Realm of the Gods
+Remote Future
+Renaissance
+Resort/Spa
+School of Magic
+Sea Adventures
+Skyscraper
+Snowed-in Town
+Space Colony
+Spinning Restaurant
+Steampunk
+Stone Age
+Suburban Retail Center
+Sword & Sorcery
+Tiny People
+Tokyo
+Traveling Circus
+Treetop Civilization
+Tropical Paradise
+Underground
+Underwater
+Victorian Era
+Viking Explorers
+Virtual Reality
+War
+World War [||I|II|III|]
+Wild West
+Wilderness
+Wildlife Preserve
+World Government HQ
+Your Place
+
+Table: Tone
+Abstract Tech
+Acid Pixie
+Acidwave
+Acubi
+Adventurecore
+Adventure Pulp
+Aetherpunk
+Afrofuturism
+Afro-Victorian
+After Hours
+Agropeople
+Ah Beng
+Alien
+Alternative
+Americana
+American Pioneers
+American Revolution
+American Thanksgiving
+American Tourist Traps
+Analog Horror
+Ancient Egypt
+Androgynous
+Angelcore
+Anglocore
+Anglo Gothic
+Angura
+Animecore
+Anti-Fashion
+Antique Grunge
+Arcade
+Arcadecore
+Art Academia
+Art Deco
+Art Hoe
+Art Nouveau
+Arts and Crafts Movement
+Asian Baby Girl
+Athlete
+Atompunk
+Auroracore
+Australiana
+Australian Outback
+Autumn
+Autumn Academia
+Avant Apocalypse
+Avant-garde
+Babycore
+Babygirl
+Back-to-School
+Baddie
+Ballet Academia
+Balletcore
+Baltic Violence Tumblr
+Barbiecore
+Bardcore
+Baroque
+Bastardcore
+Bauhaus
+BDSM
+Beach Bunny
+Beach Day
+Beatnik
+Biker
+Bimbocore
+Biopunk
+Bizarro Fiction
+Black-Holed Meme
+Bloomcore
+Bodikon
+Bohemian
+Bombacore
+Bookstore Girl
+Bosozoku
+Boujee
+Breakcore
+Britpop
+Bro
+Bronzepunk
+Bubble Bujo
+Bubble Goth
+Bubblegum Bitch
+Bubblegum Witch
+Cabincore
+Cagole
+Camp
+Campcore
+Cargopunk
+Carnivalcore
+Cartelcore
+Cartooncore
+Casino
+Cassette Futurism
+Celtic
+Changelingcore
+Chaotic Academia
+Chav
+Cheiron Crush
+Cherry Emoji Twitter
+Chic Modernist
+Cholo
+Christcore
+Christian Girl Autumn
+Christmas
+Chunyu
+City Pop
+Classic Academia
+Classicism
+Classic Lolita
+Cleancore
+Clockpunk
+Clowncore
+Club
+Club Kids
+Coastal Grandmother
+Coffee House/Cafe
+Coffinwood
+Comfy/Cozy
+Common White Girl
+Concore
+Constructivism
+Corporate
+Corporate Memphis
+Corporate Punk
+Cottagecore
+Cottagegore
+Coquette
+Coquette Academia
+Country
+Cozy Childhood Hideaway
+C-Pop
+Crackhead
+Craftcore
+Cripplepunk
+Crowcore
+Crustpunk
+Cryptid Academia
+Cryptidcore
+Cubism
+Cuddle Party
+Cultcore
+Cult Party Kei
+Cutecore
+Cyberdelic
+Cyber Fairy Grunge
+Cyberghetto
+Cybergoth
+Cybergrunge
+CyberneticPunk
+Cyberparadism
+Cyberpop
+Cyberprep
+Cyberpunk
+Cyber Stylin’
+Danish Pastel
+Dark Academia
+Darkcore
+DarkErrorcore
+Darkest Academia
+Dark Fantasy
+Dark Naturalism
+Dark Nautical
+Dark Nymphet
+Dark Paradise
+Daydreampunk
+Dazecore
+Deathcore
+Deathrock
+Decopunk
+Decora
+Delicate Sweet
+Desertwave
+Desi Romantic Academia
+De Stijl
+Dethereal
+Devilcore
+Dieselpunk
+Diner
+Dionysism
+Disco
+Dollar store vernacular
+Dollette
+Dolly Kei
+Doodlecore
+Downtown Girl
+Dracopunk
+Dragoncore
+Drain
+Dreamcore
+Dreamy
+Drugcore
+Dual Kawaii
+Dullcore
+Dungeon Synth
+Earthcore
+E-Boy
+E-Girl
+ElectroPop 08
+Electro Swing
+Elizabethan England
+Emo
+English Major
+Equestrian
+Erokawa
+Eshay
+Ethereal
+Europunk
+Expressionism
+Fairy Academia
+Fairycore
+Fairy Grunge
+Fairy Kei
+Fairy Tale
+Fanfare
+Fantasy
+Fantasy Astronomy
+FantasY2K
+Farmer's Daughter
+Fashwave
+Fauvism
+Femboy
+Femcel Weeaboo
+Femme Fatale
+Feralcore
+Film Noir
+Flapper
+Flat Design
+Folk Punk
+Foodie
+Forestpunk
+French Girl
+French Girly 
+Frogcore
+Frutiger Aero
+Frutiger Eco
+Frutiger Metro
+Funky Seasons
+Furry
+Futurism
+Gadgetpunk
+Game Night
+Gamercore
+Gamine
+Geek
+Gen X Soft Club
+Ghostcore
+Girl-Next-Door
+Glam Girl
+Glamorous Los Angeles
+Glam Rock
+Glitchcore
+Gloomcore
+Glowwave
+Goblin Academia
+Goblincore
+Golden Age of Detective Fiction
+Golden Hour
+Gopnik
+Gorecore
+Gorpcore
+Goth
+Gothcore
+Gothic
+Gothic Lolita
+Grandmillenial
+Grandparentcore
+Greaser
+Green Academia
+Grifes
+Grindhouse
+Groundcore
+Grunge
+Gurokawa
+Gyaru
+Hackercore
+Halloween
+Hallyu
+Happycore
+Hatecore
+Hauntology
+Haussmann Paris
+Health Goth
+Heatwave
+Heistcore
+Hellenic
+Helvetica Aqua Aero
+Hermaphroditus
+Hermitpunk
+Hexatron
+High School Dream
+Hikecore
+Hime Lolita
+Hi-NRG
+Hip-Hop
+Hipness Purgatory
+Hippie
+Hipster
+Historical Americana
+Holosexual
+Honeycore
+Horror
+Horror Academia
+Hot Topic
+Hydrogen
+Hyperpop
+Icepunk
+Imaginarium
+Impressionism
+Indicolite
+Indie
+Indiecraft
+Indie Kid
+Indie Sleaze
+Internet Academia
+I-spy
+Italian Mafia
+Italian Renaissance
+Italo Disco
+Jamcore
+Jersey Shore
+Joyride
+Juggalo
+Junglecore
+Jungle Grunge
+Karasu Zoku
+Kawaii
+Kawaii Gamer
+Key West Kitten
+Kidcore
+Kid Science
+Kimoicore
+Kinderwhore
+Kingcore
+King Gas
+Kiwiana
+Knightcore
+Kogal
+Korean Cozy Beige
+Kuromicore
+Labcore
+Laborwave
+Lagenlook
+Larme Kei
+La Sape
+Late 2000s Elementary School
+Libertywave
+Light Academia
+Lightcore
+Lightningwave
+Lil Girl
+Liminal Space
+Lit Kid
+Lobotomy-Chic
+Lo-Fi
+Lolita
+Long Island
+Lounge
+Lovecore
+Lunarpunk
+Macaute
+Mad Scientist
+Magewave
+Magical Girls
+Maidcore
+Mallgoth
+Mall Ninja
+Maximalism
+McBling
+Meatcore
+Medicalcore
+Medieval
+Memphis
+Mermaid
+Metal
+Metalcore
+Metalheart
+Metrosexual
+Miami Metro
+Midwest Emo
+Midwest Gothic
+Military
+Milk
+Mind Murder
+Miniaturecore
+Minimalism
+Minivan Rock
+Miscellaneous Academia
+Mizuiro
+Mod
+Modernism
+Mori Kei
+Morute
+Mosscore
+Mote Kei
+MS Paint
+MTV Green Sky
+Mulchcore
+Mushroomcore
+Musical Academia
+Mythpunk
+Nanchatte Seifuku
+Nanopunk
+NATOwave
+Naturecore
+Nautical
+Nazi Chic
+Neko
+Neoclassicism
+Neo-Romanism
+Neo-Tokyo
+Nerd
+Nerdcore
+New Age
+New England Gothic
+New Money
+New Romantic
+New Wave
+Newweb
+Night Luxe
+Nintencore
+Normcore
+Northerness
+Nostalgiacore
+Nuclear
+Nu-Goth
+Nymphet
+Ocean Academia
+Ocean Grunge
+Old Hollywood
+Old Memecore
+Old Money
+Old Web
+Onii Kei
+Oshare Kei
+Otaku
+Otherkin
+Pachuco
+Pale Grunge
+Paleocore
+Palewave
+Paramilitary
+Party Animal
+Party Kei
+Pastel Academia
+Pastel Goth
+Pastel Punk
+PC Music
+Peach
+Pearly
+Peoplehood
+Petcore
+Phony Bureaucracy
+Photorealism
+Pink Parisian
+Pink Pilates Princess
+Pink Princess
+Pin-up
+Pirate
+Pixel Cutie
+Pixiecore
+Plaguecore
+Plant Mom
+Playboy
+Pop Art
+Pop Kei
+Post-Apocalyptic
+Post-Impressionism
+Post-Punk
+Post-rock
+Powwow Step
+Prairiecore
+Prehistoricore
+Preppy
+Pre-Raphaelite
+Pretty Preppy
+Pride flags
+Princecore
+Princesscore
+Printcore
+Progressive Academia
+Psychedelica
+Punk
+Purism
+Quality Tumblr
+Queencore
+Queer Academia
+Queercore
+R&B
+Racaille
+Ragecore
+Rainbowcore
+Rainy Day
+Randumb
+Rangercore
+Ratcore
+Ravencore
+Raver
+Real Life Super Hero
+Realism
+Reefwave
+Regency
+Regional Gothic
+Retro-Futurism
+Rivethead
+Roaring 20s
+Robotics Kids|Robotics Kid
+Rock
+Rockabilly
+Rocketpunk
+Rococo
+Roguecore
+Rollerwave
+Roma
+Romantic Academia
+Romantic Goth
+Romanticism
+Romantic Italian
+Rotcore
+Royalcore
+Rusticcore
+Sadpeople|Sad people
+Salon Kei
+Salvagepunk
+Sandalpunk
+Sanriocore
+Scene
+Schizowave
+Science Academia
+Scoutcore
+Scrapbook
+Scrapper
+Seapunk
+Selkiecore
+Shabby Chic
+Shamate
+Shanzhai
+Sharpies
+Shibuya Punk
+Shironuri
+Shoegaze
+Sigilkore
+Sigma Male
+Sizz
+Skater 
+Skeuomorphism
+Skinheads
+Slimepunk
+Sloanie
+Slutcore
+Smilecore
+Snow Bunny
+Snowdrop
+Soft Apocalypse
+Soft Grunge
+Softie
+Soft indie
+Soft Macabre
+Soggy
+Solarpunk
+Southern Belle
+Southern Gothic
+Sovietwave
+Spacecore
+Space Cowboy
+Sparklecore
+Spiritcore
+Spring
+Spy Fiction
+Starrflesh
+Steampunk
+Steelpunk
+Stilyagi
+Stimwave
+Stonepunk
+Stoner
+Stripcore
+Studyblr
+Studyplace
+Suburban Gothic
+Sukeban
+Summer
+Superflat Pop
+Suprematism
+Surf Crush
+Surrealism
+Surreal Memer
+Swenkas
+Swordpunk
+Synthwave
+Tacticool
+Taisho Roman
+Takenokozoku
+Tanbi Kei
+TangoCore
+Technical Scene
+Technocore
+Technozen
+Techwear
+Teddies
+Teenage Dream
+Teenqueen
+Teethcore
+Terrorwave
+Teslapunk
+That Girl
+Theatre Academia
+Theatre Kids
+Thrasher
+Thriftcore
+Tiki
+Tinkercore
+Tinycore
+Tomboy
+Toxic Core
+Trad Goth
+Traditional Korean
+Trailer Park Princess
+Trashcore
+Trashy Raver
+Traumacore
+Trenchcore
+Trendercore
+Trillwave
+Tropical
+Tumblewave
+Tupinipunk
+Twee
+Tweencore
+Ukiyo-e
+Unicorncore
+Urban Fantasy
+Urbancore
+Utopian Scholastic
+Vacation Dadcore
+Vampire
+Vaporwave
+VARIOUSXYZ
+Vectorbloom
+Vectorheart
+Vibrant Academia
+Victorian
+Victorian Goth
+Victorian Urban Poverty
+Viking
+Villagecore
+Villaincore
+Vintage British Sportsman
+Vintage Parisian
+Virgo's Tears
+Visual Kei
+Voidcore
+Voidpunk
+Vorticism
+VSCO
+VSCO Preppy
+Vulture Culture
+Wabi-Sabi
+Waif
+Waldorf
+Wanderlust
+Warmcore
+Weathercore
+Web Creep
+Weeaboo
+Weirdcore
+Werewolf
+Western
+Wetcore
+Whimsigothic
+Wild Child
+Winter
+Winter Fairy Coquette
+Witchcore
+Witch House
+Witchy Academia
+Wizardcore
+Wonderland
+Woodland goth
+Wormcore
+Writer Academia
+Wuxia
+Y2K
+Yakuza
+Yami Kawaii
+Yandere
+Yankeecore
+Yanki
+Youthquake
+Yume Kawaii
+Zombiecore
+
+Table: Things
+Advanced Intelligence
+Afterlife
+Alien
+Alliance
+Alternate History
+Animal
+Anthropomorphic Objects
+Artificial Intelligence
+Atomic Monster
+Big Business
+Blood
+Bogeyman
+Castle
+Church
+Computers
+Conspiracy
+Correctional System
+Dam
+Demon
+Deity
+Disaster
+Disease
+Dragons
+Dungeon
+Elves
+Empire
+Epic Heroes
+Espionage
+Exploration
+Fairy
+Fire
+Frontier
+Furry
+Gang Warfare
+Garbage
+Genetic Engineering
+Ghost Town
+Giant
+Heaven & Hell
+High Magic
+Hotel
+Immortals
+Insanity
+Invaders/Outsiders
+Limbo
+Lost Tribe
+Low Magic
+Mass Transit
+Mecha
+Military
+Monkeys
+Movie Monsters
+Music
+Mutants/Mutations
+Mysterious Energy
+Nanotech
+Neutral Ground
+Neutrality
+Ninjas
+Occult
+Organized Crime
+Pirate
+Political Intrigue
+Pollution
+Powers
+Prophesy
+Psychic Ability
+Realm of the Gods
+Robots/Automatons
+Royal Bloodline
+Ruins
+Sci-Fi
+Secret Society
+Serial Killer
+Ship
+Space
+Special Ops
+Spy
+Steampunk
+Street Gangs
+Stronghold
+Suburb
+Supernatural
+Supers
+Territory
+Terrorist
+Time Travel
+Trade
+Troubled Youth
+Ultimate Weapon
+Undead
+Underground Pariahs
+Unusual Phenomena
+Vampire
+Virtual Reality
+War
+Water
+Werewolf
+Wild Animals
+Wilderness
+World Domination
+
+Table: Other
+Armory
+Artifact
+Auditorium
+Blackmail
+Brains
+Bugs
+Burrow
+Business Office
+Cannonfodder
+Child
+Confinement
+Cover Up
+Crash Site
+Disguise
+Docks
+Door
+Dreams
+Duel
+Elected	Official
+Election
+Elvis
+Faith
+Farm
+Festival
+Fight
+Gambling
+Government Agents
+Government Office
+Grave
+Grudge
+Guard
+Guide
+Heir
+Heist
+Hired Muscle
+Honor
+Horseman
+Hostage
+Hunt
+Illness
+Intrigue
+Invention
+Island
+Janitor
+Kingpin
+Lair
+Launch
+Law	Enforcement
+Lawyer
+Leader
+Marketplace	
+Martial	Arts
+Mask	
+Mechanic	
+Mercenaries	
+Mindless Horde
+Mob	
+Murder	
+Mystery	
+Natural	Disaster
+Newborn	
+Nightclub/Rave	
+Noble	
+Note	
+Park	
+People	
+Poison	
+Political Group
+Prayer	
+Prisoner	
+Prostitute	
+Rebels	
+Red	Herring
+Religious Fanatics
+Research
+Restaurant
+Revenge
+Road
+Romance
+School
+Secret
+Security Forces
+Sleep
+Soldier
+Sporting Event
+Store
+Student
+Survival
+Tavern
+Teacher
+Theatre
+Town Square
+Traitor
+Travel
+Treasure
+Treaty
+Untimely Death
+Vehicle
+Warehouse
+Wedding
+
+Table: Population
+1: <20
+1: 100
+1: 600
+1: 3,000
+1: 15,000
+1: 80,000
+1: 400,000
+1: 2,000,000
+1: 10,000,000
+1: >10,000,000
+
+Table: Actions
+Alert
+Assassinate
+Blackmail
+Brainwash
+Build
+Celebrate
+Clean
+Clear
+Collect
+Convince
+Cover Up
+Defend
+Deliver
+Destroy
+Discover
+Disguise
+Duel
+Escape
+Explore
+Fight
+Fire
+Guard
+Guide
+Hide
+Humiliate
+Hunt
+Infiltrate
+Intimidate
+Kidnap
+Launch
+Liberate
+Lose
+Mimic
+Murder
+Negotiate
+Poison
+Purchase
+Recover
+Reject
+Rescue
+Research
+Scare
+Seduce
+Spy
+Steal
+Survive
+Teach
+Trade
+Travel
+Win

@@ -1,0 +1,8 @@
+Header: <center><span style='font:24pt Arial'>EPIC Dice Roller</span><br><span style='font:7pt Arial'><center><b>This material is Open Game Content, and is licensed for public use under the terms of the Open Game License v1.0a.</b></span></center>
+
+MaxReps:1
+Prompt: How Many Dice {}100
+Prompt: Dice Sides {}100
+
+Table: DiceyRoll
+{{$prompt1}d{$prompt2}}
