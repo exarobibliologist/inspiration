@@ -1,4 +1,4 @@
-MaxReps:5
+MaxReps:1
 Prompt: Mind {} 10
 Prompt: Senses {} 10
 Prompt: Body {} 10
@@ -7,8 +7,20 @@ Prompt: Potion Strength {} 10
 Table: v3Char
 Set: MindRand1={1d{$prompt4}}
 Set: MindRand2={1d{$prompt4}}
+Set: MindTweak1={round({prompt1}*{MindRand1}/{MindRand2})}
+Set: MindFlip={{prompt1}/{MindTweak1}}
+Set: MindFlipped={round({{prompt1}*{MindFlip}})}
+
 Set: SensesRand1={1d{$prompt4}}
 Set: SensesRand2={1d{$prompt4}}
+Set: SensesTweak1={round({prompt2}*{SensesRand1}/{SensesRand2})}
+Set: SensesFlip={{prompt2}/{SensesTweak1}}
+Set: SensesFlipped={round({{prompt2}*{SensesFlip}})}
+
 Set: BodyRand1={1d{$prompt4}}
 Set: BodyRand2={1d{$prompt4}}
-MIND = <b>{round({prompt1}*{MindRand1}/{MindRand2})}</b> = <sup><sup>{prompt1} * {MindRand1} / {MindRand2}</sup></sup><br>SENSES = <b>{round({prompt2}*{SensesRand1}/{SensesRand2})}</b> = <sup><sup>{prompt2} * {SensesRand1} / {SensesRand2}</sup></sup><br>BODY = <b>{round({prompt3}*{BodyRand1}/{BodyRand2})}</b> = <sup><sup>{prompt3} * {BodyRand1} / {BodyRand2}</sup></sup>
+Set: BodyTweak1={round({prompt3}*{BodyRand1}/{BodyRand2})}
+Set: BodyFlip={{prompt3}/{BodyTweak1}}
+Set: BodyFlipped={round({{prompt3}*{BodyFlip}})}
+
+MIND<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{prompt1} ->\t\t{MindTweak1} ->\t{MindFlipped}<br>SENSES<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{prompt2} -> {SensesTweak1} -> {SensesFlipped}<br>BODY<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{prompt3} -> {BodyTweak1} -> {BodyFlipped}
