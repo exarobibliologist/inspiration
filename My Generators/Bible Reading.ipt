@@ -1,8 +1,15 @@
 Header: <center><span style='font:24pt Arial'>Daily Bible Reading</span></center>
 
 MaxReps:1
+Prompt: Amount {Daily|Yearly}Daily
 
 Table: BibleReading
+[@{prompt1}]
+
+Table: Daily
+[@1 RandChapter]
+
+Table: Yearly
 [!365 RandChapter >> implode <br> ]
 
 Table: RandChapter
