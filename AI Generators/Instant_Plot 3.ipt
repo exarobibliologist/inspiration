@@ -3,29 +3,32 @@ Header: <center><span style='font:24pt Arial'>Instant Plot 3</span><br><span sty
 MaxReps:1
 
 Table: MasterPrompt
-Write a tabletop RPG campaign that can be played by up to {3d3} players. It should take place over {2d2} sessions. Every session before the final session should end on a suspenseful cliffhanger.<br><br>[@LineOneSetting] [@LineOneTone].<br><br>[@LineTwo]<br><br>Use \[\Things\]\ and \[\Other Things\]\ to give some suggestions of the plot, using \[\Actions\]\ to drive the plot. Give possible branches as well. When creating the output or generating the text, make sure to be as verbose, vivid and descriptive as possible.<br><br><b>\[\Things\]\</b> = [!{3d4} Things >> Sort >> Implode]<br><b>\[\Other Things\]\</b> = [!{3d4} Other >> Sort >> Implode];<br><b>\[\Actions\]\</b> = [!{5d4} Actions >> Sort >> Implode]
+Write a tabletop RPG campaign that can be played by up to {2d2} players. It should take place over {4d4} sessions. Every session before the final session should end on a suspenseful cliffhanger.<br><br>[@LineOneSetting] [@LineOneTone].<br><br>[@LineTwo]<br><br>[@LineThree] Give possible branches as well. When creating the output or generating the text, make sure to be as verbose, vivid and descriptive as possible.<br><br><b>\[\Things\]\</b> = [!{3d4} Things >> Sort >> Implode]<br><b>\[\Other Things\]\</b> = [!{3d4} Other >> Sort >> Implode];<br><b>\[\Actions\]\</b> = [!{5d4} Actions >> Sort >> Implode]
 
 Table: LineOneSetting
-The genre should be \[\ Setting\ = [@Setting] ]
-The genre should start out in \[\ Setting1\ = [@Setting] ] and transistion to \[\ Setting2\ = [@Setting] ]
-The genre should transistion back and forth between \[\ Setting1\ = [@Setting] ] and transistion to \[\ Setting2\ = [@Setting] ]
+The genre should be \[\ Setting\ = [@SettingList] ]
+The genre should start out in \[\ Setting1\ = [@SettingList] ] and transistion to \[\ Setting2\ = [@SettingList] ]
+The genre should transistion back and forth between \[\ Setting1\ = [@SettingList] ] and \[\ Setting2\ = [@SettingList] ]
 
 Table: LineOneTone
-and about \[\ Tone\ = [@Tone] ]
-and transistion between the tone of \[\Tone1\ = [@Tone] ] and \[\Tone2\ = [@Tone] ]
-and transistion back and forth between \[\Tone1\ = [@Tone] ] and \[\Tone2\ = [@Tone] ]
+and about \[\ Tone\ = [@ToneList] ]
+and transistion between the tone of \[\Tone1\ = [@ToneList] ] and \[\Tone2\ = [@ToneList] ]
+and transistion back and forth between \[\Tone1\ = [@ToneList] ] and \[\Tone2\ = [@ToneList] ]
 
 Table: LineTwo
 Start giving me suggestions on how the campaign starts and slowly progress the story.
 Give me a bulleted outline of the story. 1st level should be the major plot points. 2nd level should be minor plot points. 3rd level should be ideas for character arcs. 4th level should be possible events.
+100:Give me suggestions how to develop the world so I can allow the players freedom to do whatever they like.
 
 Table: LineThree
+Use \[\Things\]\ and \[\Other Things\]\ to give some suggestions of the plot, using \[\Actions\]\ to drive the plot.
+Use \[\Things\]\ and \[\Other Things\]\ to develop the game around the players, and give suggestions how the players can use \[\Actions\]\ to complete tasks that show up in the game.
 
 Table: LineFour
 
 Table: Instant
 
-Table: Setting
+Table: SettingList
 A dark forest full of traps and magical creatures
 The seafloor
 A derelict space station floating in orbit around a distant planet
@@ -330,7 +333,7 @@ Wildlife Preserve
 World Government HQ
 Your Place
 
-Table: Tone
+Table: ToneList
 Abstract Tech
 Acid Pixie
 Acidwave
@@ -1225,18 +1228,6 @@ Untimely Death
 Vehicle
 Warehouse
 Wedding
-
-Table: Population
-1: <20
-1: 100
-1: 600
-1: 3,000
-1: 15,000
-1: 80,000
-1: 400,000
-1: 2,000,000
-1: 10,000,000
-1: >10,000,000
 
 Table: Actions
 Alert
