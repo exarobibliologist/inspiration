@@ -13,7 +13,7 @@ The genre should transistion back and forth between \[\ Setting1\ = [@SettingLis
 Table: LineOneTone
 and about \[\ Tone\ = [@ToneList] ]
 and transistion between the tone of \[\Tone1\ = [@ToneList] ] and \[\Tone2\ = [@ToneList] ]
-and transistion back and forth between \[\Tone1\ = [@ToneList] ] and \[\Tone2\ = [@ToneList] ]
+and the tone should transistion back and forth between \[\Tone1\ = [@ToneList] ] and \[\Tone2\ = [@ToneList] ]
 
 Table: LineTwo
 Start giving me suggestions on how the campaign starts and slowly progress the story.
