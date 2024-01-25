@@ -3,7 +3,7 @@ Header: <center><span style='font:24pt Arial'>Instant Plot 3</span><br><span sty
 MaxReps:1
 
 Table: MasterPrompt
-Write a tabletop RPG campaign that can be played by up to {2d2} players. It should take place over {4d4} sessions. Every session before the final session should end on a suspenseful cliffhanger.<br><br>[@LineOneSetting] [@LineOneTone].<br><br>[@LineTwo]<br><br>[@LineThree] Give possible branches as well. When creating the output or generating the text, make sure to be as verbose, vivid and descriptive as possible.<br><br><b>\[\Things\]\</b> = [!{3d4} Things >> Sort >> Implode]<br><b>\[\Other Things\]\</b> = [!{3d4} Other >> Sort >> Implode];<br><b>\[\Actions\]\</b> = [!{5d4} Actions >> Sort >> Implode]
+Write a tabletop RPG campaign that can be played by up to {2d2} players. It should take place over {4d4} sessions. Every session before the final session should end on a suspenseful cliffhanger.<br><br>[@LineOneSetting] [@LineOneTone].<br><br>[@LineTwo]<br><br>[@LineThree] [@LineFour]<br><br>[@LineFive]<br><br><b>\[\Things\]\</b> = [!{3d4} Things >> Sort >> Implode]<br><b>\[\Other Things\]\</b> = [!{3d4} Other >> Sort >> Implode];<br><b>\[\Actions\]\</b> = [!{5d4} Actions >> Sort >> Implode]
 
 Table: LineOneSetting
 The genre should be \[\ Setting\ = [@SettingList] ]
@@ -18,15 +18,18 @@ and transistion back and forth between \[\Tone1\ = [@ToneList] ] and \[\Tone2\ =
 Table: LineTwo
 Start giving me suggestions on how the campaign starts and slowly progress the story.
 Give me a bulleted outline of the story. 1st level should be the major plot points. 2nd level should be minor plot points. 3rd level should be ideas for character arcs. 4th level should be possible events.
-100:Give me suggestions how to develop the world so I can allow the players freedom to do whatever they like.
+Give me a bulleted outline describing the world the players will be playing in. 1st level bullets describe major locations (cities, metropolis, significant areas). 2nd level describes minor locations or NPC's that exist inside those 1st level locations. 3rd level can build off 2nd level, and so on.
+Give me suggestions how to develop the world so I can allow the players freedom to do whatever they like.
 
 Table: LineThree
 Use \[\Things\]\ and \[\Other Things\]\ to give some suggestions of the plot, using \[\Actions\]\ to drive the plot.
 Use \[\Things\]\ and \[\Other Things\]\ to develop the game around the players, and give suggestions how the players can use \[\Actions\]\ to complete tasks that show up in the game.
 
 Table: LineFour
+Give possible [|branches|road blocks] as well.
 
-Table: Instant
+Table: LineFive
+When creating the output or generating the text, make sure to be as verbose, vivid and descriptive as possible.
 
 Table: SettingList
 A dark forest full of traps and magical creatures
@@ -46,7 +49,7 @@ On an elevated platform at the center of a small island
 The very, very bottom floor of a massive skyscraper that has been abandoned since construction was completed
 An underground cave system where one can go for days without seeing sunlight or another living being
 A space shuttle orbiting around Jupiter
-In the belly of a massive whale as it swims through dark, frigid waters filled with horrific monsters and other life forms from Earth’s deepest nightmares.
+In the belly of a massive whale as it swims through dark, frigid waters filled with horrific monsters and other life forms from Earth's deepest nightmares.
 On the surface of Venus during sunrise over Sif Mons Crater
 In a massive library filled to the brim with books so old, they crumble to dust when touched by human hands, at least if their age is not protected by magic or advanced technology beyond what humanity understands today
 A massive tree with a labyrinth of interconnected rooms and underground tunnels deep within its roots, filled with strange creatures like nothing ever seen on Earth before
@@ -59,7 +62,7 @@ An endless desert where sandstorms strike without warning and can carry entire s
 A small, floating island somewhere in the Indian Ocean that is only accessible every seven years when the tides pull it closer to other islands and civilizations ashore
 In a tent at a massive music festival miles away from civilization
 Underground while being chased by trolls with weapons forged from precious metals and stones no human has ever seen before
-On a far-off planet orbiting a distant star where friendly inhabitants will welcome you with open arms, but be careful about what you accept or take from them–the planetary economy might not be able to handle Earth’s money supply
+On a far-off planet orbiting a distant star where friendly inhabitants will welcome you with open arms, but be careful about what you accept or take from them - the planetary economy might not be able to handle Earth's money supply
 Inside Amazon forest
 In a small town in the center of a large valley surrounded by dense forests and thick swamps
 In a dark alley in New York City at night, desperately trying to find your way home from work before something bad happens
