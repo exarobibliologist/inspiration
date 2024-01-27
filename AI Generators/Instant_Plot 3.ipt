@@ -19,12 +19,12 @@ positive note
 mind-twisting puzzle
 
 Table: GameSetting
-The genre should be \[\ Setting\ = [@SettingList] ]
-The genre should start out in \[\ Setting1\ = [@SettingList] ] and transistion to \[\ Setting2\ = [@SettingList] ]
-The genre should transistion back and forth between \[\ Setting1\ = [@SettingList] ] and \[\ Setting2\ = [@SettingList] ]
+The setting should be \[\ Setting\ = [@SettingList] ]
+The setting should start out in \[\ Setting1\ = [@SettingList] ] and transistion to \[\ Setting2\ = [@SettingList] ]
+The setting should transistion back and forth between \[\ Setting1\ = [@SettingList] ] and \[\ Setting2\ = [@SettingList] ]
 
 Table: GameTone
-and about \[\ Tone\ = [@ToneList] ]
+and the tone should be \[\ Tone\ = [@ToneList] ]
 and transistion between the tone of \[\Tone1\ = [@ToneList] ] and \[\Tone2\ = [@ToneList] ]
 and the tone should transistion back and forth between \[\Tone1\ = [@ToneList] ] and \[\Tone2\ = [@ToneList] ]
 
@@ -43,6 +43,7 @@ Give possible [|branches|road blocks] as well.
 
 Table: LineFive
 When creating the output or generating the text, make sure to be as verbose, vivid and descriptive as possible.
+When creating the output or generating the text, make sure to highlight important keywords for each section, so I can ask you auxilliary questions for more details.
 
 Table: SettingList
 A dark forest full of traps and magical creatures
