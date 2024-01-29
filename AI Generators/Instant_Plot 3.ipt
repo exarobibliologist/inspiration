@@ -29,9 +29,9 @@ and transistion between the tone of \[\Tone1\ = [@ToneList] ] and \[\Tone2\ = [@
 and the tone should transistion back and forth between \[\Tone1\ = [@ToneList] ] and \[\Tone2\ = [@ToneList] ]
 
 Table: LineTwo
-50:Give me a bulleted outline describing the world the players will be playing in. 1st level bullets describe major locations (cities, metropolis, significant areas). 2nd level describes minor locations or NPC's that exist inside those 1st level locations. 3rd level can build off 2nd level, and so on.
+10:Give me a bulleted outline describing the world the players will be playing in. 1st level bullets describe major locations (cities, metropolis, significant areas). 2nd level describes minor locations or NPC's that exist inside those 1st level locations. 3rd level can build off 2nd level, and so on.
 10:Give me a bulleted outline of the story. 1st level should be the major plot points. 2nd level should be minor plot points. 3rd level should be ideas for character arcs. 4th level should be possible events.
-5:Start giving me suggestions on how the campaign starts and slowly progress the story, giving suggestions about [|the plot|player development|NPC arcs].
+10:Start giving me suggestions on how the campaign starts and slowly progress the story, giving suggestions about [|the plot|player development|NPC arcs].
 Give me suggestions how to develop the world so I can allow the players freedom to do whatever they like.
 
 Table: LineThree
@@ -42,7 +42,8 @@ Table: LineFour
 Give possible [|branches|road blocks] as well.
 
 Table: LineFive
-When creating the output or generating the text, make sure to be as verbose, vivid and descriptive as possible.
+20:When creating the output or generating the text, be as verbose, vivid and descriptive as possible.
+200:Give a [|complete|rough] overview of each session and cliffhanger. Be as verbose, vivid and descriptive as possible.
 When creating the output or generating the text, make sure to highlight important keywords for each section, so I can ask you auxilliary questions for more details.
 
 Table: SettingList
@@ -243,9 +244,10 @@ The cockpit of an airplane during takeoff or landing in rough weather (I like th
 A library at night
 The first row at a rock concert
 Mount Everest
-Underwater (Like “20,000 Leagues Under the Sea.”)
-On top of a skyscraper during a thunderstorm at night (Like that part in Spiderman 3 where Spidey’s fighting the Lizard and what’s-his-name.)
-On the ring road around Paris at rush hour (I’ve never been to France, but it sure sounds like hell in this instance.)
+Underwater (Like "20,000 Leagues Under the Sea.")
+On top of a skyscraper during a thunderstorm at night
+On the highway around a major city at rush hour.
+Paris, but it's hell in this instance.
 Alien Occupied Earth
 All Supers World
 Alternate history
