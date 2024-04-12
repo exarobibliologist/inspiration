@@ -12,7 +12,7 @@ Set: MIND={$prompt1}
 Set: SENSES={$prompt2}
 Set: BODY={$prompt3}
 Set: ARMOR={$prompt4}
-<span style='font:24pt Arial'><b>{$epicname}</b></span><br><b>MIND</b>=[when]{$MIND} = 1[do][MIND==2][end]{$MIND}<br><b>SENSES</b>=[when]{$SENSES} = 1[do][SENSES==2][end]{$SENSES}<br><b>BODY</b>=[when]{$BODY} = 1[do][BODY==2][end]{$BODY}<br><br><b>HP</b>={$BODY*5}<br><b>ARMOR</b>=[when]{$ARMOR} = 1[do][ARMOR==2][end]{$ARMOR}<hr>XP = {$MIND}*{$SENSES}*{$BODY}*{$ARMOR} = {{$MIND}*{$SENSES}*{$BODY}*{$ARMOR}}<hr>Max Level {$prompt1}<br>Actual Level {{{$MIND}+{$SENSES}+{$BODY}+{$ARMOR}} / 4}<br><br><br>[@{floor(sqrt({$MIND}))} AbilityRandSpec >> sort >> implode <br>]<br>[@{$MIND - floor(sqrt({$MIND}))} AbilityRand >> sort >> implode <br>]
+<span style='font:24pt Arial'><b>{$epicname}</b></span><br><b>MIND</b>=[when]{$MIND} = 1[do][MIND==2][end]{$MIND}<br><b>SENSES</b>=[when]{$SENSES} = 1[do][SENSES==2][end]{$SENSES}<br><b>BODY</b>=[when]{$BODY} = 1[do][BODY==2][end]{$BODY}<br><br><b>HP</b>={$BODY*5}<br><b>ARMOR</b>=[when]{$ARMOR} = 1[do][ARMOR==2][end]{$ARMOR}<hr>Max Level {$prompt1}<br>Actual Level {{{$MIND}+{$SENSES}+{$BODY}+{$ARMOR}} / 4}<br><br><br><b>Attack</b> = 1d([|MIND|SENSES|BODY])<br><br>[@{floor(sqrt({$MIND}))} AbilityRandSpec >> implode <br>]<br>[@{$MIND - floor(sqrt({$MIND}))} AbilityRand >> implode <br>]
 
 Table: AbilityRand
 [!Skills] = 1d{1d19+1}
