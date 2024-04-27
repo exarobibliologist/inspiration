@@ -1,0 +1,1811 @@
+Table: Person
+[@10 RandGen>>Sort>>Implode<br>]
+
+Table: RandGen
+Pos - [@PhysPos>>Implode<br>]
+Neg - [@PhysNeg>>Implode<br>]
+
+Table: Positive
+[!PhysPos>>Implode<br>]
+[!MentPos>>Implode<br>]
+
+Table: Negative
+[!PhysNeg>>Implode<br>]
+[!MentNeg>>Implode<br>]
+
+Table: PhysPos
+Able
+Accident prone
+Adorable
+Agile, nimble fingers
+Almond-shaped eyes
+Art collector
+Athletic build
+Athletic gait
+Athletic, runner's legs
+Athletic, swimmer's build
+Beautiful
+Bright eyes
+Bright, aurora-like glow
+Bright, cheerful smile
+Bright, clear complexion
+Bright, comet-like tail
+Bright, daisy-like smile
+Bright, gem-like eyes
+Bright, rainbow-colored eyes
+Bright, sapphire-like eyes
+Bright, sunflower-like smile
+Calm, serene demeanor
+Captivating, magnetic gaze
+Chiseled jawline
+Clean
+Clear complexion
+Coherent
+Confident posture
+Crystal-clear blue eyes
+Curly hair
+Deep-set, thoughtful eyes
+Deep, contemplative gaze
+Deep, resonant voice
+Deep, soulful eyes
+Defined cheekbones
+Delicate wrists
+Delicate, dove-like grace
+Delicate, fluttering eyelashes
+Delicate, lace-like fingers
+Delicate, pixie-like features
+Delicate, porcelain skin
+Delicate, rose-like blush
+Delicate, snowflake-like eyelashes
+Dimpled smile
+Enchanting, fairy-like glow
+Enchanting, moonlit smile
+Enchanting, nymph-like dance
+Enchanting, siren-like song
+Energetic, lively movements
+Enigmatic, mysterious aura
+Enigmatic, owl-like wisdom
+Enigmatic, sphinx-like gaze
+Exotic, tiger-like stripes
+Expressive hands
+Exquisite, elfin features
+Fiery, passionate eyes
+Firm grip
+Firm, toned abdomen
+Flowing mane of hair
+Freckle-dusted face
+Full lips
+Gentle hands
+Gentle, butterfly-like grace
+Gentle, caressing touch
+Gentle, deer-like eyes
+Gentle, fawn-like steps
+Gentle, lamb-like demeanor
+Gentle, reassuring gaze
+Gentle, soothing voice
+Graceful dancer's feet
+Graceful fingers
+Graceful posture
+Graceful, ballerina-like poise
+Graceful, balletic movements
+Graceful, gazelle-like leap
+Graceful, peacock-like display
+Graceful, swan-like movements
+Graceful, swan-like neck
+Graceful, willow-like sway
+Hardy
+Harmonious, tuneful whistle
+Healthy
+Heartwarming grin
+Hypnotic, oceanic eyes
+Invigorating, youthful energy
+Inviting smile
+Lean
+Lean physique
+Lithe, dancer's grace
+Lively step
+Lively, animated expressions
+Lively, animated gestures
+Lively, bouncy curls
+Lively, monkey-like antics
+Lively, springy step
+Lively, squirrel-like energy
+Long, elegant neck
+Luminous, lantern-like eyes
+Luminous, radiant aura
+Luminous, starry-eyed gaze
+Lustrous hair
+Lustrous, pearl-like complexion
+Lustrous, raven-black hair
+Lustrous, shiny locks
+Lustrous, unicorn-like mane
+Majestic, dragon-like scales
+Majestic, eagle-like profile
+Majestic, phoenix-like aura
+Majestic, royal bearing
+Melodic singing voice
+Melodious laugh
+Mesmerizing eyes
+Muscular legs
+Musical, songbird voice
+Nimble
+Nimble movements
+Petite frame
+Piercing gaze
+Playful dimples
+Powerful, bear-like embrace
+Powerful, Hercules-like strength
+Powerful, thunder-like voice
+Powerful, wolf-like presence
+Radiant skin
+Radiant, glowing aura
+Refreshing scent
+Refreshing, dewy skin
+Refreshing, minty breath
+Regal, lion-like mane
+Resilient, warrior's stance
+Robust hands
+Rosy cheeks
+Sculpted arms
+Sculpted cheekbones
+Serene, meditative presence
+Shapely eyebrows
+Shapely, toned figure
+Shimmering hair
+Shiny, well-kept nails
+Silken, cascading hair
+Silky voice
+Silky, smooth hair
+Sleek neck
+Sleek, otter-like movements
+Sleek, panther-like grace
+Sleek, toned legs
+Slender fingers
+Smooth, even teeth
+Soft-spoken voice
+Soft, bunny-like nose twitch
+Soft, cloud-like hair
+Soft, downy cheeks
+Soft, feather-like touch
+Soft, kissable lips
+Soft, kitten-like purr
+Soft, marshmallow-like cheeks
+Soft, melodious laughter
+Soft, pillowy lips
+Soft, plush-like lips
+Soft, silk-like hair texture
+Soft, smooth skin
+Soft, velvety skin
+Sparkling teeth
+Straight, white teeth
+Striking profile
+Striking silhouette
+Striking, hawk-like gaze
+Striking, regal posture
+Strong chin
+Strong nerves
+Strong, broad shoulders
+Strong, centaur-like stance
+Strong, confident stride
+Strong, dependable hands
+Strong, healthy nails
+Strong, ox-like stamina
+Strong, protective arms
+Strong, stallion-like stride
+Strong, sturdy back
+Strong, titan-like presence
+Sun-kissed skin
+Sunlit hair streaks
+Symmetrical face
+Tall
+Tall stature
+Tanned skin
+Thick, healthy hair
+Thick, luscious eyelashes
+Toned arms
+Twinkling eyes
+Twinkling starlit eyes
+Velvety, melodious voice
+Vibrant hair color
+Vibrant, fiery red hair
+Vibrant, healthy glow
+Vibrant, spirited energy
+Warm, caramel-toned skin
+Warm, cinnamon-spiced scent
+Warm, cocoa-brown eyes
+Warm, comforting touch
+Warm, golden-hued skin
+Warm, honeyed voice
+Warm, inviting eyes
+Warm, rosy glow
+Warm, sun-bronzed skin
+Warm, sunlit freckles
+Warm, sunlit hair highlights
+Wavy hair
+Wealthy
+Well-defined calves
+Well-groomed beard
+Wholesome smile
+Wholesome, rosy glow
+Young
+Youthful appearance
+
+
+Table: PhysNeg
+Abandoned
+Abusive
+Adam's apple
+Adaptable
+Albinism
+Always hungry
+Bald patches
+Beer belly
+Birthmarks
+Blistered skin
+Ill
+Bloodied knuckles
+Bloodshot eyes
+Bony hands
+Bow-legged
+Brittle nails
+Broken nose
+Bulging eyes
+Bunion
+Burn marks
+Calloused hands
+Cauliflower ear
+Chapped lips
+Cleft lip
+Clubfoot
+Clumsy
+Corns on feet
+Cross-eyed
+Crow's feet
+Dirty
+Diseased
+Double chin
+Drooping eyelids
+Drunk
+Dry, cracked skin
+Filthy
+Flabby arms
+Flaring nostrils
+Flat-footed
+Flushed skin
+Frail frame
+Freckles
+Frown lines
+Gangly limbs
+Gapped teeth
+Graying hair
+Hairy back
+Hairy moles
+Harelip
+Hollow cheeks
+Hooked nose
+Hormonal
+Hunchback
+Jaundiced skin
+Knock-kneed
+Lanky stature
+Lazy eye
+Limp
+Liver spots
+Matted hair
+Mismatched eyes
+Missing eyebrow
+Missing fingers
+Missing teeth
+Moles
+Narrow-set eyes
+Obese
+Oily skin
+Overbite
+Overweight
+Pallor
+Patchy hair
+Peeling skin
+Pigeon-toed
+Plain
+Pockmarks
+Protruding belly
+Protruding ears
+Protruding teeth
+Raspy voice
+Receding hairline
+Rickets (bowed legs)
+Rosacea
+Ruddy complexion
+Sallow skin
+Scarred face
+Shortness of breath
+Shuffling walk
+Slouching posture
+Sparse beard
+Sparse eyebrows
+Spindly legs
+Splayed feet
+Stooped gait
+Stooped posture
+Stooped shoulders
+Stutter
+Sunburn
+Sunken cheeks
+Sunken eyes
+Swollen glands
+Swollen joints
+Thin lips
+Thin, reedy voice
+Trembling hands
+Ugly
+Unclean
+Underbite
+Uneven beard
+Uneven skin tone
+Varicose veins
+Vitiligo patches
+Warts
+Weak constitution
+Wheezing
+Wide-set eyes
+Yellowed teeth
+Overgrown nails
+Rigid posture
+Stiff joints
+Constant sniffling
+Mumbling speech
+Gravelly voice
+Constant cough
+Visible veins on hands
+Stooped neck
+Protruding spine
+Uneven shoulders
+Asymmetrical face
+Dull eyes
+Constantly sweaty palms
+Tangled hair
+Unkempt beard
+Constantly dirty hands
+Faded tattoos
+Discolored patches of skin
+Constantly chapped hands
+Overly thin
+Overly muscular to the point of immobility
+Constantly red nose (from cold or other reasons)
+Always squinting
+Missing eyelashes
+Sparse hair on head
+Overgrown ear hair
+Constantly biting nails
+Always has a runny nose
+Visible scars on hands
+Scars from self-harm
+Constantly tapping foot (nervous tic)
+Always looks tired
+Swollen ankles
+Constantly scratching an itch
+Always looks pale
+Visible stretch marks
+Constantly blinks
+Always looks dehydrated
+Overly large forehead
+Too thin lips
+Always has a furrowed brow
+Visible lice in hair
+Always has a scowl
+Missing earlobe
+Overly pointy ears
+Always has a flushed face
+Constantly clears throat
+Always seems out of breath
+Has a limp wrist
+Always shivers (even when it's not cold)
+Overly hairy chest
+Constant hiccups
+Always has food stains on face or clothes
+Visible burn scars
+Always looks malnourished
+Constantly snorts when laughing
+Always has a hoarse voice
+Overly wrinkled skin for age
+Constantly twitches nose
+Always has a pained expression
+Missing a chunk of eyebrow
+Overly broad shoulders
+Always has wind-swept hair
+Constantly grinds teeth
+Always has a nervous laugh
+Missing patches of beard
+Overly long toes
+Always has cold hands
+Constantly sniffs
+Always looks disheveled
+Overly thick neck
+Constantly wrings hands
+Always has flaky skin
+Overly knobby knees
+Always has a vacant stare
+Constantly bites inner cheek
+Always has a sweaty brow
+Overly wide-set nostrils
+Constantly picks at skin
+Always has a raspy breath
+Missing patches of hair on arms
+Overly long fingernails
+Always has a nervous twitch
+Constantly shakes head
+Always looks gaunt
+Overly bony elbows
+Always has a whiny voice
+Constantly cracks knuckles
+Always looks greasy
+Overly large hands for body size
+Constantly purses lips
+Always has a wary look
+Overly sunken collarbones
+Always has a grimace
+Constantly clenches jaw
+Always looks startled
+Overly pronounced Adam's apple
+Constantly rubs hands together
+Always has a haunted expression
+
+
+Table: MentPos
+Accommodating
+Accomplished
+Action oriented
+Adventurous
+Affable
+Affectionate
+Agreeable
+Alert
+Alluring
+Altruistic
+Amiable
+Amused
+Amusing
+Analytical
+Appreciative
+Approachable
+Articulate
+Artistic
+Aspiring
+Astute
+Attentive
+Attentive to others
+Authoritative
+Aware of own limitations
+Awed
+Benevolent
+Bewitching
+Blissful
+Boundless
+Brainy
+Brave
+Bright
+Brilliant
+Broad-minded
+Brotherly
+Bubbly
+Calm
+Candid
+Capable
+Careful
+Caring
+Cautious
+Charismatic
+Charitable
+Charming
+Chaste
+Cheerful
+Civilised
+Classy
+Clever
+Comfortable
+Committed
+Communicative
+Compassionate
+Competent
+Competitive
+Concerned
+Concrete thinking
+Confident
+Congenial
+Connoisseur of good drink
+Connoisseur of good food
+Conscientious
+Conservative
+Considerate
+Consistent
+Constructive
+Content
+Contented
+Conversational
+Cool
+Cooperative
+Cosmopolitan
+Courageous
+Courteous
+Creative
+Credible
+Cuddly
+Cultured
+Cunning
+Curious
+Dainty
+Daring
+Dashing
+Dauntless
+Dazzling
+Debonair
+Decent
+Decisive
+Decorous
+Dedicated
+Deferential
+Delegates authority
+Deliberate
+Deliberative
+Delicate
+Delighted
+Delightful
+Dependable
+Dependent
+Desirous
+Detail-oriented
+Determined
+Develops close friendships
+Devoted
+Devout
+Dignified
+Diligent
+Diplomatic
+Direct
+Discerning
+Disciplined
+Discreet
+Disturbed
+Does what is necessary or right
+Driven
+Dutiful
+Dynamic
+Eager
+Easygoing
+Eccentric
+Ecstatic
+Educated
+Effervescent
+Efficient
+Elated
+Electrified
+Eloquent
+Elusive
+Embraces change
+Eminent
+Emotional
+Emotionally stable
+Empathetic
+Enchanted
+Enchanting
+Encouraging
+Enduring
+Energetic
+Engaging
+Enigmatic
+Enjoys a good argument
+Enjoys a good brawl
+Enjoys a little friendly competition
+Enterprising
+Entertaining
+Enthusiastic
+Entrepreneurial
+Equable
+Ethical
+Exacting
+Excellent
+Excited
+Exclusive
+Expansive
+Expedient
+Experimental
+Expert
+Expressive
+Extraverted
+Exuberant
+Fabulous
+Faces reality
+Fair
+Faith in oneself
+Faith in others
+Faith in self
+Faithful
+Fantastic
+Fascinated
+Fast learner
+Fastidious
+Fearless
+Feisty
+Ferocious
+Fierce
+Fiery
+Fighter
+Fine
+Fitness fanatic
+Flamboyant
+Flexible
+Flirtatious
+Flirty
+Focused
+Follower
+Follows rules
+Forgiving
+Formal
+Forthright
+Fortunate
+Frank
+Free of guilt
+Free thinking
+Fresh
+Friendly
+Frugal
+Fun
+Fun loving
+Fun to be around
+Funny
+Generous
+Genial
+Gentle
+Genuine
+Giddy
+Gives others their freedom
+Giving
+Glad
+Glamorous
+Glorious
+Goal orientated
+Good
+Good communicator
+Good listener
+Good-natured
+Good-spirited
+Graceful
+Gracious
+Grateful
+Gratified
+Groovy
+Grounded
+Group-oriented
+Handsome
+Happy
+Happy go lucky
+Hard working
+Harmonious
+Has a vision for the future
+Has achieved many things in life
+Has clear goals
+Has good taste
+Heavenly
+Helpful
+Heroic
+High energy
+High self esteem
+High social status
+Hilarious
+Hobbyist
+Holy
+Honest
+Honor bound
+Honorable
+Hopeful
+Hospitable
+Humble
+Humorous
+Imaginative
+Immaculate
+Impartial
+Impeccable
+Impressed
+Improves self
+In harmony
+Independent
+Individualistic
+Industrious
+Informed
+Inimitable
+Innocent
+Inquisitive
+Insightful
+Inspired
+Instinctive
+Intellectual
+Intelligent
+Interested
+Intrepid
+Introspective
+Introverted
+Intuitive
+Inventive
+Involved
+Irresolute
+Irreverent
+Joking
+Jolly
+Jovial
+Joyful
+Joyous
+Just
+Keen
+Kind
+Kind hearted
+Kittenish
+Knowledgeable
+Leader
+Level
+Liberal
+Light-hearted
+Likeable
+Likes people
+Linear
+Lively
+Logical
+Longing
+Lordly
+Lovable
+Love
+Lovely
+Lover, not a fighter
+Loves challenge
+Loving
+Loyal
+Loyal to boss
+Loyal to community
+Loyal to family
+Loyal to friends
+Lucky
+Mannered
+Mannerly
+Matronly
+Matter-of-fact
+Mature
+Merciful
+Meticulous
+Mild
+Mischievous
+Modern
+Modest
+Motherly
+Motivated
+Mysterious
+Mystical
+Natural leader
+Neat
+Never gives up
+Never hungry
+Nice
+Night owl
+No-nonsense
+Noble
+Nonchalant
+Nonconforming
+Nostalgic
+Nuanced
+Nurturing
+Obedient
+Obliging
+Observant
+Open
+Open to change
+Open-minded
+Optimistic
+Orderly
+Organized
+Outgoing
+Outspoken
+Paces
+Pacifistic
+Painstaking
+Participating
+Particular
+Passionate
+Patient
+Patriotic
+Peaceful
+Penitent
+Perceptive
+Performer
+Persistent
+Personable
+Persuasive
+Pert
+Philanthropic
+Pious
+Playful
+Pleasant
+Pleased
+Pleasing
+Plucky
+Polished
+Polite
+Popular
+Positive
+Practical
+Precise
+Predictable
+Pretty
+Private
+Productive
+Professional
+Professional demeanor
+Proper
+Prosaic
+Prosperous
+Protective
+Proud
+Prudent
+Puckish
+Punctilious
+Punctual
+Purposeful
+Quick
+Quick tempered
+Quiet
+Quirky
+Rapturous
+Rational
+Realistic
+Reasonable
+Reasoning
+Recalcitrant
+Receptive
+Reclusive
+Refined
+Reflective
+Refreshed
+Relaxed
+Relentless
+Reliable
+Relieved
+Religious
+Remote
+Reserved
+Resilient
+Resolute
+Resourceful
+Respected in the community
+Respectful
+Respects experience
+Respects traditional ideas
+Responsible
+Responsive
+Restrained
+Results-oriented
+Retiring
+Reverent
+Rewarded
+Rich
+Right
+Righteous
+Risk-taking
+Robust and healthy
+Romantic
+Rugged
+Rule-conscious
+Sacrificing
+Safe
+Sagely
+Saintly
+Salient
+Sanguine
+Satisfied
+Saucy
+Savage
+Savvy
+Secure
+Sees the big picture
+Selective
+Self-assured
+Self-confident
+Self-controlling
+Self-deprecating
+Self-directed
+Self-disciplined
+Self-effacing
+Self-giving
+Self-made
+Self-reliant
+Self-satisfied
+Self-sufficient
+Selfless
+Sense of duty
+Sensitive
+Sensual
+Sentimental
+Serene
+Serious
+Settled
+Sexy
+Shameless
+Sharp
+Sharp-witted
+Short
+Shows initiative
+Shrewd
+Shy
+Silent
+Silky
+Simple
+Sincere
+Sisterly
+Skeptical
+Skillful
+Smart
+Smiling
+Smooth
+Sociable
+Socially bold
+Socially precise
+Soft-hearted
+Soft-spoken
+Solemn
+Solitary
+Solution-oriented
+Sophisticated
+Spendthrift
+Spiritual
+Splendid
+Spontaneous
+Sports fan
+Spunky
+Staid
+Stately
+Steadfast
+Steady
+Stern
+Stimulating
+Stoic
+Stoical
+Stolid
+Straight-laced
+Straightforward
+Stress free
+Strident
+Strong
+Strong willed
+Studious
+Suave
+Subtle
+Successful
+Successful in school
+Successful in work
+Succinct
+Sultry
+Supportive
+Sure
+Sweet
+Sympathetic
+Systematic
+Tactful
+Takes responsibility
+Talented
+Talkative
+Tasteful
+Telepathic
+Temperate
+Tenacious
+Tender minded
+Thankful
+Thick skinned
+Thorough
+Thoughtful
+Thrifty
+Thrilled
+Time driven
+Tireless
+Tolerant
+Tough
+Tough-minded
+Traditional
+Tranquil
+Trusting
+Trustworthy
+Truthful
+Typical
+Unbending
+Unbiased
+Unconventional
+Understanding
+Unprejudiced
+Unpretentious
+Unselfish
+Unshakeable
+Unusual
+Unworried
+Upbeat
+Uptight
+Useful
+Utilitarian
+Valiant
+Valorous
+Values fair competition
+Values family
+Values hard work
+Values honesty
+Values material possessions
+Values money
+Values religion
+Venturesome
+Versatile
+Veteran
+Vigilant
+Vigorous
+Virtuous
+Visual
+Vital
+Vivacious
+Warlike
+Warm
+Warm hearted
+Wary
+Watchful
+Welcoming
+Well grounded
+Well-groomed
+Wholesome
+Willing
+Willpower
+Wise
+Witty
+Wonderful
+Works well under pressure
+Worldly
+Worshipful
+Youthful
+
+
+Table: MentNeg
+Abrasive
+Abrupt
+Absent-minded
+Accepting
+Adamant
+Addict
+ADHD
+Adulterer
+Afraid
+Afraid of commitment
+Afraid of ghosts
+Aggressive
+Agnostic
+Agonized
+Alcoholic
+Aloof
+Always late
+Amateurish demeanor
+Ambiguous
+Ambitious
+Ambivalent
+Angry
+Animated
+Annoyed
+Annoying
+Antagonistic
+Anti-intellectual
+Anti-social
+Anxious
+Apathetic
+Apologetic
+Apprehensive
+Arbitrary
+Argumentative
+Aristocratic
+Arrogant
+Artless
+Ashamed
+Assertive
+Astonished
+Astounded
+Audacious
+Austere
+Authoritarian
+Autocratic
+Avoids conflict
+Awful
+Awkward
+Babbling
+Babyish
+Backstabber
+Bashful
+Belligerent
+Betrayed
+Bewildered
+Biter
+Bitter
+Blames others
+Blasé
+Blowhard
+Boastful
+Boisterous
+Bold
+Boorish
+Bored
+Boring
+Bossy
+Bragging
+Brash
+Bratty
+Brazen
+Brutish
+Bully
+Burdened
+Busy
+Calculating
+Callous
+Capricious
+Captivated
+Carefree
+Careless
+Careless of social rules
+Caustic
+Changeable
+Chatty
+Cheat
+Cheerless
+Childish
+Chivalrous
+Close
+Closed
+Coarse
+Cocky
+Cold
+Cold hearted
+Combative
+Complacent
+Compliant
+Compulsive
+Compulsive liar
+Conceited
+Condemned
+Condescending
+Conformist
+Confused
+Conspicuous
+Conspiracy theorist
+Constricting
+Contrarian
+Contrary
+Contrite
+Controlling
+Conventional
+Coquettish
+Covetous
+Cowardly
+Cowering
+Coy
+Crabby
+Crafty
+Cranky
+Crazy
+Creepy
+Critical
+Cross
+Crude
+Cruel
+Crushed
+Culpable
+Cutthroat
+Cynical
+Dangerous
+Daredevil
+Dark
+Deceitful
+Deceiving
+Defeated
+Defiant
+Delusional about own skills
+Demanding
+Demonic
+Depraved
+Depressed
+Depressive
+Deranged
+Despairing
+Despicable
+Despondent
+Destructive
+Detached
+Devilish
+Devious
+Dictatorial
+Diffident
+Diminished
+Directionless
+Disaffected
+Disagreeable
+Discontented
+Discouraged
+Disgusting
+Dishonest
+Disillusioned
+Disinterested
+Disloyal
+Dismayed
+Disorderly
+Disorganized
+Disparaging
+Disregards rules
+Disrespectful
+Dissatisfied
+Dissident
+Dissolute
+Distant
+Distracted
+Distraught
+Distressed
+Distrustful
+Divided
+Docile
+Does what is convenient
+Dogmatic
+Dominant
+Domineering
+Dorky
+Doubtful
+Dowdy
+Downtrodden
+Draconian
+Dramatic
+Dreamer
+Dreamy
+Dreary
+Drug addict
+Dubious
+Dull
+Dumb
+Easily embarrassed
+Easily led
+Easily upset
+Egocentric
+Egotistic
+Egotistical
+Embarrassed
+Embittered
+Empty
+Envious
+Erratic
+Evasive
+Evil
+Exasperated
+Excessive
+Excitable
+Exhausted
+Extravagant
+Extreme
+Facetious
+Faded
+Failure
+Faithless
+Fake
+Fanatical
+Fanciful
+Fatalistic
+Fatigued
+Fawning
+Fearful
+Fidgety
+Finicky
+Flagging
+Flakey
+Flashy
+Fleeting
+Flighty
+Flippant
+Flustered
+Foolhardy
+Foolish
+Forceful
+Forgetful
+Foul
+Fragile
+Fragmented
+Frantic
+Frazzled
+Fretful
+Frightened
+Frigid
+Frustrated
+Fuddy duddy
+Furious
+Furtive
+Fussy
+Gabby
+Garrulous
+Gaudy
+Giggly
+Gives up easily
+Gloomy
+Glum
+Glutton
+Gluttonous
+Goofy
+Grandiose
+Greedy
+Gregarious
+Grief
+Grieving
+Grotesque
+Grouchy
+Growly
+Gruesome
+Gruff
+Grumpy
+Guarded
+Guileless
+Guilt prone
+Guilt ridden
+Guilty
+Gullible
+Haggard
+Haggling
+Hard
+Harried
+Harsh
+Hasn't achieved much in life
+Hassled
+Hateful
+Haughty
+Haunted by a ghost
+Heart broken
+Heartless
+Heavy hearted
+Hedonistic
+Helpless
+Hesitant
+High
+Homeless
+Homesick
+Hopeless
+Horrible
+Hostile
+Hot headed
+Huffy
+Hurt
+Hypocritical
+Hysterical
+Ignorant
+Ignored
+Ill-bred
+Immature
+Immobile
+Immodest
+Impatient
+Imperial
+Impersonal
+Impolite
+Impotent
+Impoverished
+Impractical
+Impudent
+Impulsive
+Inactive
+Incoherent
+Incompetent
+Inconsiderate
+Inconsistent
+Indecisive
+Indifferent
+Indiscrete
+Indiscriminate
+Indolent
+Indulgent
+Inefficient
+Inept
+Infantile
+Infatuated
+Inflexible
+Infuriated
+Inherited success
+Inhibited
+Inhumane
+Insane
+Insecure
+Insensitive
+Insincere
+Insipid
+Insistent
+Insolent
+Insouciant
+Insulting
+Intense
+Interrupting
+Intimidated
+Intimidating
+Intolerant
+Irresponsible
+Irritable
+Irritating
+Isolated
+Jackass
+Jaded
+Jealous
+Jittery
+Judgmental
+Jumpy
+Kenderish
+Lackadaisical
+Lacking
+Laconic
+Languid
+Lascivious
+Late
+Lax
+Lazy
+Leaves things unfinished
+Lecherous
+Lethargic
+Lewd
+Liar
+Licentious
+Limited
+Lingering
+Lonely
+Loquacious
+Loud
+Loudmouth
+Low confidence
+Low drive
+Low social status
+Lowly
+Lunatic
+Lusty
+Lying
+Macho
+Mad
+Malevolent
+Malice
+Malicious
+Maniacal
+Manic
+Manipulative
+Masochistic
+Materialistic
+Maudlin
+Mean
+Mean-spirited
+Meek
+Megalomaniac
+Melancholy
+Melodramatic
+Mentally slow
+Mercurial
+Messy
+Miserable
+Miserly
+Mistrusting
+Moody
+Moping
+Moralistic
+Morbid
+Muddled goals
+Murderer
+Nagging
+Naive
+Narcissistic
+Narrow-minded
+Nasty
+Naughty
+Needs social approval
+Needy
+Negative
+Negligent
+Nervous
+Neurotic
+Nibbler
+Nihilistic
+Nit picker
+No purpose
+No self confidence
+Noisy
+Non-committing
+Nosy
+Not trustworthy
+Nuisance
+Nut
+Oblivious
+Obnoxious
+Obscene
+Obsequious
+Obsessed
+Obsessive about something
+Obstinate
+Odd
+Odious
+Opinionated
+Opportunistic
+Oppositional
+Orcish
+Ornery
+Ossified
+Ostentatious
+Others can't be relied on
+Outraged
+Outrageous
+Over wrought
+Overbearing
+Overconfident
+Overwhelmed
+Overwhelming
+Pampered
+Panicked
+Panicky
+Paranoid
+Passive
+Passive-aggressive
+Pathetic
+Pensive
+Perfect
+Perfectionist
+Persecuted
+Perserverant
+Perseveres
+Persevering
+Perverse
+Perverted
+Pessimistic
+Petrified
+Petty
+Petulant
+Picky
+Pitiful
+Pity
+Placid
+Plotting
+Pompous
+Poor
+Poor communicator
+Poor listener
+Possessive
+Power-hungry
+Preoccupied
+Pressured
+Presumptuous
+Pretentious
+Prim
+Primitive
+Profane
+Promiscuous
+Psychotic
+Pushy
+Puzzled
+Quarrelsome
+Quitter
+Quixotic
+Radical
+Raging
+Rambunctious
+Random
+Rash
+Rawboned
+Reactionary
+Rebellious
+Reckless
+Regretful
+Rejected
+Rejects change
+Relents
+Reluctant
+Remorseful
+Repugnant
+Repulsive
+Resentful
+Restless
+Rhetorical
+Rigid
+Risk averse
+Rogue
+Rough
+Rowdy
+Rude
+Rule-bound
+Ruthless
+Sad
+Sadistic
+Sanctimonious
+Sarcastic
+Sassy
+Scared
+Scarred
+Scary
+Scattered
+Scheming
+Scornful
+Scrawny
+Screwed up
+Scruffy
+Secretive
+Sedate
+Seditious
+Seductive
+Self-absorbed
+Self-blaming
+Self-centered
+Self-conscious
+Self-doubting
+Self-indulgent
+Self-righteous
+Self-serving
+Selfish
+Senile
+Servile
+Sexual
+Shallow
+Sharp-tongued
+Sheepish
+Shiftless
+Shifty
+Shocked
+Short-tempered
+Silly
+Simple-minded
+Sleazy
+Sloppy
+Slovenly
+Slow paced
+Sluggish
+Slutty
+Sly
+Small-minded
+Sneaky
+Snob
+Snobbish
+Soft
+Sore
+Sorrowful
+Sorry
+Sour
+Spiteful
+Spoiled
+Squeamish
+Startled
+Static
+Stingy
+Strange
+Stressed out
+Strict
+Stubborn
+Stunned
+Stupefied
+Stupid
+Submissive
+Suffering
+Sulky
+Sullen
+Supercilious
+Superstitious
+Surly
+Suspicious
+Suspicious of strangers
+Sycophantic
+Taciturn
+Tacky
+Tactless
+Tardy
+Temperamental
+Tempted
+Tense
+Tentative
+Tenuous
+Terrible
+Terrified
+Testy
+Thankless
+Thief
+Thoughtless
+Threatened
+Threatening
+Thrillseeker
+Thwarted
+Tight
+Timid
+Tired
+Tiresome
+Toadying
+Tolerates disorder
+Torpid
+Touchy
+Traitorous
+Treacherous
+Treasonous
+Tricky
+Tries to do everything
+Trivial
+Troubled
+Truculent
+Tyrannical
+Unappreciative
+Unapproachable
+Unassuming
+Unaware of own limitations
+Uncaring
+Uncommitted
+Uncommunicative
+Unconcerned
+Unconditional
+Uncontrolled
+Uncooperative
+Uncoordinated
+Uncouth
+Undependable
+Undesirable
+Undisciplined
+Uneasy
+Uneducated
+Unenthusiastic
+Unexacting
+Unfeeling
+Unfocused
+Unforgiving
+Unfriendly
+Ungrateful
+Unhappy
+Unhelpful
+Uninhibited
+Unkind
+Unlucky
+Unmotivated
+Unpredictable
+Unreasonable
+Unreceptive
+Unreliable
+Unresponsive
+Unrestrained
+Unruly
+Unscrupulous
+Unsentimental
+Unsettled
+Unsure
+Unsuspecting
+Unsuspicious
+Unsympathetic
+Unsystematic
+Unwilling
+Upset
+Vacant
+Vague
+Vain
+Vehement
+Vengeful
+Venomous
+Verbose
+Vicious
+Vindictive
+Violent
+Volatile
+Voracious
+Vulgar
+Vulnerable
+Wanton
+Wasteful
+Weak
+Weak nerves
+Weary
+Weepy
+Weird
+Whimsical
+Wicked
+Wild
+Willful
+Wishy washy
+Withdrawn
+Worried
+Worrying
+Worships the devil
+Worthless
+Wretched
+Xenophobic
+Zany
+Zealot
+Zealous
+Sterile
+Possessed
+Psychopath
