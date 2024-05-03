@@ -7,7 +7,7 @@ Header:<center><span style='font:20pt Arial'><b>Mythic Deck</span></center>
 Prompt: Number of Cards {}1
 
 Table: Master
-While searching you find<br>[@{$prompt1} Tiles>>Implode]
+While searching you find<br>[@{$prompt1} Tiles>>Implode&nbsp;]
 
 Table: Tiles
 500:<img src="C:\\Users\\Admin\\Documents\\Inspiration Pad Pro\\Generators\\inspiration\\EPIC\\EPIC_Cards\\0 - Generic Weapon (Front).png" height="400">
