@@ -43,10 +43,10 @@ The [@TavernAdjPatrons >> Proper] [@TavernObjects >> Proper] [@TavernTitles >> P
 ; -------------------------------------------------------------------
 
 Table: CityDescriptions
-a poor district near [@CityPlaces] {@BaseValue==(1d5)}
-a Middle Class district near [@CityPlaces] {@BaseValue==(3d5)}
-an Upper Class district near [@CityPlaces] {@BaseValue==(5d5)}
-an Elite district near [@CityPlaces] {@BaseValue==(10d5)}
+a poor district near [@CityPlaces] {@BaseValue==(1d10)}
+a Middle Class district near [@CityPlaces] {@BaseValue==(3d10)}
+an Upper Class district near [@CityPlaces] {@BaseValue==(5d10)}
+an Elite district near [@CityPlaces] {@BaseValue==(10d10)}
 
 Table: CityPlaces
 the palace district
@@ -1011,8 +1011,7 @@ Democrat
 Tombstone
 
 Table: Suffix
-25:
-1:(comes in a souvenir glass that you can keep! for an extra {@BaseValue}sp)
+15:
 1:with [@Adds]
 1:on the Rocks
 1:on Ice
@@ -1030,6 +1029,7 @@ Table: Suffix
 1:topped off with [@BoozePre]
 1:topped off with [@FlavorsPre]
 1:[|on|by|under|against|in|over|above|behind|around|off] the [|Beach|Sand|Island|Sea|Floor|Bed|Floor|Wall|Ceiling|Lamppost|Sheets|Sea|Sky|Moon|Sun|Midnight Sun|Stars]
+1:(comes in a souvenir glass that you can keep! for an extra {{@BaseValue}*100} XP)
 
 Table: Adds
 a [|Rhubarb|Celery] Stalk
@@ -2068,12 +2068,12 @@ Table: RandVowel
 ; -------------------------------------------------------------------
 
 Table:MasterGen
-Define: MealCost = (Pick {3d2} Entree for {{4d10}*{@BaseValue}}cp, Pick {1d2} Entree for {{2d10}*{@BaseValue}}cp)
-Define: MealCost2 = {{4d10}*{@BaseValue}*{ExtraCost}}cp
-Define: DrinkCost = ({{2d10}*{@BaseValue}}cp)
-Define: CoffeeCost = ({{7d10}*{@BaseValue}}cp)
-Define: CocktailCost = ({{10d10}*{@BaseValue}}cp)
-Define: HappyHour = ({1d5} Refills 1/{@BaseValue} Price during Happy Hour from {1d3}-{3d4}pm)
+Define: MealCost = (Pick {3d2} Entree & Side for {{6d10}*{@BaseValue}} XP, Pick {1d2} Entree & Side for {{2d10}*{@BaseValue}} XP)
+Define: MealCost2 = {{4d10}*{@BaseValue}*{ExtraCost}} XP
+Define: DrinkCost = ({{2d10}*{@BaseValue}} XP)
+Define: CoffeeCost = ({{7d10}*{@BaseValue}} XP)
+Define: CocktailCost = ({{10d10}*{@BaseValue}} XP)
+Define: HappyHour = ({1d5} FREE Refills during Happy Hour from {1d3}-{3d4}pm)
 Define: Meal1 = <h2>Breakfast {MealCost}</h2>[!{3d3} Breakfast >> implode <br>]<br><h3>Breakfast Sides</h3>[!{2d3} BreakfastSides >> implode <br>]<br>[!{2d3} FruitVeggies >> implode <br>]
 Define: Meal2 = <h2>Dinner {MealCost}</h2>[@{2d3} Dinner >> implode <br>]<br><h3>Dinner Sides</h3>[!{2d2} DinnerSides >> implode <br>]<br>[!{2d2} DinnerSides2 >> implode <br>]<br>[!{1d6} FruitVeggies >> implode <br>]
 Define: Drinks = <h3>Drinks {DrinkCost}</h3>[!{2d3} Drinks >> implode <br>]
