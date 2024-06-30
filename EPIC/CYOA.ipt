@@ -1,0 +1,14 @@
+Shuffle: Change
+
+Table: Master
++{1d[|5|10|20|100]}% [!Change]<br><br>-{1d[|5|10|20|100]}% [!Change]
+1000:+{[|5|10|20|100]d10}% [!Change]<br><br>-{[|5|10|20|100]d10}% [!Change]
++{1d[|2|3|4|5]} [!Change]<br><br>-{1d[|2|3|20|100]} [!Change]
+
+Table: Change
+MIND (rounded down)
+SENSES (rounded down)
+BODY (rounded down)
+Max HP (rounded down)
+weapon damage
+Armor
